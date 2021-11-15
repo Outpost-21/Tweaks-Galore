@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_dontPackFood</li>
+		</settings>
+		<label>Don't Pack Food</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThinkTreeDef[defName="Humanlike"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalColonist"]/subNodes/li[@Class="ThinkNode_ConditionalNeedPercentageAbove" and need[text()="Food"]]/threshold</xpath>
+					<value>
+						<threshold>1</threshold>
+					</value>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Android tiers</li>
+					</mods>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThinkTreeDef[defName="AndroidLike"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalColonist"]/subNodes/li[@Class="ThinkNode_ConditionalNeedPercentageAbove" and need[text()="Food"]]/threshold</xpath>
+						<value>
+							<threshold>1</threshold>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>The Human Hive</li>
+					</mods>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThinkTreeDef[defName="HiveQueenT"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalColonist"]/subNodes/li[@Class="ThinkNode_ConditionalNeedPercentageAbove" and need[text()="Food"]]/threshold</xpath>
+						<value>
+							<threshold>1</threshold>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>The Human Hive</li>
+					</mods>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThinkTreeDef[defName="HiveThinkTree"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalColonist"]/subNodes/li[@Class="ThinkNode_ConditionalNeedPercentageAbove" and need[text()="Food"]]/threshold</xpath>
+						<value>
+							<threshold>1</threshold>
+						</value>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

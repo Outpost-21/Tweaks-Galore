@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_metalDoesntBurn</li>
+		</settings>
+		<label>Metal Doesn't Burn</label>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- No burn (Steel/Plasteel) -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Steel" or defName="Plasteel"]/stuffProps/statFactors/Flammability | 
+				   /Defs/ThingDef[defName="PowerConduit"]/statBases/Flammability</xpath>
+					<value>
+						<Flammability>0.0</Flammability>
+					</value>
+				</li>
+
+				<!-- Little burn (Silver/Gold) -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Silver" or defName="Gold"]/stuffProps/statFactors/Flammability |
+				   /Defs/ThingDef[defName="PowerSwitch"]/statBases/Flammability</xpath>
+					<value>
+						<Flammability>0.015</Flammability>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

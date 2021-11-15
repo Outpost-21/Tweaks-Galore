@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_replantableGauranlen</li>
+		</settings>
+		<label>Replantable Gauranlen</label>
+		<active Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Plant_TreeGauranlen"]/minifiedDef</xpath>
+		</active>
+	</Operation>
+
+</Patch>

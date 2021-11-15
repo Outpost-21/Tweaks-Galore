@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Wall Light</li>
+		</mods>
+		<match  Class="TweaksGalore.PatchOperation_SettingActive">
+			<settings>
+				<li>tweak_wallLight_vanillaColours</li>
+			</settings>
+			<label>Wall Light: Vanilla Colours</label>
+			<active Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Lighting_MURWallLight_GlowerRed"]/comps/li/glowColor</xpath>
+						<value>
+							<glowColor>(217,60,60,0)</glowColor>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Lighting_MURWallLight_GlowerGreen"]/comps/li/glowColor</xpath>
+						<value>
+							<glowColor>(80,217,80,0)</glowColor>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Lighting_MURWallLight_GlowerBlue"]/comps/li/glowColor</xpath>
+						<value>
+							<glowColor>(60,60,217,0)</glowColor>
+						</value>
+					</li>
+				</operations>
+			</active>
+		</match>
+	</Operation>
+
+</Patch>

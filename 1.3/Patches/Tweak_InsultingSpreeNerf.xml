@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_insultingSpreeNerf</li>
+		</settings>
+		<label>Insulting Spree Nerf</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/MentalStateDef[defName="InsultingSpree"]/minTicksBeforeRecovery</xpath>
+					<value>
+						<minTicksBeforeRecovery>2500</minTicksBeforeRecovery>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/MentalStateDef[defName="InsultingSpree"]/maxTicksBeforeRecovery</xpath>
+					<value>
+						<maxTicksBeforeRecovery>10000</maxTicksBeforeRecovery>
+					</value>
+				</li>
+	
+	
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/MentalBreakDef[defName="InsultingSpree"]/intensity</xpath>
+					<value>
+						<intensity>Major</intensity>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/MentalBreakDef[defName="TargetedInsultingSpree"]/intensity</xpath>
+					<value>
+						<intensity>Major</intensity>
+					</value>
+				</li>
+	
+	
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/MentalBreakDef[defName="InsultingSpree"]/baseCommonality</xpath>
+					<value>
+						<baseCommonality>0.15</baseCommonality>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/MentalBreakDef[defName="TargetedInsultingSpree"]/baseCommonality</xpath>
+					<value>
+						<baseCommonality>0.15</baseCommonality>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

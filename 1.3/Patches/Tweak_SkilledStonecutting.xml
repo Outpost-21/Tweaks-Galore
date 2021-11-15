@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_skilledStonecutting</li>
+		</settings>
+		<label>Skilled Stonecutting</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<StatDef>
+							<defName>O21_Tweak_StonecuttingSpeed</defName>
+							<label>stonecutting speed</label>
+							<description>Speed at which this person cuts rough stone into blocks.</description>
+							<category>PawnWork</category>
+							<defaultBaseValue>1</defaultBaseValue>
+							<toStringStyle>PercentZero</toStringStyle>
+							<statFactors>
+								<li>WorkSpeedGlobal</li>
+							</statFactors>
+							<skillNeedFactors>
+								<li Class="SkillNeed_BaseBonus">
+									<skill>Crafting</skill>
+									<baseValue>0.8</baseValue>
+									<bonusPerLevel>0.075</bonusPerLevel>
+								</li>
+							</skillNeedFactors>
+							<capacityFactors>
+								<li>
+									<capacity>Sight</capacity>
+									<weight>0.3</weight>
+								</li>
+								<li>
+									<capacity>Manipulation</capacity>
+									<weight>0.9</weight>
+								</li>
+							</capacityFactors>
+						</StatDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[@Name="MakeStoneBlocksBase"]</xpath>
+					<value>
+						<workSkill>Crafting</workSkill>
+						<workSkillLearnFactor>0.25</workSkillLearnFactor>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[@Name="MakeStoneBlocksBase"]/workSpeedStat</xpath>
+					<value>
+						<workSpeedStat>O21_Tweak_StonecuttingSpeed</workSpeedStat>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

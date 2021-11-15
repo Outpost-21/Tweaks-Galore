@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_oldComponentNames</li>
+		</settings>
+		<label>Old Component Names</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<!-- Component labels -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ComponentIndustrial"]/label</xpath>
+					<value>
+						<label>industrial component</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ComponentSpacer"]/label</xpath>
+					<value>
+						<label>spacer component</label>
+					</value>
+				</li>
+				<!-- Component Recipe -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_ComponentIndustrial"]/label</xpath>
+					<value>
+						<label>make industrial component</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_ComponentIndustrial"]/description</xpath>
+					<value>
+						<description>Make an industrial component</description>
+					</value>
+				</li>
+				<!-- Advanced Component Recipe -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_ComponentSpacer"]/label</xpath>
+					<value>
+						<label>make spacer component</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_ComponentSpacer"]/description</xpath>
+					<value>
+						<description>Make a spacer component</description>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

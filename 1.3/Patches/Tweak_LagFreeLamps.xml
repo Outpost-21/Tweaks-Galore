@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_lagFreeLamps</li>
+		</settings>
+		<label>Lag Free Lamps</label>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="TorchLamp"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="RGK_lamp"]</xpath>
+					<success>Always</success>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="RGK_lamp" or defName="RGK_LampM" or defName="GL_lamp_White" or defName="GL_LampM_White" or defName="RGK_Street_Lamp_L" or defName="RGK_Street_Lamp_Seven" or defName="GL_Street_Lamp_L_White" or defName="GL_Street_Lamp_Seven_White" or defName="GL_Wall_Lamp" or defName="GL_Wall_Lamp_White"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
