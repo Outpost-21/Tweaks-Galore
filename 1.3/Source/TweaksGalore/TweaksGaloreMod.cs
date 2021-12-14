@@ -254,6 +254,9 @@ namespace TweaksGalore
                 listingStandard.CheckboxEnhanced("Give Proper Materials", "Changes returned items to some reasonable materials instead of just slag.", ref settings.tweak_ancientDeconstruction_mode);
             }
             listingStandard.GapLine();
+            // Tweak: No Meme Limit
+            listingStandard.CheckboxEnhanced("No Meme Limit", "Raises the limit of how many memes you can choose to 1000...so effectively no limit.", ref settings.patch_noMemeLimit);
+            listingStandard.GapLine();
             // Tweak: Proper Suppression
             listingStandard.CheckboxEnhanced("Proper Suppression", "Changes suppression slightly so that rebellions never happen if your slaves are kept suppressed.", ref settings.patch_properSuppression);
             listingStandard.GapLine();

@@ -59,6 +59,7 @@ namespace TweaksGalore
         public bool tweak_replantableGauranlen = true;
 
         public bool patch_properSuppression = true;
+        public bool patch_noMemeLimit = true;
 
         // Mods
         // Wall Light
@@ -113,6 +114,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_replantableGauranlen, "tweak_replantableGauranlen", true);
 
             Scribe_Values.Look(ref patch_properSuppression, "patch_properSuppression", true);
+            Scribe_Values.Look(ref patch_noMemeLimit, "patch_noMemeLimit", true);
 
             // Mods
             // Wall Light

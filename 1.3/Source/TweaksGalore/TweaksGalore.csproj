@@ -74,6 +74,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="PatchOperation_SettingActive.cs" />
     <Compile Include="Patch_GetRewardStackElementsForThings.cs" />
+    <Compile Include="Patch_IdeoFoundation_InitPrecepts.cs" />
     <Compile Include="Patch_InitiateSlaveRebellionMtbDays.cs" />
     <Compile Include="Patch_StunHandler_EMPAdaptationTicksDuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
