@@ -116,10 +116,6 @@ namespace TweaksGalore
                     DoSettings_Ideology(listingStandard);
                 }
             }
-            //else if (currentPage == TweaksGaloreSettingsPage.Mods)
-            //{
-            //    DoSettings_ModPatches(listingStandard);
-            //}
             listingStandard.End();
             Widgets.EndScrollView();
 
@@ -264,19 +260,6 @@ namespace TweaksGalore
             listingStandard.CheckboxEnhanced("Replantable Gauranlen", "Makes it so you can move Gauranlen trees like any other.", ref settings.tweak_replantableGauranlen);
             listingStandard.GapLine();
         }
-
-        //public void DoSettings_ModPatches(Listing_Standard listingStandard)
-        //{
-        //    if (ModLister.HasActiveModWithName("Wall Light"))
-        //    {
-        //        // Tweak: Vanilla Light Colours
-        //        listingStandard.Label("Wall Light");
-        //        listingStandard.GapLine();
-        //        listingStandard.CheckboxEnhanced("Vanilla Colours", "Wall Light's primary colours do not use the same values as vanilla lamps of the same colour. This simply fixes that.", ref settings.tweak_wallLight_vanillaColours);
-        //        listingStandard.CheckboxEnhanced("White Textures", "Wall Light's lamps use different textures for each colour of lamp.", ref settings.tweak_wallLight_vanillaColours);
-        //        listingStandard.GapLine();
-        //    }
-        //}
 
         public Dictionary<string, bool> GetDeconModes
         {
