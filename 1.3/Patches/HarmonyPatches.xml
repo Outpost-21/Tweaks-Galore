@@ -15,4 +15,11 @@
 		<label>Disable Adapting</label>
 	</Operation>
 
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>patch_settlementTraderTimer</li>
+		</settings>
+		<label>Next Restock Timer</label>
+	</Operation>
+
 </Patch>

@@ -25,7 +25,7 @@ namespace TweaksGalore
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message("O21 :: Tweaks Galore :: 1.0.0");
+            Log.Message("O21 :: Tweaks Galore :: 1.1.0");
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
@@ -150,11 +150,29 @@ namespace TweaksGalore
                 "\n- Min Duration: 25,000 ticks --> 2,500 ticks" +
                 "\n- Base Event Chance: 0.5 --> 0.15", ref settings.tweak_insultingSpreeNerf);
             listingStandard.GapLine();
+            // Tweak: Impassable Deep Water
+            listingStandard.CheckboxEnhanced("Impassable Deep Water", "Changes deep water to be impassable by pawns, preventing them from pathing through it.", ref settings.tweak_impassableDeepWater);
+            listingStandard.GapLine();
             // Tweak: Lag free Lamps
             listingStandard.CheckboxEnhanced("Lag Free Lamps", "Removes the fuel comp from fuelled lamps, so they now no longer run code constantly they impact performance that little bit less.", ref settings.tweak_lagFreeLamps);
             listingStandard.GapLine();
+            // Tweak: Megasloth to Megatherium
+            listingStandard.CheckboxEnhanced("Megasloth to Megatherium", "Reverts the name change of the Megatherium so it retains the obviously cooler name.", ref settings.tweak_oldMegaslothName);
+            listingStandard.GapLine();
+            // Tweak: Next Restock Timer
+            listingStandard.CheckboxEnhanced("Next Restock Timer", "Displays in the world map information of settlements whether or not they have restocked since you last visited and how long till their next restock.", ref settings.patch_settlementTraderTimer);
+            listingStandard.GapLine();
             // Tweak: No Breakdowns
             listingStandard.CheckboxEnhanced("No Breakdowns", "Removes the breakdown comp from anything that has it, artificially enforced resource sinks are LAZY.", ref settings.tweak_noBreakdowns);
+            listingStandard.GapLine();
+            // Tweak: Prisoners Don't Have Keys
+            listingStandard.CheckboxEnhanced("Prisoners Don't Have Keys", "Selectively controls whether prisoners and slaves can open doors during breakout and rebellion.", ref settings.patch_prisonersDontHaveKeys);
+            if (settings.patch_prisonersDontHaveKeys)
+            {
+                listingStandard.CheckboxLabeled("Applies to Prisoners", ref settings.patch_pdhk_prisoners);
+                listingStandard.CheckboxLabeled("Applies to Slaves", ref settings.patch_pdhk_slaves);
+                listingStandard.CheckboxLabeled("Escaping pawns can open their own door", ref settings.patch_pdhk_ownDoor);
+            }
             listingStandard.GapLine();
             // Tweak: Skilled Stonecutting
             listingStandard.CheckboxEnhanced("Skilled Stonecutting", "Makes stonecutting give crafting skill increases, and makes more skilled crafters create blocks quickler.", ref settings.tweak_skilledStonecutting);

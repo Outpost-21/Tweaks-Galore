@@ -23,8 +23,15 @@ namespace TweaksGalore
         public bool tweak_preReleaseShipParts = false;
         public bool tweak_fixDeconstructionReturn = false;
         public bool tweak_noBreakdowns = false;
+        public bool tweak_impassableDeepWater = false;
+        public bool tweak_oldMegaslothName = false;
 
+        public bool patch_settlementTraderTimer = false;
         public bool patch_incidentPawnStats = false;
+        public bool patch_prisonersDontHaveKeys = false;
+        public bool patch_pdhk_ownDoor = true;
+        public bool patch_pdhk_prisoners = true;
+        public bool patch_pdhk_slaves = true;
 
         // Power
         public bool tweak_powerUsageTweaks = false;
@@ -75,8 +82,15 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_preReleaseShipParts, "tweak_preReleaseShipParts", false);
             Scribe_Values.Look(ref tweak_fixDeconstructionReturn, "tweak_fixDeconstructionReturn", false);
             Scribe_Values.Look(ref tweak_noBreakdowns, "tweak_noBreakdowns", false);
+            Scribe_Values.Look(ref tweak_impassableDeepWater, "tweak_impassableDeepWater", false);
+            Scribe_Values.Look(ref tweak_oldMegaslothName, "tweak_oldMegaslothName", false);
 
+            Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
             Scribe_Values.Look(ref patch_incidentPawnStats, "patch_incidentPawnStats", false);
+            Scribe_Values.Look(ref patch_prisonersDontHaveKeys, "patch_prisonersDontHaveKeys", false);
+            Scribe_Values.Look(ref patch_pdhk_ownDoor, "patch_pdhk_ownDoor", true);
+            Scribe_Values.Look(ref patch_pdhk_prisoners, "patch_pdhk_prisoners", true);
+            Scribe_Values.Look(ref patch_pdhk_slaves, "patch_pdhk_slaves", true);
 
             // Power
             Scribe_Values.Look(ref tweak_powerUsageTweaks, "tweak_powerUsageTweaks", false);

@@ -92,7 +92,7 @@ namespace TweaksGalore
 
                 DefDatabase<ThingDef>.GetNamedSilentFail("SunLamp").SetPowerUsage((int)settings.tweak_powerUsage_sunlamp);
                 DefDatabase<ThingDef>.GetNamedSilentFail("Autodoor").SetPowerUsage((int)settings.tweak_powerUsage_autodoor);
-                DefDatabase<ThingDef>.GetNamedSilentFail("VanometricPowerCell").SetPowerUsage((int)settings.tweak_powerUsage_vanometricCell);
+                DefDatabase<ThingDef>.GetNamedSilentFail("VanometricPowerCell").SetPowerUsage(-(int)settings.tweak_powerUsage_vanometricCell);
             }
         }
 

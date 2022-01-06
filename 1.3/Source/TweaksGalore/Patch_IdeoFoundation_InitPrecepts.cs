@@ -16,11 +16,12 @@ namespace TweaksGalore
 	[HarmonyPatch("InitPrecepts")]
 	public class Patch_IdeoFoundation_InitPrecepts
 	{
-		public static void Prefix(ref IntRange ___MemeCountRangeAbsolute)
+		[HarmonyPostfix]
+		public static void Postfix(ref IntRange ___MemeCountRangeAbsolute)
 		{
             if (TweaksGaloreMod.settings.patch_noMemeLimit)
 			{
-				___MemeCountRangeAbsolute = new IntRange(0, 1000);
+				___MemeCountRangeAbsolute = new IntRange(1, 1000);
 			}
 		}
 	}

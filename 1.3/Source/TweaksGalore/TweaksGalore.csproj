@@ -75,7 +75,9 @@
     <Compile Include="PatchOperation_SettingActive.cs" />
     <Compile Include="Patch_GetRewardStackElementsForThings.cs" />
     <Compile Include="Patch_IdeoFoundation_InitPrecepts.cs" />
+    <Compile Include="Patch_Settlement_GetInspectString.cs" />
     <Compile Include="Patch_InitiateSlaveRebellionMtbDays.cs" />
+    <Compile Include="Patch_Building_Door_PawnCanOpen.cs" />
     <Compile Include="Patch_StunHandler_EMPAdaptationTicksDuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatPart_FasterSmoothing.cs" />

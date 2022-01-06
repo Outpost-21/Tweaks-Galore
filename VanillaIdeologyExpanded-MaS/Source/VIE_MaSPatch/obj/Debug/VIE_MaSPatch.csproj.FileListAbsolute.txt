@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Source\VIE_MaSPatch\bin\Debug\VIE_MaSPatch.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Source\VIE_MaSPatch\bin\Debug\VIE_MaSPatch.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Source\VIE_MaSPatch\obj\Debug\VIE_MaSPatch.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Source\VIE_MaSPatch\obj\Debug\VIE_MaSPatch.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Source\VIE_MaSPatch\obj\Debug\VIE_MaSPatch.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Source\VIE_MaSPatch\obj\Debug\VIE_MaSPatch.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Assemblies\VIE_MaSPatch.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[O21] Tweaks Galore\VanillaIdeologyExpanded-MaS\Assemblies\VIE_MaSPatch.pdb

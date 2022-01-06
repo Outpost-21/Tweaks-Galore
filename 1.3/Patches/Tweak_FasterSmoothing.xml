@@ -3,9 +3,9 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
 		<settings>
-			<li>tweak_prettyPreciousMetals</li>
+			<li>tweak_fasterSmoothing_factor</li>
 		</settings>
-		<label>Pretty Precious Metals</label>
+		<label>Faster Smoothing</label>
 		<active Class="PatchOperationConditional">
 			<xpath>/Defs/StatDef[defName="SmoothingSpeed"]/parts</xpath>
 			<match Class="PatchOperationAdd">

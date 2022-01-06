@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- <O21Toolbox.UpdateListings.UpdateDef>
+		<defName>O21_Tweaks_20221229</defName>
+		<date>2022/12/29</date>
+		<banner></banner>
+		<content>Version 1.2.0
+Added Tweak: Glowing Ambrosia - Makes Ambrosia glow so it's easier to spot.
+Added Tweak: Glowing Healroot - Makes Healroot glow so it's easier to spot.
+Added Tweak: Wild Reproduction - Wild animals can do the horizontal monster mash.
+Added Tweak: Hunters Can Use Melee - Speaks for itself.
+Added Tweak: Boomalopes Bleed Chemfuel - BURN BABAY!
+Added Tweak: Disfigurement Penalty Multiplier - Ugly is the new Beautiful.
+Added Tweak: Chatty Comms - Coms Console is a recreation source.
+Added Tweak: Green Thumb - Restored Green Thumb trait.
+Added Tweak: Herd Migration - Restored Herd Migration Event.
+Added Tweak: Not So Wild Berries - Wild Berries now plantable.
+Added Tweak: Food is Food - Adds Precept for "Don't Care" to apply to both Fungus and Insect meat.
+Added Tweak: Room Size Tolerance - Better room size tolerances.
+Added Tweak: Silent Doors - Disables the sound of doors opening and closing.
+Added Tweak: Silent Mining - Disables the sound of mining.</content>
+		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
+		<important>false</important>
+	</O21Toolbox.UpdateListings.UpdateDef> -->
+
+	<O21Toolbox.UpdateListings.UpdateDef>
+		<defName>O21_Tweaks_20220106</defName>
+		<date>2022/01/06</date>
+		<banner></banner>
+		<content>Version 1.1.0
+- Added Tweak: Megasloth to Megatherium - Reverts the name change.
+- Added Tweak: Impassable Deep Water - Prevents pawns navigating through deep water tiles.
+- Added Tweak: Prisoners Don't Have Keys - Control whether or not prisoners and slaves can open doors.
+- Added Tweak: Next Restock Timer - Shows when a settlement will next restock.
+
+- Updated Tweak: Lag Free Lamps - Now includes darklight torches and braziers, as well as Vanilla Expanded candles and wall torches.
+- Fixed Bug: Faster Smoothing - Now applies properly based on its setting.
+- Fixed Bug: Power Usage Tweaks - Vanometric Power Cell now correctly provides instead of drains power.
+- Fixed Conflict: Vanilla Ideology Expanded - Memes and Structure no longer blocks meme unlimiter.</content>
+		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
+		<important>false</important>
+	</O21Toolbox.UpdateListings.UpdateDef>
+
+</Defs>
