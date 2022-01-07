@@ -1,9 +1,8 @@
 {
     "folders": {
         "new-version": {
-            "About": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Outer Rim - Galaxy Undivided\\About",
+            "About": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Tweaks Galore\\About",
             "DefReferences": [
-                "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Outer Rim - Galaxy Undivided\\1.3\\OnDemand",
                 "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Data\\Royalty\\Defs",
                 "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Data\\Ideology\\Defs",
                 "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Data\\Core\\Defs"
@@ -11,11 +10,11 @@
             "AssemblyReferences": [
                 "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Toolbox\\1.3\\Assemblies"
             ],
-            "Assemblies": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Outer Rim - Galaxy Undivided\\1.3\\Assemblies",
-            "Defs": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Outer Rim - Galaxy Undivided\\1.3\\Defs",
-            "Textures": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Outer Rim - Galaxy Undivided\\Textures",
-            "Sounds": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Outer Rim - Galaxy Undivided\\Sounds",
-            "Patches": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Outer Rim - Galaxy Undivided\\1.3\\Patches"
+            "Assemblies": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Tweaks Galore\\1.3\\Assemblies",
+            "Defs": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Tweaks Galore",
+            "Textures": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Tweaks Galore",
+            "Sounds": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Tweaks Galore",
+            "Patches": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\[O21] Tweaks Galore\\1.3\\Patches"
         }
     }
 }
