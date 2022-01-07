@@ -32,6 +32,7 @@ namespace TweaksGalore
         public bool patch_pdhk_ownDoor = true;
         public bool patch_pdhk_prisoners = true;
         public bool patch_pdhk_slaves = true;
+        public bool patch_strongFloorsStopInfestations = false;
 
         // Power
         public bool tweak_powerUsageTweaks = false;
@@ -39,6 +40,12 @@ namespace TweaksGalore
         public float tweak_powerUsage_sunlamp = 2900f;
         public float tweak_powerUsage_autodoor = 50f;
         public float tweak_powerUsage_vanometricCell = 1000f;
+
+        // Raids
+        public bool tweak_noMoreDropPodRaids = false;
+        public bool tweak_noMoreBreachRaids = false;
+        public bool tweak_noMoreSapperRaids = false;
+        public bool tweak_noMoreSiegeRaids = false;
 
         // Resources
         public bool tweak_strongerSteel = false;
@@ -91,6 +98,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref patch_pdhk_ownDoor, "patch_pdhk_ownDoor", true);
             Scribe_Values.Look(ref patch_pdhk_prisoners, "patch_pdhk_prisoners", true);
             Scribe_Values.Look(ref patch_pdhk_slaves, "patch_pdhk_slaves", true);
+            Scribe_Values.Look(ref patch_strongFloorsStopInfestations, "patch_strongFloorsStopInfestations", false);
 
             // Power
             Scribe_Values.Look(ref tweak_powerUsageTweaks, "tweak_powerUsageTweaks", false);
@@ -98,6 +106,12 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_powerUsage_sunlamp, "tweak_powerUsage_sunlamp", 2900f);
             Scribe_Values.Look(ref tweak_powerUsage_autodoor, "tweak_powerUsage_autodoor", 50f);
             Scribe_Values.Look(ref tweak_powerUsage_vanometricCell, "tweak_powerUsage_vanometricCell", 1000f);
+
+            // Raids
+            Scribe_Values.Look(ref tweak_noMoreDropPodRaids, "tweak_noMoreDropPodRaids", false);
+            Scribe_Values.Look(ref tweak_noMoreBreachRaids, "tweak_noMoreBreachRaids", false);
+            Scribe_Values.Look(ref tweak_noMoreSapperRaids, "tweak_noMoreSapperRaids", false);
+            Scribe_Values.Look(ref tweak_noMoreSiegeRaids, "tweak_noMoreSiegeRaids", false);
 
             // Resources
             Scribe_Values.Look(ref tweak_strongerSteel, "tweak_strongerSteel", false);

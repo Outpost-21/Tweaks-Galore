@@ -3,7 +3,7 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
 		<settings>
-			<li>tweak_fasterSmoothing_factor</li>
+			<li>tweak_fasterSmoothing</li>
 		</settings>
 		<label>Faster Smoothing</label>
 		<active Class="PatchOperationConditional">

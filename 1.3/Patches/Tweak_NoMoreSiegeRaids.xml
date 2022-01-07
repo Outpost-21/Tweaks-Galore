@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_noMoreSiegeRaids</li>
+		</settings>
+		<label>No More Siege Raids</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RaidStrategyDef[defName="Siege"]/selectionWeightPerPointsCurve/points</xpath>
+					<value>
+						<points>
+							<li>(700, 0)</li>
+							<li>(1000, 0)</li>
+						</points>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

@@ -2,10 +2,10 @@
 <Defs>
 
 	<!-- <O21Toolbox.UpdateListings.UpdateDef>
-		<defName>O21_Tweaks_20221229</defName>
-		<date>2022/12/29</date>
+		<defName>O21_Tweaks_20220101</defName>
+		<date>2022/01/01</date>
 		<banner></banner>
-		<content>Version 1.2.0
+		<content>Version 1.3.0
 Added Tweak: Glowing Ambrosia - Makes Ambrosia glow so it's easier to spot.
 Added Tweak: Glowing Healroot - Makes Healroot glow so it's easier to spot.
 Added Tweak: Wild Reproduction - Wild animals can do the horizontal monster mash.
@@ -23,6 +23,20 @@ Added Tweak: Silent Mining - Disables the sound of mining.</content>
 		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
 		<important>false</important>
 	</O21Toolbox.UpdateListings.UpdateDef> -->
+
+	<O21Toolbox.UpdateListings.UpdateDef>
+		<defName>O21_Tweaks_20220107</defName>
+		<date>2022/01/07</date>
+		<banner></banner>
+		<content>Version 1.2.0
+- Added Tweak: Infestation Blocking Floors
+- Added Tweak: No More Drop Pod Raids
+- Added Tweak: No More Siege Raids
+- Added Tweak: No More Sapper Raids
+- Added Tweak: No More Breacher Raids</content>
+		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
+		<important>false</important>
+	</O21Toolbox.UpdateListings.UpdateDef>
 
 	<O21Toolbox.UpdateListings.UpdateDef>
 		<defName>O21_Tweaks_20220106</defName>

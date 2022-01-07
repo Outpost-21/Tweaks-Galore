@@ -94,6 +94,32 @@ namespace TweaksGalore
                 DefDatabase<ThingDef>.GetNamedSilentFail("Autodoor").SetPowerUsage((int)settings.tweak_powerUsage_autodoor);
                 DefDatabase<ThingDef>.GetNamedSilentFail("VanometricPowerCell").SetPowerUsage(-(int)settings.tweak_powerUsage_vanometricCell);
             }
+
+            // Strong Floors Block Infestations
+            if (settings.patch_strongFloorsStopInfestations)
+            {
+                List<TerrainDef> strongFloors = new List<TerrainDef>();
+
+                foreach(TerrainDef terrain in DefDatabase<TerrainDef>.AllDefs)
+                {
+                    if(terrain != null) 
+                    { 
+                        if(terrain.costList != null && terrain.costList.Any(t => t.thingDef.stuffProps != null && (t.thingDef.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic) || t.thingDef.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))))
+                        {
+                            strongFloors.Add(terrain);
+                        }
+                        else if(!terrain.stuffCategories.NullOrEmpty() && (terrain.stuffCategories.Contains(StuffCategoryDefOf.Metallic) || terrain.stuffCategories.Contains(StuffCategoryDefOf.Stony)))
+                        {
+                            strongFloors.Add(terrain);
+                        }
+                    }
+                }
+
+                for (int i = 0; i < strongFloors.Count; i++)
+                {
+                    strongFloors[i].tags.Add("BlocksInfestations");
+                }
+            }
         }
 
         public static void SetPowerUsage(this ThingDef thing, int powerConsumption)

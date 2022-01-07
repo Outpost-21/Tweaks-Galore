@@ -25,7 +25,7 @@ namespace TweaksGalore
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message("O21 :: Tweaks Galore :: 1.1.0");
+            Log.Message("O21 :: Tweaks Galore :: 1.2.0");
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
@@ -60,6 +60,18 @@ namespace TweaksGalore
             {
                 scrollRectHeight = 460f;
             }
+            else if (currentPage == TweaksGaloreSettingsPage.Power)
+            {
+                scrollRectHeight = 460f;
+            }
+            else if (currentPage == TweaksGaloreSettingsPage.Raids)
+            {
+                scrollRectHeight = 460f;
+            }
+            else if (currentPage == TweaksGaloreSettingsPage.Resources)
+            {
+                scrollRectHeight = 800f;
+            }
             else if(currentPage == TweaksGaloreSettingsPage.Royalty)
             {
                 scrollRectHeight = 460f;
@@ -89,6 +101,10 @@ namespace TweaksGalore
             else if(currentPage == TweaksGaloreSettingsPage.Power)
             {
                 DoSettings_Power(listingStandard);
+            }
+            else if (currentPage == TweaksGaloreSettingsPage.Raids)
+            {
+                DoSettings_Raids(listingStandard);
             }
             else if (currentPage == TweaksGaloreSettingsPage.Resources)
             {
@@ -142,6 +158,9 @@ namespace TweaksGalore
             listingStandard.GapLine();
             // Tweak: Incident Pawn Stats
             listingStandard.CheckboxEnhanced("Incident Pawn Stats", "Displays the information of any pawns rewarded as part of incidents.", ref settings.patch_incidentPawnStats);
+            listingStandard.GapLine();
+            // Tweak: Infestation Blocking Floors
+            listingStandard.CheckboxEnhanced("Infestation Blocking Floors", "Prevents infestations happening on harder floors (Steel, Stone, Concrete). Only prevents the event picking that spot, hives can still spawn on them if an event happens closeby.", ref settings.patch_strongFloorsStopInfestations);
             listingStandard.GapLine();
             // Tweak: Insulting Spree Nerf
             listingStandard.CheckboxEnhanced("Insulting Spree Nerf", "Makes the Insulting Spree mental break less annoying to deal with." +
@@ -217,6 +236,22 @@ namespace TweaksGalore
                 listingStandard.AddLabeledSlider("Auto-Door: " + settings.tweak_powerUsage_autodoor, ref settings.tweak_powerUsage_autodoor, 0f, 100f, "Min: 0", "Max: 100", 1f);
                 listingStandard.AddLabeledSlider("Vanometric Power Cell: " + settings.tweak_powerUsage_vanometricCell, ref settings.tweak_powerUsage_vanometricCell, 0f, 10000f, "Min: 0", "Max: 10000", 50f);
             }
+        }
+
+        public void DoSettings_Raids(Listing_Standard listingStandard)
+        {
+            // Tweak: No More Breach Raids
+            listingStandard.CheckboxEnhanced("No More Breach Raids", "Removes Breach Raids as an option for raiders.", ref settings.tweak_noMoreBreachRaids);
+            listingStandard.GapLine();
+            // Tweak: No More Breach Raids
+            listingStandard.CheckboxEnhanced("No More Drop Pod Raids", "Removes Drop Pod Raids as an option for raiders. Does not work with RimWar.", ref settings.tweak_noMoreDropPodRaids);
+            listingStandard.GapLine();
+            // Tweak: No More Breach Raids
+            listingStandard.CheckboxEnhanced("No More Sapper Raids", "Removes Sapper Raids as an option for raiders.", ref settings.tweak_noMoreSapperRaids);
+            listingStandard.GapLine();
+            // Tweak: No More Breach Raids
+            listingStandard.CheckboxEnhanced("No More Siege Raids", "Removes Siege Raids as an option for raiders.", ref settings.tweak_noMoreSiegeRaids);
+            listingStandard.GapLine();
         }
 
         public void DoSettings_Resources(Listing_Standard listingStandard)
@@ -299,9 +334,9 @@ namespace TweaksGalore
         General,
         Mechanoids,
         Power,
+        Raids,
         Resources,
         Royalty,
-        Ideology//,
-        //Mods
+        Ideology
     }
 }

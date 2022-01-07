@@ -73,6 +73,7 @@
     <Compile Include="EnhancedSettings.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="PatchOperation_SettingActive.cs" />
+    <Compile Include="Patch_InfestationCellFinder_GetScoreAt.cs" />
     <Compile Include="Patch_GetRewardStackElementsForThings.cs" />
     <Compile Include="Patch_IdeoFoundation_InitPrecepts.cs" />
     <Compile Include="Patch_Settlement_GetInspectString.cs" />
