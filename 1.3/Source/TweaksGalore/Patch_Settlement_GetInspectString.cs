@@ -22,7 +22,7 @@ namespace TweaksGalore
 			string text = __result;
             if (TweaksGaloreMod.settings.patch_settlementTraderTimer)
 			{
-				if(__instance.Faction != Faction.OfPlayer && !text.NullOrEmpty() && __instance.trader.EverVisited)
+				if(__instance.Faction != null && __instance.Faction != Faction.OfPlayer && !text.NullOrEmpty() && __instance.trader != null && __instance.trader.EverVisited)
                 {
 					text += "\n";
 					text += "Restocked Since Last Visit: " + __instance.RestockedSinceLastVisit.ToString() + "\n";

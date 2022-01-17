@@ -68,7 +68,7 @@ namespace TweaksGalore
                         }
                         else
                         {
-                            Log.Message("O21 :: Tweaks Galore :: Failed to patch: " + def.defName + ", this is likely intended behaviour.");
+                            Log.Message("O21 :: Tweaks Galore :: Mechanoid Recognised: " + def.defName + "/" + def.label + ", but not patched as it has no heat armour value. This is intended behaviour not an error.");
                         }
                     }
                 }
@@ -85,9 +85,12 @@ namespace TweaksGalore
                     DefDatabase<ThingDef>.GetNamedSilentFail("StandingLamp_Blue")
                 };
 
-                for (int i = 0; i < standingLamps.Count; i++)
+                if (!standingLamps.NullOrEmpty())
                 {
-                    standingLamps[i].SetPowerUsage((int)settings.tweak_powerUsage_lamp);
+                    for (int i = 0; i < standingLamps.Count; i++)
+                    {
+                        standingLamps[i].SetPowerUsage((int)settings.tweak_powerUsage_lamp);
+                    }
                 }
 
                 DefDatabase<ThingDef>.GetNamedSilentFail("SunLamp").SetPowerUsage((int)settings.tweak_powerUsage_sunlamp);
@@ -124,7 +127,14 @@ namespace TweaksGalore
 
         public static void SetPowerUsage(this ThingDef thing, int powerConsumption)
         {
-            thing.GetCompProperties<CompProperties_Power>().basePowerConsumption = powerConsumption;
+            if(thing != null)
+            {
+                CompProperties_Power comp = thing.GetCompProperties<CompProperties_Power>();
+                if(comp != null)
+                {
+                    thing.GetCompProperties<CompProperties_Power>().basePowerConsumption = powerConsumption;
+                }
+            }
         }
 
         public static List<ThingDef> GetAllMechanoids

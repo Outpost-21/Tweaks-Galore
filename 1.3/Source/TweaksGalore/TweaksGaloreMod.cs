@@ -25,7 +25,7 @@ namespace TweaksGalore
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message("O21 :: Tweaks Galore :: 1.2.0");
+            Log.Message("O21 :: Tweaks Galore :: 1.2.2");
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
@@ -48,8 +48,6 @@ namespace TweaksGalore
 
             inRect.yMin = secondStageHeight;
             Rect outRect = inRect.ContractedBy(10f);
-            //outRect.height -= 50f;
-            //outRect.y = secondStageHeight;
 
             float scrollRectHeight = 3000f;
             if (currentPage == TweaksGaloreSettingsPage.General)
