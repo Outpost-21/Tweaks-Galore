@@ -19,6 +19,15 @@ namespace TweaksGalore
         {
 			TweaksGaloreSettings settings = TweaksGaloreMod.settings;
 
+            try { Tweak_FixDeconstructionReturn(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: FixDeconstructionReturn :: " + e); };
+            try { Tweak_StackableChunks(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: StackableChunks :: " + e); };
+            try { Tweak_MechanoidHeatArmor(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: MechanoidHeatArmor :: " + e); };
+            try { Tweak_PowerUsageTweaks(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: PowerUsageTweaks :: " + e); };
+            try { Tweak_StrongFloorsBlockInfestations(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: StrongFloorsBlockInfestations :: " + e); };
+        }
+
+        public static void Tweak_FixDeconstructionReturn(TweaksGaloreSettings settings)
+        {
             // Tweak: Fix Deconstruction Return
             if (settings.tweak_fixDeconstructionReturn)
             {
@@ -27,7 +36,10 @@ namespace TweaksGalore
                     buildableDef.resourcesFractionWhenDeconstructed = 1f;
                 }
             }
+        }
 
+        public static void Tweak_StackableChunks(TweaksGaloreSettings settings)
+        {
             // Tweak: Stackable Chunks
             if (settings.tweak_stackableChunks)
             {
@@ -53,7 +65,10 @@ namespace TweaksGalore
                     }
                 }
             }
+        }
 
+        public static void Tweak_MechanoidHeatArmor(TweaksGaloreSettings settings)
+        {
             // Tweak: Mechanoid Heat Armor
             if (!GetAllMechanoids.EnumerableNullOrEmpty())
             {
@@ -73,7 +88,10 @@ namespace TweaksGalore
                     }
                 }
             }
+        }
 
+        public static void Tweak_PowerUsageTweaks(TweaksGaloreSettings settings)
+        {
             // Power Usage Tweaks
             if (settings.tweak_powerUsageTweaks)
             {
@@ -97,21 +115,24 @@ namespace TweaksGalore
                 DefDatabase<ThingDef>.GetNamedSilentFail("Autodoor").SetPowerUsage((int)settings.tweak_powerUsage_autodoor);
                 DefDatabase<ThingDef>.GetNamedSilentFail("VanometricPowerCell").SetPowerUsage(-(int)settings.tweak_powerUsage_vanometricCell);
             }
+        }
 
+        public static void Tweak_StrongFloorsBlockInfestations(TweaksGaloreSettings settings)
+        {
             // Strong Floors Block Infestations
             if (settings.patch_strongFloorsStopInfestations)
             {
                 List<TerrainDef> strongFloors = new List<TerrainDef>();
 
-                foreach(TerrainDef terrain in DefDatabase<TerrainDef>.AllDefs)
+                foreach (TerrainDef terrain in DefDatabase<TerrainDef>.AllDefs)
                 {
-                    if(terrain != null) 
-                    { 
-                        if(terrain.costList != null && terrain.costList.Any(t => t.thingDef.stuffProps != null && (t.thingDef.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic) || t.thingDef.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))))
+                    if (terrain != null)
+                    {
+                        if (terrain.costList != null && terrain.costList.Any(t => t.thingDef.stuffProps != null && ((bool)(t.thingDef?.stuffProps?.categories?.Contains(StuffCategoryDefOf.Metallic)) || (bool)(t.thingDef?.stuffProps?.categories?.Contains(StuffCategoryDefOf.Stony)))))
                         {
                             strongFloors.Add(terrain);
                         }
-                        else if(!terrain.stuffCategories.NullOrEmpty() && (terrain.stuffCategories.Contains(StuffCategoryDefOf.Metallic) || terrain.stuffCategories.Contains(StuffCategoryDefOf.Stony)))
+                        else if (!terrain.stuffCategories.NullOrEmpty() && (terrain.stuffCategories.Contains(StuffCategoryDefOf.Metallic) || terrain.stuffCategories.Contains(StuffCategoryDefOf.Stony)))
                         {
                             strongFloors.Add(terrain);
                         }
@@ -120,6 +141,10 @@ namespace TweaksGalore
 
                 for (int i = 0; i < strongFloors.Count; i++)
                 {
+                    if (strongFloors[i].tags == null)
+                    {
+                        strongFloors[i].tags = new List<string>();
+                    }
                     strongFloors[i].tags.Add("BlocksInfestations");
                 }
             }

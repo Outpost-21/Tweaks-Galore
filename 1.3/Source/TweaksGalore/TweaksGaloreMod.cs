@@ -25,7 +25,7 @@ namespace TweaksGalore
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message("O21 :: Tweaks Galore :: 1.2.2");
+            Log.Message("O21 :: Tweaks Galore :: 1.2.3");
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
