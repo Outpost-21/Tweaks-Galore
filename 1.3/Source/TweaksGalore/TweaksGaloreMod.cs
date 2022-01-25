@@ -25,7 +25,7 @@ namespace TweaksGalore
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message("O21 :: Tweaks Galore :: 1.2.3");
+            Log.Message("O21 :: Tweaks Galore :: 1.3.0");
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
@@ -309,6 +309,9 @@ namespace TweaksGalore
             listingStandard.GapLine();
             // Tweak: Replantable Gauranlen
             listingStandard.CheckboxEnhanced("Replantable Gauranlen", "Makes it so you can move Gauranlen trees like any other.", ref settings.tweak_replantableGauranlen);
+            listingStandard.GapLine();
+            // Tweak: Unlocked Ideology Buildings
+            listingStandard.CheckboxEnhanced("Unlocked Ideology Buildings", "Removes the meme restriction on ideology buildings so you can use them regardless of what memes you have. Includes floors and apparel.", ref settings.tweak_unlockedIdeologyBuildings);
             listingStandard.GapLine();
         }
 

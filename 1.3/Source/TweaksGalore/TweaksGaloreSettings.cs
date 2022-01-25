@@ -71,6 +71,7 @@ namespace TweaksGalore
         public bool tweak_ancientDeconstruction = false;
         public bool tweak_ancientDeconstruction_mode = false;
         public bool tweak_replantableGauranlen = false;
+        public bool tweak_unlockedIdeologyBuildings = false;
 
         public bool patch_properSuppression = false;
         public bool patch_noMemeLimit = false;
@@ -136,6 +137,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_ancientDeconstruction, "tweak_ancientDeconstruction", false);
             Scribe_Values.Look(ref tweak_ancientDeconstruction_mode, "tweak_ancientDeconstruction_mode", false);
             Scribe_Values.Look(ref tweak_replantableGauranlen, "tweak_replantableGauranlen", false);
+            Scribe_Values.Look(ref tweak_unlockedIdeologyBuildings, "tweak_unlockedIdeologyBuildings", false);
 
             Scribe_Values.Look(ref patch_properSuppression, "patch_properSuppression", false);
             Scribe_Values.Look(ref patch_noMemeLimit, "patch_noMemeLimit", false);

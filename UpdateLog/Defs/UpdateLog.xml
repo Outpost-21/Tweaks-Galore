@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<!-- <O21Toolbox.UpdateListings.UpdateDef>
-		<defName>O21_Tweaks_20220101</defName>
-		<date>2022/01/01</date>
+	<O21Toolbox.UpdateListings.UpdateDef>
+		<defName>O21_Tweaks_20220126</defName>
+		<date>2022/01/26</date>
 		<banner></banner>
 		<content>Version 1.3.0
+- Fixed Conflict with Roads of the Rim.
+- Added Tweak: Unlocked Meme Buildings - No memes required for buildable ideology stuff.
 Added Tweak: Glowing Ambrosia - Makes Ambrosia glow so it's easier to spot.
 Added Tweak: Glowing Healroot - Makes Healroot glow so it's easier to spot.
 Added Tweak: Wild Reproduction - Wild animals can do the horizontal monster mash.
@@ -16,13 +18,12 @@ Added Tweak: Chatty Comms - Coms Console is a recreation source.
 Added Tweak: Green Thumb - Restored Green Thumb trait.
 Added Tweak: Herd Migration - Restored Herd Migration Event.
 Added Tweak: Not So Wild Berries - Wild Berries now plantable.
-Added Tweak: Food is Food - Adds Precept for "Don't Care" to apply to both Fungus and Insect meat.
 Added Tweak: Room Size Tolerance - Better room size tolerances.
 Added Tweak: Silent Doors - Disables the sound of doors opening and closing.
 Added Tweak: Silent Mining - Disables the sound of mining.</content>
 		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
 		<important>false</important>
-	</O21Toolbox.UpdateListings.UpdateDef> -->
+	</O21Toolbox.UpdateListings.UpdateDef>
 
 	<O21Toolbox.UpdateListings.UpdateDef>
 		<defName>O21_Tweaks_20220107</defName>
