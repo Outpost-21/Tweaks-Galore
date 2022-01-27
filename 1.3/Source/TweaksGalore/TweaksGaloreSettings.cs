@@ -25,6 +25,7 @@ namespace TweaksGalore
         public bool tweak_noBreakdowns = false;
         public bool tweak_impassableDeepWater = false;
         public bool tweak_oldMegaslothName = false;
+        public bool tweak_healrootToXerigium = false;
 
         public bool patch_settlementTraderTimer = false;
         public bool patch_incidentPawnStats = false;
@@ -33,6 +34,11 @@ namespace TweaksGalore
         public bool patch_pdhk_prisoners = true;
         public bool patch_pdhk_slaves = true;
         public bool patch_strongFloorsStopInfestations = false;
+
+        public bool patch_slimRim = false;
+        public bool patch_slimRim_fat = false;
+        public bool patch_slimRim_hulk = false;
+        public bool patch_slimRim_thin = false;
 
         // Power
         public bool tweak_powerUsageTweaks = false;
@@ -92,6 +98,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_noBreakdowns, "tweak_noBreakdowns", false);
             Scribe_Values.Look(ref tweak_impassableDeepWater, "tweak_impassableDeepWater", false);
             Scribe_Values.Look(ref tweak_oldMegaslothName, "tweak_oldMegaslothName", false);
+            Scribe_Values.Look(ref tweak_healrootToXerigium, "tweak_healrootToXerigium", false);
 
             Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
             Scribe_Values.Look(ref patch_incidentPawnStats, "patch_incidentPawnStats", false);
@@ -100,6 +107,11 @@ namespace TweaksGalore
             Scribe_Values.Look(ref patch_pdhk_prisoners, "patch_pdhk_prisoners", true);
             Scribe_Values.Look(ref patch_pdhk_slaves, "patch_pdhk_slaves", true);
             Scribe_Values.Look(ref patch_strongFloorsStopInfestations, "patch_strongFloorsStopInfestations", false);
+
+            Scribe_Values.Look(ref patch_slimRim, "patch_slimRim", false);
+            Scribe_Values.Look(ref patch_slimRim_fat, "patch_slimRim_fat", false);
+            Scribe_Values.Look(ref patch_slimRim_hulk, "patch_slimRim_hulk", false);
+            Scribe_Values.Look(ref patch_slimRim_thin, "patch_slimRim_thin", false);
 
             // Power
             Scribe_Values.Look(ref tweak_powerUsageTweaks, "tweak_powerUsageTweaks", false);

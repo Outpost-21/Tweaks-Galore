@@ -52,7 +52,7 @@ namespace TweaksGalore
             float scrollRectHeight = 3000f;
             if (currentPage == TweaksGaloreSettingsPage.General)
             {
-                scrollRectHeight = 1100f;
+                scrollRectHeight = 1300f;
             }
             else if (currentPage == TweaksGaloreSettingsPage.Mechanoids)
             {
@@ -154,6 +154,9 @@ namespace TweaksGalore
             // Tweak: Full Deconstruction Return
             listingStandard.CheckboxEnhanced("Full Deconstruct Return", "Returns the full amount it takes to build something. No more punishment for moving a building that isn't uninstallable.", ref settings.tweak_fixDeconstructionReturn);
             listingStandard.GapLine();
+            // Tweak: Healroot to Xerigium
+            listingStandard.CheckboxEnhanced("Healroot to Xerigium", "Reverts the old name change of the herbal medicine plant Healroot back to Xerigium like it used to be in older game versions.", ref settings.tweak_healrootToXerigium);
+            listingStandard.GapLine();
             // Tweak: Incident Pawn Stats
             listingStandard.CheckboxEnhanced("Incident Pawn Stats", "Displays the information of any pawns rewarded as part of incidents.", ref settings.patch_incidentPawnStats);
             listingStandard.GapLine();
@@ -194,6 +197,14 @@ namespace TweaksGalore
             // Tweak: Skilled Stonecutting
             listingStandard.CheckboxEnhanced("Skilled Stonecutting", "Makes stonecutting give crafting skill increases, and makes more skilled crafters create blocks quickler.", ref settings.tweak_skilledStonecutting);
             listingStandard.GapLine();
+            // Tweak: Slim Rim
+            listingStandard.CheckboxEnhanced("Slim Rim", "Allows the disabling of body types on pawn generation. Does this during generation of the pawn so will not affect existing ones. The replacement body will be either Male or Female, whichever matches the pawns gender.", ref settings.patch_slimRim);
+            if (settings.patch_slimRim)
+            {
+                listingStandard.CheckboxLabeled("Fat", ref settings.patch_slimRim_fat);
+                listingStandard.CheckboxLabeled("Hulk", ref settings.patch_slimRim_hulk);
+                listingStandard.CheckboxLabeled("Thin", ref settings.patch_slimRim_thin);
+            }
         }
 
         public void DoSettings_Mechanoids(Listing_Standard listingStandard)

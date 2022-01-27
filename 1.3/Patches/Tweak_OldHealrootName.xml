@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_healrootToXerigium</li>
+		</settings>
+		<label>Healroot To Xerigium</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Plant_Healroot"]/label</xpath>
+					<value>
+						<label>Xerigium</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Plant_HealrootWild"]/label</xpath>
+					<value>
+						<label>Wild Xerigium</label>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
