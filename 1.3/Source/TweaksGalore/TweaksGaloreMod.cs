@@ -25,7 +25,7 @@ namespace TweaksGalore
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message("O21 :: Tweaks Galore :: 1.3.0");
+            Log.Message(":: O21 Tweaks Galore :: 1.3.0 ::");
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
@@ -183,8 +183,11 @@ namespace TweaksGalore
             listingStandard.CheckboxEnhanced("Next Restock Timer", "Displays in the world map information of settlements whether or not they have restocked since you last visited and how long till their next restock.", ref settings.patch_settlementTraderTimer);
             listingStandard.GapLine();
             // Tweak: No Breakdowns
-            listingStandard.CheckboxEnhanced("No Breakdowns", "Removes the breakdown comp from anything that has it, artificially enforced resource sinks are LAZY.", ref settings.tweak_noBreakdowns);
-            listingStandard.GapLine();
+            if(ModLister.GetActiveModWithIdentifier("kentington.saveourship2") == null)
+            {
+                listingStandard.CheckboxEnhanced("No Breakdowns", "Removes the breakdown comp from anything that has it, artificially enforced resource sinks are LAZY.", ref settings.tweak_noBreakdowns);
+                listingStandard.GapLine();
+            }
             // Tweak: Prisoners Don't Have Keys
             listingStandard.CheckboxEnhanced("Prisoners Don't Have Keys", "Selectively controls whether prisoners and slaves can open doors during breakout and rebellion.", ref settings.patch_prisonersDontHaveKeys);
             if (settings.patch_prisonersDontHaveKeys)

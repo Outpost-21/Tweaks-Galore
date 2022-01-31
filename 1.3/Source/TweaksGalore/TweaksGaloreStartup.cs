@@ -19,11 +19,21 @@ namespace TweaksGalore
         {
 			TweaksGaloreSettings settings = TweaksGaloreMod.settings;
 
+            try { CompatibilityChecks(settings); } catch (Exception e) { Log.Error("Caught exeption in Tweaks Galore startup: " + e); };
             try { Tweak_FixDeconstructionReturn(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: FixDeconstructionReturn :: " + e); };
             try { Tweak_StackableChunks(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: StackableChunks :: " + e); };
             try { Tweak_MechanoidHeatArmor(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: MechanoidHeatArmor :: " + e); };
             try { Tweak_PowerUsageTweaks(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: PowerUsageTweaks :: " + e); };
             try { Tweak_StrongFloorsBlockInfestations(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: StrongFloorsBlockInfestations :: " + e); };
+        }
+
+        public static void CompatibilityChecks(TweaksGaloreSettings settings)
+        {
+            if (ModLister.GetActiveModWithIdentifier("kentington.saveourship2") != null && settings.tweak_noBreakdowns)
+            {
+                Log.Message(":: Tweaks Galore :: SOS2 detected during startup. Disabling No Breakdowns tweak due to incompatibility.");
+                settings.tweak_noBreakdowns = false;
+            }
         }
 
         public static void Tweak_FixDeconstructionReturn(TweaksGaloreSettings settings)
