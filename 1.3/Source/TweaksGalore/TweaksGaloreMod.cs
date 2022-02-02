@@ -157,6 +157,16 @@ namespace TweaksGalore
             // Tweak: Healroot to Xerigium
             listingStandard.CheckboxEnhanced("Healroot to Xerigium", "Reverts the old name change of the herbal medicine plant Healroot back to Xerigium like it used to be in older game versions.", ref settings.tweak_healrootToXerigium);
             listingStandard.GapLine();
+            // Tweak: Hunters Can Use Melee
+            listingStandard.CheckboxEnhanced("Hunters Can Use Melee", "Allows hunters to use melee, regardless of how well they can do so.", ref settings.tweak_hunterMelee);
+            if (settings.tweak_hunterMelee)
+            {
+                listingStandard.CheckboxLabeled("Allow Fists", ref settings.tweak_hunterMelee_fistFighting, "Allows hunters to use their fists to hunt, stupid but it works.");
+                if (Patches_HunterMelee.SimpleSidearmsLoaded)
+                {
+                    listingStandard.CheckboxLabeled("Enable Simple Sidearms", ref settings.tweak_hunterMelee_allowSimpleSidearms, "Enable Simple Sidearms Compatibility, allowing pawns to consider sidearms for hunting.");
+                }
+            }
             // Tweak: Incident Pawn Stats
             listingStandard.CheckboxEnhanced("Incident Pawn Stats", "Displays the information of any pawns rewarded as part of incidents.", ref settings.patch_incidentPawnStats);
             listingStandard.GapLine();
@@ -314,6 +324,9 @@ namespace TweaksGalore
             {
                 listingStandard.CheckboxEnhanced("Give Proper Materials", "Changes returned items to some reasonable materials instead of just slag.", ref settings.tweak_ancientDeconstruction_mode);
             }
+            listingStandard.GapLine();
+            // Tweak: Darklight Glow Pods
+            listingStandard.CheckboxEnhanced("Darklight Glow Pods", "Makes glow pods spawned in insectoid nests use the darklight colour.", ref settings.tweak_darklightGlowPods);
             listingStandard.GapLine();
             // Tweak: No Meme Limit
             listingStandard.CheckboxEnhanced("No Meme Limit", "Raises the limit of how many memes you can choose to 1000...so effectively no limit.", ref settings.patch_noMemeLimit);

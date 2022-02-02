@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_glowingAmbrosia</li>
+		</settings>
+		<label>Glowing Ambrosia</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Plant_Ambrosia"]</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Glower">
+								<glowRadius>3</glowRadius>
+								<glowColor>(207, 189, 126, 0)</glowColor>
+							</li>
+						</comps>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+
+</Patch>
