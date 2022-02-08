@@ -52,7 +52,7 @@ namespace TweaksGalore
             float scrollRectHeight = 3000f;
             if (currentPage == TweaksGaloreSettingsPage.General)
             {
-                scrollRectHeight = 1300f;
+                scrollRectHeight = 1600f;
             }
             else if (currentPage == TweaksGaloreSettingsPage.Mechanoids)
             {
@@ -153,6 +153,13 @@ namespace TweaksGalore
             listingStandard.GapLine();
             // Tweak: Full Deconstruction Return
             listingStandard.CheckboxEnhanced("Full Deconstruct Return", "Returns the full amount it takes to build something. No more punishment for moving a building that isn't uninstallable.", ref settings.tweak_fixDeconstructionReturn);
+            listingStandard.GapLine();
+            // Tweak: Glowing Ambrosia
+            listingStandard.CheckboxEnhanced("Glowing Ambrosia", "Gives Ambrosia a slight glow around it, making natural spawning Ambrosia easier to find on a map in the dark.", ref settings.tweak_glowingAmbrosia);
+            listingStandard.GapLine();
+            // Tweak: Glowing Healroot
+            string healrootName = (settings.tweak_healrootToXerigium ? "Xerigium" : "Healroot");
+            listingStandard.CheckboxEnhanced("Glowing " + healrootName, "Gives " + healrootName + " a slight glow around it, making natural " + healrootName + " easier to find on a map in the dark.", ref settings.tweak_glowingHealroot);
             listingStandard.GapLine();
             // Tweak: Healroot to Xerigium
             listingStandard.CheckboxEnhanced("Healroot to Xerigium", "Reverts the old name change of the herbal medicine plant Healroot back to Xerigium like it used to be in older game versions.", ref settings.tweak_healrootToXerigium);

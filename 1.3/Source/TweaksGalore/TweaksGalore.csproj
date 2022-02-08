@@ -81,6 +81,7 @@
     <Compile Include="Patch_InitiateSlaveRebellionMtbDays.cs" />
     <Compile Include="Patch_Building_Door_PawnCanOpen.cs" />
     <Compile Include="Patch_StunHandler_EMPAdaptationTicksDuration.cs" />
+    <Compile Include="Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatPart_FasterSmoothing.cs" />
     <Compile Include="TweaksGaloreMod.cs" />

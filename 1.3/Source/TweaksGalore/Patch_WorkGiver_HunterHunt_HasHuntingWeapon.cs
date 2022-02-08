@@ -65,12 +65,14 @@ namespace TweaksGalore
 			}
 
 			[HarmonyPatch(typeof(Alert_HunterLacksRangedWeapon))]
+			[HarmonyPatch(MethodType.Constructor)]
 			public static class Patch_HuntersLacksWeaponAlert
 			{
-				private static void Postfix(ref string ___defaultLabel, ref string ___defaultExplanation)
+				[HarmonyPostfix]
+				public static void Postfix(ref string ___defaultLabel, ref string ___defaultExplanation)
 				{
-					___defaultLabel = "HUMHunterLacksWeapon".Translate();
-					___defaultExplanation = "HUMHunterLacksWeaponDesc".Translate();
+					___defaultLabel = "TG_HunterLacksWeapon".Translate();
+					___defaultExplanation = "TG_HunterLacksWeaponDesc".Translate();
 				}
 			}
 		}

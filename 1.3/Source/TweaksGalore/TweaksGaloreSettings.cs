@@ -26,6 +26,8 @@ namespace TweaksGalore
         public bool tweak_impassableDeepWater = false;
         public bool tweak_oldMegaslothName = false;
         public bool tweak_healrootToXerigium = false;
+        public bool tweak_glowingAmbrosia = false;
+        public bool tweak_glowingHealroot = false;
 
         public bool tweak_hunterMelee = false;
         public bool tweak_hunterMelee_fistFighting = false;
@@ -104,11 +106,15 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_impassableDeepWater, "tweak_impassableDeepWater", false);
             Scribe_Values.Look(ref tweak_oldMegaslothName, "tweak_oldMegaslothName", false);
             Scribe_Values.Look(ref tweak_healrootToXerigium, "tweak_healrootToXerigium", false);
+            Scribe_Values.Look(ref tweak_glowingHealroot, "tweak_glowingHealroot", false);
+            Scribe_Values.Look(ref tweak_glowingAmbrosia, "tweak_glowingAmbrosia", false);
+
+
             Scribe_Values.Look(ref tweak_hunterMelee, "tweak_hunterMelee", false);
             Scribe_Values.Look(ref tweak_hunterMelee_fistFighting, "tweak_hunterMelee_fistFighting", false);
             Scribe_Values.Look(ref tweak_hunterMelee_allowSimpleSidearms, "tweak_hunterMelee_allowSimpleSidearms", false);
 
-        Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
+            Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
             Scribe_Values.Look(ref patch_incidentPawnStats, "patch_incidentPawnStats", false);
             Scribe_Values.Look(ref patch_prisonersDontHaveKeys, "patch_prisonersDontHaveKeys", false);
             Scribe_Values.Look(ref patch_pdhk_ownDoor, "patch_pdhk_ownDoor", true);
