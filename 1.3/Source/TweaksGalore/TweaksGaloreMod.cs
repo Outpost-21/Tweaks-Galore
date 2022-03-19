@@ -25,7 +25,7 @@ namespace TweaksGalore
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message(":: O21 Tweaks Galore :: 1.3.0 ::");
+            Log.Message(":: Tweaks Galore :: 1.3.1 ::");
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
@@ -144,6 +144,9 @@ namespace TweaksGalore
             // Tweak: Don't Pack Food
             listingStandard.CheckboxEnhanced("Don't Pack Food", "Prevents pawns from stuffing food into their inventory to carry around.", ref settings.tweak_dontPackFood);
             listingStandard.GapLine();
+            // Tweak: Eyewear Under Helmets
+            listingStandard.CheckboxEnhanced("Eyewear Under Helmets", "Inverts the layer rendering of the EyeCover and Overhead apparel layers, so blindfolds and anything modded on that layer renders UNDER helmets like the should have to begin with.", ref settings.tweak_eyewearUnderHelmets);
+            listingStandard.GapLine();
             // Tweak: Faster Smoothing
             listingStandard.CheckboxEnhanced("Faster Smoothing", "Enables an additional stat to speed up smoothing of natural rock. Default: 300%", ref settings.tweak_fasterSmoothing);
             if (settings.tweak_fasterSmoothing)
@@ -174,6 +177,7 @@ namespace TweaksGalore
                     listingStandard.CheckboxLabeled("Enable Simple Sidearms", ref settings.tweak_hunterMelee_allowSimpleSidearms, "Enable Simple Sidearms Compatibility, allowing pawns to consider sidearms for hunting.");
                 }
             }
+            listingStandard.GapLine();
             // Tweak: Incident Pawn Stats
             listingStandard.CheckboxEnhanced("Incident Pawn Stats", "Displays the information of any pawns rewarded as part of incidents.", ref settings.patch_incidentPawnStats);
             listingStandard.GapLine();

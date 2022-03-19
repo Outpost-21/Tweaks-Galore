@@ -11,7 +11,6 @@ using Verse;
 
 namespace TweaksGalore
 {
-
     public class PatchOperation_SettingActive : PatchOperation
     {
         public List<string> settings;
