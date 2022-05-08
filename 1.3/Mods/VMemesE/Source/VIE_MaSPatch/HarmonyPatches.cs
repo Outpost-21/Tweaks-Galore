@@ -29,6 +29,9 @@ namespace VIE_MaSPatch
 		[HarmonyPrefix]
 		public static bool Prefix()
 		{
+			// Disable MaS counter if TG patch is set to active.
+			// Otherwise MaS controls it, which results in people
+			// complaining to me.
 			if (TweaksGaloreMod.settings.patch_noMemeLimit)
 			{
 				return false;
