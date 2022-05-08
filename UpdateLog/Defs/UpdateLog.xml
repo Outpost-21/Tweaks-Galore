@@ -5,20 +5,32 @@
 		<defName>O21_Tweaks_20220203</defName>
 		<date>2022/02/03</date>
 		<banner></banner>
-		<content>Version 1.4.0
-Added Tweak: Wild Reproduction - Wild animals can do the horizontal monster mash.
-Added Tweak: Boomalopes Bleed Chemfuel - BURN BABAY!
-Added Tweak: Disfigurement Penalty Multiplier - Ugly is the new Beautiful.
-Added Tweak: Chatty Comms - Coms Console is a recreation source.
-Added Tweak: Green Thumb - Restored Green Thumb trait.
-Added Tweak: Herd Migration - Restored Herd Migration Event.
-Added Tweak: Not So Wild Berries - Wild Berries now plantable.
-Added Tweak: Room Size Tolerance - Better room size tolerances.
-Added Tweak: Silent Doors - Disables the sound of doors opening and closing.
-Added Tweak: Silent Mining - Disables the sound of mining.</content>
+		<content>Version 1.5.0
+Added: Wild Reproduction - Wild animals can do the horizontal monster mash.
+Added: Green Thumb - Restored Green Thumb trait.
+Added: Herd Migration - Restored Herd Migration Event.
+Added: Silent Doors - Disables the sound of doors opening and closing.
+Added: Silent Mining - Disables the sound of mining.
+Added: Room Size Tolerance - Better room size tolerances.
+Added: Disfigurement Penalty Multiplier - Ugly is the new Beautiful.</content>
 		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
 		<important>false</important>
 	</O21Toolbox.UpdateListings.UpdateDef> -->
+
+	<O21Toolbox.UpdateListings.UpdateDef>
+		<defName>O21_Tweaks_20220508</defName>
+		<date>2022/05/08</date>
+		<banner></banner>
+		<content>Version 1.4.8163
+Added: Boomalopes Bleed Chemfuel - BURN BABAY!
+Added: Chatty Comms - Coms Console is a recreation source.
+Added: Not So Wild Berries - Wild Berries now plantable.
+
+Fixed: Breakdowns no longer patches VFE - Power's reactor due to issues with it.
+Fixed: VIE - Memes and structures - It updated and broke the patch, now fixed.</content>
+		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
+		<important>false</important>
+	</O21Toolbox.UpdateListings.UpdateDef>
 
 	<O21Toolbox.UpdateListings.UpdateDef>
 		<defName>O21_Tweaks_20220202</defName>

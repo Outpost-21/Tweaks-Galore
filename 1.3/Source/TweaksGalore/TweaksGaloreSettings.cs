@@ -33,6 +33,10 @@ namespace TweaksGalore
         public bool tweak_hunterMelee_fistFighting = false;
         public bool tweak_hunterMelee_allowSimpleSidearms = false;
 
+        public bool tweak_boomalopesBleedChemfuel = false;
+        public bool tweak_chattyComms = false;
+        public bool tweak_notSoWildBerries = false;
+
         public bool patch_settlementTraderTimer = false;
         public bool patch_incidentPawnStats = false;
         public bool patch_prisonersDontHaveKeys = false;
@@ -114,7 +118,11 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_hunterMelee_fistFighting, "tweak_hunterMelee_fistFighting", false);
             Scribe_Values.Look(ref tweak_hunterMelee_allowSimpleSidearms, "tweak_hunterMelee_allowSimpleSidearms", false);
 
-            Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
+            Scribe_Values.Look(ref tweak_boomalopesBleedChemfuel, "tweak_boomalopesBleedChemfuel", false);
+            Scribe_Values.Look(ref tweak_chattyComms, "tweak_chattyComms", false);
+            Scribe_Values.Look(ref tweak_notSoWildBerries, "tweak_notSoWildBerries", false);
+
+        Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
             Scribe_Values.Look(ref patch_incidentPawnStats, "patch_incidentPawnStats", false);
             Scribe_Values.Look(ref patch_prisonersDontHaveKeys, "patch_prisonersDontHaveKeys", false);
             Scribe_Values.Look(ref patch_pdhk_ownDoor, "patch_pdhk_ownDoor", true);

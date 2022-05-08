@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 
 using UnityEngine;
@@ -21,11 +23,20 @@ namespace TweaksGalore
         public Vector2 scrollPosition;
         public Dictionary<string, bool> AncientDeconRadioDict = new Dictionary<string, bool>();
 
+        internal static string VersionDir => Path.Combine(ModLister.GetActiveModWithIdentifier("Neronix17.TweaksGalore").RootDir.FullName, "Version.txt");
+        public static string CurrentVersion { get; private set; }
+
         public TweaksGaloreMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-            Log.Message(":: Tweaks Galore :: 1.3.1 ::");
+
+            Version version = Assembly.GetExecutingAssembly().GetName().Version;
+            CurrentVersion = $"{version.Major}.{version.Minor}.{version.Build}";
+
+            Log.Message($":: Tweaks Galore :: {CurrentVersion} ::");
+
+            File.WriteAllText(VersionDir, CurrentVersion);
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
         }
@@ -138,14 +149,17 @@ namespace TweaksGalore
 
         public void DoSettings_Vanilla(Listing_Standard listingStandard)
         {
+            // Tweak: Boomalopes Bleed Chemfuel
+            listingStandard.CheckboxEnhanced("Boomalopes Bleed Chemfuel", "Changes the blood def from boomalopes and boomrats to be chemfuel puddles instead.", ref settings.tweak_boomalopesBleedChemfuel);
+            listingStandard.GapLine();
+            // Tweak: Chatty Comms
+            listingStandard.CheckboxEnhanced("Chatty Comms", "Adds a recreation type to comms consoles allowing them to be used by pawns to gain recreation through 'chatting'.", ref settings.tweak_chattyComms);
+            listingStandard.GapLine();
             // Tweak: Destroy Anything
             listingStandard.CheckboxEnhanced("Destroy Anything", "Allows the smelting of pretty much anything anything in the crematorium aside from weapons, apparel and minified buildings. Be careful so you don't burn anything important.", ref settings.tweak_destroyAnything);
             listingStandard.GapLine();
             // Tweak: Don't Pack Food
             listingStandard.CheckboxEnhanced("Don't Pack Food", "Prevents pawns from stuffing food into their inventory to carry around.", ref settings.tweak_dontPackFood);
-            listingStandard.GapLine();
-            // Tweak: Eyewear Under Helmets
-            listingStandard.CheckboxEnhanced("Eyewear Under Helmets", "Inverts the layer rendering of the EyeCover and Overhead apparel layers, so blindfolds and anything modded on that layer renders UNDER helmets like the should have to begin with.", ref settings.tweak_eyewearUnderHelmets);
             listingStandard.GapLine();
             // Tweak: Faster Smoothing
             listingStandard.CheckboxEnhanced("Faster Smoothing", "Enables an additional stat to speed up smoothing of natural rock. Default: 300%", ref settings.tweak_fasterSmoothing);
@@ -209,6 +223,9 @@ namespace TweaksGalore
                 listingStandard.CheckboxEnhanced("No Breakdowns", "Removes the breakdown comp from anything that has it, artificially enforced resource sinks are LAZY.", ref settings.tweak_noBreakdowns);
                 listingStandard.GapLine();
             }
+            // Tweak: Not So Wild Berries
+            listingStandard.CheckboxEnhanced("Not So Wild Berries", "Adds the ground sowing tag to wild berries so they can be planted.", ref settings.tweak_notSoWildBerries);
+            listingStandard.GapLine();
             // Tweak: Prisoners Don't Have Keys
             listingStandard.CheckboxEnhanced("Prisoners Don't Have Keys", "Selectively controls whether prisoners and slaves can open doors during breakout and rebellion.", ref settings.patch_prisonersDontHaveKeys);
             if (settings.patch_prisonersDontHaveKeys)

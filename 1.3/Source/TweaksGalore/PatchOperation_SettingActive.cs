@@ -37,7 +37,7 @@ namespace TweaksGalore
             {
                 if (active != null)
                 {
-                    Log.Message("O21 :: Tweaks Galore :: " + label + " - Active");
+                    Log.Message(":: Tweaks Galore :: " + label + " - Active");
                     return active.Apply(xml);
                 }
             }
