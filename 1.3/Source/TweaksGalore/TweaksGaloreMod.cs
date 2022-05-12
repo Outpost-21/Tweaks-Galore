@@ -186,10 +186,10 @@ namespace TweaksGalore
             if (settings.tweak_hunterMelee)
             {
                 listingStandard.CheckboxLabeled("Allow Fists", ref settings.tweak_hunterMelee_fistFighting, "Allows hunters to use their fists to hunt, stupid but it works.");
-                if (Patches_HunterMelee.SimpleSidearmsLoaded)
-                {
-                    listingStandard.CheckboxLabeled("Enable Simple Sidearms", ref settings.tweak_hunterMelee_allowSimpleSidearms, "Enable Simple Sidearms Compatibility, allowing pawns to consider sidearms for hunting.");
-                }
+                //if (Patches_HunterMelee.SimpleSidearmsLoaded)
+                //{
+                //    listingStandard.CheckboxLabeled("Enable Simple Sidearms", ref settings.tweak_hunterMelee_allowSimpleSidearms, "Enable Simple Sidearms Compatibility, allowing pawns to consider sidearms for hunting.");
+                //}
             }
             listingStandard.GapLine();
             // Tweak: Incident Pawn Stats
