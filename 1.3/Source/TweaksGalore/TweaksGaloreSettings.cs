@@ -12,6 +12,8 @@ namespace TweaksGalore
 {
     public class TweaksGaloreSettings : ModSettings
     {
+        public bool debugMode = false;
+
         // Vanilla
         public bool tweak_insultingSpreeNerf = false;
         public bool tweak_lagFreeLamps = false;

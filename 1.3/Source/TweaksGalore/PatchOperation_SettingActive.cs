@@ -37,7 +37,10 @@ namespace TweaksGalore
             {
                 if (active != null)
                 {
-                    Log.Message(":: Tweaks Galore :: " + label + " - Active");
+                    if (TweaksGaloreMod.settings.debugMode)
+                    {
+                        LogUtil.LogMessage(label + " - Active");
+                    }
                     return active.Apply(xml);
                 }
             }

@@ -34,7 +34,7 @@ namespace TweaksGalore
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             CurrentVersion = $"{version.Major}.{version.Minor}.{version.Build}";
 
-            Log.Message($":: Tweaks Galore :: {CurrentVersion} ::");
+            LogUtil.LogMessage($"Version: {CurrentVersion} ::");
 
             File.WriteAllText(VersionDir, CurrentVersion);
 

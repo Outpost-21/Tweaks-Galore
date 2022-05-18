@@ -19,19 +19,19 @@ namespace TweaksGalore
         {
 			TweaksGaloreSettings settings = TweaksGaloreMod.settings;
 
-            try { CompatibilityChecks(settings); } catch (Exception e) { Log.Error("Caught exeption in Tweaks Galore startup: " + e); };
-            try { Tweak_FixDeconstructionReturn(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: FixDeconstructionReturn :: " + e); };
-            try { Tweak_StackableChunks(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: StackableChunks :: " + e); };
-            try { Tweak_MechanoidHeatArmor(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: MechanoidHeatArmor :: " + e); };
-            try { Tweak_PowerUsageTweaks(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: PowerUsageTweaks :: " + e); };
-            try { Tweak_StrongFloorsBlockInfestations(settings); } catch (Exception e) { Log.Error("Caught exception in Tweak: StrongFloorsBlockInfestations :: " + e); };
+            try { CompatibilityChecks(settings); } catch (Exception e) { LogUtil.LogError("Caught exeption in Tweaks Galore startup: " + e); };
+            try { Tweak_FixDeconstructionReturn(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: FixDeconstructionReturn :: " + e); };
+            try { Tweak_StackableChunks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: StackableChunks :: " + e); };
+            try { Tweak_MechanoidHeatArmor(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: MechanoidHeatArmor :: " + e); };
+            try { Tweak_PowerUsageTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: PowerUsageTweaks :: " + e); };
+            try { Tweak_StrongFloorsBlockInfestations(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: StrongFloorsBlockInfestations :: " + e); };
         }
 
         public static void CompatibilityChecks(TweaksGaloreSettings settings)
         {
             if (ModLister.GetActiveModWithIdentifier("kentington.saveourship2") != null && settings.tweak_noBreakdowns)
             {
-                Log.Message(":: Tweaks Galore :: SOS2 detected during startup. Disabling No Breakdowns tweak due to incompatibility.");
+                LogUtil.LogWarning("SOS2 detected during startup. Disabling No Breakdowns tweak due to incompatibility.");
                 settings.tweak_noBreakdowns = false;
             }
         }
@@ -93,7 +93,7 @@ namespace TweaksGalore
                         }
                         else
                         {
-                            Log.Message("O21 :: Tweaks Galore :: Mechanoid Recognised: " + def.defName + "/" + def.label + ", but not patched as it has no heat armour value. This is intended behaviour not an error.");
+                            LogUtil.LogMessage("O21 :: Tweaks Galore :: Mechanoid Recognised: " + def.defName + "/" + def.label + ", but not patched as it has no heat armour value. This is intended behaviour not an error.");
                         }
                     }
                 }

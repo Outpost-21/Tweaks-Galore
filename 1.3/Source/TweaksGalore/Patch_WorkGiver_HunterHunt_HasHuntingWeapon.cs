@@ -24,7 +24,7 @@ namespace TweaksGalore
 			}
             catch
             {
-				//Log.Message(":: Tweaks Galore :: Could not find Simple Sidearms during startup. Skipping support.");
+				//LogUtil.LogMessage(":: Tweaks Galore :: Could not find Simple Sidearms during startup. Skipping support.");
             }
         }
 
