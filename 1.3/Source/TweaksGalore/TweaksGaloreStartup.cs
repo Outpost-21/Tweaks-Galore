@@ -25,6 +25,31 @@ namespace TweaksGalore
             try { Tweak_MechanoidHeatArmor(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: MechanoidHeatArmor :: " + e); };
             try { Tweak_PowerUsageTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: PowerUsageTweaks :: " + e); };
             try { Tweak_StrongFloorsBlockInfestations(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: StrongFloorsBlockInfestations :: " + e); };
+            try { Tweak_NoFriendShapedManhunters(settings);  } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: NoFriendShapedManhunters :: " + e); };
+        }
+
+        public static void Tweak_NoFriendShapedManhunters(TweaksGaloreSettings settings)
+        {
+            // Tweak: No Friend Shaped Manhunters
+            if (settings.tweak_noFriendShapedManhunters)
+            {
+                List<PawnKindDef> animalPawnKinds = DefDatabase<PawnKindDef>.AllDefs.Where(pk => pk.RaceProps.Animal).ToList();
+                foreach (PawnKindDef def in animalPawnKinds)
+                {
+                    if((settings.tweak_NFSMTrainability_Intermediate && def.RaceProps.trainability == TrainabilityDefOf.Intermediate) ||
+                        (settings.tweak_NFSMTrainability_Intermediate && def.RaceProps.trainability == TrainabilityDefOf.Advanced) ||
+                        (settings.tweak_NFSMNuzzleHours && def.RaceProps.nuzzleMtbHours >= 0) ||
+                        (settings.tweak_NFSMWildness > def.RaceProps.wildness) ||
+                        (settings.tweak_NFSMCombatPower > def.combatPower))
+                    {
+                        def.canArriveManhunter = false;
+                        if (settings.tweak_NFSMDisableManhunterOnTame)
+                        {
+                            def.race.race.manhunterOnTameFailChance = 0f;
+                        }
+                    }
+                }
+            }
         }
 
         public static void CompatibilityChecks(TweaksGaloreSettings settings)

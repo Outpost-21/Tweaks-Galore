@@ -21,7 +21,7 @@ namespace TweaksGalore
 
         public TweaksGaloreSettingsPage currentPage = TweaksGaloreSettingsPage.General;
         public Vector2 scrollPosition;
-        public Dictionary<string, bool> AncientDeconRadioDict = new Dictionary<string, bool>();
+        public Dictionary<string, TrainabilityDef> TrainabilityRadioDict = new Dictionary<string, TrainabilityDef>();
 
         internal static string VersionDir => Path.Combine(ModLister.GetActiveModWithIdentifier("Neronix17.TweaksGalore").RootDir.FullName, "Version.txt");
         public static string CurrentVersion { get; private set; }
@@ -63,7 +63,7 @@ namespace TweaksGalore
             float scrollRectHeight = 3000f;
             if (currentPage == TweaksGaloreSettingsPage.General)
             {
-                scrollRectHeight = 1600f;
+                scrollRectHeight = 2400f;
             }
             else if (currentPage == TweaksGaloreSettingsPage.Mechanoids)
             {
@@ -214,6 +214,9 @@ namespace TweaksGalore
             // Tweak: Megasloth to Megatherium
             listingStandard.CheckboxEnhanced("Megasloth to Megatherium", "Reverts the name change of the Megatherium so it retains the obviously cooler name.", ref settings.tweak_oldMegaslothName);
             listingStandard.GapLine();
+            // Tweak: Misanthrope Trait
+            listingStandard.CheckboxEnhanced("Misanthrope Trait", "Adds the misanthrope trait (dislikes humans), also makes it so if a pawn was going to spawn with both the misandrist and misogynist traits that they instead get the misanthrope trait.", ref settings.tweak_misanthropeTrait);
+            listingStandard.GapLine();
             // Tweak: Next Restock Timer
             listingStandard.CheckboxEnhanced("Next Restock Timer", "Displays in the world map information of settlements whether or not they have restocked since you last visited and how long till their next restock.", ref settings.patch_settlementTraderTimer);
             listingStandard.GapLine();
@@ -223,6 +226,20 @@ namespace TweaksGalore
                 listingStandard.CheckboxEnhanced("No Breakdowns", "Removes the breakdown comp from anything that has it, artificially enforced resource sinks are LAZY.", ref settings.tweak_noBreakdowns);
                 listingStandard.GapLine();
             }
+            // Tweak: No Friend Shaped Manhunters
+            listingStandard.CheckboxEnhanced("No Friend Shaped Manhunters", "Sets parameters which decide if an animal can arrive as manhunter or not. This does not prevent it happening if they take damage.", ref settings.tweak_noFriendShapedManhunters);
+            if (settings.tweak_noFriendShapedManhunters)
+            {
+                listingStandard.AddLabelLine("Prevent by Trainability");
+                listingStandard.CheckboxLabeled("Intermediate", ref settings.tweak_NFSMTrainability_Intermediate);
+                listingStandard.CheckboxLabeled("Advanced", ref settings.tweak_NFSMTrainability_Advanced);
+                listingStandard.Gap(24f);
+                listingStandard.CheckboxLabeled("Prevent if Nuzzle-able", ref settings.tweak_NFSMNuzzleHours);
+                listingStandard.AddLabeledSlider("Prevent if Wildness Below: " + settings.tweak_NFSMWildness.ToStringPercent(), ref settings.tweak_NFSMWildness, 0f, 1f, "Min: 0%", "Max: 100%", 0.01f);
+                listingStandard.AddLabeledSlider("Prevent if Combat Power Below: " + settings.tweak_NFSMCombatPower, ref settings.tweak_NFSMCombatPower, 0f, 200f, "Min: 0", "Max: 200", 1f);
+                listingStandard.CheckboxEnhanced("Disable Manhunter on Tame Fail", "Uses the same parameters to prevent animals going manhunter on tame fail too, they can still go manhunter if damaged.", ref settings.tweak_NFSMDisableManhunterOnTame);
+            }
+            listingStandard.GapLine();
             // Tweak: Not So Wild Berries
             listingStandard.CheckboxEnhanced("Not So Wild Berries", "Adds the ground sowing tag to wild berries so they can be planted.", ref settings.tweak_notSoWildBerries);
             listingStandard.GapLine();
@@ -246,6 +263,16 @@ namespace TweaksGalore
                 listingStandard.CheckboxLabeled("Hulk", ref settings.patch_slimRim_hulk);
                 listingStandard.CheckboxLabeled("Thin", ref settings.patch_slimRim_thin);
             }
+            listingStandard.GapLine();
+            // Tweak: Trait Count Adjustment
+            listingStandard.CheckboxEnhanced("Trait Count Adjustment", "There may be cases where this cannot apply, such as modded alien races where they have been set up to have a specific trait count.", ref settings.tweak_traitCountAdjustment);
+            if (settings.tweak_traitCountAdjustment)
+            {
+                listingStandard.Label("Trait Count Range");
+                listingStandard.Note($"Current: {settings.tweak_traitCountRange.min}-{settings.tweak_traitCountRange.max}  Min: 1  Max: 8", GameFont.Tiny);
+                listingStandard.IntRange(ref settings.tweak_traitCountRange, 1, 8);
+            }
+            listingStandard.GapLine();
         }
 
         public void DoSettings_Mechanoids(Listing_Standard listingStandard)
@@ -370,17 +397,18 @@ namespace TweaksGalore
             listingStandard.GapLine();
         }
 
-        public Dictionary<string, bool> GetDeconModes
+        public Dictionary<string, TrainabilityDef> GetTrainabilityModes
         {
             get
             {
-                if (AncientDeconRadioDict.NullOrEmpty())
+                if (TrainabilityRadioDict.NullOrEmpty())
                 {
-                    AncientDeconRadioDict.Add("Slag", true);
-                    AncientDeconRadioDict.Add("Materials", false);
+                    TrainabilityRadioDict.Add("None", TrainabilityDefOf.None);
+                    TrainabilityRadioDict.Add("Intermediate", TrainabilityDefOf.Intermediate);
+                    TrainabilityRadioDict.Add("Advanced", TrainabilityDefOf.Advanced);
                 }
 
-                return AncientDeconRadioDict;
+                return TrainabilityRadioDict;
             }
         }
     }

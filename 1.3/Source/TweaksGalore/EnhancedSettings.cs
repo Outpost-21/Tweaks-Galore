@@ -235,7 +235,7 @@ namespace TweaksGalore
 			listing_Standard.AddRadioList(EnhancedListingStandard.GenerateLabeledRadioValues<T>(dict), ref val, null);
 		}
 
-		private static void AddRadioList<T>(this Listing_Standard listing_Standard, List<EnhancedListingStandard.LabeledRadioValue<T>> items, ref T val, float? height = null)
+		public static void AddRadioList<T>(this Listing_Standard listing_Standard, List<EnhancedListingStandard.LabeledRadioValue<T>> items, ref T val, float? height = null)
 		{
 			foreach (EnhancedListingStandard.LabeledRadioValue<T> labeledRadioValue in items)
 			{

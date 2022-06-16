@@ -52,6 +52,19 @@ namespace TweaksGalore
         public bool patch_slimRim_hulk = false;
         public bool patch_slimRim_thin = false;
 
+        public bool tweak_noFriendShapedManhunters = false;
+        public bool tweak_NFSMTrainability_Intermediate = false;
+        public bool tweak_NFSMTrainability_Advanced = false;
+        public bool tweak_NFSMNuzzleHours = false;
+        public float tweak_NFSMWildness = 0.65f;
+        public float tweak_NFSMCombatPower = 60f;
+        public bool tweak_NFSMDisableManhunterOnTame = false;
+
+        public bool tweak_traitCountAdjustment = false;
+        public IntRange tweak_traitCountRange = new IntRange(3, 3);
+
+        public bool tweak_misanthropeTrait = false;
+
         // Power
         public bool tweak_powerUsageTweaks = false;
         public float tweak_powerUsage_lamp = 30f;
@@ -124,7 +137,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_chattyComms, "tweak_chattyComms", false);
             Scribe_Values.Look(ref tweak_notSoWildBerries, "tweak_notSoWildBerries", false);
 
-        Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
+            Scribe_Values.Look(ref patch_settlementTraderTimer, "patch_settlementTraderTimer", false);
             Scribe_Values.Look(ref patch_incidentPawnStats, "patch_incidentPawnStats", false);
             Scribe_Values.Look(ref patch_prisonersDontHaveKeys, "patch_prisonersDontHaveKeys", false);
             Scribe_Values.Look(ref patch_pdhk_ownDoor, "patch_pdhk_ownDoor", true);
@@ -136,6 +149,18 @@ namespace TweaksGalore
             Scribe_Values.Look(ref patch_slimRim_fat, "patch_slimRim_fat", false);
             Scribe_Values.Look(ref patch_slimRim_hulk, "patch_slimRim_hulk", false);
             Scribe_Values.Look(ref patch_slimRim_thin, "patch_slimRim_thin", false);
+
+            Scribe_Values.Look(ref tweak_noFriendShapedManhunters, "tweak_noFriendShapedManhunters", false);
+            Scribe_Values.Look(ref tweak_NFSMTrainability_Intermediate, "tweak_NFSMTrainability_Intermediate", false);
+            Scribe_Values.Look(ref tweak_NFSMTrainability_Advanced, "tweak_NFSMTrainability_Advanced", false);
+            Scribe_Values.Look(ref tweak_NFSMNuzzleHours, "tweak_NFSMNuzzleHours", false);
+            Scribe_Values.Look(ref tweak_NFSMWildness, "tweak_NFSMWildness", 0.65f);
+            Scribe_Values.Look(ref tweak_NFSMCombatPower, "tweak_NFSMCombatPower", 60f);
+            Scribe_Values.Look(ref tweak_NFSMDisableManhunterOnTame, "tweak_NFSMDisableManhunterOnTame", false);
+
+            Scribe_Values.Look(ref tweak_traitCountAdjustment, "traitCountAdjustment", false);
+            Scribe_Values.Look(ref tweak_traitCountRange, "traitCountRange", new IntRange(3, 3));
+            Scribe_Values.Look(ref tweak_misanthropeTrait, "tweak_misanthropyTrait", false);
 
             // Power
             Scribe_Values.Look(ref tweak_powerUsageTweaks, "tweak_powerUsageTweaks", false);
