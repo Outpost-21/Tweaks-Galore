@@ -78,9 +78,11 @@
     <Compile Include="Patch_InfestationCellFinder_GetScoreAt.cs" />
     <Compile Include="Patch_GetRewardStackElementsForThings.cs" />
     <Compile Include="Patch_IdeoFoundation_InitPrecepts.cs" />
+    <Compile Include="Patch_PawnGenerator_GenerateTraits.cs" />
     <Compile Include="Patch_Settlement_GetInspectString.cs" />
     <Compile Include="Patch_InitiateSlaveRebellionMtbDays.cs" />
     <Compile Include="Patch_Building_Door_PawnCanOpen.cs" />
+    <Compile Include="Patch_SkillRecord_Learn.cs" />
     <Compile Include="Patch_StunHandler_EMPAdaptationTicksDuration.cs" />
     <Compile Include="Patch_ThoughtWorker_Woman_CurrentSocialStateInternal.cs" />
     <Compile Include="Patch_ThoughtWorker_Man_CurrentSocialStateInternal.cs" />

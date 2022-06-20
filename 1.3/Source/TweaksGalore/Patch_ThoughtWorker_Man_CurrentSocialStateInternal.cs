@@ -14,14 +14,14 @@ namespace TweaksGalore
 	public static class Patch_ThoughtWorker_Man_CurrentSocialStateInternal
 	{
 		[HarmonyPrefix]
-		public static bool Prefix(Pawn p, Pawn other, bool __result)
+		public static bool Prefix(Pawn p, Pawn other, ThoughtState __result)
 		{
 			if (TweaksGaloreMod.settings.tweak_misanthropeTrait)
 			{
 				TraitDef dislikesHumanity = DefDatabase<TraitDef>.GetNamed("DislikesHumanity");
 				if (!p.story.traits.HasTrait(dislikesHumanity))
 				{
-					__result = false;
+					__result = ThoughtState.Inactive;
 					return false;
 				}
 			}

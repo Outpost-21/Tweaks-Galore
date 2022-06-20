@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_disableDesiredApparel</li>
+		</settings>
+		<label>Disable Desired Apparel</label>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/MemeDef/selectOneOrNone/noneChance</xpath>
+					<value>
+						<noneChance>1</noneChance>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

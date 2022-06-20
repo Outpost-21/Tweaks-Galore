@@ -18,16 +18,30 @@ Added: Disfigurement Penalty Multiplier - Ugly is the new Beautiful.</content>
 	</O21Toolbox.UpdateListings.UpdateDef> -->
 
 	<O21Toolbox.UpdateListings.UpdateDef>
+		<defName>O21_Tweaks_20220620</defName>
+		<date>2022/06/20</date>
+		<banner></banner>
+		<content>Version 1.4.8206
+- Added: Disable Desirable Apparel - Ideology option that disables those stupid fucking hats defaulting to showing up.
+- Added: No Friend Shaped Manhunters - Allows control over parameters that can disable an animal from arriving on the map as a manhunter. 
+- Added: Misanthrope Trait - Adds the Misanthrope trait (Dislikes People) and if a pawn was going to spawn with both Misandrist and Misogynist replaces them with Misanthrope.
+- Added: Skill Rates Adjustment - Control skill gain or loss and a threshold to decide what level and above loss can happen at.
+- Added: Trait Count Adjustment - Control how many traits pawns spawn with, within a min and max number.</content>
+		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
+		<important>false</important>
+	</O21Toolbox.UpdateListings.UpdateDef>
+
+	<O21Toolbox.UpdateListings.UpdateDef>
 		<defName>O21_Tweaks_20220508</defName>
 		<date>2022/05/08</date>
 		<banner></banner>
 		<content>Version 1.4.8163
-Added: Boomalopes Bleed Chemfuel - BURN BABAY!
-Added: Chatty Comms - Coms Console is a recreation source.
-Added: Not So Wild Berries - Wild Berries now plantable.
+- Added: Boomalopes Bleed Chemfuel - BURN BABAY!
+- Added: Chatty Comms - Coms Console is a recreation source.
+- Added: Not So Wild Berries - Wild Berries now plantable.
 
-Fixed: Breakdowns no longer patches VFE - Power's reactor due to issues with it.
-Fixed: VIE - Memes and structures - It updated and broke the patch, now fixed.</content>
+- Fixed: Breakdowns no longer patches VFE - Power's reactor due to issues with it.
+- Fixed: VIE - Memes and structures - It updated and broke the patch, now fixed.</content>
 		<linkUrl>https://outpost-21.fandom.com/wiki/Tweaks_Galore</linkUrl>
 		<important>false</important>
 	</O21Toolbox.UpdateListings.UpdateDef>

@@ -87,7 +87,7 @@ namespace TweaksGalore
             }
             else if (currentPage == TweaksGaloreSettingsPage.Ideology)
             {
-                scrollRectHeight = 460f;
+                scrollRectHeight = 600f;
             }
             else
             {
@@ -255,6 +255,16 @@ namespace TweaksGalore
             // Tweak: Skilled Stonecutting
             listingStandard.CheckboxEnhanced("Skilled Stonecutting", "Makes stonecutting give crafting skill increases, and makes more skilled crafters create blocks quickler.", ref settings.tweak_skilledStonecutting);
             listingStandard.GapLine();
+            // Tweak: Skill Rates
+            listingStandard.CheckboxEnhanced("Skill Rates Adjustment", "Enables more control over skill gain/loss rates and what levels that should happen at.", ref settings.tweak_skillRates);
+            if (settings.tweak_skillRates)
+            {
+                listingStandard.AddLabeledSlider("Skill Loss Multiplier: " + settings.tweak_skillRateLoss.ToStringPercent(), ref settings.tweak_skillRateLoss, 0f, 2f, "Min: 0%", "Max: 200%", 0.01f);
+                listingStandard.AddLabeledSlider("Skill Gain Multiplier: " + settings.tweak_skillRateGain.ToStringPercent(), ref settings.tweak_skillRateGain, 0f, 2f, "Min: 0%", "Max: 200%", 0.01f);
+                listingStandard.AddLabeledSlider("Skill Loss Threshold: " + settings.tweak_skillRateLossThreshold.ToString(), ref settings.tweak_skillRateLossThreshold, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                listingStandard.Note("Skill loss threshold is the level a skill has to reach before skill loss starts happening, it will prevent skill loss entirely below that level.", GameFont.Tiny);
+            }
+            listingStandard.GapLine();
             // Tweak: Slim Rim
             listingStandard.CheckboxEnhanced("Slim Rim", "Allows the disabling of body types on pawn generation. Does this during generation of the pawn so will not affect existing ones. The replacement body will be either Male or Female, whichever matches the pawns gender.", ref settings.patch_slimRim);
             if (settings.patch_slimRim)
@@ -382,6 +392,9 @@ namespace TweaksGalore
             listingStandard.GapLine();
             // Tweak: Darklight Glow Pods
             listingStandard.CheckboxEnhanced("Darklight Glow Pods", "Makes glow pods spawned in insectoid nests use the darklight colour.", ref settings.tweak_darklightGlowPods);
+            listingStandard.GapLine();
+            // Tweak: Disable Desired Apparel
+            listingStandard.CheckboxEnhanced("Disable Desired Apparel", "Disables default Ideology desired apparel from showing up. I got really fucking sick of this happening when I was testing faction loadouts, whoever came up with this and DIDN'T think to have an option to disable it deserves to step on an upright UK appliance plug.", ref settings.tweak_disableDesiredApparel);
             listingStandard.GapLine();
             // Tweak: No Meme Limit
             listingStandard.CheckboxEnhanced("No Meme Limit", "Raises the limit of how many memes you can choose to 1000...so effectively no limit.", ref settings.patch_noMemeLimit);

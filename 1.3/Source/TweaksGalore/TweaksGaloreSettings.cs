@@ -65,6 +65,11 @@ namespace TweaksGalore
 
         public bool tweak_misanthropeTrait = false;
 
+        public bool tweak_skillRates = false;
+        public float tweak_skillRateLoss = 1f;
+        public float tweak_skillRateGain = 1f;
+        public float tweak_skillRateLossThreshold = 0f;
+
         // Power
         public bool tweak_powerUsageTweaks = false;
         public float tweak_powerUsage_lamp = 30f;
@@ -104,6 +109,7 @@ namespace TweaksGalore
         public bool tweak_replantableGauranlen = false;
         public bool tweak_unlockedIdeologyBuildings = false;
         public bool tweak_darklightGlowPods = false;
+        public bool tweak_disableDesiredApparel = false;
 
         public bool patch_properSuppression = false;
         public bool patch_noMemeLimit = false;
@@ -162,6 +168,11 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_traitCountRange, "traitCountRange", new IntRange(3, 3));
             Scribe_Values.Look(ref tweak_misanthropeTrait, "tweak_misanthropyTrait", false);
 
+            Scribe_Values.Look(ref tweak_skillRates, "tweak_skillRates", false);
+            Scribe_Values.Look(ref tweak_skillRateLoss, "tweak_skillRateLoss", 1f);
+            Scribe_Values.Look(ref tweak_skillRateGain, "tweak_skillRateGain", 1f);
+            Scribe_Values.Look(ref tweak_skillRateLossThreshold, "tweak_skillRateLossThreshold", 0f);
+
             // Power
             Scribe_Values.Look(ref tweak_powerUsageTweaks, "tweak_powerUsageTweaks", false);
             Scribe_Values.Look(ref tweak_powerUsage_lamp, "tweak_powerUsage_lamp", 30f);
@@ -200,6 +211,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_replantableGauranlen, "tweak_replantableGauranlen", false);
             Scribe_Values.Look(ref tweak_unlockedIdeologyBuildings, "tweak_unlockedIdeologyBuildings", false); 
             Scribe_Values.Look(ref tweak_darklightGlowPods, "tweak_darklightGlowPods", false);
+            Scribe_Values.Look(ref tweak_disableDesiredApparel, "tweak_disableDesiredApparel", false);
 
             Scribe_Values.Look(ref patch_properSuppression, "patch_properSuppression", false);
             Scribe_Values.Look(ref patch_noMemeLimit, "patch_noMemeLimit", false);
