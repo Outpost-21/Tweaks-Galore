@@ -12,7 +12,7 @@ using Verse;
 
 namespace TweaksGalore
 {
-	public static class EnhancedSettings
+	public static class SettingsUtil
 	{
 		public static void CheckboxEnhanced(this Listing_Standard listing, string name, string explanation, ref bool value, string tooltip = null)
 		{

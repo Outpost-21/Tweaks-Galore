@@ -6,7 +6,7 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>", Scope = "member", Target = "~M:TweaksGalore.GetRewardStackElementsForThings_Patch.Prefix(System.Collections.Generic.IEnumerable{Verse.Thing}@,System.Boolean@)~System.Boolean")]
-[assembly: SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>", Scope = "member", Target = "~M:TweaksGalore.EnhancedSettings.SettingsDropdown``1(Verse.Listing_Standard,System.String,System.String,TweaksGalore.TweaksGaloreSettingsPage@,System.Single,System.String)")]
+[assembly: SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>", Scope = "member", Target = "~M:TweaksGalore.SettingsUtil.SettingsDropdown``1(Verse.Listing_Standard,System.String,System.String,TweaksGalore.TweaksGaloreSettingsPage@,System.Single,System.String)")]
 [assembly: SuppressMessage("Style", "IDE0044:Add readonly modifier", Justification = "<Pending>", Scope = "member", Target = "~F:TweaksGalore.Dialog_ColourPicker._alphaBGBlockSize")]
 [assembly: SuppressMessage("Style", "IDE0044:Add readonly modifier", Justification = "<Pending>", Scope = "member", Target = "~F:TweaksGalore.Dialog_ColourPicker._callback")]
 [assembly: SuppressMessage("Style", "IDE0044:Add readonly modifier", Justification = "<Pending>", Scope = "member", Target = "~F:TweaksGalore.Dialog_ColourPicker._fieldHeight")]

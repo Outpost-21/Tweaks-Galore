@@ -99,6 +99,9 @@ namespace TweaksGalore
 
         public bool patch_disableMechanoidAdapting = false;
 
+        // User Interface
+        public bool patch_copyExportDialogs = false;
+
         // Royalty
         public bool tweak_delayedRoyalty = false;
         public bool tweak_replantableAnima = false;
@@ -200,6 +203,9 @@ namespace TweaksGalore
             // Mechanoids
             Scribe_Values.Look(ref tweak_mechanoidHeatArmour, "tweak_mechanoidHeatArmour", 2f);
             Scribe_Values.Look(ref patch_disableMechanoidAdapting, "tweak_disableMechanoidAdapting", false);
+
+            // User Interface
+            Scribe_Values.Look(ref patch_copyExportDialogs, "patch_copyExportDialogs", false);
 
             // Royalty
             Scribe_Values.Look(ref tweak_delayedRoyalty, "tweak_delayedRoyalty", false);

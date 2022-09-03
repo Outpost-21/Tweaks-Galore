@@ -32,6 +32,12 @@
 						<xpath>Defs/ThingDef[defName="Plasteel"]/deepLumpSizeRange</xpath>
 					</match>
 				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()=MineablePlasteel]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()=MineablePlasteel]</xpath>
+					</match>
+				</li>
 			</operations>
 		</active>
 	</Operation>
