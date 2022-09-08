@@ -22,7 +22,7 @@
 					<value>
 						<selectionWeightCurvesPerFaction>
 							<li>
-								<faction>Mechanoid</faction> <!-- Special case for mechanoids -->
+								<faction>Mechanoid</faction>
 								<selectionWeightPerPointsCurve>
 									<points>
 										<li>(700, 0)</li>

@@ -8,25 +8,9 @@
 		<label>No More Drop Pod Raids</label>
 		<active Class="PatchOperationSequence">
 			<operations>
-				<!-- ImmediateAttack -->
+				<!-- Generalised -->
 				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RaidStrategyDef[defName="ImmediateAttack"]/arriveModes/li[text()="EdgeDrop" or text()="CenterDrop" or text()="RandomDrop" or text()="EdgeDropGroups"]</xpath>
-				</li>
-				<!-- ImmediateAttackSmart -->
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RaidStrategyDef[defName="ImmediateAttackSmart"]/arriveModes/li[text()="EdgeDrop" or text()="CenterDrop" or text()="RandomDrop" or text()="EdgeDropGroups"]</xpath>
-				</li>
-				<!-- StageThenAttack -->
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RaidStrategyDef[defName="StageThenAttack"]/arriveModes/li[text()="EdgeDrop" or text()="EdgeDropGroups"]</xpath>
-				</li>
-				<!-- ImmediateAttackSappers -->
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RaidStrategyDef[defName="ImmediateAttackSappers"]/arriveModes/li[text()="EdgeDrop" or text()="EdgeDropGroups"]</xpath>
-				</li>
-				<!-- Siege -->
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RaidStrategyDef[defName="Siege"]/arriveModes/li[text()="EdgeDrop"]</xpath>
+					<xpath>/Defs/RaidStrategyDef/arriveModes/li[text()="EdgeDrop" or text()="CenterDrop" or text()="RandomDrop" or text()="EdgeDropGroups"]</xpath>
 				</li>
 			</operations>
 		</active>
