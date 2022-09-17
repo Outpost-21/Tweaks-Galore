@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_prettyPreciousMetals</li>
+		</settings>
+		<label>Pretty Precious Metals</label>
+		<active Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gold" or defName="Silver"]/statBases</xpath>
+			<value>
+				<Beauty>4</Beauty>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

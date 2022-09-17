@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_unlockedIdeologyBuildings</li>
+		</settings>
+		<label>Unlocked Ideology Buildings</label>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SleepAccelerator" or defName="NeuralSupercharger" or defName="Autobong" or defName="SlabBed" or defName="SlabDoubleBed"]/canGenerateDefaultDesignator</xpath>
+					<value>
+						<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Altar_Small" or defName="Altar_Medium" or defName="Altar_Large" or defName="Altar_Grand" or defName="Ideogram" or defName="ChristmasTree" or defName="CannibalPlatter" or defName="Effigy" or defName="SacrificialFlag" or defName="Pyre" or defName="Burnbong" or defName="IncenseShrine" or defName="Pew" or defName="KneelSheet" or defName="KneelPillow"]</xpath>
+					<value>
+						<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="MorbidSlab_Medium" or defName="MorbidSlab_Broad" or defName="TotemicSlab_Medium" or defName="TotemicSlab_Broad" or defName="SpikecoreFloorStar_Broad" or defName="SpikecoreFloorStar_Medium" or defName="RusticRug_Medium" or defName="RusticRug_Broad" or defName="AnimalistSlab_Medium" or defName="AnimalistSlab_Broad"]</xpath>
+					<value>
+						<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TerrainDef[defName="Carpet_MorbidWhite" or defName="Carpet_MorbidBurgundy" or defName="Carpet_MorbidIndigo" or defName="Tile_MorbidSandstone" or defName="Tile_MorbidGranite" or defName="Tile_MorbidLimestone" or defName="Tile_MorbidSlate" or defName="Tile_MorbidMarble" or defName="Tile_SpikecoreSandstone" or defName="Tile_SpikecoreGranite" or defName="Tile_SpikecoreLimestone" or defName="Tile_SpikecoreSlate" or defName="Tile_SpikecoreMarble" or defName="Tile_TotemicSandstone" or defName="Tile_TotemicGranite" or defName="Tile_TotemicLimestone" or defName="Tile_TotemicSlate" or defName="Tile_TotemicMarble" or defName="Carpet_MindbendA" or defName="Carpet_MindbendB" or defName="Carpet_MindbendC" or defName="Carpet_MindbendD" or defName="Carpet_MindbendE" or defName="Carpet_TranshumanistWhite" or defName="Carpet_TranshumanistBurgundy" or defName="Carpet_TranshumanistIndigo"]</xpath>
+					<value>
+						<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Apparel_TortureCrown" or defName="Apparel_Blindfold"]/recipeMaker/memePrerequisitesAny</xpath>
+				</li>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TerrainDef[defName="FungalGravel" or defName="Plates_Spikecore" or defName="Tile_Transhumanist" or defName="Boards_Totemic"]/canGenerateDefaultDesignator</xpath>
+					<value>
+						<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

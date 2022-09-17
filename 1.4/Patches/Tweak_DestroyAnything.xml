@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_destroyAnything</li>
+		</settings>
+		<label>Destroy Anything</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RecipeDef>
+							<defName>O21_Tweak_RecipeDestroyAnything</defName>
+							<label>destroy anything</label>
+							<description>Smelt anything down into basic particles, destroying it completely.\n\nSeriously. It can destroy anything so be careful.</description>
+							<jobString>Destroying {0}.</jobString>
+							<workAmount>95</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<effectWorking>Cremate</effectWorking>
+							<soundWorking>Recipe_Cremate</soundWorking>
+							<autoStripCorpses>false</autoStripCorpses>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>Foods</li>
+											<li>MeatRaw</li>
+											<li>PlantFoodRaw</li>
+											<li>AnimalProductRaw</li>
+											<li>Manufactured</li>
+											<li>Leathers</li>
+											<li>ResourcesRaw</li>
+											<li>Items</li>
+											<li>NeurotrainersPsycast</li>
+											<li>BodyParts</li>
+											<li>Buildings</li>
+										</categories>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>Foods</li>
+									<li>MeatRaw</li>
+									<li>PlantFoodRaw</li>
+									<li>AnimalProductRaw</li>
+									<li>Manufactured</li>
+									<li>Leathers</li>
+									<li>ResourcesRaw</li>
+									<li>Items</li>
+									<li>NeurotrainersPsycast</li>
+									<li>BodyParts</li>
+									<li>Buildings</li>
+								</categories>
+							</fixedIngredientFilter>
+						</RecipeDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ElectricCrematorium"]/recipes</xpath>
+					<value>
+						<li>O21_Tweak_RecipeDestroyAnything</li>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

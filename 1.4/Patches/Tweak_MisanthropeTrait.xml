@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_misanthropeTrait</li>
+		</settings>
+		<label>Misanthrope Trait</label>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<TraitDef>
+							<defName>DislikesHumanity</defName>
+							<commonality>0.1</commonality>
+							<degreeDatas>
+								<li>
+									<label>misanthrope</label>
+									<description>{PAWN_nameDef} really dislikes and distrusts people in general. I mean, who can blame them right?</description>
+								</li>
+							</degreeDatas>
+						</TraitDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThoughtDef>
+						  <defName>PersonDislike</defName>
+						  <thoughtClass>Thought_SituationalSocial</thoughtClass>
+						  <workerClass>TweaksGalore.ThoughtWorker_Person</workerClass>
+						  <validWhileDespawned>true</validWhileDespawned>
+						  <stages>
+							<li>
+							  <label>person</label>
+							  <baseOpinionOffset>-25</baseOpinionOffset>
+							</li>
+						  </stages>
+						</ThoughtDef>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

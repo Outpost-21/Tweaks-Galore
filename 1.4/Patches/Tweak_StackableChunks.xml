@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_stackableChunks</li>
+		</settings>
+		<label>Stackable Chunks</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[@Name="ChunkBase"]/stackLimit</xpath>
+					<value>
+						<stackLimit>5</stackLimit>
+						<drawGUIOverlay>true</drawGUIOverlay>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@Name="ChunkBase"]/passability</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@Name="ChunkBase"]/saveCompressible</xpath>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

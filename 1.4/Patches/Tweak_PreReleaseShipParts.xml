@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_preReleaseShipParts</li>
+		</settings>
+		<label>Pre-1.0 Ship Parts</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName = "PsychicDronerShipPart"]/killedLeavings</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName = "PsychicDronerShipPart"]/killedLeavings</xpath>
+						<value>
+							<Steel>100</Steel>
+							<Plasteel>35</Plasteel>
+							<ChunkSlagSteel>8</ChunkSlagSteel>
+							<ComponentIndustrial>4</ComponentIndustrial>
+							<ComponentSpacer>1</ComponentSpacer>
+							<AIPersonaCore>1</AIPersonaCore>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName = "PsychicDronerShipPart"]</xpath>
+						<value>
+							<killedLeavings>
+								<Steel>100</Steel>
+								<Plasteel>35</Plasteel>
+								<ChunkSlagSteel>8</ChunkSlagSteel>
+								<ComponentIndustrial>4</ComponentIndustrial>
+								<ComponentSpacer>1</ComponentSpacer>
+								<AIPersonaCore>1</AIPersonaCore>
+							</killedLeavings>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName = "DefoliatorShipPart"]/killedLeavings</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName = "DefoliatorShipPart"]/killedLeavings</xpath>
+						<value>
+							<Steel>100</Steel>
+							<Plasteel>35</Plasteel>
+							<ChunkSlagSteel>8</ChunkSlagSteel>
+							<ComponentIndustrial>4</ComponentIndustrial>
+							<ComponentSpacer>1</ComponentSpacer>
+							<MedicineUltratech>5</MedicineUltratech>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName = "DefoliatorShipPart"]</xpath>
+						<value>
+							<killedLeavings>
+								<Steel>100</Steel>
+								<Plasteel>35</Plasteel>
+								<ChunkSlagSteel>8</ChunkSlagSteel>
+								<ComponentIndustrial>4</ComponentIndustrial>
+								<ComponentSpacer>1</ComponentSpacer>
+								<MedicineUltratech>5</MedicineUltratech>
+							</killedLeavings>
+						</value>
+					</nomatch>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

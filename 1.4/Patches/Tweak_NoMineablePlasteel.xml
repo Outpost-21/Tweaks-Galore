@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_noMineablePlasteel</li>
+		</settings>
+		<label>No Mineable Plasteel</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="MineablePlasteel"]/building/mineableScatterCommonality</xpath>
+					<value>
+						<mineableScatterCommonality>0</mineableScatterCommonality>
+					</value>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Plasteel"]/deepCommonality</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="Plasteel"]/deepCommonality</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Plasteel"]/deepCountPerPortion</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="Plasteel"]/deepCountPerPortion</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Plasteel"]/deepLumpSizeRange</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="Plasteel"]/deepLumpSizeRange</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()=MineablePlasteel]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()=MineablePlasteel]</xpath>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

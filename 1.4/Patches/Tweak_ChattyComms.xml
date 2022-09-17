@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_chattyComms</li>
+		</settings>
+		<label>Chatty Comms</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<JoyGiverDef>
+							<defName>TG_ChattyComms</defName>
+							<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+							<baseChance>4</baseChance>
+							<thingDefs>
+								<li>CommsConsole</li>
+							</thingDefs>
+							<jobDef>TG_ChattyComms</jobDef>
+							<desireSit>false</desireSit>
+							<joyKind>Social</joyKind>
+							<requiredCapacities>
+								<li>Sight</li>
+								<li>Hearing</li>
+								<li>Talking</li>
+								<li>Manipulation</li>
+							</requiredCapacities>
+						</JoyGiverDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<JobDef>
+							<defName>TG_ChattyComms</defName>
+							<driverClass>JobDriver_WatchBuilding</driverClass>
+							<reportString>Chatting on Comms</reportString>
+							<joyKind>Social</joyKind>
+							<joySkill>Social</joySkill>
+							<joyDuration>4000</joyDuration>
+							<joyXpPerTick>0.004</joyXpPerTick>
+							<joyMaxParticipants>1</joyMaxParticipants>
+						</JobDef>
+					</value>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="CommsConsole"]/building</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="CommsConsole"]/building</xpath>
+						<value>
+							<joyKind>Social</joyKind>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="CommsConsole"]</xpath>
+						<value>
+							<building>
+								<joyKind>Social</joyKind>
+							</building>
+						</value>
+					</nomatch>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

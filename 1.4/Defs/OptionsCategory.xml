@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<OptionCategoryDef>
+		<defName>TweaksGalore_OptionsCategory</defName>
+		<label>Tweaks Galore</label>
+		<texPath>UI/Icons/Options/OptionsGameplay</texPath>
+	</OptionCategoryDef>
+	
+</Defs>

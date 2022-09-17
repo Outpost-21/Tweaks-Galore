@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_delayedRoyalty</li>
+		</settings>
+		<label>Delayed Royalty</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps/li[incident[contains(text(), "GiveQuest_Intro_Wimp")]]/fireAfterDaysPassed</xpath>
+					<value>
+						<fireAfterDaysPassed>12</fireAfterDaysPassed>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps/li[incident[contains(text(), "GiveQuest_Intro_Deserter")]]/fireAfterDaysPassed</xpath>
+					<value>
+						<fireAfterDaysPassed>32</fireAfterDaysPassed>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

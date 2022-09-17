@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_noMoreDropPodRaids</li>
+		</settings>
+		<label>No More Drop Pod Raids</label>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<!-- Generalised -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RaidStrategyDef/arriveModes/li[text()="EdgeDrop" or text()="CenterDrop" or text()="RandomDrop" or text()="EdgeDropGroups"]</xpath>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
