@@ -4,7 +4,7 @@
 	<OptionCategoryDef>
 		<defName>TweaksGalore_OptionsCategory</defName>
 		<label>Tweaks Galore</label>
-		<texPath>UI/Icons/Options/OptionsGameplay</texPath>
+		<texPath>UI/Icons/Options/OptionsGeneral</texPath>
 	</OptionCategoryDef>
 	
 </Defs>
