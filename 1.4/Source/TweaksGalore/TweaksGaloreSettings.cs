@@ -105,6 +105,7 @@ namespace TweaksGalore
         // Royalty
         public bool tweak_delayedRoyalty = false;
         public bool tweak_replantableAnima = false;
+        public bool tweak_uninstallableMechShields = false;
 
         // Ideology
         public bool tweak_ancientDeconstruction = false;
@@ -116,6 +117,9 @@ namespace TweaksGalore
 
         public bool patch_properSuppression = false;
         public bool patch_noMemeLimit = false;
+
+        // Biotech
+        public bool tweak_replantablePolux = false;
 
         public override void ExposeData()
         {
@@ -210,6 +214,7 @@ namespace TweaksGalore
             // Royalty
             Scribe_Values.Look(ref tweak_delayedRoyalty, "tweak_delayedRoyalty", false);
             Scribe_Values.Look(ref tweak_replantableAnima, "tweak_replantableAnima", false);
+            Scribe_Values.Look(ref tweak_uninstallableMechShields, "tweak_uninstallableMechShields", false);
 
             // Ideology
             Scribe_Values.Look(ref tweak_ancientDeconstruction, "tweak_ancientDeconstruction", false);
@@ -221,6 +226,9 @@ namespace TweaksGalore
 
             Scribe_Values.Look(ref patch_properSuppression, "patch_properSuppression", false);
             Scribe_Values.Look(ref patch_noMemeLimit, "patch_noMemeLimit", false);
+
+            // Biotech
+            Scribe_Values.Look(ref tweak_replantablePolux, "tweak_replantablePolux", false);
         }
 
         public IEnumerable<string> GetEnabledSettings
