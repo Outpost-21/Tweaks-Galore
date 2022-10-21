@@ -6,8 +6,11 @@
 			<li>tweak_replantableAnima</li>
 		</settings>
 		<label>Replantable Anima</label>
-		<active Class="PatchOperationRemove">
+		<active Class="PatchOperationConidtional">
 			<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/minifiedDef</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/minifiedDef</xpath>
+			</match>
 		</active>
 	</Operation>
 
