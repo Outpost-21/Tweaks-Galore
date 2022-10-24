@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_stackableChunks</li>
 		</settings>
-		<label>Stackable Chunks</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">

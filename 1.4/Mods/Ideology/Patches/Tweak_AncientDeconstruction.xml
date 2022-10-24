@@ -5,7 +5,6 @@
 		<settings>
 			<li>tweak_ancientDeconstruction</li>
 		</settings>
-		<label>Ancient Deconstruction</label>
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>

@@ -5,7 +5,6 @@
 		<settings>
 			<li>tweak_darklightGlowPods</li>
 		</settings>
-		<label>Darklight Glow Pods</label>
 		<active Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[defName="GlowPod"]/comps/li[@Class="CompProperties_Glower"]/glowColor</xpath>
 			<value>

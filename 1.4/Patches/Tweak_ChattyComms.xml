@@ -5,20 +5,19 @@
 		<settings>
 			<li>tweak_chattyComms</li>
 		</settings>
-		<label>Chatty Comms</label>
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
 					<value>
 						<JoyGiverDef>
-							<defName>TG_ChattyComms</defName>
+							<defName>TweaksGalore_ChattyComms</defName>
 							<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
 							<baseChance>4</baseChance>
 							<thingDefs>
 								<li>CommsConsole</li>
 							</thingDefs>
-							<jobDef>TG_ChattyComms</jobDef>
+							<jobDef>TweaksGalore_ChattyComms</jobDef>
 							<desireSit>false</desireSit>
 							<joyKind>Social</joyKind>
 							<requiredCapacities>
@@ -34,7 +33,7 @@
 					<xpath>/Defs</xpath>
 					<value>
 						<JobDef>
-							<defName>TG_ChattyComms</defName>
+							<defName>TweaksGalore_ChattyComms</defName>
 							<driverClass>JobDriver_WatchBuilding</driverClass>
 							<reportString>Chatting on Comms</reportString>
 							<joyKind>Social</joyKind>

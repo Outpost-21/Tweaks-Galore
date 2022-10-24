@@ -5,8 +5,7 @@
 		<settings>
 			<li>tweak_replantableGauranlen</li>
 		</settings>
-		<label>Replantable Gauranlen</label>
-		<active Class="PatchOperationConidtional">
+		<active Class="PatchOperationConditional">
 			<xpath>/Defs/ThingDef[defName="Plant_TreeGauranlen"]/minifiedDef</xpath>
 			<match Class="PatchOperationRemove">
 				<xpath>/Defs/ThingDef[defName="Plant_TreeGauranlen"]/minifiedDef</xpath>

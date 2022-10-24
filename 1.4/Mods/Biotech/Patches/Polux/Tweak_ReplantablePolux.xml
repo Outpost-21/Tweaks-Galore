@@ -5,8 +5,7 @@
 		<settings>
 			<li>tweak_replantablePolux</li>
 		</settings>
-		<label>Replantable Polux</label>
-		<active Class="PatchOperationConidtional">
+		<active Class="PatchOperationConditional">
 			<xpath>/Defs/ThingDef[defName="Plant_TreePolux"]/minifiedDef</xpath>
 			<match Class="PatchOperationRemove">
 				<xpath>/Defs/ThingDef[defName="Plant_TreePolux"]/minifiedDef</xpath>

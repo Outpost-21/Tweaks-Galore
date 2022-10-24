@@ -5,14 +5,14 @@
 		<settings>
 			<li>tweak_destroyAnything</li>
 		</settings>
-		<label>Destroy Anything</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
 					<value>
 						<RecipeDef>
-							<defName>O21_Tweak_RecipeDestroyAnything</defName>
+							<defName>TweaksGalore_RecipeDestroyAnything</defName>
 							<label>destroy anything</label>
 							<description>Smelt anything down into basic particles, destroying it completely.\n\nSeriously. It can destroy anything so be careful.</description>
 							<jobString>Destroying {0}.</jobString>
@@ -62,7 +62,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="ElectricCrematorium"]/recipes</xpath>
 					<value>
-						<li>O21_Tweak_RecipeDestroyAnything</li>
+						<li>TweaksGalore_RecipeDestroyAnything</li>
 					</value>
 				</li>
 			</operations>

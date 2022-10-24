@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_oldMegaslothName</li>
 		</settings>
-		<label>Megasloth to Megatherium</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">

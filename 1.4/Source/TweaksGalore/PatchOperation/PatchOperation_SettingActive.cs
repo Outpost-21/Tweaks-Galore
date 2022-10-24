@@ -15,32 +15,18 @@ namespace TweaksGalore
     {
         public List<string> settings;
 
+        public bool allNeeded = false;
+
         public PatchOperation active;
 
         public PatchOperation inactive;
 
-        public string label = "Unknown";
-
         public override bool ApplyWorker(XmlDocument xml)
         {
-            bool flag = false;
-            for (int i = 0; i < settings.Count(); i++)
-            {
-                if (TweaksGaloreMod.settings.GetEnabledSettings.Contains(settings[i]))
-                {
-                    flag = true;
-                    break;
-                }
-            }
-
-            if (flag)
+            if (HasRequiredSettings())
             {
                 if (active != null)
                 {
-                    if (TweaksGaloreMod.settings.debugMode)
-                    {
-                        LogUtil.LogMessage(label + " - Active");
-                    }
                     return active.Apply(xml);
                 }
             }
@@ -49,6 +35,47 @@ namespace TweaksGalore
                 return inactive.Apply(xml);
             }
             return true;
+        }
+
+        public bool HasRequiredSettings()
+        {
+            if (allNeeded)
+            {
+                return HasAllSettings();
+            }
+            else
+            {
+                return HasAnySetting();
+            }
+        }
+
+        public bool HasAnySetting()
+        {
+            for (int i = 0; i < settings.Count(); i++)
+            {
+                if (TweaksGaloreMod.settings.GetEnabledSettings.Contains(settings[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool HasAllSettings()
+        {
+            int num = 0;
+            for (int i = 0; i < settings.Count; i++)
+            {
+                if (TweaksGaloreMod.settings.GetEnabledSettings.Contains(settings[i]))
+                {
+                    num++;
+                }
+            }
+            if(num > settings.Count)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

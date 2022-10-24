@@ -15,6 +15,15 @@ namespace TweaksGalore
     {
         public static List<ThingDef> allMechanoidDefs = new List<ThingDef>();
 
+        public static SimpleCurve original_maxDryadsPerConnectionStrengthCurve = new SimpleCurve();
+        public static SimpleCurve adjusted_maxDryadsPerConnectionStrengthCurve = new SimpleCurve();
+
+        public static SimpleCurve original_connectionLossPerLevelCurve = new SimpleCurve();
+        public static SimpleCurve adjusted_connectionLossPerLevelCurve = new SimpleCurve();
+
+        public static SimpleCurve original_connectionLossDailyPerBuildingDistanceCurve = new SimpleCurve();
+        public static SimpleCurve adjusted_connectionLossDailyPerBuildingDistanceCurve = new SimpleCurve();
+
         static TweaksGaloreStartup()
         {
 			TweaksGaloreSettings settings = TweaksGaloreMod.settings;
@@ -26,6 +35,313 @@ namespace TweaksGalore
             try { Tweak_PowerUsageTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: PowerUsageTweaks :: " + e); };
             try { Tweak_StrongFloorsBlockInfestations(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: StrongFloorsBlockInfestations :: " + e); };
             try { Tweak_NoFriendShapedManhunters(settings);  } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: NoFriendShapedManhunters :: " + e); };
+            if (ModLister.RoyaltyInstalled)
+            {
+                try { Tweak_MeditationAnyFocus(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during MeditationAnyFocus :: " + e); };
+
+                if (settings.tweak_animaTweaks)
+                {
+                    try { Tweak_AnimaTweaksStartup(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Anima Tweaks :: " + e); };
+                }
+            }
+            if (ModLister.IdeologyInstalled)
+            {
+                if(settings.tweak_gauranlenTweaks)
+                {
+                    try { Tweak_GauranlenTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Gauranlen Tweaks :: " + e); };
+                }
+            }
+            if (ModLister.BiotechInstalled)
+            {
+                try { Tweak_GeneticsTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Genetics Tweaks :: " + e); }
+
+                if (settings.tweak_poluxTweaks)
+                {
+                    try { Tweak_PoluxTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Polux Tweaks :: " + e); };
+                }
+                if (settings.tweak_mechanitorTweaks)
+                {
+                    try { Tweak_MechanitorTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Mechanitor Tweaks :: " + e); };
+                }
+                if (settings.tweak_playerMechTweaks)
+                {
+                    try { Tweak_PlayerMechTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during PlayerMech Tweaks :: " + e); };
+                }
+            }
+        }
+
+        public static void Tweak_MechanitorTweaks(TweaksGaloreSettings settings)
+        {
+            HediffDef implantDef = TGHediffDefOf.MechlinkImplant;
+            HediffStage implantStage = implantDef.stages.First();
+            implantStage.statOffsets.Find(sm => sm.stat == StatDefOf.MechBandwidth).value = settings.tweak_mechanitorBandwidthBase;
+            implantStage.statOffsets.Find(sm => sm.stat == StatDefOf.MechControlGroups).value = settings.tweak_mechanitorControlGroupBase;
+        }
+
+        public static void Tweak_PlayerMechTweaksStartup(TweaksGaloreSettings settings)
+        {
+            List<ThingDef> mechanoidListing = new List<ThingDef>();
+            if (settings.tweak_mechTweaksAffectMods)
+            {
+                mechanoidListing = DefDatabase<ThingDef>.AllDefs.Where(td => td.race?.IsMechanoid ?? false).ToList();
+            }
+            else
+            {
+                mechanoidListing = DefDatabase<ThingDef>.AllDefs.Where(td => (td.modContentPack.IsCoreMod || td.modContentPack.IsOfficialMod) && (td.race?.IsMechanoid ?? false)).ToList();
+            }
+
+            for (int i = 0; i < mechanoidListing.Count(); i++)
+            {
+                ThingDef curMech = mechanoidListing[i];
+                // Handle Skill Level
+                curMech.race.mechFixedSkillLevel = Mathf.RoundToInt(settings.tweak_mechanoidSkillLevel);
+                // Handle Work Speed
+                Tweak_PlayerMechWorkSpeed(settings, curMech);
+            }
+
+            Tweak_PlayerMechTweaks(settings);
+        }
+
+        public static void Tweak_PlayerMechTweaks(TweaksGaloreSettings settings)
+        {
+            StatDefOf.MechEnergyUsageFactor.defaultBaseValue = settings.tweak_mechanoidDrainRate;
+        }
+
+        public static void Tweak_PlayerMechWorkSpeed(TweaksGaloreSettings settings, ThingDef mech)
+        {
+            // TODO: Separate work speeds per work type!
+        }
+
+        public static void Tweak_GeneticsTweaks(TweaksGaloreSettings settings)
+        {
+            foreach (GeneDef gene in DefDatabase<GeneDef>.AllDefs)
+            {
+                if (settings.tweak_flattenComplexity)
+                {
+                    gene.biostatCpx = 0;
+                }
+                if (settings.tweak_flattenMetabolism)
+                {
+                    gene.biostatMet = 0;
+                }
+                if (settings.tweak_flattenArchites)
+                {
+                    gene.biostatArc = 0;
+                }
+            }
+        }
+
+        public static void Tweak_MeditationAnyFocus(TweaksGaloreSettings settings)
+        {
+            if (settings.tweak_animaMeditationAll)
+            {
+                List<ThingDef> meditationObjects = DefDatabase<ThingDef>.AllDefs.Where(td => td.GetCompProperties<CompProperties_MeditationFocus>() != null).ToList();
+                List<MeditationFocusDef> focusDefs = DefDatabase<MeditationFocusDef>.AllDefs.ToList();
+
+                for (int i = 0; i < meditationObjects.Count(); i++)
+                {
+                    ThingDef curObj = meditationObjects[i];
+                    CompProperties_MeditationFocus curComp = curObj.GetCompProperties<CompProperties_MeditationFocus>();
+                    for (int j = 0; j < focusDefs.Count(); j++)
+                    {
+                        if (!curComp.focusTypes.Contains(focusDefs[j]))
+                        {
+                            curComp.focusTypes.Add(focusDefs[j]);
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void Tweak_AnimaTweaksStartup(TweaksGaloreSettings settings)
+        {
+            if (TweaksGaloreMod.mod.GetPsylinkStuff)
+            {
+                // Just loads the initial settings for psylink levels.
+            }
+
+            // Deal with the Tree Scream
+            if (settings.tweak_animaDisableScream)
+            {
+                ThingDef animaTree = ThingDefOf.Plant_TreeAnima;
+                animaTree.comps.Remove(animaTree.GetCompProperties<CompProperties_GiveThoughtToAllMapPawnsOnDestroy>());
+                animaTree.comps.Remove(animaTree.GetCompProperties<CompProperties_PlaySoundOnDestroy>());
+            }
+
+            Tweak_AnimaTweaks(settings);
+        }
+
+        public static void Tweak_AnimaTweaks(TweaksGaloreSettings settings)
+        {
+
+            // Deal with the Tree Scream
+            if(!settings.tweak_animaDisableScream)
+            {
+                ThoughtDef screamThought = TGThoughtDefOf.AnimaScream;
+                screamThought.stages.First().baseMoodEffect = settings.tweak_animaScreamDebuff;
+                screamThought.durationDays = settings.tweak_animaScreamLength;
+                screamThought.stackLimit = Mathf.RoundToInt(settings.tweak_animaScreamStackLimit);
+            }
+
+            // Deal with Tree Radii
+            CompProperties_MeditationFocus focus = ThingDefOf.Plant_TreeAnima.GetCompProperties<CompProperties_MeditationFocus>();
+
+            FocusStrengthOffset_ArtificialBuildings artificialOffset =
+                (FocusStrengthOffset_ArtificialBuildings)focus.offsets.Find(os => os.GetType() == typeof(FocusStrengthOffset_ArtificialBuildings));
+            FocusStrengthOffset_BuildingDefs naturalOffset =
+                (FocusStrengthOffset_BuildingDefs)focus.offsets.Find(os => os.GetType() == typeof(FocusStrengthOffset_BuildingDefs));
+
+            artificialOffset.radius = settings.tweak_animaArtificialBuildingRadius;
+
+            StatPart_ArtificialBuildingsNearbyOffset nearbyBuildingOffset = (StatPart_ArtificialBuildingsNearbyOffset)StatDefOf.MeditationPlantGrowthOffset.parts.Find(sp => sp.GetType() == typeof(StatPart_ArtificialBuildingsNearbyOffset));
+            nearbyBuildingOffset.radius = settings.tweak_animaArtificialBuildingRadius;
+
+            naturalOffset.radius = settings.tweak_animaBuffBuildingRadius;
+            naturalOffset.maxBuildings = Mathf.RoundToInt(settings.tweak_animaMaxBuffBuildings);
+
+            // Deal with grass requirements
+            CompProperties_Psylinkable psycomp = ThingDefOf.Plant_TreeAnima.GetCompProperties<CompProperties_Psylinkable>();
+            psycomp.requiredSubplantCountPerPsylinkLevel = settings.tweak_animaPsylinkLevelNeeds;
+
+
+            // Get all viable shrines quietly
+            List<ThingDef> shrineList = new List<ThingDef>();
+            // Shrine Small
+            ThingDef shrine_natureSmall = DefDatabase<ThingDef>.GetNamedSilentFail("NatureShrine_Small");
+            if (shrine_natureSmall != null)
+            {
+                shrineList.Add(shrine_natureSmall);
+            }
+            // Shrine Large
+            ThingDef shrine_natureLarge = DefDatabase<ThingDef>.GetNamedSilentFail("NatureShrine_Large");
+            if (shrine_natureLarge != null)
+            {
+                shrineList.Add(shrine_natureLarge);
+            }
+            // Animus Stone
+            ThingDef shrine_animusStone = DefDatabase<ThingDef>.GetNamedSilentFail("AnimusStone");
+            if (shrine_animusStone != null)
+            {
+                shrineList.Add(shrine_animusStone);
+            }
+            // Runestone
+            ThingDef shrine_runestone = DefDatabase<ThingDef>.GetNamedSilentFail("VFEV_RuneStone");
+            if (shrine_runestone != null)
+            {
+                shrineList.Add(shrine_runestone);
+            }
+
+            // Deal with shrines
+            if (!shrineList.NullOrEmpty())
+            {
+                foreach (ThingDef shrine in shrineList)
+                {
+                    CompProperties_MeditationFocus shrineFocus = shrine.GetCompProperties<CompProperties_MeditationFocus>();
+
+                    FocusStrengthOffset_ArtificialBuildings shrineRange =
+                        (FocusStrengthOffset_ArtificialBuildings)shrineFocus.offsets.Find(os => os.GetType() == typeof(FocusStrengthOffset_ArtificialBuildings));
+                    FocusStrengthOffset_BuildingDefs shrineNatureRange =
+                        (FocusStrengthOffset_BuildingDefs)focus.offsets.Find(os => os.GetType() == typeof(FocusStrengthOffset_BuildingDefs));
+
+                    shrineRange.radius = settings.tweak_animaShrineBuildingRadius;
+                    shrineNatureRange.radius = settings.tweak_animaShrineBuffBuildingRadius;
+                }
+            }
+
+            // Deal with Psyfocus regen rate
+            StatDefOf.MeditationFocusGain.defaultBaseValue = settings.tweak_animaMeditationGain;
+        }
+
+        public static void Tweak_GauranlenTweaks(TweaksGaloreSettings settings)
+        {
+            // Store Original Values If Needed
+            CompProperties_TreeConnection originalProps = ThingDefOf.Plant_TreeGauranlen.GetCompProperties<CompProperties_TreeConnection>();
+            if (original_connectionLossDailyPerBuildingDistanceCurve.EnumerableNullOrEmpty())
+            {
+                original_connectionLossDailyPerBuildingDistanceCurve = originalProps.connectionLossDailyPerBuildingDistanceCurve;
+            }
+            if (original_connectionLossPerLevelCurve.EnumerableNullOrEmpty())
+            {
+                original_connectionLossPerLevelCurve = originalProps.connectionLossPerLevelCurve;
+            }
+            if (original_maxDryadsPerConnectionStrengthCurve.EnumerableNullOrEmpty())
+            {
+                original_maxDryadsPerConnectionStrengthCurve = originalProps.maxDryadsPerConnectionStrengthCurve;
+            }
+
+            Tweak_GauranlenDryads(settings);
+            Tweak_GauranlenMoss(settings);
+            Tweak_GauranlenPods(settings);
+        }
+
+        public static void Tweak_GauranlenDryads(TweaksGaloreSettings settings)
+        {
+            // Deal with the Tree
+            {
+                CompProperties_TreeConnection treeProps = ThingDefOf.Plant_TreeGauranlen.GetCompProperties<CompProperties_TreeConnection>();
+                treeProps.spawnDays = settings.tweak_gauranlenDryadSpawnDays;
+                treeProps.initialConnectionStrengthRange = settings.tweak_gauranlenInitialConnectionStrength;
+                treeProps.radiusToBuildingForConnectionStrengthLoss = settings.tweak_gauranlenArtificialBuildingRadius;
+                treeProps.connectionStrengthGainPerHourPruningBase = settings.tweak_gauranlenConnectionGainPerHourPruning;
+                {
+                    adjusted_maxDryadsPerConnectionStrengthCurve = new SimpleCurve();
+                    adjusted_maxDryadsPerConnectionStrengthCurve.Add(original_maxDryadsPerConnectionStrengthCurve.First());
+                    adjusted_maxDryadsPerConnectionStrengthCurve.Add(new CurvePoint(0.76f, settings.tweak_gauranlenMaxDryads));
+
+                    treeProps.maxDryadsPerConnectionStrengthCurve = adjusted_maxDryadsPerConnectionStrengthCurve;
+                }
+                {
+                    adjusted_connectionLossPerLevelCurve = new SimpleCurve();
+                    adjusted_connectionLossPerLevelCurve.Add(original_connectionLossPerLevelCurve.First());
+                    adjusted_connectionLossPerLevelCurve.Add(new CurvePoint(0.66f, 0.06f * settings.tweak_gauranlenConnectionLossPerLevel));
+
+                    treeProps.connectionLossPerLevelCurve = adjusted_connectionLossPerLevelCurve;
+                }
+                {
+                    adjusted_connectionLossDailyPerBuildingDistanceCurve = new SimpleCurve();
+                    adjusted_connectionLossDailyPerBuildingDistanceCurve.Add(new CurvePoint(0, 0.07f * settings.tweak_gauranlenLossPerBuilding));
+                    adjusted_connectionLossDailyPerBuildingDistanceCurve.Add(new CurvePoint(settings.tweak_gauranlenArtificialBuildingRadius, 0.01f * settings.tweak_gauranlenLossPerBuilding));
+
+                    treeProps.connectionLossDailyPerBuildingDistanceCurve = adjusted_connectionLossDailyPerBuildingDistanceCurve;
+                }
+            }
+        }
+
+        public static void Tweak_GauranlenMoss(TweaksGaloreSettings settings)
+        {
+            // Deal with the Moss
+            {
+                CompProperties_SpawnSubplant subPlantProps = ThingDefOf.Plant_TreeGauranlen.GetCompProperties<CompProperties_SpawnSubplant>();
+                subPlantProps.maxRadius = settings.tweak_gauranlenPlantGrowthRadius;
+
+                TGThingDefOf.Plant_MossGauranlen.plant.growDays = settings.tweak_gauranlenMossGrowDays;
+            }
+        }
+
+        public static void Tweak_GauranlenPods(TweaksGaloreSettings settings)
+        {
+            // Deal with the Pods
+            {
+                CompProperties_DryadCocoon cocoonProps = ThingDefOf.DryadCocoon.GetCompProperties<CompProperties_DryadCocoon>();
+                cocoonProps.daysToComplete = settings.tweak_gauranlenCocoonDaysToComplete;
+            }
+            {
+                CompProperties_DryadCocoon cocoonprops = ThingDefOf.GaumakerCocoon.GetCompProperties<CompProperties_DryadCocoon>();
+                cocoonprops.daysToComplete = settings.tweak_gauranlenGaumakerDaysToComplete;
+            }
+            {
+                ThingDefOf.Plant_PodGauranlen.plant.growDays = settings.tweak_gauranlenMossGrowDays;
+                ThingDefOf.Plant_PodGauranlen.plant.harvestYield = settings.tweak_gauranlenPodHarvestYield;
+            }
+        }
+
+        public static void Tweak_PoluxTweaks(TweaksGaloreSettings settings)
+        {
+            // Deal with Tree Radii
+            CompProperties_PollutionPump pollutionPumpComp = TGThingDefOf.Plant_TreePolux.GetCompProperties<CompProperties_PollutionPump>();
+            pollutionPumpComp.radius = settings.tweak_poluxEffectRadius;
+            pollutionPumpComp.intervalTicks = Mathf.RoundToInt(25000f * settings.tweak_poluxEffectRate);
+            pollutionPumpComp.disabledByArtificialBuildings = !settings.tweak_poluxArtificialDisables;
         }
 
         public static void Tweak_NoFriendShapedManhunters(TweaksGaloreSettings settings)

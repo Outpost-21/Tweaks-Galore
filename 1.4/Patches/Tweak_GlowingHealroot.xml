@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_glowingHealroot</li>
 		</settings>
-		<label>Glowing Healroot</label>
+		
 		<active Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[@Name="HealrootBase"]</xpath>
 			<value>

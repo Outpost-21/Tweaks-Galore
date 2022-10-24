@@ -2,13 +2,13 @@
 <Defs>
 
 	<TabulaRasa.UpdateDef>
-		<defName>TweaksGalore_31102022</defName>
-		<date>2022/10/31</date>
+		<defName>TweaksGalore_24102022</defName>
+		<date>2022/10/24</date>
 		<banner></banner>
-		<content>Version 2.0.xxxx
-Added support for 1.4  started adding tweaks related to Biotech. Note that a lot of changes have happened with 1.4 and the DLC, so some tweaks may not work properly, remember to report those issues so they can be fixed (and include a HugsLib log!).
+		<content>Version 2.0.8332
+Added support for 1.4 and started adding tweaks related to Biotech. Note that a lot of changes have happened with 1.4 and the DLC, as well as many new tweaks being added, so some tweaks may not work properly, remember to report those issues so they can be fixed (and include a HugsLib log!).
 
-Some tweaks may need further updates in cases where compatibility with other mods is concerned, this will come as those update.</content>
+Many more tweaks are still to come.</content>
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
 		<important>false</important>
 	</TabulaRasa.UpdateDef>

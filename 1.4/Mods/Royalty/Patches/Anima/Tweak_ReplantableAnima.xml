@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_animaTweaks</li>
+		</settings>
+		<active Class="TweaksGalore.PatchOperation_SettingActive">
+			<settings>
+				<li>tweak_replantableAnima</li>
+			</settings>
+			<active Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/minifiedDef</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/minifiedDef</xpath>
+				</match>
+			</active>
+		</active>
+	</Operation>
+
+</Patch>

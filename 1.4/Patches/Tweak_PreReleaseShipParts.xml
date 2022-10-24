@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_preReleaseShipParts</li>
 		</settings>
-		<label>Pre-1.0 Ship Parts</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationConditional">

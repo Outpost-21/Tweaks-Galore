@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_lagFreeLamps</li>
 		</settings>
-		<label>Lag Free Lamps</label>
+		
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>

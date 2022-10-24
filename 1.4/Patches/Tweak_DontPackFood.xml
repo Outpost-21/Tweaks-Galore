@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_dontPackFood</li>
 		</settings>
-		<label>Don't Pack Food</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">

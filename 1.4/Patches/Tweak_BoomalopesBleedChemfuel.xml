@@ -6,7 +6,6 @@
 		<settings>
 			<li>tweak_boomalopesBleedChemfuel</li>
 		</settings>
-		<label>Boomalopes Bleed Chemfuel</label>
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">

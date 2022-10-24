@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_oldComponentNames</li>
 		</settings>
-		<label>Old Component Names</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<!-- Component labels -->

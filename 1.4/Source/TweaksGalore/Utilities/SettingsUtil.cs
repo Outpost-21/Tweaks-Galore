@@ -41,14 +41,15 @@ namespace TweaksGalore
 			listing.Gap(6f);
 		}
 
-		public static void Note(this Listing_Standard listing, string name, GameFont font = GameFont.Small)
+		public static void Note(this Listing_Standard listing, string name, GameFont font = GameFont.Small, Color? color = null)
 		{
 			Text.Font = font;
 			listing.ColumnWidth -= 34f;
-			GUI.color = Color.white;
+			GUI.color = color ?? Color.white;
 			listing.Label(name, -1f, null);
 			listing.ColumnWidth += 34f;
 			Text.Font = GameFont.Small;
+			GUI.color = Color.white;
 		}
 
 		public static void ValueLabeled<T>(this Listing_Standard listing, string name, string explanation, ref T value, string tooltip = null)

@@ -5,7 +5,6 @@
 		<settings>
 			<li>tweak_uninstallableMechShields</li>
 		</settings>
-		<label>Uninstallable Mech Shields</label>
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">

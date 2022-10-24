@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_prettyPreciousMetals</li>
 		</settings>
-		<label>Pretty Precious Metals</label>
+		
 		<active Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="Gold" or defName="Silver"]/statBases</xpath>
 			<value>

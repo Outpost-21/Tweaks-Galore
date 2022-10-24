@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_animaRemoveBackstoryLimits</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/MeditationFocusDef[defName = "Natural"]/requiredBackstoriesAny</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/MeditationFocusDef[defName = "Natural"]/requiredBackstoriesAny</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/MeditationFocusDef[defName = "Artistic"]/incompatibleBackstoriesAny</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/MeditationFocusDef[defName = "Artistic"]/incompatibleBackstoriesAny</xpath>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

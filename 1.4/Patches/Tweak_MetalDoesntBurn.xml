@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_metalDoesntBurn</li>
 		</settings>
-		<label>Metal Doesn't Burn</label>
+		
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>

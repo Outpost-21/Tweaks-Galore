@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Handled via C# since this removing it through patches doesn't seem to actually work. Probably a fuckup somewhere in this but I'm better with C# than xpath. -->
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_animaTweaks</li>
+			<li>tweak_animaDisableScream</li>
+		</settings>
+		<allNeeded>true</allNeeded>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[Class="CompProperties_GiveThoughtToAllMapPawnsOnDestroy"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[Class="CompProperties_GiveThoughtToAllMapPawnsOnDestroy"]</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[Class="CompProperties_PlaySoundOnDestroy"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[Class="CompProperties_PlaySoundOnDestroy"]</xpath>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

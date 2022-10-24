@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_strongerSteel</li>
 		</settings>
-		<label>Stronger Steel</label>
+		
 		<active Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="Steel"]/stuffProps/statFactors/MaxHitPoints</xpath>
 			<value>

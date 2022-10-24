@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_misanthropeTrait</li>
 		</settings>
-		<label>Misanthrope Trait</label>
+		
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>

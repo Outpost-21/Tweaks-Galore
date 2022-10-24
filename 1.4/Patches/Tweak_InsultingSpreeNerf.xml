@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_insultingSpreeNerf</li>
 		</settings>
-		<label>Insulting Spree Nerf</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">

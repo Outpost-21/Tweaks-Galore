@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_noMoreDropPodRaids</li>
 		</settings>
-		<label>No More Drop Pod Raids</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<!-- Generalised -->

@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_disableDesiredApparel</li>
 		</settings>
-		<label>Disable Desired Apparel</label>
+		
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>			

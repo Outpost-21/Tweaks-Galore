@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_fasterSmoothing</li>
 		</settings>
-		<label>Faster Smoothing</label>
+		
 		<active Class="PatchOperationConditional">
 			<xpath>/Defs/StatDef[defName="SmoothingSpeed"]/parts</xpath>
 			<match Class="PatchOperationAdd">

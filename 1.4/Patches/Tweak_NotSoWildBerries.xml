@@ -6,7 +6,7 @@
 		<settings>
 			<li>tweak_notSoWildBerries</li>
 		</settings>
-		<label>Not So Wild Berries</label>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">

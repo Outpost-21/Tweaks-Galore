@@ -5,7 +5,7 @@
 		<settings>
 			<li>tweak_unlockedIdeologyBuildings</li>
 		</settings>
-		<label>Unlocked Ideology Buildings</label>
+		
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>

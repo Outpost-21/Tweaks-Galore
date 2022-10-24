@@ -104,13 +104,29 @@ namespace TweaksGalore
 
         // Royalty
         public bool tweak_delayedRoyalty = false;
-        public bool tweak_replantableAnima = false;
         public bool tweak_uninstallableMechShields = false;
+
+        // Anima
+        public bool tweak_animaTweaks = false;
+        public bool tweak_replantableAnima = false;
+        public bool tweak_animaDisableScream = false;
+        public float tweak_animaScreamDebuff = -6f;
+        public float tweak_animaScreamLength = 5f;
+        public float tweak_animaScreamStackLimit = 3f;
+        public float tweak_animaArtificialBuildingRadius = 34.9f;
+        public float tweak_animaShrineBuildingRadius = 34.9f;
+        public float tweak_animaBuffBuildingRadius = 9.9f;
+        public float tweak_animaShrineBuffBuildingRadius = 9.9f;
+        public float tweak_animaMaxBuffBuildings = 4f;
+        public List<int> tweak_animaPsylinkLevelNeeds = new List<int>();
+        public bool tweak_animaMeditationAll = false;
+        public bool tweak_animaBuildableShrines = false;
+        public bool tweak_animaRemoveBackstoryLimits = false;
+        public float tweak_animaMeditationGain = 0.5f;
 
         // Ideology
         public bool tweak_ancientDeconstruction = false;
         public bool tweak_ancientDeconstruction_mode = false;
-        public bool tweak_replantableGauranlen = false;
         public bool tweak_unlockedIdeologyBuildings = false;
         public bool tweak_darklightGlowPods = false;
         public bool tweak_disableDesiredApparel = false;
@@ -118,8 +134,50 @@ namespace TweaksGalore
         public bool patch_properSuppression = false;
         public bool patch_noMemeLimit = false;
 
+        // Gauranlen
+        public bool tweak_gauranlenTweaks = false;
+        public bool tweak_replantableGauranlen = false;
+        public FloatRange tweak_gauranlenInitialConnectionStrength = new FloatRange(0.25f, 0.45f);
+        public float tweak_gauranlenConnectionGainPerHourPruning = 0.01f;
+        public float tweak_gauranlenDryadSpawnDays = 8;
+        public float tweak_gauranlenMaxDryads = 4;
+        public float tweak_gauranlenArtificialBuildingRadius = 7.9f;
+        public float tweak_gauranlenConnectionLossPerLevel = 1f;
+        public float tweak_gauranlenLossPerBuilding = 1f;
+        public float tweak_gauranlenPlantGrowthRadius = 7.9f;
+        public float tweak_gauranlenMossGrowDays = 5;
+        public float tweak_gauranlenCocoonDaysToComplete = 6;
+        public float tweak_gauranlenGaumakerDaysToComplete = 4;
+        public float tweak_gauranlenPodHarvestYield = 1;
+
         // Biotech
+        public bool tweak_flattenComplexity = false;
+        public bool tweak_flattenMetabolism = false;
+        public bool tweak_flattenArchites = false;
+        public bool tweak_showGenesTab = false;
+        public bool tweak_playerMechTweaks = false;
+        public bool tweak_mechTweaksAffectMods = false;
+        public float tweak_mechanoidSkillLevel = 10f;
+        public float tweak_mechanoidRechargeRate = 1.0f;
+        public float tweak_mechanoidDrainRate = 1.0f;
+        public float tweak_mechanoidWorkSpeed = 0.2f;
+        public bool tweak_mechanitorTweaks = false;
+        public bool tweak_mechanitorDisableRange = false;
+        public float tweak_mechanitorRangeMulti = 1.0f;
+        public float tweak_mechanitorBandwidthBase = 6f;
+        public float tweak_mechanitorControlGroupBase = 2f;
+        public float tweak_mechanitorBandNodeBandwidth = 1f;
+
+        public bool tweak_primitiveVasectomy = false;
+        public float tweak_pregnancyLengthMultiplier = 1.0f;
+
+
+        // Polux
+        public bool tweak_poluxTweaks = false;
         public bool tweak_replantablePolux = false;
+        public float tweak_poluxEffectRadius = 7.9f;
+        public float tweak_poluxEffectRate = 1.0f;
+        public bool tweak_poluxArtificialDisables = false;
 
         public override void ExposeData()
         {
@@ -216,6 +274,22 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_replantableAnima, "tweak_replantableAnima", false);
             Scribe_Values.Look(ref tweak_uninstallableMechShields, "tweak_uninstallableMechShields", false);
 
+            Scribe_Values.Look(ref tweak_animaTweaks, "tweak_animaTweaks", false);
+            Scribe_Values.Look(ref tweak_animaDisableScream, "tweak_animaDisableScream", false);
+            Scribe_Values.Look(ref tweak_animaScreamDebuff, "tweak_animaScreamDebuff", -6f);
+            Scribe_Values.Look(ref tweak_animaScreamLength, "tweak_animaScreamLength", 5f);
+            Scribe_Values.Look(ref tweak_animaScreamStackLimit, "tweak_animaScreamStackLimit", 3f);
+            Scribe_Values.Look(ref tweak_animaArtificialBuildingRadius, "tweak_animaArtificialBuildingRadius", 34.9f);
+            Scribe_Values.Look(ref tweak_animaShrineBuildingRadius, "tweak_animaShrineBuildingRadius", 34.9f);
+            Scribe_Values.Look(ref tweak_animaBuffBuildingRadius, "tweak_animaBuffBuildingRadius", 9.9f);
+            Scribe_Values.Look(ref tweak_animaShrineBuffBuildingRadius, "tweak_animaShrineBuffBuildingRadius", 9.9f);
+            Scribe_Values.Look(ref tweak_animaMaxBuffBuildings, "tweak_animaMaxBuffBuildings", 4f);
+            Scribe_Collections.Look(ref tweak_animaPsylinkLevelNeeds, "tweak_animaPsylinkLevelNeeds");
+            Scribe_Values.Look(ref tweak_animaMeditationAll, "tweak_animaMeditationAll", false);
+            Scribe_Values.Look(ref tweak_animaBuildableShrines, "tweak_animaBuildableShrines", false);
+            Scribe_Values.Look(ref tweak_animaRemoveBackstoryLimits, "tweak_animaRemoveBackstoryLimits", false);
+            Scribe_Values.Look(ref tweak_animaMeditationGain, "tweak_animaMeditationGain", 0.5f);
+
             // Ideology
             Scribe_Values.Look(ref tweak_ancientDeconstruction, "tweak_ancientDeconstruction", false);
             Scribe_Values.Look(ref tweak_ancientDeconstruction_mode, "tweak_ancientDeconstruction_mode", false);
@@ -227,9 +301,43 @@ namespace TweaksGalore
             Scribe_Values.Look(ref patch_properSuppression, "patch_properSuppression", false);
             Scribe_Values.Look(ref patch_noMemeLimit, "patch_noMemeLimit", false);
 
+            Scribe_Values.Look(ref tweak_gauranlenTweaks, "tweak_gauranlenTweaks", false);
+            Scribe_Values.Look(ref tweak_gauranlenInitialConnectionStrength, "tweak_gauranlenInitialConnectionStrength", new FloatRange(0.25f, 0.45f));
+            Scribe_Values.Look(ref tweak_gauranlenConnectionGainPerHourPruning, "tweak_gauranlenConnectionGainPerHourPruning", 0.01f);
+            Scribe_Values.Look(ref tweak_gauranlenDryadSpawnDays, "tweak_gauranlenDryadSpawnDays", 8);
+            Scribe_Values.Look(ref tweak_gauranlenMaxDryads, "tweak_gauranlenMaxDryads", 4);
+            Scribe_Values.Look(ref tweak_gauranlenArtificialBuildingRadius, "tweak_gauranlenArtificialBuildingRadius", 7.9f);
+            Scribe_Values.Look(ref tweak_gauranlenConnectionLossPerLevel, "tweak_gauranlenConnectionLossPerLevel", 1f);
+            Scribe_Values.Look(ref tweak_gauranlenLossPerBuilding, "tweak_gauranlenLossPerBuilding", 1f);
+            Scribe_Values.Look(ref tweak_gauranlenPlantGrowthRadius, "tweak_gauranlenPlantGrowthRadius", 7.9f);
+            Scribe_Values.Look(ref tweak_gauranlenMossGrowDays, "tweak_gauranlenMossGrowDays", 5);
+            Scribe_Values.Look(ref tweak_gauranlenCocoonDaysToComplete, "tweak_gauranlenCocoonDaysToComplete", 6);
+            Scribe_Values.Look(ref tweak_gauranlenGaumakerDaysToComplete, "tweak_gauranlenGaumakerDaysToComplete", 4);
+            Scribe_Values.Look(ref tweak_gauranlenPodHarvestYield, "tweak_gauranlenPodHarvestYield", 1);
+
             // Biotech
+            Scribe_Values.Look(ref tweak_poluxTweaks, "tweak_poluxTweaks", false);
             Scribe_Values.Look(ref tweak_replantablePolux, "tweak_replantablePolux", false);
-        }
+            Scribe_Values.Look(ref tweak_flattenComplexity, "tweak_flattenComplexity", false);
+            Scribe_Values.Look(ref tweak_flattenMetabolism, "tweak_flattenMetabolism", false);
+            Scribe_Values.Look(ref tweak_flattenArchites, "tweak_flattenArchites", false);
+            Scribe_Values.Look(ref tweak_showGenesTab, "tweak_showGenesTab", false);
+            Scribe_Values.Look(ref tweak_playerMechTweaks, "tweak_playerMechTweaks", false);
+            Scribe_Values.Look(ref tweak_mechTweaksAffectMods, "tweak_mechTweaksAffectMods", false);
+            Scribe_Values.Look(ref tweak_mechanoidSkillLevel, "tweak_mechanoidSkillLevel", 10f);
+            Scribe_Values.Look(ref tweak_mechanoidRechargeRate, "tweak_mechanoidRechargeRate", 1f);
+            Scribe_Values.Look(ref tweak_mechanoidDrainRate, "tweak_mechanoidDrainRate", 1f);
+            Scribe_Values.Look(ref tweak_mechanoidWorkSpeed, "tweak_mechanoidWorkSpeed", 0.2f);
+            Scribe_Values.Look(ref tweak_mechanitorTweaks, "tweak_mechanitorTweaks", false);
+            Scribe_Values.Look(ref tweak_mechanitorDisableRange, "tweak_mechanitorDisableRange", false);
+            Scribe_Values.Look(ref tweak_mechanitorRangeMulti, "tweak_mechanitorRangeMulti", 1f);
+            Scribe_Values.Look(ref tweak_mechanitorBandwidthBase, "tweak_mechanitorBandwidthBase", 6f);
+            Scribe_Values.Look(ref tweak_mechanitorControlGroupBase, "tweak_mechanitorControlGroupBase", 2f);
+            Scribe_Values.Look(ref tweak_mechanitorBandNodeBandwidth, "tweak_mechanitorBandNodeBandwidth", 1f);
+            Scribe_Values.Look(ref tweak_poluxEffectRadius, "tweak_poluxEffectRadius", 7.9f);
+            Scribe_Values.Look(ref tweak_primitiveVasectomy, "tweak_primitiveVasectomy", false);
+            Scribe_Values.Look(ref tweak_pregnancyLengthMultiplier, "tweak_pregnancyLengthMultiplier", 1.0f);
+    }
 
         public IEnumerable<string> GetEnabledSettings
         {

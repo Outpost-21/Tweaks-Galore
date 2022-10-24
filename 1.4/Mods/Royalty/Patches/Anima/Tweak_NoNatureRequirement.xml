@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_animaTweaks</li>
+		</settings>
+		<active Class="TweaksGalore.PatchOperation_SettingActive">
+			<settings>
+				<li>tweak_animaBuildableShrines</li>
+			</settings>
+			<active Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationConditional">
+						<xpath>/Defs/ThingDef[@Name="NatureShrineBase"]/placeWorkers[value="PlaceWorker_RequireNaturePsycaster"]</xpath>
+						<match Class="PatchOperationRemove">
+							<xpath>/Defs/ThingDef[@Name="NatureShrineBase"]/placeWorkers[value="PlaceWorker_RequireNaturePsycaster"]</xpath>
+						</match>
+					</li>
+					<!-- VFE - Vikings Compatibility-->
+					<li Class="PatchOperationConditional">
+						<xpath>/Defs/ThingDef[@Name="VFEV_RuneStone"]/placeWorkers[value="PlaceWorker_RequireNaturePsycaster"]</xpath>
+						<match Class="PatchOperationRemove">
+							<xpath>/Defs/ThingDef[@Name="VFEV_RuneStone"]/placeWorkers[value="PlaceWorker_RequireNaturePsycaster"]</xpath>
+						</match>
+					</li>
+				</operations>
+			</active>
+		</active>
+	</Operation>
+
+</Patch>
