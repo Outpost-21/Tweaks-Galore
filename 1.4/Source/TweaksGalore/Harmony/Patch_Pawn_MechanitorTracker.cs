@@ -31,10 +31,15 @@ namespace TweaksGalore
 	public class Patch_Pawn_MechanitorTracker_CanCommandTo
 	{
 		[HarmonyPrefix]
-		public static bool Prefix(Pawn_MechanitorTracker __instance, bool __result)
+		public static bool Prefix(Pawn_MechanitorTracker __instance, ref LocalTargetInfo target, ref bool __result)
 		{
 			if (TweaksGaloreMod.settings.tweak_mechanitorTweaks && TweaksGaloreMod.settings.tweak_mechanitorDisableRange)
 			{
+				if (!target.Cell.InBounds(__instance.pawn.MapHeld))
+				{
+					__result = false;
+					return false;
+				}
 				__result = true;
 				return false;
 			}

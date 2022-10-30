@@ -15,7 +15,7 @@ namespace TweaksGalore
     public class Patch_SkillRecord_Learn
     {
         [HarmonyPrefix]
-        public static bool Prefix(float xp, bool direct, SkillRecord __instance)
+        public static bool Prefix(ref float xp, bool direct, SkillRecord __instance)
         {
             TweaksGaloreSettings s = TweaksGaloreMod.settings;
             if (s.tweak_skillRates)

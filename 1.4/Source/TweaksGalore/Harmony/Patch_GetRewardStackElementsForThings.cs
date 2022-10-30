@@ -17,8 +17,9 @@ namespace TweaksGalore
 		typeof(IEnumerable<Thing>),
 		typeof(bool)
 	})]
-	public class GetRewardStackElementsForThings_Patch
+	public static class GetRewardStackElementsForThings_Patch
 	{
+		[HarmonyPrefix]
 		public static bool Prefix(ref IEnumerable<Thing> things, ref bool detailsHidden)
 		{
             if (TweaksGaloreMod.settings.patch_incidentPawnStats)

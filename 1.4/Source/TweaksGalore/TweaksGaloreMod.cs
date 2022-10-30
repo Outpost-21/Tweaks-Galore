@@ -588,7 +588,8 @@ namespace TweaksGalore
             if (settings.tweak_playerMechTweaks)
             {
                 // Tweak: Mechanoid Skill Level
-                listing.AddLabeledSlider($"- Skill Level: {settings.tweak_mechanoidSkillLevel}", ref settings.tweak_mechanoidSkillLevel, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                // TODO: Something fucky going on with this.
+                //listing.AddLabeledSlider($"- Skill Level: {settings.tweak_mechanoidSkillLevel}", ref settings.tweak_mechanoidSkillLevel, 0f, 20f, "Min: 0", "Max: 20", 1f);
                 // Tweak: Mechanoid Work Speed
                 // TODO: Replace with a listing for individual work types, they all seem to use different speeds!
                 //listing.AddLabeledSlider($"- Work Speed: {settings.tweak_mechanoidWorkSpeed.ToStringPercent()}", ref settings.tweak_mechanoidWorkSpeed, 0.05f, 5f, "Min: 5%", "Max: 500%", 0.05f);
@@ -621,7 +622,7 @@ namespace TweaksGalore
 
         public void DoSettings_Polux(Listing_Standard listing)
         {
-            listing.CheckboxEnhanced("Enable Polux Tweaks", "This entire section is disabled by default for compatibility sake mostly, some Polux related tweaks function regardless of if they've been changed (any changing a radius for example) so without this setting could have caused compatibility issue with other Polux related mods if you prefer to use those.", ref settings.tweak_gauranlenTweaks);
+            listing.CheckboxEnhanced("Enable Polux Tweaks", "This entire section is disabled by default for compatibility sake mostly, some Polux related tweaks function regardless of if they've been changed (any changing a radius for example) so without this setting could have caused compatibility issue with other Polux related mods if you prefer to use those.", ref settings.tweak_poluxTweaks);
             if (settings.tweak_poluxTweaks)
             {
                 // Tweak: Replantable Pollux

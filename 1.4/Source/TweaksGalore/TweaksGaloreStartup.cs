@@ -65,7 +65,7 @@ namespace TweaksGalore
                 }
                 if (settings.tweak_playerMechTweaks)
                 {
-                    try { Tweak_PlayerMechTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during PlayerMech Tweaks :: " + e); };
+                    try { Tweak_PlayerMechTweaksStartup(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during PlayerMech Tweaks :: " + e); };
                 }
             }
         }
@@ -81,14 +81,8 @@ namespace TweaksGalore
         public static void Tweak_PlayerMechTweaksStartup(TweaksGaloreSettings settings)
         {
             List<ThingDef> mechanoidListing = new List<ThingDef>();
-            if (settings.tweak_mechTweaksAffectMods)
-            {
-                mechanoidListing = DefDatabase<ThingDef>.AllDefs.Where(td => td.race?.IsMechanoid ?? false).ToList();
-            }
-            else
-            {
-                mechanoidListing = DefDatabase<ThingDef>.AllDefs.Where(td => (td.modContentPack.IsCoreMod || td.modContentPack.IsOfficialMod) && (td.race?.IsMechanoid ?? false)).ToList();
-            }
+
+            mechanoidListing = DefDatabase<ThingDef>.AllDefs.Where(td => td.race?.IsMechanoid ?? false).ToList();
 
             for (int i = 0; i < mechanoidListing.Count(); i++)
             {
