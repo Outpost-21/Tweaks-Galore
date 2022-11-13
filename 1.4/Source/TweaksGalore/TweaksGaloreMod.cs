@@ -23,23 +23,44 @@ namespace TweaksGalore
         public Vector2 optionsScrollPosition;
         public float optionsViewRectHeight;
         public Dictionary<string, TrainabilityDef> TrainabilityRadioDict = new Dictionary<string, TrainabilityDef>();
+        public List<ThingDef> cachedAnimalListing = new List<ThingDef>();
 
-        internal static string VersionDir => Path.Combine(ModLister.GetActiveModWithIdentifier("Neronix17.TweaksGalore").RootDir.FullName, "Version.txt");
+        public bool restoreGeneral = false;
+        public bool restoreMechanoids = false;
+        public bool restorePennedAnimals = false;
+        public bool restorePower = false;
+        public bool restoreRaids = false;
+        public bool restoreResources = false;
+        public bool restoreRoyalty = false;
+        public bool restoreAnima = false;
+        public bool restoreIdeology = false;
+        public bool restoreGauranlen = false;
+        public bool restoreBiotech = false;
+        public bool restorePolux = false;
+
+        internal static string VersionDir => Path.Combine(ModLister.GetActiveModWithIdentifier("Neronix17.TweaksGalore", true).RootDir.FullName, "Version.txt");
         public static string CurrentVersion { get; private set; }
 
         public TweaksGaloreMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<TweaksGaloreSettings>();
             mod = this;
-
-            Version version = Assembly.GetExecutingAssembly().GetName().Version;
-            CurrentVersion = $"{version.Major}.{version.Minor}.{version.Build}";
-
-            LogUtil.LogMessage($"{CurrentVersion} ::");
-
-            if (Prefs.DevMode)
+            try
             {
-                File.WriteAllText(VersionDir, CurrentVersion);
+
+                Version version = Assembly.GetExecutingAssembly().GetName().Version;
+                CurrentVersion = $"{version.Major}.{version.Minor}.{version.Build}";
+
+                LogUtil.LogMessage($"{CurrentVersion} ::");
+
+                if (Prefs.DevMode && VersionDir != null)
+                {
+                    File.WriteAllText(VersionDir, CurrentVersion);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogUtil.LogMessage("Suppressed Error: " + ex);
             }
 
             new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
@@ -71,89 +92,91 @@ namespace TweaksGalore
             listing.GapLine();
             if (currentPage == TweaksGaloreSettingsPage.General)
             {
-                DoSettings_Vanilla(listing);
+                if (restoreGeneral) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
+                else { DoSettings_Vanilla(listing); }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Mechanoids)
             {
-                DoSettings_Mechanoids(listing);
+                if (restoreMechanoids) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
+                else { DoSettings_Mechanoids(listing); }
+            }
+            else if (currentPage == TweaksGaloreSettingsPage.Penned_Animals)
+            {
+                if (restorePennedAnimals) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
+                else { DoSettings_PennedAnimals(listing); }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Power)
             {
-                DoSettings_Power(listing);
+                if (restorePower) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
+                else { DoSettings_Power(listing); }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Raids)
             {
-                DoSettings_Raids(listing);
+                if (restoreRaids) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
+                else { DoSettings_Raids(listing); }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Resources)
             {
-                DoSettings_Resources(listing);
+                if (restoreResources) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
+                else { DoSettings_Resources(listing); }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Royalty)
             {
-                if (!ModLister.RoyaltyInstalled)
-                {
-                    listing.Note("Royalty is not installed. These options would do nothing for you.");
-                }
+                if (restoreRoyalty) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
                 else
                 {
-                    DoSettings_Royalty(listing);
+                    if (!ModLister.RoyaltyInstalled) { listing.Note("Royalty is not installed. These options would do nothing for you."); }
+                    else { DoSettings_Royalty(listing); }
                 }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Anima)
             {
-                if (!ModLister.RoyaltyInstalled)
-                {
-                    listing.Note("Royalty is not installed. These options would do nothing for you.");
-                }
+                if (restoreAnima) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
                 else
                 {
-                    DoSettings_Anima(listing);
+                    if (!ModLister.RoyaltyInstalled) { listing.Note("Royalty is not installed. These options would do nothing for you."); }
+                    else { DoSettings_Anima(listing); }
                 }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Ideology)
             {
-                if (!ModLister.IdeologyInstalled)
-                {
-                    listing.Note("Ideology is not installed. These options would do nothing for you.");
-                }
+                if (restoreIdeology) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
                 else
                 {
-                    DoSettings_Ideology(listing);
+                    if (!ModLister.IdeologyInstalled) { listing.Note("Ideology is not installed. These options would do nothing for you."); }
+                    else { DoSettings_Ideology(listing); }
                 }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Gauranlen)
             {
-                if (!ModLister.IdeologyInstalled)
-                {
-                    listing.Note("Ideology is not installed. These options would do nothing for you.");
-                }
+                if (restoreGauranlen) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
                 else
                 {
-                    DoSettings_Gauranlen(listing);
+                    if (!ModLister.IdeologyInstalled) { listing.Note("Ideology is not installed. These options would do nothing for you."); }
+                    else { DoSettings_Gauranlen(listing); }
                 }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Biotech)
             {
-                if (!ModLister.BiotechInstalled)
-                {
-                    listing.Note("Biotech is not installed. These options would do nothing for you.");
-                }
+                if (restoreBiotech) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
                 else
                 {
-                    DoSettings_Biotech(listing);
+                    if (!ModLister.BiotechInstalled) { listing.Note("Biotech is not installed. These options would do nothing for you."); }
+                    else { DoSettings_Biotech(listing); }
                 }
             }
             else if (currentPage == TweaksGaloreSettingsPage.Polux)
             {
-                if (!ModLister.BiotechInstalled)
-                {
-                    listing.Note("Biotech is not installed. These options would do nothing for you.");
-                }
+                if (restorePolux) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
                 else
                 {
-                    DoSettings_Polux(listing);
+                    if (!ModLister.BiotechInstalled) { listing.Note("Biotech is not installed. These options would do nothing for you."); }
+                    else { DoSettings_Polux(listing); }
                 }
+            }
+            else if (currentPage == TweaksGaloreSettingsPage.Defaults)
+            {
+                DoSettings_Defaults(listing);
             }
         }
 
@@ -206,7 +229,7 @@ namespace TweaksGalore
             listing.CheckboxEnhanced("Incident Pawn Stats", "Displays the information of any pawns rewarded as part of incidents.", ref settings.patch_incidentPawnStats);
             listing.GapLine();
             // Tweak: Infestation Blocking Floors
-            listing.CheckboxEnhanced("Infestation Blocking Floors", "Prevents infestations happening on harder floors (Steel, Stone, Concrete). Only prevents the event picking that spot, hives can still spawn on them if an event happens closeby.", ref settings.patch_strongFloorsStopInfestations);
+            listing.CheckboxEnhanced("Infestation Blocking Floors", "Prevents infestations happening on harder floors (anything crafted from metal or stone materials). Only prevents the event picking that spot, hives can still spawn on them if an event happens closeby.", ref settings.patch_strongFloorsStopInfestations);
             listing.GapLine();
             // Tweak: Insulting Spree Nerf
             listing.CheckboxEnhanced("Insulting Spree Nerf", "Makes the Insulting Spree mental break less annoying to deal with." +
@@ -317,6 +340,53 @@ namespace TweaksGalore
                 "\n- Industrial Component x4" +
                 "\n- Spacer Component x1" +
                 "\n- Glittertech Medicine x5", ref settings.tweak_preReleaseShipParts);
+        }
+
+        public void DoSettings_PennedAnimals(Listing_Standard listing)
+        {
+            // Tweak: Penned Animal Config
+            listing.CheckboxEnhanced("Penned Animal Config", "Allows control over which animals can be penned and how many days it takes for them to begin roaming if they are not in a pen.", ref settings.tweak_pennedAnimalConfig);
+            if (settings.tweak_pennedAnimalConfig)
+            {
+                listing.GapLine();
+                for (int i = 0; i < CachedAnimalListing.Count; i++)
+                {
+                    ThingDef curAnimal = CachedAnimalListing[i];
+                    float value = settings.tweak_pennedAnimalDict[curAnimal.defName];
+                    listing.AddLabeledSlider(curAnimal.LabelCap + ": " + (value == 0f ? "Not Pennable" : (value + " Days")), ref value, 0f, 20f, "Disabled", "20 Days");
+                    settings.tweak_pennedAnimalDict[curAnimal.defName] = value;
+                }
+
+                TweaksGaloreStartup.SetPennedAnimals(settings);
+            }
+            listing.GapLine();
+        }
+
+        public List<ThingDef> CachedAnimalListing
+        {
+            get
+            {
+                if (cachedAnimalListing.NullOrEmpty())
+                {
+                    LogUtil.LogWarning("0");
+                    cachedAnimalListing = new List<ThingDef>();
+                    LogUtil.LogWarning("1");
+                    List<string> startList = (from x in settings.tweak_pennedAnimalDict.Keys.ToList() orderby x descending select x).ToList();
+                    LogUtil.LogWarning("2");
+                    foreach (string name in startList)
+                    {
+                        LogUtil.LogWarning("3");
+                        ThingDef animal = DefDatabase<ThingDef>.GetNamedSilentFail(name);
+                        if(animal != null)
+                        {
+                            LogUtil.LogWarning("4");
+                            cachedAnimalListing.Add(animal);
+                        }
+                    }
+                }
+                LogUtil.LogWarning("5");
+                return cachedAnimalListing;
+            }
         }
 
         public void DoSettings_Power(Listing_Standard listing)
@@ -645,12 +715,107 @@ namespace TweaksGalore
                 TweaksGaloreStartup.Tweak_PoluxTweaks(settings);
             }
         }
+
+        public void DoSettings_Defaults(Listing_Standard listing)
+        {
+            listing.Note("These buttons restore the default values for a given category, there is no confirmation box so be sure you want to before you click. Restored categories will not be accessible until you have relaunched the game.");
+            if (listing.ButtonText("General"))
+            {
+                DefaultUtil.RestoreSettings_Vanilla(settings);
+                Messages.Message("Tweaks Galore: 'General' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreGeneral = true;
+            }
+            if (listing.ButtonText("Mechanoids"))
+            {
+                DefaultUtil.RestoreSettings_Mechanoids(settings);
+                Messages.Message("Tweaks Galore: 'Mechanoids' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreMechanoids = true;
+            }
+            if (listing.ButtonText("Penned Animals"))
+            {
+                DefaultUtil.RestoreSettings_PennedAnimals(settings);
+                Messages.Message("Tweaks Galore: 'Penned Animals' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restorePennedAnimals = true;
+            }
+            if (listing.ButtonText("Power"))
+            {
+                DefaultUtil.RestoreSettings_Power(settings);
+                Messages.Message("Tweaks Galore: 'Power' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restorePower = true;
+            }
+            if (listing.ButtonText("Raids"))
+            {
+                DefaultUtil.RestoreSettings_Raids(settings);
+                Messages.Message("Tweaks Galore: 'Raids' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreRaids = true;
+            }
+            if (listing.ButtonText("Resources"))
+            {
+                DefaultUtil.RestoreSettings_Resources(settings);
+                Messages.Message("Tweaks Galore: 'Resources' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreResources = true;
+            }
+            if (listing.ButtonText("Royalty"))
+            {
+                DefaultUtil.RestoreSettings_Royalty(settings);
+                Messages.Message("Tweaks Galore: 'Royalty' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreRoyalty = true;
+            }
+            if (listing.ButtonText("Anima"))
+            {
+                DefaultUtil.RestoreSettings_Anima(settings);
+                Messages.Message("Tweaks Galore: 'Anima' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreAnima = true;
+            }
+            if (listing.ButtonText("Ideology"))
+            {
+                DefaultUtil.RestoreSettings_Ideology(settings);
+                Messages.Message("Tweaks Galore: 'Ideology' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreIdeology = true;
+            }
+            if (listing.ButtonText("Gauranlen"))
+            {
+                DefaultUtil.RestoreSettings_Gauranlen(settings);
+                Messages.Message("Tweaks Galore: 'Gauranlen' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreGauranlen = true;
+            }
+            if (listing.ButtonText("Biotech"))
+            {
+                DefaultUtil.RestoreSettings_Biotech(settings);
+                Messages.Message("Tweaks Galore: 'Biotech' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreBiotech = true;
+            }
+            if (listing.ButtonText("Polux"))
+            {
+                DefaultUtil.RestoreSettings_Polux(settings);
+                Messages.Message("Tweaks Galore: 'Polux' tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restorePolux = true;
+            }
+            if (listing.ButtonText("RESTORE ALL"))
+            {
+                DefaultUtil.RestoreALL(settings);
+                Messages.Message("Tweaks Galore: ALL tweaks restored to defaults.", MessageTypeDefOf.CautionInput);
+                restoreGeneral = true;
+                restoreMechanoids = true;
+                restorePennedAnimals = true;
+                restorePower = true;
+                restoreRaids = true;
+                restoreResources = true;
+                restoreRoyalty = true;
+                restoreAnima = true;
+                restoreIdeology = true;
+                restoreGauranlen = true;
+                restoreBiotech = true;
+                restorePolux = true;
+            }
+        }
     }
 
     public enum TweaksGaloreSettingsPage
     {
         General,
         Mechanoids,
+        Penned_Animals,
         Power,
         Raids,
         Resources,
@@ -659,6 +824,7 @@ namespace TweaksGalore
         Ideology,
         Gauranlen,
         Biotech,
-        Polux
+        Polux,
+        Defaults
     }
 }

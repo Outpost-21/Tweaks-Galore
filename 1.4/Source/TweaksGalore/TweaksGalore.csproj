@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utilities\DefaultUtil.cs" />
     <Compile Include="DefOfs\TGHediffDefOf.cs" />
     <Compile Include="DefOfs\TGThingDefOf.cs" />
     <Compile Include="Harmony\Patch_Pawn_MechanitorTracker.cs" />

@@ -23,7 +23,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[@Name="NonDeconstructibleAncientBuildingBase"]/statBases</xpath>
 					<value>
-						<WorkToBuild>1500</WorkToBuild>
+						<WorkToBuild>5000</WorkToBuild>
 					</value>
 				</li>
 				<li Class="TweaksGalore.PatchOperation_SettingActive">

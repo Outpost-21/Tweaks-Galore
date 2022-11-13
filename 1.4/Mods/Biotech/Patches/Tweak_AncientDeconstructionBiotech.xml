@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_ancientDeconstruction</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="TweaksGalore.PatchOperation_SettingActive">
+					<settings>
+						<li>tweak_ancientDeconstruction_mode</li>
+					</settings>
+					<!-- inactive means the mode is set to Slag -->
+					<inactive Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientExostriderHead" or defName="AncientMechGestator" or defName="AncientBasicRecharger" or defName="AncientStandardRecharger" or defName="AncientBandNode"]</xpath>
+								<value>
+									<costList>
+										<ChunkSlagSteel>4</ChunkSlagSteel>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientExostriderLeg" or defName="AncientToxifierGenerator"]</xpath>
+								<value>
+									<costList>
+										<ChunkSlagSteel>3</ChunkSlagSteel>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientLargeMechGestator"]</xpath>
+								<value>
+									<costList>
+										<ChunkSlagSteel>5</ChunkSlagSteel>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]</xpath>
+								<value>
+									<costList>
+										<ChunkSlagSteel>6</ChunkSlagSteel>
+										<MechanoidTransponder>1</MechanoidTransponder>
+									</costList>
+								</value>
+							</li>
+						</operations>
+					</inactive>
+					<!-- active means the mode is set to materials -->
+					<active Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientExostriderHead" or defName="AncientMechGestator" or defName="AncientBasicRecharger" or defName="AncientStandardRecharger" or defName="AncientBandNode"]</xpath>
+								<value>
+									<costList>
+										<Steel>40</Steel>
+										<ComponentIndustrial>2</ComponentIndustrial>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientExostriderLeg"]</xpath>
+								<value>
+									<costList>
+										<Steel>30</Steel>
+										<ComponentIndustrial>1</ComponentIndustrial>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientLargeMechGestator"]</xpath>
+								<value>
+									<costList>
+										<Steel>50</Steel>
+										<ComponentIndustrial>3</ComponentIndustrial>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientToxifierGenerator"]</xpath>
+								<value>
+									<costList>
+										<Steel>50</Steel>
+										<ComponentIndustrial>2</ComponentIndustrial>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]</xpath>
+								<value>
+									<costList>
+										<Steel>60</Steel>
+										<ComponentIndustrial>3</ComponentIndustrial>
+										<MechanoidTransponder>1</MechanoidTransponder>
+									</costList>
+								</value>
+							</li>
+						</operations>
+					</active>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

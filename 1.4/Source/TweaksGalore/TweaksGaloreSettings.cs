@@ -70,6 +70,11 @@ namespace TweaksGalore
         public float tweak_skillRateGain = 1f;
         public float tweak_skillRateLossThreshold = 0f;
 
+        // Penned Animals
+        public bool restorePennedAnimals = false;
+        public bool tweak_pennedAnimalConfig = false;
+        public Dictionary<string, float> tweak_pennedAnimalDict = new Dictionary<string, float>();
+
         // Power
         public bool tweak_powerUsageTweaks = false;
         public float tweak_powerUsage_lamp = 30f;
@@ -139,8 +144,8 @@ namespace TweaksGalore
         public bool tweak_replantableGauranlen = false;
         public FloatRange tweak_gauranlenInitialConnectionStrength = new FloatRange(0.25f, 0.45f);
         public float tweak_gauranlenConnectionGainPerHourPruning = 0.01f;
-        public float tweak_gauranlenDryadSpawnDays = 8;
-        public float tweak_gauranlenMaxDryads = 4;
+        public float tweak_gauranlenDryadSpawnDays = 8f;
+        public float tweak_gauranlenMaxDryads = 4f;
         public float tweak_gauranlenArtificialBuildingRadius = 7.9f;
         public float tweak_gauranlenConnectionLossPerLevel = 1f;
         public float tweak_gauranlenLossPerBuilding = 1f;
@@ -237,6 +242,11 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_skillRateLoss, "tweak_skillRateLoss", 1f);
             Scribe_Values.Look(ref tweak_skillRateGain, "tweak_skillRateGain", 1f);
             Scribe_Values.Look(ref tweak_skillRateLossThreshold, "tweak_skillRateLossThreshold", 0f);
+
+            // Penned Animals
+            Scribe_Values.Look(ref restorePennedAnimals, "restorePennedAnimals", false);
+            Scribe_Values.Look(ref tweak_pennedAnimalConfig, "tweak_pennedAnimalConfig", false);
+            Scribe_Collections.Look(ref tweak_pennedAnimalDict, "tweak_pennedAnimalDict");
 
             // Power
             Scribe_Values.Look(ref tweak_powerUsageTweaks, "tweak_powerUsageTweaks", false);
@@ -337,7 +347,9 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_poluxEffectRadius, "tweak_poluxEffectRadius", 7.9f);
             Scribe_Values.Look(ref tweak_primitiveVasectomy, "tweak_primitiveVasectomy", false);
             Scribe_Values.Look(ref tweak_pregnancyLengthMultiplier, "tweak_pregnancyLengthMultiplier", 1.0f);
-    }
+            Scribe_Values.Look(ref tweak_poluxEffectRate, "tweak_poluxEffectRate", 1.0f);
+            Scribe_Values.Look(ref tweak_poluxArtificialDisables, "tweak_poluxArtificialDisables", false);
+        }
 
         public IEnumerable<string> GetEnabledSettings
         {

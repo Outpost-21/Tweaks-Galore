@@ -35,6 +35,7 @@ namespace TweaksGalore
             try { Tweak_PowerUsageTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: PowerUsageTweaks :: " + e); };
             try { Tweak_StrongFloorsBlockInfestations(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: StrongFloorsBlockInfestations :: " + e); };
             try { Tweak_NoFriendShapedManhunters(settings);  } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: NoFriendShapedManhunters :: " + e); };
+            try { Tweak_PennedAnimalConfig(settings); } catch (Exception e) { LogUtil.LogError("Caught exception in Tweak: PennedAnimalConfig :: " + e); };
             if (ModLister.RoyaltyInstalled)
             {
                 try { Tweak_MeditationAnyFocus(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during MeditationAnyFocus :: " + e); };
@@ -66,6 +67,47 @@ namespace TweaksGalore
                 if (settings.tweak_playerMechTweaks)
                 {
                     try { Tweak_PlayerMechTweaksStartup(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during PlayerMech Tweaks :: " + e); };
+                }
+            }
+        }
+
+        public static void Tweak_PennedAnimalConfig(TweaksGaloreSettings settings)
+        {
+            FillAnimalDict(settings);
+            if (settings.tweak_pennedAnimalConfig)
+            {
+                SetPennedAnimals(settings);
+            }
+        }
+
+        public static void FillAnimalDict(TweaksGaloreSettings settings)
+        {
+            if (settings.tweak_pennedAnimalDict.NullOrEmpty() || settings.restorePennedAnimals)
+            {
+                settings.tweak_pennedAnimalDict = new Dictionary<string, float>();
+                settings.restorePennedAnimals = false;
+            }
+
+            List<ThingDef> list = (from x in DefDatabase<ThingDef>.AllDefs where (bool)(x.race?.Animal ?? false) select x).ToList();
+            foreach (ThingDef def in list)
+            {
+                if (!settings.tweak_pennedAnimalDict.ContainsKey(def.defName))
+                {
+                    float roamMtbDays = def.race.roamMtbDays ?? 0f;
+                    settings.tweak_pennedAnimalDict.Add(def.defName, roamMtbDays);
+                }
+            }
+        }
+
+        public static void SetPennedAnimals(TweaksGaloreSettings settings)
+        {
+            foreach(KeyValuePair<string, float> pair in settings.tweak_pennedAnimalDict)
+            {
+                ThingDef animal = DefDatabase<ThingDef>.GetNamedSilentFail(pair.Key);
+                if (animal != null)
+                {
+                    if (pair.Value == 0f) { animal.race.roamMtbDays = null; }
+                    else { animal.race.roamMtbDays = pair.Value; }
                 }
             }
         }
