@@ -103,6 +103,9 @@ namespace TweaksGalore
         public float tweak_mechanoidHeatArmour = 2f;
 
         public bool patch_disableMechanoidAdapting = false;
+        public bool tweak_betterGloomlight = false;
+        public bool tweak_gloomlightSunlamp = false;
+        public bool tweak_gloomlightDarklight = false;
 
         // User Interface
         public bool patch_copyExportDialogs = false;
@@ -275,6 +278,9 @@ namespace TweaksGalore
             // Mechanoids
             Scribe_Values.Look(ref tweak_mechanoidHeatArmour, "tweak_mechanoidHeatArmour", 2f);
             Scribe_Values.Look(ref patch_disableMechanoidAdapting, "tweak_disableMechanoidAdapting", false);
+            Scribe_Values.Look(ref tweak_betterGloomlight, "tweak_betterGloomlight", false);
+            Scribe_Values.Look(ref tweak_gloomlightSunlamp, "tweak_gloomlightSunlamp", false);
+            Scribe_Values.Look(ref tweak_gloomlightDarklight, "tweak_gloomlightDarklight", false);
 
             // User Interface
             Scribe_Values.Look(ref patch_copyExportDialogs, "patch_copyExportDialogs", false);

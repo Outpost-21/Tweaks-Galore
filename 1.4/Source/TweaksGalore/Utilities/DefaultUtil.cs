@@ -80,6 +80,9 @@ namespace TweaksGalore
         {
             s.tweak_mechanoidHeatArmour = 2f;
             s.patch_disableMechanoidAdapting = false;
+            s.tweak_betterGloomlight = false;
+            s.tweak_gloomlightSunlamp = false;
+            s.tweak_gloomlightDarklight = false;
         }
 
         public static void RestoreSettings_PennedAnimals(TweaksGaloreSettings s)

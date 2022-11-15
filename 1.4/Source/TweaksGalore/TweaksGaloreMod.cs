@@ -285,7 +285,7 @@ namespace TweaksGalore
             }
             listing.GapLine();
             // Tweak: Skilled Stonecutting
-            listing.CheckboxEnhanced("Skilled Stonecutting", "Makes stonecutting give crafting skill increases, and makes more skilled crafters create blocks quickler.", ref settings.tweak_skilledStonecutting);
+            listing.CheckboxEnhanced("Skilled Stonecutting", "Makes stonecutting give crafting skill increases, and makes more skilled crafters create blocks quicker.", ref settings.tweak_skilledStonecutting);
             listing.GapLine();
             // Tweak: Skill Rates
             listing.CheckboxEnhanced("Skill Rates Adjustment", "Enables more control over skill gain/loss rates and what levels that should happen at.", ref settings.tweak_skillRates);
@@ -340,6 +340,12 @@ namespace TweaksGalore
                 "\n- Industrial Component x4" +
                 "\n- Spacer Component x1" +
                 "\n- Glittertech Medicine x5", ref settings.tweak_preReleaseShipParts);
+            if (ModLister.RoyaltyInstalled)
+            {
+                listing.CheckboxEnhanced("Better Gloomlight", "Changes the gloomlight often found in mech clusters to produce more light so it's actually useful.", ref settings.tweak_betterGloomlight);
+                listing.CheckboxEnhanced("- Sunlamp Gloomlight", "With Better Gloomlight and this enabled, they'll instead produce enough light to be equal to that of a free sunlamp.", ref settings.tweak_gloomlightSunlamp);
+                listing.CheckboxEnhanced("- Darklight Gloomlight", "Changes the colour of the gloomlight to match that of 'Darklight'.", ref settings.tweak_gloomlightDarklight);
+            }
         }
 
         public void DoSettings_PennedAnimals(Listing_Standard listing)
@@ -368,18 +374,13 @@ namespace TweaksGalore
             {
                 if (cachedAnimalListing.NullOrEmpty())
                 {
-                    LogUtil.LogWarning("0");
                     cachedAnimalListing = new List<ThingDef>();
-                    LogUtil.LogWarning("1");
                     List<string> startList = (from x in settings.tweak_pennedAnimalDict.Keys.ToList() orderby x descending select x).ToList();
-                    LogUtil.LogWarning("2");
                     foreach (string name in startList)
                     {
-                        LogUtil.LogWarning("3");
                         ThingDef animal = DefDatabase<ThingDef>.GetNamedSilentFail(name);
                         if(animal != null)
                         {
-                            LogUtil.LogWarning("4");
                             cachedAnimalListing.Add(animal);
                         }
                     }

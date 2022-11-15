@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_betterGloomlight</li>
+		</settings>
+		<active Class="TweaksGalore.PatchOperation_SettingActive">
+			<settings>
+				<li>tweak_gloomlightSunlamp</li>
+			</settings>
+			<active Class="TweaksGalore.PatchOperation_SettingActive">
+				<settings>
+					<li>tweak_gloomlightDarklight</li>
+				</settings>
+				<active Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Gloomlight"]/comps</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Glower">
+								<overlightRadius>7</overlightRadius>
+								<glowRadius>14</glowRadius>
+								<glowColor>(216, 219, 67, 0)</glowColor>
+							</li>
+						</comps>
+					</value>
+				</active>
+				<inactive Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Gloomlight"]/comps</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Glower">
+								<overlightRadius>7</overlightRadius>
+								<glowRadius>14</glowRadius>
+								<glowColor>(78, 226, 229, 0)</glowColor>
+							</li>
+						</comps>
+					</value>
+				</inactive>
+			</active>
+			<inactive Class="TweaksGalore.PatchOperation_SettingActive">
+				<settings>
+					<li>tweak_gloomlightDarklight</li>
+				</settings>
+				<active Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Gloomlight"]/comps</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Glower">
+								<glowRadius>7</glowRadius>
+								<glowColor>(216, 219, 67, 0)</glowColor>
+							</li>
+						</comps>
+					</value>
+				</active>
+				<inactive Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Gloomlight"]/comps</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Glower">
+								<glowRadius>7</glowRadius>
+								<glowColor>(78, 226, 229, 0)</glowColor>
+							</li>
+						</comps>
+					</value>
+				</inactive>
+			</inactive>
+		</active>
+	</Operation>
+
+</Patch>

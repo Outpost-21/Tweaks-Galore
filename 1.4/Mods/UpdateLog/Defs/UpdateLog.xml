@@ -2,15 +2,11 @@
 <Defs>
 
 	<TabulaRasa.UpdateDef>
-		<defName>TweaksGalore_13112022</defName>
-		<date>2022/11/13</date>
+		<defName>TweaksGalore_15112022</defName>
+		<date>2022/11/15</date>
 		<banner></banner>
-		<content>Version 2.0.8352
-- Ancient Deconstruction: Fixed deconstructing Biotech buildings providing no resources, including the ancient exostrider.
-
-- Penned Animals Config: New category in the options to control the number of days till a pennable animal wanders off (setting to 0 disables the pen functionality for that animal).
-
-- Restore Defaults: Another new category for restoring the defaults of any other category, requires relaunching the game to complete the process as a safety since some things absolutely need to be done on startup.</content>
+		<content>Version 2.0.8354
+- Better Gloomlight: Added tweaks to adjust the gloomlight building found in mech clusters.</content>
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
 		<important>false</important>
 	</TabulaRasa.UpdateDef>
