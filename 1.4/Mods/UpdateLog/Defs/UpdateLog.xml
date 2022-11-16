@@ -6,7 +6,9 @@
 		<date>2022/11/15</date>
 		<banner></banner>
 		<content>Version 2.0.8354
-- Better Gloomlight: Added tweaks to adjust the gloomlight building found in mech clusters.</content>
+- Better Gloomlight: Added tweaks to adjust the gloomlight building found in mech clusters.
+
+- Lag Free Lamps: Added support for more lamps.</content>
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
 		<important>false</important>
 	</TabulaRasa.UpdateDef>

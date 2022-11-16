@@ -70,6 +70,14 @@
 						<xpath>/Defs/ThingDef[defName="Outland_Toro"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
 					</match>
 				</li>
+				<!-- [LTS] Furnishings -->
+				<li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="LTS_Firepit"]</xpath>
+                    <success>Always</success>
+                    <match Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="LTS_Firepit" or defName="LTS_FirepitRound" or defName="LTS_Fireplace" or defName="LTS_LightBase" or defName="LTS_OilLamp" or defName="LTS_Lantern" or defName="LTS_TableLantern" or defName="LTS_Lanternpost"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+                    </match>
+                </li>
 			</operations>
 		</active>
 	</Operation>
