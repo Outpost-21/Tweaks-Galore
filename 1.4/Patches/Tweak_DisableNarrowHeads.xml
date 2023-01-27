@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_disableNarrowHeads</li>
+		</settings>
+		<active Class="PatchOperationRemove">
+			<xpath>/Defs/HeadTypeDef[defName="Male_NarrowNormal" or defName="Male_NarrowPointy" or defName="Male_NarrowWide" or defName="Female_NarrowNormal" or defName="Female_NarrowPointy" or defName="Female_NarrowWide"]</xpath>
+		</active>
+	</Operation>
+
+
+</Patch>

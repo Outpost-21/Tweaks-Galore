@@ -21,7 +21,7 @@ namespace TweaksGalore
             if (TweaksGaloreMod.settings.patch_properSuppression)
 			{
 				Need_Suppression need_Suppression = pawn.needs.TryGetNeed<Need_Suppression>();
-				if (need_Suppression != null && !need_Suppression.CanBeSuppressedNow)
+				if (need_Suppression != null && !need_Suppression.IsSuppressed())
 				{
 					__result = -1f;
 					return false;

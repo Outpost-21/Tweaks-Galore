@@ -70,6 +70,11 @@ namespace TweaksGalore
         public float tweak_skillRateGain = 1f;
         public float tweak_skillRateLossThreshold = 0f;
 
+        public bool tweak_disableNarrowHeads = false;
+        public bool tweak_growableAmbrosia = false;
+        public bool tweak_growableGrass = false;
+        public bool tweak_growableMushrooms = false;
+
         // Penned Animals
         public bool restorePennedAnimals = false;
         public bool tweak_pennedAnimalConfig = false;
@@ -87,6 +92,7 @@ namespace TweaksGalore
         public bool tweak_noMoreBreachRaids = false;
         public bool tweak_noMoreSapperRaids = false;
         public bool tweak_noMoreSiegeRaids = false;
+        public bool tweak_noCowardlyRaiders = false;
 
         // Resources
         public bool tweak_strongerSteel = false;
@@ -140,6 +146,7 @@ namespace TweaksGalore
         public bool tweak_disableDesiredApparel = false;
 
         public bool patch_properSuppression = false;
+        public float patch_properSuppressionPercentage = 0.7f;
         public bool patch_noMemeLimit = false;
 
         // Gauranlen
@@ -178,6 +185,8 @@ namespace TweaksGalore
 
         public bool tweak_primitiveVasectomy = false;
         public float tweak_pregnancyLengthMultiplier = 1.0f;
+        public float tweak_defaultPregnancyChance = 0.03f;
+        public List<PawnKindDef> tweak_pregnancyChanceEditedPawnKinds = new List<PawnKindDef>();
 
 
         // Polux
@@ -186,6 +195,11 @@ namespace TweaksGalore
         public float tweak_poluxEffectRadius = 7.9f;
         public float tweak_poluxEffectRate = 1.0f;
         public bool tweak_poluxArtificialDisables = false;
+
+        // Genepacks
+        public bool tweak_genepackTweaks = false;
+        public Dictionary<string, bool> genepacksEnabled = new Dictionary<string, bool>();
+        public Dictionary<string, bool> defaultGenepacksEnabled = new Dictionary<string, bool>();
 
         public override void ExposeData()
         {
@@ -246,6 +260,11 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_skillRateGain, "tweak_skillRateGain", 1f);
             Scribe_Values.Look(ref tweak_skillRateLossThreshold, "tweak_skillRateLossThreshold", 0f);
 
+            Scribe_Values.Look(ref tweak_disableNarrowHeads, "tweak_disableNarrowHeads", false);
+            Scribe_Values.Look(ref tweak_growableAmbrosia, "tweak_growableAmbrosia", false);
+            Scribe_Values.Look(ref tweak_growableGrass, "tweak_growableGrass", false);
+            Scribe_Values.Look(ref tweak_growableMushrooms, "tweak_growableMushrooms", false);
+
             // Penned Animals
             Scribe_Values.Look(ref restorePennedAnimals, "restorePennedAnimals", false);
             Scribe_Values.Look(ref tweak_pennedAnimalConfig, "tweak_pennedAnimalConfig", false);
@@ -263,6 +282,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_noMoreBreachRaids, "tweak_noMoreBreachRaids", false);
             Scribe_Values.Look(ref tweak_noMoreSapperRaids, "tweak_noMoreSapperRaids", false);
             Scribe_Values.Look(ref tweak_noMoreSiegeRaids, "tweak_noMoreSiegeRaids", false);
+            Scribe_Values.Look(ref tweak_noCowardlyRaiders, "tweak_noCowardlyRaiders", false);
 
             // Resources
             Scribe_Values.Look(ref tweak_strongerSteel, "tweak_strongerSteel", false);
@@ -315,6 +335,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_disableDesiredApparel, "tweak_disableDesiredApparel", false);
 
             Scribe_Values.Look(ref patch_properSuppression, "patch_properSuppression", false);
+            Scribe_Values.Look(ref patch_properSuppressionPercentage, "patch_properSuppressionPercentage", 0.7f);
             Scribe_Values.Look(ref patch_noMemeLimit, "patch_noMemeLimit", false);
 
             Scribe_Values.Look(ref tweak_gauranlenTweaks, "tweak_gauranlenTweaks", false);
@@ -355,6 +376,11 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_pregnancyLengthMultiplier, "tweak_pregnancyLengthMultiplier", 1.0f);
             Scribe_Values.Look(ref tweak_poluxEffectRate, "tweak_poluxEffectRate", 1.0f);
             Scribe_Values.Look(ref tweak_poluxArtificialDisables, "tweak_poluxArtificialDisables", false);
+            Scribe_Values.Look(ref tweak_defaultPregnancyChance, "tweak_defaultPregnancyChance", 0.03f);
+
+            // Genepacks
+            Scribe_Values.Look(ref tweak_genepackTweaks, "tweak_genepackTweaks", false);
+            Scribe_Collections.Look(ref genepacksEnabled, "genepacksEnabled");
         }
 
         public IEnumerable<string> GetEnabledSettings

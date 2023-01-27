@@ -38,6 +38,51 @@ namespace TweaksGalore
         public bool restoreBiotech = false;
         public bool restorePolux = false;
 
+        public Dictionary<GeneDef, ModContentPack> cachedGeneDictionary = new Dictionary<GeneDef, ModContentPack>();
+
+        public Dictionary<GeneDef, ModContentPack> CachedGeneDictionary
+        {
+            get
+            {
+                if (cachedGeneDictionary.NullOrEmpty())
+                {
+                    cachedGeneDictionary = new Dictionary<GeneDef, ModContentPack>();
+                    List<string> startList = (from x in settings.genepacksEnabled.Keys.ToList() orderby x descending select x).ToList();
+                    foreach (string name in startList)
+                    {
+                        GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(name);
+                        if (gene != null && gene.modContentPack != null)
+                        {
+                            cachedGeneDictionary.Add(gene, gene.modContentPack);
+                        }
+                    }
+                }
+                return cachedGeneDictionary;
+            }
+        }
+
+        public List<ModContentPack> cachedModListing = new List<ModContentPack>();
+
+        public List<ModContentPack> CachedModListing
+        {
+            get
+            {
+                if (cachedModListing.NullOrEmpty())
+                {
+                    cachedModListing = CachedGeneDictionary.Values.Distinct().ToList();
+                    for (int i = 0; i < cachedModListing.Count; i++)
+                    {
+                        if (cachedModListing[i].IsCoreMod || cachedModListing[i].IsOfficialMod)
+                        {
+                            cachedModListing.RemoveAt(i);
+                        }
+                    }
+                    cachedModListing.SortBy(cml => cml.Name);
+                }
+                return cachedModListing;
+            }
+        }
+
         internal static string VersionDir => Path.Combine(ModLister.GetActiveModWithIdentifier("Neronix17.TweaksGalore", true).RootDir.FullName, "Version.txt");
         public static string CurrentVersion { get; private set; }
 
@@ -165,6 +210,11 @@ namespace TweaksGalore
                     else { DoSettings_Biotech(listing); }
                 }
             }
+            else if (currentPage == TweaksGaloreSettingsPage.Genepacks)
+            {
+                if (!ModLister.BiotechInstalled) { listing.Note("Biotech is not installed. These options would do nothing for you."); }
+                else { DoSettings_Genepacks(listing); }
+            }
             else if (currentPage == TweaksGaloreSettingsPage.Polux)
             {
                 if (restorePolux) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
@@ -191,6 +241,9 @@ namespace TweaksGalore
             // Tweak: Destroy Anything
             listing.CheckboxEnhanced("Destroy Anything", "Allows the smelting of pretty much anything anything in the crematorium aside from weapons, apparel and minified buildings. Be careful so you don't burn anything important.", ref settings.tweak_destroyAnything);
             listing.GapLine();
+            // Tweak: Disable Narrow Heads
+            listing.CheckboxEnhanced("Disable Narrow Heads", "Removes the narrow head shapes, they do not fit many of even the vanilla hair and beard styles properly and thanks to 1.4 making them defs it is very easy to just YEET.", ref settings.tweak_disableNarrowHeads);
+            listing.GapLine();
             // Tweak: Don't Pack Food
             listing.CheckboxEnhanced("Don't Pack Food", "Prevents pawns from stuffing food into their inventory to carry around.", ref settings.tweak_dontPackFood);
             listing.GapLine();
@@ -210,6 +263,15 @@ namespace TweaksGalore
             // Tweak: Glowing Healroot
             string healrootName = (settings.tweak_healrootToXerigium ? "Xerigium" : "Healroot");
             listing.CheckboxEnhanced("Glowing " + healrootName, "Gives " + healrootName + " a slight glow around it, making natural " + healrootName + " easier to find on a map in the dark.", ref settings.tweak_glowingHealroot);
+            listing.GapLine();
+            // Tweak: Growable Ambrosia
+            listing.CheckboxEnhanced("Growable Ambrosia", "Allows the growing of Ambrosia in plant zones.", ref settings.tweak_growableAmbrosia);
+            listing.GapLine();
+            // Tweak: Growable Grass
+            listing.CheckboxEnhanced("Growable Grass", "Allows the growing of grass and tall grass in plant zones. If you have Biotech you can also grow grey grass from that.", ref settings.tweak_growableGrass);
+            listing.GapLine();
+            // Tweak: Growable Mushrooms
+            listing.CheckboxEnhanced("Growable Mushrooms", "Allows the growing of Glowstool and Agarilux in plant zones with sensible adjustments to the rates and yield to be more reasonable.", ref settings.tweak_growableMushrooms);
             listing.GapLine();
             // Tweak: Healroot to Xerigium
             listing.CheckboxEnhanced("Healroot to Xerigium", "Reverts the old name change of the herbal medicine plant Healroot back to Xerigium like it used to be in older game versions.", ref settings.tweak_healrootToXerigium);
@@ -307,7 +369,7 @@ namespace TweaksGalore
             }
             listing.GapLine();
             // Tweak: Trait Count Adjustment
-            listing.CheckboxEnhanced("Trait Count Adjustment", "There may be cases where this cannot apply, such as modded alien races where they have been set up to have a specific trait count.", ref settings.tweak_traitCountAdjustment);
+            listing.CheckboxEnhanced("Trait Count Adjustment", "As of 1.4 this isn't fully functional, changes to the way traits generate made it so the first 1-3 can always generate like normal, regardless of what I do. So this is only usefuly currently for those who want to guarantee more than 1 or have more in general. Won't affect newborns.", ref settings.tweak_traitCountAdjustment);
             if (settings.tweak_traitCountAdjustment)
             {
                 listing.Label("- Trait Count Range");
@@ -321,6 +383,7 @@ namespace TweaksGalore
         {
             // Tweak: Disable Adapting
             listing.CheckboxEnhanced("Disable Adapting", "Disables the ability for Mechanoids to adapt to EMP.", ref settings.patch_disableMechanoidAdapting);
+            listing.GapLine();
             // Tweak: Heat Armor
             listing.Label("Mechanoid Heat Armour: " + settings.tweak_mechanoidHeatArmour.ToStringPercent());
             listing.AddLabeledSlider(null, ref settings.tweak_mechanoidHeatArmour, 0f, 2f, "Min: 0%", "Max: 200%", 0.01f);
@@ -340,11 +403,13 @@ namespace TweaksGalore
                 "\n- Industrial Component x4" +
                 "\n- Spacer Component x1" +
                 "\n- Glittertech Medicine x5", ref settings.tweak_preReleaseShipParts);
+            listing.GapLine();
             if (ModLister.RoyaltyInstalled)
             {
                 listing.CheckboxEnhanced("Better Gloomlight", "Changes the gloomlight often found in mech clusters to produce more light so it's actually useful.", ref settings.tweak_betterGloomlight);
                 listing.CheckboxEnhanced("- Sunlamp Gloomlight", "With Better Gloomlight and this enabled, they'll instead produce enough light to be equal to that of a free sunlamp.", ref settings.tweak_gloomlightSunlamp);
                 listing.CheckboxEnhanced("- Darklight Gloomlight", "Changes the colour of the gloomlight to match that of 'Darklight'.", ref settings.tweak_gloomlightDarklight);
+                listing.GapLine();
             }
         }
 
@@ -384,8 +449,8 @@ namespace TweaksGalore
                             cachedAnimalListing.Add(animal);
                         }
                     }
+                    cachedAnimalListing.SortBy(x => x.label);
                 }
-                LogUtil.LogWarning("5");
                 return cachedAnimalListing;
             }
         }
@@ -409,14 +474,17 @@ namespace TweaksGalore
             // Tweak: No More Breach Raids
             listing.CheckboxEnhanced("No More Breach Raids", "Removes Breach Raids as an option for raiders.", ref settings.tweak_noMoreBreachRaids);
             listing.GapLine();
-            // Tweak: No More Breach Raids
+            // Tweak: No More Drop Pod Raids
             listing.CheckboxEnhanced("No More Drop Pod Raids", "Removes Drop Pod Raids as an option for raiders. Does not work with RimWar.", ref settings.tweak_noMoreDropPodRaids);
             listing.GapLine();
-            // Tweak: No More Breach Raids
+            // Tweak: No More Sapper Raids
             listing.CheckboxEnhanced("No More Sapper Raids", "Removes Sapper Raids as an option for raiders.", ref settings.tweak_noMoreSapperRaids);
             listing.GapLine();
-            // Tweak: No More Breach Raids
+            // Tweak: No More Siege Raids
             listing.CheckboxEnhanced("No More Siege Raids", "Removes Siege Raids as an option for raiders.", ref settings.tweak_noMoreSiegeRaids);
+            listing.GapLine();
+            // Tweak: No More Cowardly Raids
+            listing.CheckboxEnhanced("No More Cowardly Raids", "Prevents raiders from fleeing.", ref settings.tweak_noCowardlyRaiders);
             listing.GapLine();
         }
 
@@ -556,7 +624,7 @@ namespace TweaksGalore
         public void DoSettings_Ideology(Listing_Standard listing)
         {
             // Tweak: Ancient Deconstruction
-            listing.CheckboxEnhanced("Ancient Deconstruction", "Makes the Ancient Ruins added by Ideology deconstructable instead of having to destroy them.", ref settings.tweak_ancientDeconstruction);
+            listing.CheckboxEnhanced("Ancient Deconstruction", "Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.", ref settings.tweak_ancientDeconstruction);
             if (settings.tweak_ancientDeconstruction)
             {
                 listing.CheckboxEnhanced("- Give Proper Materials", "Changes returned items to some reasonable materials instead of just slag.", ref settings.tweak_ancientDeconstruction_mode);
@@ -572,7 +640,11 @@ namespace TweaksGalore
             listing.CheckboxEnhanced("No Meme Limit", "Raises the limit of how many memes you can choose to 1000...so effectively no limit.", ref settings.patch_noMemeLimit);
             listing.GapLine();
             // Tweak: Proper Suppression
-            listing.CheckboxEnhanced("Proper Suppression", "Changes suppression slightly so that rebellions never happen if your slaves are kept suppressed.", ref settings.patch_properSuppression);
+            listing.CheckboxEnhanced("Proper Suppression", "Changes suppression mechanics slightly so that rebellions never happen if your slaves are kept suppressed. Also prevents suppressed pawns from taking part in rebellions when they do happen.", ref settings.patch_properSuppression);
+            listing.GapLine();
+            // Tweak: Suppression Percentage
+            listing.AddLabeledSlider($"Suppression Percentage: {settings.patch_properSuppressionPercentage.ToStringPercent()}", ref settings.patch_properSuppressionPercentage, 0f, 1f, "Min: 0%", "Max: 100%", 0.01f);
+            listing.Note("Controls the percentage at which rebellions are considered suppressed, if Proper Suppression is enabled this is the threshold at which rebellions would be disabled entirely.", GameFont.Tiny, Color.gray);
             listing.GapLine();
             // Tweak: Unlocked Ideology Buildings
             listing.CheckboxEnhanced("Unlocked Ideology Buildings", "Removes the meme restriction on ideology buildings so you can use them regardless of what memes you have. Includes floors and apparel.", ref settings.tweak_unlockedIdeologyBuildings);
@@ -643,6 +715,13 @@ namespace TweaksGalore
 
         public void DoSettings_Biotech(Listing_Standard listing)
         {
+            // Tweak: Ancient Deconstruction
+            listing.CheckboxEnhanced("Ancient Deconstruction", "Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.", ref settings.tweak_ancientDeconstruction);
+            if (settings.tweak_ancientDeconstruction)
+            {
+                listing.CheckboxEnhanced("- Give Proper Materials", "Changes returned items to some reasonable materials instead of just slag.", ref settings.tweak_ancientDeconstruction_mode);
+            }
+            listing.GapLine();
             listing.Label("Genetics");
             listing.GapLine();
             // Tweak: Flatten Complexity
@@ -653,6 +732,11 @@ namespace TweaksGalore
             listing.CheckboxEnhanced("Flatten Archites", "Remove archite values from genes so they are all set to 0.", ref settings.tweak_flattenArchites);
             // Tweak: Show Genes Tab
             listing.CheckboxEnhanced("Show Genes Tab", "By default the Genes tab is hidden on pawns, if you don't have another mod revealing it, you can use this to do so instead. Just keep in mind this was potentially hidden in vanilla for a reason.", ref settings.tweak_showGenesTab);
+            listing.GapLine();
+            // Tweak: Default Pregnancy Chance
+            listing.AddLabeledSlider($"Spawn Pregnancy Chance: {settings.tweak_defaultPregnancyChance.ToStringPercent()}", ref settings.tweak_defaultPregnancyChance, 0f, 1f, "Min: 0%", "Max: 100%", 0.01f);
+            listing.Note("PawnKinds usually have a 3% chance to spawn pregnant if children are enabled which is multiplied by fertility of the pawn, this lets you change that base chance. Any pawnKind that doesn't use the default value will be skipped so as not to cause problems.", GameFont.Tiny, Color.gray);
+            TweaksGaloreStartup.UpdatePregnancyChances(settings);
             listing.GapLine();
             listing.Gap();
             listing.CheckboxEnhanced("Enable Player Mech Tweaks", "This controls if any of the player mechanoid tweaks even try to function, some tweaks have no other way of knowing if they should even run.", ref settings.tweak_playerMechTweaks);
@@ -689,6 +773,81 @@ namespace TweaksGalore
                 TweaksGaloreStartup.Tweak_MechanitorTweaks(settings);
             }
             listing.GapLine();
+        }
+
+        public void DoSettings_Genepacks(Listing_Standard listing)
+        {
+            listing.CheckboxEnhanced("Enable Genepack Tweaks", "This entire section is disabled by default for compatibility sake mostly, so there's no conflicting with other mods that choose to do this sort of tweak. These options allow you to choose whether or not a gene can spawn in genepacks.", ref settings.tweak_genepackTweaks);
+            if (settings.tweak_genepackTweaks)
+            {
+
+                listing.Note("\bBiotech\b", GameFont.Medium);
+                listing.GapLine();
+                List<GeneDef> biotechGenes = GetGenesFromOfficialContent();
+                biotechGenes.SortBy(gd => gd.label);
+                for (int i = 0; i < biotechGenes.Count(); i++)
+                {
+                    DrawGeneSetting(listing, biotechGenes[i]);
+                }
+                listing.GapLine();
+                for (int i = 0; i < CachedModListing.Count; i++)
+                {
+                    // Do Modded Genes
+                    ModContentPack curMCP = CachedModListing[i];
+                    listing.Note("\b" + curMCP.Name + "\b", GameFont.Medium);
+                    listing.GapLine();
+                    List<GeneDef> modGenes = GetGenesFromContentPack(curMCP);
+                    modGenes.SortBy(gd => gd.label);
+                    for (int j = 0; j < modGenes.Count(); j++)
+                    {
+                        DrawGeneSetting(listing, modGenes[j]);
+                    }
+                    listing.GapLine();
+                }
+
+                TweaksGaloreStartup.SetGeneSettingsValues(settings);
+            }
+        }
+
+        public void DrawGeneSetting(Listing_Standard listing, GeneDef curGene)
+        {
+            bool tempBool = settings.genepacksEnabled[curGene.defName];
+            string tooltip = curGene.LabelCap.Colorize(ColoredText.TipSectionTitleColor) + "\n\n" + curGene.DescriptionFull;
+            listing.CheckboxLabeled(curGene.LabelCap, ref tempBool, tooltip);
+            settings.genepacksEnabled[curGene.defName] = tempBool;
+        }
+
+        public List<GeneDef> GetGenesFromOfficialContent()
+        {
+            List<GeneDef> results = new List<GeneDef>();
+
+            foreach (KeyValuePair<GeneDef, ModContentPack> kvp in CachedGeneDictionary)
+            {
+                if (kvp.Value.IsCoreMod || kvp.Value.IsOfficialMod)
+                {
+                    if (!(kvp.Key.endogeneCategory == EndogeneCategory.Melanin))
+                    {
+                        results.Add(kvp.Key);
+                    }
+                }
+            }
+
+            return results;
+        }
+
+        public List<GeneDef> GetGenesFromContentPack(ModContentPack pack)
+        {
+            List<GeneDef> results = new List<GeneDef>();
+
+            foreach (KeyValuePair<GeneDef, ModContentPack> kvp in CachedGeneDictionary)
+            {
+                if (kvp.Value?.PackageId == pack?.PackageId)
+                {
+                    results.Add(kvp.Key);
+                }
+            }
+
+            return results;
         }
 
         public void DoSettings_Polux(Listing_Standard listing)
@@ -825,6 +984,7 @@ namespace TweaksGalore
         Ideology,
         Gauranlen,
         Biotech,
+        Genepacks,
         Polux,
         Defaults
     }

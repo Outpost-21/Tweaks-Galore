@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_growableMushrooms</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<!-- ===== Glowstool ===== -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Glowstool"]/plant</xpath>
+					<value>
+						<sowTags>
+							<li>Ground</li>
+							<li>Hydroponic</li>
+						</sowTags>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Glowstool"]/plant/growDays</xpath>
+					<value>
+						<growDays>12</growDays>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Glowstool"]/plant/harvestYield</xpath>
+					<value>
+						<harvestYield>14</harvestYield>
+					</value>
+				</li>
+				<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Glowstool"]/plant</xpath>
+					<value>
+						<sowResearchPrerequisites>
+							<li>RG_MushroomCultivation</li>
+						</sowResearchPrerequisites>
+					</value>
+				</li>
+				<!-- ===== Agarilux ===== -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Agarilux"]/plant</xpath>
+					<value>
+						<sowTags>
+							<li>Ground</li>
+						</sowTags>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Agarilux"]/plant/growDays</xpath>
+					<value>
+						<growDays>18</growDays>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Agarilux"]/plant/harvestYield</xpath>
+					<value>
+						<harvestYield>20</harvestYield>
+					</value>
+				</li>
+				<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Agarilux"]/plant</xpath>
+					<value>
+						<sowResearchPrerequisites>
+							<li>RG_MushroomCultivation</li>
+						</sowResearchPrerequisites>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

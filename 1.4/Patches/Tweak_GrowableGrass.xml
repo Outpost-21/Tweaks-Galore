@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_growableGrass</li>
+		</settings>
+		<active Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Plant_Grass" or defName="Plant_TallGrass"]/plant</xpath>
+			<value>
+				<sowTags>
+					<li>Ground</li>
+				</sowTags>
+			</value>
+		</active>
+	</Operation>
+
+
+</Patch>

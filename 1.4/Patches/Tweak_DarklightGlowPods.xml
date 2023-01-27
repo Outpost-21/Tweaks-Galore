@@ -6,7 +6,7 @@
 			<li>tweak_darklightGlowPods</li>
 		</settings>
 		<active Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="GlowPod"]/comps/li[@Class="CompProperties_Glower"]/glowColor</xpath>
+			<xpath>/Defs/ThingDef[defName="GlowPod"]/comps/li[@Class="CompProperties_Glower"]/glowColor</xpath>
 			<value>
 				<glowColor>(78, 226, 229, 0)</glowColor>
 			</value>

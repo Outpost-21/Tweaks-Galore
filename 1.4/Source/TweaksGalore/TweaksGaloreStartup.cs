@@ -55,6 +55,7 @@ namespace TweaksGalore
             if (ModLister.BiotechInstalled)
             {
                 try { Tweak_GeneticsTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Genetics Tweaks :: " + e); }
+                try { Tweak_PregnancyTweaks(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Pregnancy Tweaks :: " + e); }
 
                 if (settings.tweak_poluxTweaks)
                 {
@@ -68,7 +69,78 @@ namespace TweaksGalore
                 {
                     try { Tweak_PlayerMechTweaksStartup(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during PlayerMech Tweaks :: " + e); };
                 }
+
+                try { Tweak_GeneRegistration(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Gene Registration :: " + e); }
+                LogUtil.LogMessage("Loaded with " + settings.genepacksEnabled.Count.ToString() + " total GeneDefs registered.");
             }
+        }
+
+        public static void Tweak_GeneRegistration(TweaksGaloreSettings settings)
+        {
+            if (settings.defaultGenepacksEnabled.NullOrEmpty())
+            {
+                settings.defaultGenepacksEnabled = new Dictionary<string, bool>();
+            }
+            if (settings.genepacksEnabled.NullOrEmpty())
+            {
+                settings.genepacksEnabled = new Dictionary<string, bool>();
+            }
+
+            List<GeneDef> list = (from x in DefDatabase<GeneDef>.AllDefs where (bool)(x.modContentPack != null) select x).ToList();
+            foreach (GeneDef gene in list)
+            {
+                if (!settings.defaultGenepacksEnabled.ContainsKey(gene.defName))
+                {
+                    settings.defaultGenepacksEnabled.Add(gene.defName, gene.canGenerateInGeneSet);
+                }
+                if (!settings.genepacksEnabled.ContainsKey(gene.defName))
+                {
+                    settings.genepacksEnabled.Add(gene.defName, gene.canGenerateInGeneSet);
+                }
+            }
+        }
+
+        public static void SetGeneSettingsValues(TweaksGaloreSettings settings)
+        {
+            foreach (KeyValuePair<string, bool> pair in settings.genepacksEnabled)
+            {
+                GeneDef gene = DefDatabase<GeneDef>.GetNamedSilentFail(pair.Key);
+                if (gene != null)
+                {
+                    gene.canGenerateInGeneSet = pair.Value;
+                }
+            }
+        }
+
+        public static void Tweak_PregnancyTweaks(TweaksGaloreSettings settings)
+        {
+            // Pregnancy Chance Tweak
+            RegisterAlteredPregnancyChances(settings);
+            UpdatePregnancyChances(settings);
+        }
+
+        public static void UpdatePregnancyChances(TweaksGaloreSettings settings)
+        {
+            for (int i = 0; i < settings.tweak_pregnancyChanceEditedPawnKinds.Count; i++)
+            {
+                PawnKindDef curDef = settings.tweak_pregnancyChanceEditedPawnKinds[i];
+                curDef.humanPregnancyChance = settings.tweak_defaultPregnancyChance;
+            }
+        }
+
+        public static void RegisterAlteredPregnancyChances(TweaksGaloreSettings settings)
+        {
+            foreach (PawnKindDef def in DefDatabase<PawnKindDef>.AllDefs)
+            {
+                if (def.humanPregnancyChance != 0f && def.humanPregnancyChance != 1f)
+                {
+                    if (!settings.tweak_pregnancyChanceEditedPawnKinds.Contains(def))
+                    {
+                        settings.tweak_pregnancyChanceEditedPawnKinds.Add(def);
+                    }
+                }
+            }
+            LogUtil.LogMessage("Registered " + settings.tweak_pregnancyChanceEditedPawnKinds.Count + " pawnKinds for tweak_pregnancyChanceEditedPawnKinds.");
         }
 
         public static void Tweak_PennedAnimalConfig(TweaksGaloreSettings settings)

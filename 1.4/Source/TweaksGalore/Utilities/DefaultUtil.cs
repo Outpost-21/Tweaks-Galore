@@ -25,6 +25,7 @@ namespace TweaksGalore
             RestoreSettings_Gauranlen(s);
             RestoreSettings_Biotech(s);
             RestoreSettings_Polux(s);
+            RestoreSettings_Genepacks(s);
         }
 
         public static void RestoreSettings_Vanilla(TweaksGaloreSettings s)
@@ -74,6 +75,10 @@ namespace TweaksGalore
             s.tweak_skillRateLoss = 1f;
             s.tweak_skillRateGain = 1f;
             s.tweak_skillRateLossThreshold = 0f;
+            s.tweak_disableNarrowHeads = false;
+            s.tweak_growableAmbrosia = false;
+            s.tweak_growableGrass = false;
+            s.tweak_growableMushrooms = false;
         }
 
         public static void RestoreSettings_Mechanoids(TweaksGaloreSettings s)
@@ -106,6 +111,7 @@ namespace TweaksGalore
             s.tweak_noMoreDropPodRaids = false;
             s.tweak_noMoreSapperRaids = false;
             s.tweak_noMoreSiegeRaids = false;
+            s.tweak_noCowardlyRaiders = false;
         }
 
         public static void RestoreSettings_Resources(TweaksGaloreSettings s)
@@ -155,6 +161,7 @@ namespace TweaksGalore
             s.tweak_darklightGlowPods = false;
             s.tweak_disableDesiredApparel = false;
             s.patch_properSuppression = false;
+            s.patch_properSuppressionPercentage = 0.7f;
             s.patch_noMemeLimit = false;
         }
 
@@ -196,6 +203,7 @@ namespace TweaksGalore
             s.tweak_mechanitorBandNodeBandwidth = 1f;
             s.tweak_primitiveVasectomy = false;
             s.tweak_pregnancyLengthMultiplier = 1.0f;
+            s.tweak_defaultPregnancyChance = 0.03f;
         }
 
         public static void RestoreSettings_Polux(TweaksGaloreSettings s)
@@ -205,6 +213,11 @@ namespace TweaksGalore
             s.tweak_poluxEffectRadius = 7.9f;
             s.tweak_poluxEffectRate = 1.0f;
             s.tweak_poluxArtificialDisables = false;
+        }
+
+        public static void RestoreSettings_Genepacks(TweaksGaloreSettings s)
+        {
+            s.genepacksEnabled = s.defaultGenepacksEnabled;
         }
     }
 }

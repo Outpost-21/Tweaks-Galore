@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_noCowardlyRaiders</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef/autoFlee</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef</xpath>
+					<value>
+						<autoFlee>false</autoFlee>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

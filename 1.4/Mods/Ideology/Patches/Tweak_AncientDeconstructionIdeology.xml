@@ -8,24 +8,6 @@
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[@Name="NonDeconstructibleAncientBuildingBase"]/building/deconstructible</xpath>
-					<value>
-						<deconstructible>true</deconstructible>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[@Name="NonDeconstructibleAncientBuildingBase"]/building/claimable</xpath>
-					<value>
-						<claimable>true</claimable>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[@Name="NonDeconstructibleAncientBuildingBase"]/statBases</xpath>
-					<value>
-						<WorkToBuild>5000</WorkToBuild>
-					</value>
-				</li>
 				<li Class="TweaksGalore.PatchOperation_SettingActive">
 					<settings>
 						<li>tweak_ancientDeconstruction_mode</li>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_disableNarrowHeads</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/HeadTypeDef[defName="Furskin_Narrow1" or defName="Furskin_Narrow2" or defName="Furskin_Narrow3"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/GeneDef[defName="Furskin"]/forcedHeadTypes/li[text()="Furskin_Narrow1" or text()="Furskin_Narrow2" or text()="Furskin_Narrow3"]</xpath>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/GeneDef[defName="AG_RockSpurs"]</xpath>
+					<success>Always</success>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/GeneDef[defName="AG_RockSpurs"]/forcedHeadTypes/li[text()="Male_NarrowNormal" or text()="Male_NarrowPointy" or text()="Female_NarrowNormal" or text()="Female_NarrowPointy"]</xpath>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
