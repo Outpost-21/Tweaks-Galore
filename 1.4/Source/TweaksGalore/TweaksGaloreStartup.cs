@@ -528,6 +528,8 @@ namespace TweaksGalore
 
         public static void Tweak_MechanoidHeatArmor(TweaksGaloreSettings settings)
         {
+            if(settings.tweak_mechanoidHeatArmour == 2f) { return; }
+
             // Tweak: Mechanoid Heat Armor
             if (!GetAllMechanoids.EnumerableNullOrEmpty())
             {
@@ -542,7 +544,7 @@ namespace TweaksGalore
                         }
                         else
                         {
-                            LogUtil.LogMessage("O21 :: Tweaks Galore :: Mechanoid Recognised: " + def.defName + "/" + def.label + ", but not patched as it has no heat armour value. This is intended behaviour not an error.");
+                            LogUtil.LogMessage("Mechanoid Recognised: " + def.defName + "/" + def.label + ", but not patched as it has no heat armour value. This is intended behaviour not an error.");
                         }
                     }
                 }
