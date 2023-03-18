@@ -20,6 +20,8 @@ namespace TweaksGalore
             RestoreSettings_Raids(s);
             RestoreSettings_Resources(s);
             RestoreSettings_Royalty(s);
+            RestoreSettings_RoyalTitles(s);
+            RestoreSettings_RoyalPermits(s);
             RestoreSettings_Anima(s);
             RestoreSettings_Ideology(s);
             RestoreSettings_Gauranlen(s);
@@ -79,6 +81,7 @@ namespace TweaksGalore
             s.tweak_growableAmbrosia = false;
             s.tweak_growableGrass = false;
             s.tweak_growableMushrooms = false;
+            s.tweak_hiddenConduits = false;
         }
 
         public static void RestoreSettings_Mechanoids(TweaksGaloreSettings s)
@@ -151,6 +154,16 @@ namespace TweaksGalore
             s.tweak_animaPsylinkLevelNeeds = new List<int>();
             s.tweak_animaBuildableShrines = false;
             s.tweak_animaMeditationGain = 0.5f;
+        }
+
+        public static void RestoreSettings_RoyalTitles(TweaksGaloreSettings s)
+        {
+            s.tweak_royalTitleSettings = s.royalTitleSettingsDefaults;
+        }
+
+        public static void RestoreSettings_RoyalPermits(TweaksGaloreSettings s)
+        {
+            s.tweak_royalPermitSettings = s.royalPermitSettingsDefaults;
         }
 
         public static void RestoreSettings_Ideology(TweaksGaloreSettings s)

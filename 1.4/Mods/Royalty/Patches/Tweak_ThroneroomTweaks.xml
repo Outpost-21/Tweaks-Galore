@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_throneroomAnyBuildings</li>
+		</settings>
+		<active Class="PatchOperationRemove">
+			<xpath>/Defs/RoyalTitleDef/throneRoomRequirements/li[@Class="RoomRequirement_ForbiddenBuildings" or @Class="RoomRequirement_ForbidAltars"]</xpath>
+		</active>
+		<inactive Class="TweaksGalore.PatchOperation_SettingActive">
+			<settings>
+				<li>tweak_throneroomAllowAltars</li>
+			</settings>
+			<active Class="PatchOperationRemove">
+				<xpath>/Defs/RoyalTitleDef/throneRoomRequirements/li[@Class="RoomRequirement_ForbidAltars"]</xpath>
+			</active>
+		</inactive>
+	</Operation>
+
+</Patch>

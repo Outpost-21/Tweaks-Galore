@@ -12,11 +12,7 @@ using HarmonyLib;
 
 namespace TweaksGalore
 {
-	[HarmonyPatch(typeof(QuestPartUtility), "GetRewardStackElementsForThings", new Type[]
-	{
-		typeof(IEnumerable<Thing>),
-		typeof(bool)
-	})]
+	[HarmonyPatch(typeof(QuestPartUtility), "GetRewardStackElementsForThings", new Type[] { typeof(IEnumerable<Thing>), typeof(bool) })]
 	public static class GetRewardStackElementsForThings_Patch
 	{
 		[HarmonyPrefix]

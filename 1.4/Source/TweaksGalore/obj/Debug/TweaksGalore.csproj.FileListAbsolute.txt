@@ -10,3 +10,7 @@ C:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Assemblies\TweaksGalore.dl
 C:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Source\TweaksGalore\obj\Debug\TweaksGalore.csproj.AssemblyReference.cache
 C:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Source\TweaksGalore\obj\Debug\TweaksGalore.csproj.CoreCompileInputs.cache
 C:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Source\TweaksGalore\obj\Debug\TweaksGalore.dll
+F:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Assemblies\TweaksGalore.dll
+F:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Source\TweaksGalore\obj\Debug\TweaksGalore.csproj.AssemblyReference.cache
+F:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Source\TweaksGalore\obj\Debug\TweaksGalore.csproj.CoreCompileInputs.cache
+F:\RWModCategories\Neronix17\_Fixes\Tweaks Galore\1.4\Source\TweaksGalore\obj\Debug\TweaksGalore.dll

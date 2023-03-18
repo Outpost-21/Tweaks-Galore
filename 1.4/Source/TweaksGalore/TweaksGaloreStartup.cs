@@ -39,11 +39,14 @@ namespace TweaksGalore
             if (ModLister.RoyaltyInstalled)
             {
                 try { Tweak_MeditationAnyFocus(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during MeditationAnyFocus :: " + e); };
+                try { Tweak_WaitThisIsBetter(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during WaitThisIsBetter :: " + e); };
 
                 if (settings.tweak_animaTweaks)
                 {
                     try { Tweak_AnimaTweaksStartup(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Anima Tweaks :: " + e); };
                 }
+                try { Tweak_RoyaltyTitleTweaksStartup(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Royalty Title Tweaks :: " + e); };
+                try { Tweak_RoyaltyPermitTweaksStartup(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Royalty Permit Tweaks :: " + e); };
             }
             if (ModLister.IdeologyInstalled)
             {
@@ -73,6 +76,166 @@ namespace TweaksGalore
                 try { Tweak_GeneRegistration(settings); } catch (Exception e) { LogUtil.LogError("Caught exception during Gene Registration :: " + e); }
                 LogUtil.LogMessage("Loaded with " + settings.genepacksEnabled.Count.ToString() + " total GeneDefs registered.");
             }
+        }
+
+        public static void Tweak_WaitThisIsBetter(TweaksGaloreSettings settings)
+        {
+            if (settings.tweak_waitThisIsBetter)
+            {
+                foreach(ThingDef apparel in DefDatabase<ThingDef>.AllDefs.Where(d => d.IsApparel))
+                {
+                    if(apparel.apparel != null && !apparel.apparel.tags.NullOrEmpty())
+                    {
+                        string[] sTags = new string[] { "RoyalTier7", "RoyalTier6", "RoyalTier5", "RoyalTier4", "RoyalTier3", "RoyalTier2", "RoyalTier1" };
+                        string sTagResult = sTags.FirstOrDefault(s => apparel.apparel.tags.Contains(s));
+                        switch (sTagResult)
+                        {
+                            case "RoyalTier7":
+                                AddTagsToRoyalApparel(apparel, sTags, 1);
+                                break;
+                            case "RoyalTier6":
+                                AddTagsToRoyalApparel(apparel, sTags, 2);
+                                break;
+                            case "RoyalTier5":
+                                AddTagsToRoyalApparel(apparel, sTags, 3);
+                                break;
+                            case "RoyalTier4":
+                                AddTagsToRoyalApparel(apparel, sTags, 4);
+                                break;
+                            case "RoyalTier3":
+                                AddTagsToRoyalApparel(apparel, sTags, 5);
+                                break;
+                            case "RoyalTier2":
+                                AddTagsToRoyalApparel(apparel, sTags, 6);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void AddTagsToRoyalApparel(ThingDef apparel, string[] tags, int start)
+        {
+            for (int i = start; i < tags.Length; i++)
+            {
+                apparel.apparel.tags.Add(tags[i]);
+            }
+        }
+
+        public static void Tweak_RoyaltyTitleTweaksStartup(TweaksGaloreSettings settings)
+        {
+            if (settings.royalTitleSettingsDefaults.NullOrEmpty())
+            {
+                settings.royalTitleSettingsDefaults = new Dictionary<string, RoyalTitleSettings>();
+            }
+            if(settings.tweak_royalTitleSettings.NullOrEmpty())
+            {
+                settings.tweak_royalTitleSettings = new Dictionary<string, RoyalTitleSettings>();
+            }
+            foreach(RoyalTitleDef title in DefDatabase<RoyalTitleDef>.AllDefs)
+            {
+                if(title.Awardable && title.tags != null)
+                {
+                    if (!settings.royalTitleSettingsDefaults.ContainsKey(title.defName))
+                    {
+                        settings.royalTitleSettingsDefaults.Add(title.defName, MakeNewRoyalTitleSetting(title));
+                    }
+                    if (!settings.tweak_royalTitleSettings.ContainsKey(title.defName))
+                    {
+                        settings.tweak_royalTitleSettings.Add(title.defName, MakeNewRoyalTitleSetting(title));
+                    }
+                    RoyalTitleSettings titleSettings = settings.tweak_royalTitleSettings[title.defName];
+                    title.favorCost = Mathf.RoundToInt(titleSettings.favorCost);
+                    title.changeHeirQuestPoints = Mathf.RoundToInt(titleSettings.heirQuestPoints);
+                    title.permitPointsAwarded = Mathf.RoundToInt(titleSettings.permitPoints);
+                    title.allowDignifiedMeditationFocus = titleSettings.dignifiedMeditation;
+                    if (titleSettings.enableWork)
+                    {
+                        title.disabledWorkTags = WorkTags.None;
+                    }
+                    else
+                    {
+                        title.disabledWorkTags = titleSettings.disabledWorkTags;
+                    }
+                    if (titleSettings.disableThroneroomRequirements == null) { titleSettings.disableThroneroomRequirements = false; }
+                    else if (titleSettings.disableThroneroomRequirements == true) { title.throneRoomRequirements = null; }
+                    if (titleSettings.disableBedroomRequirements == null) { titleSettings.disableBedroomRequirements = false; }
+                    else if (titleSettings.disableBedroomRequirements == true) { title.bedroomRequirements = null; }
+                }
+            }
+        }
+
+        public static RoyalTitleSettings MakeNewRoyalTitleSetting(RoyalTitleDef title)
+        {
+            return new RoyalTitleSettings()
+            {
+                favorCost = title.favorCost,
+                heirQuestPoints = title.changeHeirQuestPoints,
+                permitPoints = title.permitPointsAwarded,
+                dignifiedMeditation = title.allowDignifiedMeditationFocus,
+                enableWork = false,
+                disabledWorkTags = title.disabledWorkTags,
+                hasBedroomReqs = title.bedroomRequirements != null,
+                hasThroneroomReqs = title.throneRoomRequirements != null
+            };
+        }
+
+        public static void Tweak_RoyaltyPermitTweaksStartup(TweaksGaloreSettings settings)
+        {
+            if (settings.royalPermitSettingsDefaults.NullOrEmpty())
+            {
+                settings.royalPermitSettingsDefaults = new Dictionary<string, RoyalPermitSettings>();
+            }
+            if (settings.tweak_royalPermitSettings.NullOrEmpty())
+            {
+                settings.tweak_royalPermitSettings = new Dictionary<string, RoyalPermitSettings>();
+            }
+            foreach (RoyalTitlePermitDef permit in DefDatabase<RoyalTitlePermitDef>.AllDefs)
+            {
+                if (permit.faction != null)
+                {
+                    if (!settings.royalPermitSettingsDefaults.ContainsKey(permit.defName))
+                    {
+                        settings.royalPermitSettingsDefaults.Add(permit.defName, MakeNewRoyalPermitSetting(permit));
+                    }
+                    if (!settings.tweak_royalPermitSettings.ContainsKey(permit.defName))
+                    {
+                        settings.tweak_royalPermitSettings.Add(permit.defName, MakeNewRoyalPermitSetting(permit));
+                    }
+                    RoyalPermitSettings permitSettings = settings.tweak_royalPermitSettings[permit.defName];
+                    RoyalTitleDef minTitle = DefDatabase<RoyalTitleDef>.GetNamed(permitSettings.minTitle);
+                    if(minTitle != null)
+                    {
+                        minTitle = permit.minTitle;
+                    }
+                    permit.minTitle = minTitle;
+                    permit.permitPointCost = Mathf.RoundToInt(permitSettings.permitPointCost);
+                    permit.cooldownDays = permitSettings.cooldownDays;
+                    if(permit.royalAid != null)
+                    {
+                        permit.royalAid.favorCost = Mathf.RoundToInt(permitSettings.favorCost);
+                        permit.royalAid.pawnCount = Mathf.RoundToInt(permitSettings.pawnCount);
+                        permit.royalAid.aidDurationDays = Mathf.RoundToInt(permitSettings.aidDurationDays);
+                    }
+                }
+            }
+        }
+
+        public static RoyalPermitSettings MakeNewRoyalPermitSetting(RoyalTitlePermitDef permit)
+        {
+            RoyalPermitSettings s = new RoyalPermitSettings();
+            s.minTitle = permit.minTitle.defName;
+            s.permitPointCost = permit.permitPointCost;
+            s.cooldownDays = permit.cooldownDays;
+            if (permit.royalAid != null)
+            {
+                s.favorCost = permit.royalAid.favorCost;
+                s.pawnCount = permit.royalAid.pawnCount;
+                s.aidDurationDays = permit.royalAid.aidDurationDays;
+            }
+            return s;
         }
 
         public static void Tweak_GeneRegistration(TweaksGaloreSettings settings)
@@ -263,7 +426,7 @@ namespace TweaksGalore
 
         public static void Tweak_AnimaTweaksStartup(TweaksGaloreSettings settings)
         {
-            if (TweaksGaloreMod.mod.GetPsylinkStuff)
+            if (SettingsPage_Anima.GetPsylinkStuff)
             {
                 // Just loads the initial settings for psylink levels.
             }

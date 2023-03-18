@@ -75,6 +75,8 @@ namespace TweaksGalore
         public bool tweak_growableGrass = false;
         public bool tweak_growableMushrooms = false;
 
+        public bool tweak_hiddenConduits = false;
+
         // Penned Animals
         public bool restorePennedAnimals = false;
         public bool tweak_pennedAnimalConfig = false;
@@ -119,6 +121,12 @@ namespace TweaksGalore
         // Royalty
         public bool tweak_delayedRoyalty = false;
         public bool tweak_uninstallableMechShields = false;
+        public bool tweak_paintableRoyalStuff = false;
+        public bool tweak_workingRoyalty = false;
+        public bool tweak_waitThisIsBetter = false;
+        public bool tweak_noTradingPermit = false;
+        public bool tweak_throneroomAllowAltars = false;
+        public bool tweak_throneroomAnyBuildings = false;
 
         // Anima
         public bool tweak_animaTweaks = false;
@@ -137,6 +145,18 @@ namespace TweaksGalore
         public bool tweak_animaBuildableShrines = false;
         public bool tweak_animaRemoveBackstoryLimits = false;
         public float tweak_animaMeditationGain = 0.5f;
+
+        // Titles
+        public Dictionary<string, RoyalTitleSettings> tweak_royalTitleSettings = new Dictionary<string, RoyalTitleSettings>();
+
+        [Unsaved]
+        public Dictionary<string, RoyalTitleSettings> royalTitleSettingsDefaults = new Dictionary<string, RoyalTitleSettings>();
+
+        // Permits
+        public Dictionary<string, RoyalPermitSettings> tweak_royalPermitSettings = new Dictionary<string, RoyalPermitSettings>();
+
+        [Unsaved]
+        public Dictionary<string, RoyalPermitSettings> royalPermitSettingsDefaults = new Dictionary<string, RoyalPermitSettings>();
 
         // Ideology
         public bool tweak_ancientDeconstruction = false;
@@ -265,6 +285,8 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_growableGrass, "tweak_growableGrass", false);
             Scribe_Values.Look(ref tweak_growableMushrooms, "tweak_growableMushrooms", false);
 
+            Scribe_Values.Look(ref tweak_hiddenConduits, "tweak_hiddenConduits", false);
+
             // Penned Animals
             Scribe_Values.Look(ref restorePennedAnimals, "restorePennedAnimals", false);
             Scribe_Values.Look(ref tweak_pennedAnimalConfig, "tweak_pennedAnimalConfig", false);
@@ -309,6 +331,10 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_delayedRoyalty, "tweak_delayedRoyalty", false);
             Scribe_Values.Look(ref tweak_replantableAnima, "tweak_replantableAnima", false);
             Scribe_Values.Look(ref tweak_uninstallableMechShields, "tweak_uninstallableMechShields", false);
+            Scribe_Values.Look(ref tweak_waitThisIsBetter, "tweak_waitThisIsBetter", false);
+            Scribe_Values.Look(ref tweak_noTradingPermit, "tweak_noTradingPermit", false);
+            Scribe_Values.Look(ref tweak_throneroomAllowAltars, "tweak_throneroomAllowAltars", false);
+            Scribe_Values.Look(ref tweak_throneroomAnyBuildings, "tweak_throneroomAnyBuildings", false);
 
             Scribe_Values.Look(ref tweak_animaTweaks, "tweak_animaTweaks", false);
             Scribe_Values.Look(ref tweak_animaDisableScream, "tweak_animaDisableScream", false);
@@ -325,6 +351,12 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_animaBuildableShrines, "tweak_animaBuildableShrines", false);
             Scribe_Values.Look(ref tweak_animaRemoveBackstoryLimits, "tweak_animaRemoveBackstoryLimits", false);
             Scribe_Values.Look(ref tweak_animaMeditationGain, "tweak_animaMeditationGain", 0.5f);
+
+            // Royal Titles
+            Scribe_Collections.Look(ref tweak_royalTitleSettings, "tweak_royalTitleSettings");
+
+            // Royal Permits
+            Scribe_Collections.Look(ref tweak_royalPermitSettings, "tweak_royalPermitSettings");
 
             // Ideology
             Scribe_Values.Look(ref tweak_ancientDeconstruction, "tweak_ancientDeconstruction", false);

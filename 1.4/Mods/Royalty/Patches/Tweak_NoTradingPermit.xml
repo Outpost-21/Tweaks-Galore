@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+		<settings>
+			<li>tweak_noTradingPermit</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/permitRequiredForTrading</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/permitRequiredForTrading</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]/permitRequiredForTrading</xpath>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
