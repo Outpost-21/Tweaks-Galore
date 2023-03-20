@@ -76,6 +76,7 @@ namespace TweaksGalore
         public bool tweak_growableMushrooms = false;
 
         public bool tweak_hiddenConduits = false;
+        public bool patch_lowPrisonerExpectations = false;
 
         // Penned Animals
         public bool restorePennedAnimals = false;
@@ -286,6 +287,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref tweak_growableMushrooms, "tweak_growableMushrooms", false);
 
             Scribe_Values.Look(ref tweak_hiddenConduits, "tweak_hiddenConduits", false);
+            Scribe_Values.Look(ref patch_lowPrisonerExpectations, "patch_lowPrisonerExpectations", false);
 
             // Penned Animals
             Scribe_Values.Look(ref restorePennedAnimals, "restorePennedAnimals", false);

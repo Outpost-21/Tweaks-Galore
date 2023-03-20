@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\RoyalPermitSettings.cs" />
+    <Compile Include="Harmony\Patch_ThoughtWorker_Expectations_CurrentStateInternal.cs" />
     <Compile Include="SettingsPages\SettingsPage_Anima.cs" />
     <Compile Include="Harmony\Patch_CanParticipateInSlaveRebellion.cs" />
     <Compile Include="Harmony\Patch_PowerNetGraphics_PrintWirePieceConnecting.cs" />

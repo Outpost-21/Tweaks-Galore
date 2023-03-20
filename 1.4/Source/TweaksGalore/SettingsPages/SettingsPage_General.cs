@@ -59,8 +59,8 @@ namespace TweaksGalore
             // Tweak: Healroot to Xerigium
             listing.CheckboxEnhanced("Healroot to Xerigium", "Reverts the old name change of the herbal medicine plant Healroot back to Xerigium like it used to be in older game versions.", ref settings.tweak_healrootToXerigium);
             listing.GapLine();
-            // Tweak: Hidden Conduits
-            listing.CheckboxEnhanced("Hidden Conduits", "Visually hides the random conduit cables that connect to the proper power conduits from buildings that don't specifically need to be placed on top of power.", ref settings.tweak_hiddenConduits);
+            // Tweak: Hidden Cables
+            listing.CheckboxEnhanced("Hidden Wires", "Visually hides the ugly wires that connect to the power conduits from buildings that don't specifically need to be placed on top of conduits.", ref settings.tweak_hiddenConduits);
             listing.GapLine();
             // Tweak: Hunters Can Use Melee
             listing.CheckboxEnhanced("Hunters Can Use Melee", "Allows hunters to use melee, regardless of how well they can do so.", ref settings.tweak_hunterMelee);
@@ -92,6 +92,8 @@ namespace TweaksGalore
             // Tweak: Lag free Lamps
             listing.CheckboxEnhanced("Lag Free Lamps", "Removes the fuel comp from fuelled lamps, so they now no longer run code constantly they impact performance that little bit less.", ref settings.tweak_lagFreeLamps);
             listing.GapLine();
+            // Tweak: Lower Prisoner Expectations
+            listing.CheckboxEnhanced("Lower Prisoner Expectations", "Brings prisoner expectations down to a more reasonable 'low expectations' level. They just tried to kill your colony most of the time, they don't deserve to have expectations.", ref settings.patch_lowPrisonerExpectations);
             // Tweak: Megasloth to Megatherium
             listing.CheckboxEnhanced("Megasloth to Megatherium", "Reverts the name change of the Megatherium so it retains the obviously cooler name.", ref settings.tweak_oldMegaslothName);
             listing.GapLine();

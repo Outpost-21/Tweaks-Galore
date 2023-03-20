@@ -2,21 +2,14 @@
 <Defs>
 
 	<TabulaRasa.UpdateDef>
-		<defName>TweaksGalore_18032023</defName>
-		<date>2023/03/18</date>
+		<defName>TweaksGalore_26032023</defName>
+		<date>2023/03/26</date>
 		<banner></banner>
-		<content>Royal Pain? No more!
-
-New Tweaks:
-- [Royalty] Allow Altars in Throne Rooms - Does what it says, allows altars while keeping a throne room recognised as one.
-- [Royalty] Allow Any Building in Throne Rooms - Again does what it says, just removes any building restrictions, including altars.
-- [Royalty] Wait, This is Better - Allows higher tier royalty gear to also satisfy lower tier seeking titles.
-- [Royalty] No Trading Permit - Removes the need for a trading permit to be able to trade with the Shattered Empire.
-- [Royalty] Royal Titles - New page allowing control over some aspects of every Royal Title the player can obtain, including modded titles (yes it works with Vanilla Factions Expanded - Empire, it's why I did this whole update).
-- [Royalty] Royal Permits - New page allowing control over some aspects of Royal Permits, including modded ones.
+		<content>New Tweaks:
+- Reduced Prisoner Expectations - Lowers prisoner expectations so they aren't so uptight considering they usually just tried to murder your colonists.
 
 Fixes:
-- [Royalty] No Backstory Limits - Should now work with Vanilla Psycasts Expanded, also removing backstory limits on psycasting paths.</content>
+- Hidden Conduits - Renamed to Hidden Wires</content>
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
 		<important>false</important>
 	</TabulaRasa.UpdateDef>
