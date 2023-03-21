@@ -17,7 +17,7 @@ namespace TweaksGalore
 	public class Patch_ThoughtWorker_Expectations_CurrentStateInternal
 	{
 		[HarmonyPostfix]
-		public static ThoughtState Postfix(Pawn p, ref ThoughtState __result)
+		public static ThoughtState Postfix(ThoughtState __result, Pawn p)
 		{
             if (TweaksGaloreMod.settings.patch_lowPrisonerExpectations)
 			{
