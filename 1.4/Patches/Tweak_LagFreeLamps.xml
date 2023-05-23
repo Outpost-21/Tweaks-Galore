@@ -74,7 +74,23 @@
 					<xpath>/Defs/ThingDef[defName="Outland_Toro"]</xpath>
 					<success>Always</success>
 					<match Class="PatchOperationRemove">
-						<xpath>/Defs/ThingDef[defName="Outland_Toro"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+						<xpath>/Defs/ThingDef[defName="Outland_Toro" or defName="Outland_WallBoxLantern" or defName="Outland_WallBoxLantern_Darklight"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+					</match>
+				</li>
+				<!-- Simple Utilities: Wall -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="Owl_Fencepost_TorchLamp"]</xpath>
+					<success>Always</success>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="Owl_Fencepost_TorchLamp" or defName="Owl_Fencepost_Chemlamp"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+					</match>
+				</li>
+				<!-- Simple Utilities: Ceiling -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="Owl_Chandelier"]</xpath>
+					<success>Always</success>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="Owl_Chandelier"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
 					</match>
 				</li>
 				<!-- [LTS] Furnishings -->
