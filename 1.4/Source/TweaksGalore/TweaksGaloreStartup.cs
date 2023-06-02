@@ -701,7 +701,7 @@ namespace TweaksGalore
                     if (def != null & !def.defName.Contains("Corpse"))
                     {
                         StatModifier heatStat = def?.statBases?.Find(stat => stat.stat == StatDefOf.ArmorRating_Heat);
-                        if (heatStat != null)
+                        if (heatStat != null && heatStat.value == 2f)
                         {
                             heatStat.value = settings.tweak_mechanoidHeatArmour;
                         }
