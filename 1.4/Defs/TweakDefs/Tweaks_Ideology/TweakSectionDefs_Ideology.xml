@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_Ideology</defName>
+		<label>Ideology</label>
+		<sections>
+			<li>TweakSection_Ideology_General</li>
+			<li>TweakSection_Ideology_Gauranlen</li>
+		</sections>
+		<required>
+			<li>Ludeon.RimWorld.Ideology</li>
+		</required>
+		<orderID>-2</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+</Defs>

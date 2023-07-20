@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_Royalty</defName>
+		<label>Royalty</label>
+		<sections>
+			<li>TweakSection_Royalty_General</li>
+			<li>TweakSection_Royalty_Anima</li>
+			<li>TweakSection_Royalty_RoyalTitles</li>
+			<li>TweakSection_Royalty_RoyalPermits</li>
+		</sections>
+		<required>
+			<li>Ludeon.RimWorld.Royalty</li>
+		</required>
+		<orderID>-3</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Royalty_RoyalTitles</defName>
+		<label>Royal Titles</label>
+		<sectionWorker>TweaksGalore.SectionWorker_RoyalTitles</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Royalty_RoyalPermits</defName>
+		<label>Royal Permits</label>
+		<sectionWorker>TweaksGalore.SectionWorker_RoyalPermits</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+</Defs>

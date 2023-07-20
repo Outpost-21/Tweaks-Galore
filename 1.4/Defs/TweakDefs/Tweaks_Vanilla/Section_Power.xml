@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Power</defName>
+		<label>Power</label>
+		<description>Allows tweaking the usage rate of some buildings. If they usually produce then it configures how much they output instead.</description>
+		<tweaks>
+			<li>Tweak_PowerAdjusting</li>
+			<li>Tweak_PowerAdj_StandingLamp</li>
+			<li>Tweak_PowerAdj_SunLamp</li>
+			<li>Tweak_PowerAdj_Autodoor</li>
+			<li>Tweak_PowerAdj_VanometricPowerCell</li>
+		</tweaks>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PowerAdjusting</defName>
+		<label>Enabled</label>
+		<description>If enabled, allows the below power changes to take effect. Requires restart for the values to actually work, as they're assigned on startup.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+		</formatting>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef Name="TweakBase_PowerAdjuster" Abstract="True">
+		<tweakWorker>TweaksGalore.TweakWorker_PowerValue</tweakWorker>
+		<tweakType>Int</tweakType>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_StandingLamp</defName>
+		<label>Standing Lamp</label>
+		<defaultValue>30</defaultValue>
+		<intRange>0~100</intRange>
+		<tweakThings>
+			<li>StandingLamp</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_SunLamp</defName>
+		<label>Sun Lamp</label>
+		<defaultValue>2900</defaultValue>
+		<intRange>0~10000</intRange>
+		<tweakThing>SunLamp</tweakThing>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_Autodoor</defName>
+		<label>Auto-door</label>
+		<defaultValue>50</defaultValue>
+		<intRange>0~100</intRange>
+		<tweakThing>Autodoor</tweakThing>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_VanometricPowerCell</defName>
+		<label>Vanometric Power Cell</label>
+		<defaultValue>1000</defaultValue>
+		<intRange>0~10000</intRange>
+		<invertUsage>true</invertUsage>
+		<tweakThing>VanometricPowerCell</tweakThing>
+	</TweaksGalore.TweakDef>
+
+</Defs>

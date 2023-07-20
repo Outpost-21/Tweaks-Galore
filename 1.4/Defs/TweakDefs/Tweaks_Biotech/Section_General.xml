@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Biotech_General</defName>
+		<label>General</label>
+		<tweaks></tweaks>
+		<subSections>
+			<li>TweakSubSection_AncientDeconstruction</li>
+			<li>TweakSubSection_Biotech_GeneStats</li>
+			<li>TweakSubSection_Biotech_MechanitorTweaks</li>
+			<li>TweakSubSection_PlayerMechs</li>
+		</subSections>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ShowGenesTab</defName>
+		<label>Show Genes Tab</label>
+		<description>By default the Genes tab is hidden on pawns, if you don't have another mod revealing it, you can use this to do so instead. Just keep in mind this was potentially hidden in vanilla for a reason.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SpawnPregnancyChance</defName>
+		<label>Spawn Pregnancy Chance</label>
+		<description>PawnKinds usually have a 3% chance to spawn pregnant if children are enabled which is multiplied by fertility of the pawn, this lets you change that base chance. Any pawnKind that doesn't use the default value will be skipped so as not to cause problems.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>0.03</defaultValue>
+		<floatRange>0.0~1.0</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- ================== Gene Stats ================== -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_Biotech_GeneStats</defName>
+		<label>Gene Stats</label>
+		<tweaks>
+			<li>Tweak_FlattenComplexity</li>
+			<li>Tweak_FlattenMetabolism</li>
+			<li>Tweak_FlattenArchites</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FlattenComplexity</defName>
+		<label>Flatten Complexity</label>
+		<description>Remove complexity values from genes so they are all set to 0.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GeneDefComplexity</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FlattenMetabolism</defName>
+		<label>Flatten Metabolism</label>
+		<description>Remove metabolism values from genes so they are all set to 0.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GeneDefMetabolism</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FlattenArchites</defName>
+		<label>Flatten Archites</label>
+		<description>Remove archite values from genes so they are all set to 0.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GeneDefArchites</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<!-- ======================================================= -->
+	<!-- ================== Mechanitor Tweaks ================== -->
+	<!-- ======================================================= -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_Biotech_MechanitorTweaks</defName>
+		<label>Mechanitor Tweaks</label>
+		<tweaks>
+			<li>Tweak_MechanitorTweaks</li>
+			<li>Tweak_MechanitorDisableRange</li>
+			<li>Tweak_MechanitorBandwidthBase</li>
+			<li>Tweak_MechanitorControlGroupBase</li>
+			<li>Tweak_BandwidthPerBandNode</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechanitorTweaks</defName>
+		<label>Enabled</label>
+		<description>This controls if any of the mechanitor tweaks even try to function, some tweaks have no other way of knowing if they should even run.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_MechanitorTweaks</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechanitorDisableRange</defName>
+		<label>Disable Range Limit</label>
+		<description>Makes mechanoids controllable regardless of distance to Mechanitor. If they can design a neural interface they can design something with better than cheap wifi range.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechanitorBandwidthBase</defName>
+		<label>Bandwidth Base</label>
+		<description>Controls the initial bandwidth all Mechanitors have.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>6</defaultValue>
+		<intRange>1~30</intRange>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechanitorControlGroupBase</defName>
+		<label>Control Group Base</label>
+		<description>Controls the initial number of control groups all Mechanitors have.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>2</defaultValue>
+		<intRange>1~10</intRange>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BandwidthPerBandNode</defName>
+		<label>Bandwitdth Per Band Node</label>
+		<description>Controls the bandwidth a band node adds to a given mechanitor.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>1</defaultValue>
+		<intRange>1~20</intRange>
+	</TweaksGalore.TweakDef>
+
+</Defs>

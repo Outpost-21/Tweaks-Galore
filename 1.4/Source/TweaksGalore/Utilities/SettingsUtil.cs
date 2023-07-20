@@ -9,6 +9,7 @@ using System.Windows;
 using UnityEngine;
 using RimWorld;
 using Verse;
+using Verse.Sound;
 
 namespace TweaksGalore
 {
@@ -108,7 +109,7 @@ namespace TweaksGalore
 			listing.Gap(6f);
 		}
 
-		public static void SettingsDropdown(this Listing_Standard listing, string name, string explanation, ref TweaksGaloreSettingsPage value, float width)
+		public static void SettingsCategoryDropdown(this Listing_Standard listing, string name, string explanation, ref TweakCategoryDef def, float width)
 		{
 			float curHeight = listing.CurHeight;
 			Rect rect = listing.GetRect(Text.LineHeight + listing.verticalSpacing);
@@ -120,15 +121,17 @@ namespace TweaksGalore
 			Text.Anchor = TextAnchor.MiddleRight;
 
 			Rect rect2 = new Rect(width - 150f, 0f, 150f, 29f);
-			if (Widgets.ButtonText(rect2, value.ToString().Replace("_", " "), true, true, true))
+			if (Widgets.ButtonText(rect2, def.LabelCap, true, true, true))
 			{
 				List<FloatMenuOption> list = new List<FloatMenuOption>();
-				List<TweaksGaloreSettingsPage> enumValues = Enum.GetValues(typeof(TweaksGaloreSettingsPage)).Cast<TweaksGaloreSettingsPage>().ToList();
-				foreach (TweaksGaloreSettingsPage enumValue in enumValues)
+				List<TweakCategoryDef> categories = DefDatabase<TweakCategoryDef>.AllDefsListForReading;
+				categories.SortBy(c => c.orderID);
+				foreach (TweakCategoryDef category in categories)
 				{
-					list.Add(new FloatMenuOption(enumValue.ToString().Replace("_", " "), delegate ()
+					if ((category.required.NullOrEmpty() || category.required.All(r => ModLister.GetActiveModWithIdentifier(r) != null)) && (category.incompatible.NullOrEmpty() || category.incompatible.All(i => ModLister.GetActiveModWithIdentifier(i) == null)))
+					list.Add(new FloatMenuOption(category.LabelCap, delegate ()
 					{
-						TweaksGaloreMod.mod.currentPage = enumValue;
+						TweaksGaloreMod.mod.currentCategory = category;
 					}));
 				}
 
@@ -149,6 +152,73 @@ namespace TweaksGalore
 			rect.y -= rect.height;
 			GUI.color = Color.white;
 			listing.Gap(6f);
+		}
+
+		public static void LabelBacked(this Listing_Standard list, string inputText, Color color, bool translate = false)
+		{
+			string text = (translate ? inputText.Translate() : inputText);
+			TextAnchor anchor = Text.Anchor;
+			Text.Anchor = TextAnchor.MiddleLeft;
+			float height = Text.CalcHeight(text, list.ColumnWidth - 3f - 6f) + 6f;
+			Rect rect = list.GetRect(height).Rounded();
+			Color color2 = color;
+			color2.r *= 0.25f;
+			color2.g *= 0.25f;
+			color2.b *= 0.25f;
+			color2.a *= 0.2f;
+			GUI.color = color2;
+			Rect position = rect.ContractedBy(1f);
+			position.yMax -= 2f;
+			GUI.DrawTexture(position, BaseContent.WhiteTex);
+			GUI.color = color;
+			rect.xMin += 6f;
+			Widgets.Label(rect, text);
+			GUI.color = Color.white;
+			Text.Anchor = anchor;
+		}
+
+		public static void LabelBackedHeader(this Listing_Standard list, string inputText, Color color, ref bool collapsed, GameFont font = GameFont.Medium, bool translate = false)
+		{
+			Text.Font = font;
+			string text = (translate ? inputText.Translate() : inputText);
+			TextAnchor anchor = Text.Anchor;
+			Text.Anchor = TextAnchor.MiddleLeft;
+			float height = Text.CalcHeight(text, list.ColumnWidth - 3f - 6f) + 6f;
+			Rect rect = list.GetRect(height).Rounded();
+			Color color2 = color;
+			color2.r *= 0.25f;
+			color2.g *= 0.25f;
+			color2.b *= 0.25f;
+			color2.a *= 0.2f;
+			GUI.color = color2;
+			Rect position = rect.ContractedBy(1f);
+			position.yMax -= 2f;
+			GUI.DrawTexture(position, BaseContent.WhiteTex);
+			GUI.color = color;
+			rect.xMin += 6f;
+			Rect position2 = new Rect(rect.x, rect.y + (rect.height - 18f) / 2f, 18f, 18f);
+			GUI.DrawTexture(position2, collapsed ? TexButton.Reveal : TexButton.Collapse);
+			if (Widgets.ButtonInvisible(rect))
+			{
+				collapsed = !collapsed;
+				if (collapsed)
+				{
+					SoundDefOf.TabClose.PlayOneShotOnCamera();
+				}
+				else
+				{
+					SoundDefOf.TabOpen.PlayOneShotOnCamera();
+				}
+			}
+			if (Mouse.IsOver(rect))
+			{
+				Widgets.DrawHighlight(rect);
+			}
+			Rect textRect = new Rect(rect.x + 18f, rect.y, rect.width - 18f, rect.height);
+			Widgets.Label(textRect, text);
+			GUI.color = Color.white;
+			Text.Anchor = anchor;
+			Text.Font = GameFont.Small;
 		}
 	}
 

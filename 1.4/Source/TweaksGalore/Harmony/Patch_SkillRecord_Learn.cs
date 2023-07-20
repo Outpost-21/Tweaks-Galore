@@ -22,7 +22,7 @@ namespace TweaksGalore
             {
                 if (xp < 0f)
                 {
-                    if ((s.tweak_skillRateLossThreshold - 1) > __instance.levelInt)
+                    if ((s.tweak_skillRateLossThreshold) >= __instance.levelInt)
                     {
                         return false;
                     }

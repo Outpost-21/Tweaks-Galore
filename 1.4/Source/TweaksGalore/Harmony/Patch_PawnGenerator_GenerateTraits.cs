@@ -21,7 +21,7 @@ namespace TweaksGalore
         [HarmonyPostfix]
         public static void Postfix(Pawn pawn, PawnGenerationRequest request)
         {
-            if (TweaksGaloreMod.settings.tweak_traitCountAdjustment)
+            if (TGTweakDefOf.Tweak_TraitCountAdjustment.BoolValue)
             {
                 if (pawn.story == null || request.AllowedDevelopmentalStages.Newborn() || pawn.DevelopmentalStage != DevelopmentalStage.Adult) { return; }
                 targetCount = GetRandomTraitCount();
@@ -85,7 +85,7 @@ namespace TweaksGalore
 
         public static int GetRandomTraitCount()
         {
-            return Rand.RangeInclusive(TweaksGaloreMod.settings.tweak_traitCountRange.min, TweaksGaloreMod.settings.tweak_traitCountRange.max);
+            return Rand.RangeInclusive(TGTweakDefOf.Tweak_TraitCountRange.IntRangeValue.min, TGTweakDefOf.Tweak_TraitCountRange.IntRangeValue.max);
         }
     }
 
@@ -95,7 +95,7 @@ namespace TweaksGalore
         [HarmonyPrefix]
         public static void Prefix(Pawn pawn, ref int traitCount, PawnGenerationRequest? req = null, bool growthMomentTrait = false)
         {
-            if (TweaksGaloreMod.settings.tweak_traitCountAdjustment)
+            if (TGTweakDefOf.Tweak_TraitCountAdjustment.BoolValue)
             {
                 if (pawn.story.traits.allTraits.Count >= Patch_PawnGenerator_GenerateTraits.targetCount && Patch_PawnGenerator_GenerateTraits.targetCount != -1)
                 {

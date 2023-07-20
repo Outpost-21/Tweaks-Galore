@@ -11,7 +11,24 @@ namespace TweaksGalore
 {
     public static class SettingsPage_GenePacks
     {
+        public static TweaksGaloreMod mod = TweaksGaloreMod.mod;
         public static TweaksGaloreSettings settings => TweaksGaloreMod.settings;
+
+        public static Dictionary<string, float> sectionHeights = new Dictionary<string, float>();
+
+        public static float GetSectionHeight(string section)
+        {
+            if (!sectionHeights.ContainsKey(section))
+            {
+                sectionHeights.Add(section, float.MaxValue);
+            }
+            return sectionHeights[section];
+        }
+
+        public static void SetSectionHeight(string section, float value)
+        {
+            sectionHeights[section] = value;
+        }
 
         public static Dictionary<GeneDef, ModContentPack> cachedGeneDictionary = new Dictionary<GeneDef, ModContentPack>();
 
@@ -60,35 +77,90 @@ namespace TweaksGalore
 
         public static void DoSettings_Genepacks(Listing_Standard listing)
         {
-            listing.CheckboxEnhanced("Enable Genepack Tweaks", "This entire section is disabled by default for compatibility sake mostly, so there's no conflicting with other mods that choose to do this sort of tweak. These options allow you to choose whether or not a gene can spawn in genepacks.", ref settings.tweak_genepackTweaks);
-            if (settings.tweak_genepackTweaks)
+            string categoryString = "Cat_Biotech_Genepacks";
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader("Genepacks", mod.headerColor, ref categoryToggle);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
             {
-
-                listing.Note("\bBiotech\b", GameFont.Medium);
-                listing.GapLine();
-                List<GeneDef> biotechGenes = GetGenesFromOfficialContent();
-                biotechGenes.SortBy(gd => gd.label);
-                for (int i = 0; i < biotechGenes.Count(); i++)
+                if (listing.ButtonTextLabeled("", "Restore defaults"))
                 {
-                    DrawGeneSetting(listing, biotechGenes[i]);
+                    DefaultUtil.RestoreSettings_Genepacks(settings);
+                    Messages.Message("Tweaks Galore: 'Genepacks' tweaks restored to defaults. Restart required to take effect.", MessageTypeDefOf.CautionInput);
+                    TweaksGaloreMod.mod.restoreGenepacks = true;
                 }
-                listing.GapLine();
-                for (int i = 0; i < CachedModListing.Count; i++)
+                if (mod.restoreGenepacks)
                 {
-                    // Do Modded Genes
-                    ModContentPack curMCP = CachedModListing[i];
-                    listing.Note("\b" + curMCP.Name + "\b", GameFont.Medium);
-                    listing.GapLine();
-                    List<GeneDef> modGenes = GetGenesFromContentPack(curMCP);
-                    modGenes.SortBy(gd => gd.label);
-                    for (int j = 0; j < modGenes.Count(); j++)
+                    listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!");
+                }
+                else
+                {
+
+                    listing.CheckboxEnhanced("Enable Genepack Tweaks", "This entire section is disabled by default for compatibility sake mostly, so there's no conflicting with other mods that choose to do this sort of tweak. These options allow you to choose whether or not a gene can spawn in genepacks.", ref settings.tweak_genepackTweaks);
+                    if (settings.tweak_genepackTweaks)
                     {
-                        DrawGeneSetting(listing, modGenes[j]);
+                        DrawBiotechGenepackSettings(listing);
+                        for (int i = 0; i < CachedModListing.Count; i++)
+                        {
+                            // Do Modded Genes
+                            DrawModGenepackSettings(listing, CachedModListing[i]);
+                        }
                     }
-                    listing.GapLine();
                 }
 
                 TweaksGaloreStartup.SetGeneSettingsValues(settings);
+            }
+        }
+
+        public static void DrawBiotechGenepackSettings(Listing_Standard listing)
+        {
+            string categoryString = "Cat_Genepacks_Biotech";
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader("Biotech", mod.subHeaderColor, ref categoryToggle, GameFont.Small);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
+            {
+                List<GeneDef> biotechGenes = GetGenesFromOfficialContent();
+                biotechGenes.SortBy(gd => gd.label);
+                Listing_Standard geneListing = listing.BeginSection(GetSectionHeight(categoryString));
+                geneListing.ColumnWidth -= 26f;
+                geneListing.ColumnWidth *= 0.5f;
+                for (int i = 0; i < biotechGenes.Count(); i++)
+                {
+                    if (i == (biotechGenes.Count + (biotechGenes.Count % 2f == 0f ? 0f : 1f)) / 2f)
+                    {
+                        geneListing.NewColumn();
+                    }
+                    DrawGeneSetting(geneListing, biotechGenes[i]);
+                }
+                SetSectionHeight(categoryString, geneListing.CurHeight);
+                listing.EndSection(geneListing);
+            }
+        }
+
+        public static void DrawModGenepackSettings(Listing_Standard listing, ModContentPack curMCP)
+        {
+            string categoryString = "Cat_ModGenepacks_" + curMCP.Name;
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader(curMCP.Name, mod.subHeaderColor, ref categoryToggle, GameFont.Small);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
+            {
+                List<GeneDef> modGenes = GetGenesFromContentPack(curMCP);
+                modGenes.SortBy(gd => gd.label);
+                Listing_Standard geneListing = listing.BeginSection(GetSectionHeight(categoryString));
+                geneListing.ColumnWidth -= 26f;
+                geneListing.ColumnWidth *= 0.5f;
+                for (int i = 0; i < modGenes.Count(); i++)
+                {
+                    if(i == (modGenes.Count + (modGenes.Count % 2f == 0f ? 0f : 1f)) / 2f)
+                    {
+                        geneListing.NewColumn();
+                    }
+                    DrawGeneSetting(geneListing, modGenes[i]);
+                }
+                SetSectionHeight(categoryString, geneListing.MaxColumnHeightSeen);
+                listing.EndSection(geneListing);
             }
         }
 

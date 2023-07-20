@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Biotech_Polux</defName>
+		<label>Polux</label>
+		<sectionWorker>TweaksGalore.SectionWorker_Polux</sectionWorker>
+		<tweaks>
+			<li>Tweak_PoluxTweaks</li>
+			<li>Tweak_ReplantablePolux</li>
+			<li>Tweak_IgnoreArtificialBuildings</li>
+			<li>Tweak_PoluxEffectRadius</li>
+			<li>Tweak_PoluxEffectRate</li>
+		</tweaks>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PoluxTweaks</defName>
+		<label>Enable Polux Tweaks</label>
+		<description>This entire section is disabled by default for compatibility sake mostly, some Polux related tweaks function regardless of if they've been changed (any changing a radius for example) so this allows them all to be skipped over without any potential for conflicts if you prefer another polux tweak mod.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+			<enhanced>true</enhanced>
+		</formatting>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ReplantablePolux</defName>
+		<label>Replantable Polux</label>
+		<description>Makes it so you can move Polux trees like any other.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_IgnoreArtificialBuildings</defName>
+		<label>Ignore Artificial Buildings</label>
+		<description>Vanilla usually disables the tree's effects if there are artificial buildings in its radius, this disables that behaviour and lets it function anyway.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_PoluxIgnoreBuildings</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PoluxEffectRadius</defName>
+		<label>Effect Radius</label>
+		<description>The radius in which the polux tree will cleanse of pollution.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_PoluxEffectRadius</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>7.9</defaultValue>
+		<floatRange>0~50</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PoluxEffectRate</defName>
+		<label>Effect Rate</label>
+		<description>A multiplier on the time between each attempt to cleanse pollution around the tree.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_PoluxEffectRate</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>1</defaultValue>
+		<floatRange>0~2</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+</Defs>

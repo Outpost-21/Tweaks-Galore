@@ -18,7 +18,7 @@ namespace TweaksGalore
         [HarmonyPrefix]
         public static bool Prefix(bool forPowerOverlay) 
         { 
-            return TweaksGaloreMod.settings.tweak_hiddenConduits ? forPowerOverlay : true; 
+            return TGTweakDefOf.Tweak_HiddenWires.BoolValue ? forPowerOverlay : true; 
         }
     }
 }

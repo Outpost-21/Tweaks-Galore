@@ -17,7 +17,7 @@ namespace TweaksGalore
 	{
 		public static void Postfix(IntVec3 cell, Map map, ref float __result)
 		{
-            if (TweaksGaloreMod.settings.patch_strongFloorsStopInfestations)
+            if (TGTweakDefOf.Tweak_InfestationBlockingFloors.BoolValue)
             {
 				if (__result > 0f && map.terrainGrid.TerrainAt(cell).HasTag("BlocksInfestations"))
 				{

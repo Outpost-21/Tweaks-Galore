@@ -19,7 +19,7 @@ namespace TweaksGalore
 		[HarmonyPostfix]
 		public static ThoughtState Postfix(ThoughtState __result, Pawn p)
 		{
-            if (TweaksGaloreMod.settings.patch_lowPrisonerExpectations)
+            if (TGTweakDefOf.Tweak_LowerPrisonerExpectations.BoolValue)
 			{
 				return p.IsPrisoner ? ThoughtState.ActiveAtStage(Math.Min(__result.StageIndex + 3, 5)) : __result;
 			}

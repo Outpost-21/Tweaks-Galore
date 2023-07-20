@@ -18,8 +18,8 @@ namespace TweaksGalore
 		[HarmonyPrefix]
 		public static bool Prefix(Hediff_BandNode __instance, ref HediffStage __result)
 		{
-			int tweakBandwidth = Mathf.RoundToInt(TweaksGaloreMod.settings.tweak_mechanitorBandNodeBandwidth);
-			if (tweakBandwidth > 1)
+			int tweakBandwidth = TGTweakDefOf.Tweak_BandwidthPerBandNode.IntValue;
+			if (tweakBandwidth > 1 && TGTweakDefOf.Tweak_MechanitorTweaks.BoolValue)
             {
 				if(__instance.curStage == null && __instance.cachedTunedBandNodesCount > 0)
                 {

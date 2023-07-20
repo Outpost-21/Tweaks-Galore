@@ -19,27 +19,50 @@ namespace TweaksGalore
         public static TweaksGaloreSettings settings;
         public static TweaksGaloreMod mod;
 
-        public TweaksGaloreSettingsPage currentPage = TweaksGaloreSettingsPage.General;
+        public TweakCategoryDef currentCategory;
+        public QuickSearchWidget quickSearchWidget = new QuickSearchWidget();
+        public string tweakFilter = "";
         public Vector2 optionsScrollPosition;
         public float optionsViewRectHeight;
         public Dictionary<string, TrainabilityDef> TrainabilityRadioDict = new Dictionary<string, TrainabilityDef>();
 
-        public bool restoreGeneral = false;
-        public bool restoreMechanoids = false;
-        public bool restorePennedAnimals = false;
-        public bool restorePower = false;
-        public bool restoreRaids = false;
-        public bool restoreResources = false;
-        public bool restoreRoyalty = false;
-        public bool restoreAnima = false;
-        public bool restoreRoyalTitles = false;
-        public bool restoreRoyalPermits = false;
-        public bool restoreIdeology = false;
-        public bool restoreGauranlen = false;
-        public bool restoreBiotech = false;
-        public bool restorePolux = false;
+        public Color headerColor = new Color(1.0f, 1.0f, 1.0f);
+        public Color subHeaderColor = new Color(0.9f, 0.9f, 0.9f);
+        public Color settingColor = new Color(0.8f, 0.8f, 0.8f);
 
-        internal static string VersionDir => Path.Combine(ModLister.GetActiveModWithIdentifier("Neronix17.TweaksGalore", true).RootDir.FullName, "Version.txt");
+        public Dictionary<string, bool> collapsedCategories = new Dictionary<string, bool>();
+
+        public bool GetCollapsedCategoryState(string category)
+        {
+            if (!collapsedCategories.ContainsKey(category))
+            {
+                collapsedCategories.Add(category, true);
+            }
+            return collapsedCategories[category];
+        }
+
+        public void SetCollapsedCategoryState(string category, bool value)
+        {
+            collapsedCategories[category] = value;
+        }
+
+        public Dictionary<string, float> subStandardHeights = new Dictionary<string, float>();
+
+        public float GetSubStandardHeight(string section)
+        {
+            if (!subStandardHeights.ContainsKey(section))
+            {
+                subStandardHeights.Add(section, float.MaxValue);
+            }
+            return subStandardHeights[section];
+        }
+
+        public void SetSubStandardHeight(string section, float value)
+        {
+            subStandardHeights[section] = value;
+        }
+
+        internal static string VersionDir => Path.Combine(mod.Content.ModMetaData.RootDir.FullName, "Version.txt");
         public static string CurrentVersion { get; private set; }
 
         public TweaksGaloreMod(ModContentPack content) : base(content)
@@ -48,7 +71,6 @@ namespace TweaksGalore
             mod = this;
             try
             {
-
                 Version version = Assembly.GetExecutingAssembly().GetName().Version;
                 CurrentVersion = $"{version.Major}.{version.Minor}.{version.Build}";
 
@@ -64,7 +86,7 @@ namespace TweaksGalore
                 LogUtil.LogMessage("Suppressed Error: " + ex);
             }
 
-            new Harmony("neronix17.tweaksgalore.rimworld").PatchAll();
+            new Harmony("Neronix17.TweaksGalore.RimWorld").PatchAll();
         }
 
         public override string SettingsCategory() => "Tweaks Galore";
@@ -88,145 +110,29 @@ namespace TweaksGalore
 
         public void DoOptionsCategoryContents(Listing_Standard listing)
         {
-            listing.SettingsDropdown("Current Page", "", ref currentPage, listing.ColumnWidth);
-            listing.Note("You will need to restart the game for most of these settings to take effect.", GameFont.Tiny);
+            if(currentCategory == null) { currentCategory = TGTweakDefOf.TweakCategory_Vanilla; }
+            listing.SettingsCategoryDropdown("Current Page", "Setting descriptions are in tooltips. The Searchbar only works for the currently selected page.\nYou will need to restart the game for many of these settings to take effect.", ref currentCategory, listing.ColumnWidth);
+            Rect rect = listing.GetRect(30f);
+            quickSearchWidget.OnGUI(rect);
+            tweakFilter = quickSearchWidget.filter.Text;
             listing.GapLine();
-            if (currentPage == TweaksGaloreSettingsPage.General)
-            {
-                if (restoreGeneral) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else { SettingsPage_General.DoSettings_Vanilla(listing); }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Mechanoids)
-            {
-                if (restoreMechanoids) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else { SettingsPage_Mechanoids.DoSettings_Mechanoids(listing); }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Penned_Animals)
-            {
-                if (restorePennedAnimals) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else { SettingsPage_PennedAnimals.DoSettings_PennedAnimals(listing); }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Power)
-            {
-                if (restorePower) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else { SettingsPage_Power.DoSettings_Power(listing); }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Raids)
-            {
-                if (restoreRaids) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else { SettingsPage_Raids.DoSettings_Raids(listing); }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Resources)
-            {
-                if (restoreResources) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else { SettingsPage_Resources.DoSettings_Resources(listing); }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Royalty)
-            {
-                if (restoreRoyalty) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.RoyaltyInstalled) { listing.Note("Royalty is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_Royalty.DoSettings_Royalty(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Anima)
-            {
-                if (restoreAnima) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.RoyaltyInstalled) { listing.Note("Royalty is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_Anima.DoSettings_Anima(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Royal_Titles)
-            {
-                if (restoreRoyalTitles) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.RoyaltyInstalled) { listing.Note("Royalty is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_RoyaltyTitles.DoSettings_RoyaltyTitles(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Royal_Permits)
-            {
-                if (restoreRoyalTitles) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.RoyaltyInstalled) { listing.Note("Royalty is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_RoyaltyPermits.DoSettings_RoyaltyPermits(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Ideology)
-            {
-                if (restoreIdeology) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.IdeologyInstalled) { listing.Note("Ideology is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_Ideology.DoSettings_Ideology(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Gauranlen)
-            {
-                if (restoreGauranlen) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.IdeologyInstalled) { listing.Note("Ideology is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_Gauranlen.DoSettings_Gauranlen(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Biotech)
-            {
-                if (restoreBiotech) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.BiotechInstalled) { listing.Note("Biotech is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_Biotech.DoSettings_Biotech(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Genepacks)
-            {
-                if (!ModLister.BiotechInstalled) { listing.Note("Biotech is not installed. These options would do nothing for you."); }
-                else { SettingsPage_GenePacks.DoSettings_Genepacks(listing); }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Polux)
-            {
-                if (restorePolux) { listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!"); }
-                else
-                {
-                    if (!ModLister.BiotechInstalled) { listing.Note("Biotech is not installed. These options would do nothing for you."); }
-                    else { SettingsPage_Polux.DoSettings_Polux(listing); }
-                }
-            }
-            else if (currentPage == TweaksGaloreSettingsPage.Defaults)
-            {
-                SettingsPage_Defaults.DoSettings_Defaults(listing);
-            }
+            currentCategory.DoCategoryContents(listing, settings, tweakFilter);
         }
 
         public override void WriteSettings()
         {
             base.WriteSettings();
+            foreach (TweakDef tweak in DefDatabase<TweakDef>.AllDefs)
+            {
+                try
+                {
+                    tweak.Worker.OnWriteSettings();
+                }
+                catch (Exception e)
+                {
+                    LogUtil.LogError($"Caught Exception applying '{tweak.defName}' tweak:\n" + e);
+                }
+            }
         }
-    }
-
-    public enum TweaksGaloreSettingsPage
-    {
-        General,
-        Mechanoids,
-        Penned_Animals,
-        Power,
-        Raids,
-        Resources,
-        Royalty,
-        Royal_Titles,
-        Royal_Permits,
-        Anima,
-        Ideology,
-        Gauranlen,
-        Biotech,
-        Genepacks,
-        Polux,
-        Defaults
     }
 }

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Ideology_General</defName>
+		<label>General</label>
+		<tweaks>
+			<li>Tweak_DarklightGlowPods</li>
+			<li>Tweak_DisableDesiredApparel</li>
+			<li>Tweak_NoMemeLimit</li>
+			<li>Tweak_ProperSuppression</li>
+			<li>Tweak_SuppressionThreshold</li>
+			<li>Tweak_UnlockedIdeologyBuildings</li>
+		</tweaks>
+		<subSections>
+			<li>TweakSubSection_AncientDeconstruction</li>
+		</subSections>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DarklightGlowPods</defName>
+		<label>Darklight Glow Pods</label>
+		<description>Makes glow pods spawned in insectoid nests use the darklight colour.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableDesiredApparel</defName>
+		<label>Disable Desired Apparel</label>
+		<description>Disables default Ideology desired apparel from showing up, that random shit that factions use throughout them for no fucking reason.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoMemeLimit</defName>
+		<label>No Meme Limit</label>
+		<description>Raises the limit of how many memes you can choose to 1000...so effectively no limit.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ProperSuppression</defName>
+		<label>Proper Suppression</label>
+		<description>Changes suppression mechanics slightly so that rebellions never happen if your slaves are kept suppressed. Also prevents suppressed pawns from taking part in rebellions when they do happen.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SuppressionThreshold</defName>
+		<label>Suppression Threshold</label>
+		<description>Controls the percentage at which rebellions are considered suppressed, if Proper Suppression is enabled this is the threshold at which rebellions would be disabled entirely.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.01~1.0</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_UnlockedIdeologyBuildings</defName>
+		<label>Unlocked Ideology Buildings</label>
+		<description>Removes the meme restriction on ideology buildings so you can use them regardless of what memes you have. Includes floors and apparel.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<!-- ============================================================ -->
+	<!-- ================== Ancient Deconstruction ================== -->
+	<!-- ============================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_AncientDeconstruction</defName>
+		<label>Ancient Deconstruction</label>
+		<description>Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.</description>
+		<tweaks>
+			<li>Tweak_AncientDeconstruction</li>
+			<li>Tweak_AncientDeconstructionProper</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AncientDeconstruction</defName>
+		<label>Enabled</label>
+		<description>Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AncientDeconstructionProper</defName>
+		<label>Give Proper Materials</label>
+		<description>Changes returned items to some reasonable materials instead of just slag.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+</Defs>

@@ -19,7 +19,7 @@ namespace TweaksGalore
 		[HarmonyPostfix]
 		public static void Postfix(ref IntRange ___MemeCountRangeAbsolute)
 		{
-            if (TweaksGaloreMod.settings.patch_noMemeLimit)
+            if (TGTweakDefOf.Tweak_NoMemeLimit.BoolValue)
 			{
 				___MemeCountRangeAbsolute = new IntRange(1, 1000);
 			}

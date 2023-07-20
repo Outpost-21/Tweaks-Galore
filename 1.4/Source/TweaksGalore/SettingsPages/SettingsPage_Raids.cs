@@ -11,25 +11,40 @@ namespace TweaksGalore
 {
     public static class SettingsPage_Raids
     {
+        public static TweaksGaloreMod mod = TweaksGaloreMod.mod;
         public static TweaksGaloreSettings settings => TweaksGaloreMod.settings;
 
         public static void DoSettings_Raids(Listing_Standard listing)
         {
-            // Tweak: No More Breach Raids
-            listing.CheckboxEnhanced("No More Breach Raids", "Removes Breach Raids as an option for raiders.", ref settings.tweak_noMoreBreachRaids);
-            listing.GapLine();
-            // Tweak: No More Drop Pod Raids
-            listing.CheckboxEnhanced("No More Drop Pod Raids", "Removes Drop Pod Raids as an option for raiders. Does not work with RimWar.", ref settings.tweak_noMoreDropPodRaids);
-            listing.GapLine();
-            // Tweak: No More Sapper Raids
-            listing.CheckboxEnhanced("No More Sapper Raids", "Removes Sapper Raids as an option for raiders.", ref settings.tweak_noMoreSapperRaids);
-            listing.GapLine();
-            // Tweak: No More Siege Raids
-            listing.CheckboxEnhanced("No More Siege Raids", "Removes Siege Raids as an option for raiders.", ref settings.tweak_noMoreSiegeRaids);
-            listing.GapLine();
-            // Tweak: No More Cowardly Raids
-            listing.CheckboxEnhanced("No More Cowardly Raids", "Prevents raiders from fleeing.", ref settings.tweak_noCowardlyRaiders);
-            listing.GapLine();
+            string categoryString = "Cat_General_Raids";
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader("Raids", mod.headerColor, ref categoryToggle);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
+            {
+                if (listing.ButtonTextLabeled("", "Restore defaults"))
+                {
+                    DefaultUtil.RestoreSettings_Raids(settings);
+                    Messages.Message("Tweaks Galore: 'Raids' tweaks restored to defaults. Restart required to take effect.", MessageTypeDefOf.CautionInput);
+                    TweaksGaloreMod.mod.restoreRaids = true;
+                }
+                if (mod.restoreRaids)
+                {
+                    listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!");
+                }
+                else
+                {
+                    listing.LabelBacked("Blocked Raid Strategies", mod.settingColor);
+                    listing.Note("This will only function against vanilla versions of the raid types, some modded raids use their own version and will bypass these tweaks.", GameFont.Tiny);
+                    listing.CheckboxLabeled("Breach Raids", ref settings.tweak_noMoreBreachRaids);
+                    listing.CheckboxLabeled("Drop Pod Raids", ref settings.tweak_noMoreDropPodRaids);
+                    listing.CheckboxLabeled("Sapper Raids", ref settings.tweak_noMoreSapperRaids);
+                    listing.CheckboxLabeled("Siege Raids", ref settings.tweak_noMoreSiegeRaids);
+                    listing.CheckboxLabeled("Cowardly Raids", ref settings.tweak_noCowardlyRaiders);
+
+                    listing.Gap();
+                }
+            }
         }
     }
 }

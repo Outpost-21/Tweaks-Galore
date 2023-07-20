@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>tweak_noMineableComponents</li>
+			<li>Tweak_NoMineableComponents</li>
 		</settings>
-		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">

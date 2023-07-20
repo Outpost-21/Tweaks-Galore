@@ -11,15 +11,36 @@ namespace TweaksGalore
 {
     public static class SettingsPage_RoyaltyPermits
     {
+        public static TweaksGaloreMod mod = TweaksGaloreMod.mod;
         public static TweaksGaloreSettings settings => TweaksGaloreMod.settings;
 
         public static void DoSettings_RoyaltyPermits(Listing_Standard listing)
         {
-            foreach (RoyalTitlePermitDef permit in DefDatabase<RoyalTitlePermitDef>.AllDefs)
+            string categoryString = "Cat_Royalty_Permits";
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader("Royal Permits", mod.headerColor, ref categoryToggle);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
             {
-                if (permit.faction != null)
+                if (listing.ButtonTextLabeled("", "Restore defaults"))
                 {
-                    DoPermitSettings(listing, permit);
+                    DefaultUtil.RestoreSettings_RoyalPermits(settings);
+                    Messages.Message("Tweaks Galore: 'Royal Permit' tweaks restored to defaults. Restart required to take effect.", MessageTypeDefOf.CautionInput);
+                    TweaksGaloreMod.mod.restoreRoyalPermits = true;
+                }
+                if (mod.restoreRoyalPermits)
+                {
+                    listing.Note("You've marked this category for restoring to defaults! Relaunch the game to complete the process!");
+                }
+                else
+                {
+                    foreach (RoyalTitlePermitDef permit in DefDatabase<RoyalTitlePermitDef>.AllDefs)
+                    {
+                        if (permit.faction != null)
+                        {
+                            DoPermitSettings(listing, permit);
+                        }
+                    }
                 }
             }
 
@@ -28,41 +49,45 @@ namespace TweaksGalore
 
         public static void DoPermitSettings(Listing_Standard listing, RoyalTitlePermitDef permit)
         {
-            listing.Label(permit.LabelCap);
-            listing.GapLine();
-            listing.Note($"Faction: {permit.faction.LabelCap}", GameFont.Tiny, Color.gray);
-            // Tweak: Minimum Title
-            string minTitleBuffer = settings.tweak_royalPermitSettings[permit.defName].minTitle;
-            listing.TitleFloatMenu("- Minimum Title", minTitleBuffer, permit);
-            settings.tweak_royalPermitSettings[permit.defName].minTitle = minTitleBuffer;
-            // Tweak: Permit Point Cost
-            float permitPointBuffer = settings.tweak_royalPermitSettings[permit.defName].permitPointCost;
-            listing.AddLabeledSlider($"- Permit Point Cost: {permitPointBuffer.ToString("0")}", ref permitPointBuffer, 1f, 20f, "Min: 1", "Max: 20", 1f);
-            settings.tweak_royalPermitSettings[permit.defName].permitPointCost = permitPointBuffer;
-            // Tweak: Cooldown Days
-            float cooldownDaysBuffer = settings.tweak_royalPermitSettings[permit.defName].cooldownDays;
-            listing.AddLabeledSlider($"- Cooldown Days: {cooldownDaysBuffer.ToString("0.0")}", ref cooldownDaysBuffer, 0.5f, 100f, "Min: 0.5", "Max: 100", 0.5f);
-            settings.tweak_royalPermitSettings[permit.defName].cooldownDays = cooldownDaysBuffer;
-            if(permit.royalAid != null)
+            string categoryString = "Cat_RoyaltyPermit_" + permit.defName;
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader(permit.LabelCap, mod.subHeaderColor, ref categoryToggle, GameFont.Small);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
             {
-                // Tweak: Aid Favor Cost
-                float favorCostBuffer = settings.tweak_royalPermitSettings[permit.defName].favorCost;
-                listing.AddLabeledSlider($"- Aid Favor Cost: {favorCostBuffer.ToString("0")}", ref favorCostBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
-                settings.tweak_royalPermitSettings[permit.defName].favorCost = favorCostBuffer;
-                if(permit.royalAid.pawnKindDef != null)
+                listing.Note($"Faction: {permit.faction.LabelCap}", GameFont.Tiny, Color.gray);
+                // Tweak: Minimum Title
+                string minTitleBuffer = settings.tweak_royalPermitSettings[permit.defName].minTitle;
+                listing.TitleFloatMenu("- Minimum Title", minTitleBuffer, permit);
+                settings.tweak_royalPermitSettings[permit.defName].minTitle = minTitleBuffer;
+                // Tweak: Permit Point Cost
+                float permitPointBuffer = settings.tweak_royalPermitSettings[permit.defName].permitPointCost;
+                listing.AddLabeledSlider($"- Permit Point Cost: {permitPointBuffer.ToString("0")}", ref permitPointBuffer, 1f, 20f, "Min: 1", "Max: 20", 1f);
+                settings.tweak_royalPermitSettings[permit.defName].permitPointCost = permitPointBuffer;
+                // Tweak: Cooldown Days
+                float cooldownDaysBuffer = settings.tweak_royalPermitSettings[permit.defName].cooldownDays;
+                listing.AddLabeledSlider($"- Cooldown Days: {cooldownDaysBuffer.ToString("0.0")}", ref cooldownDaysBuffer, 0.5f, 100f, "Min: 0.5", "Max: 100", 0.5f);
+                settings.tweak_royalPermitSettings[permit.defName].cooldownDays = cooldownDaysBuffer;
+                if (permit.royalAid != null)
                 {
-                    // Tweak: Aid Pawn Count
-                    float aidPawnCountBuffer = settings.tweak_royalPermitSettings[permit.defName].pawnCount;
-                    listing.AddLabeledSlider($"- Aid Pawn Count: {aidPawnCountBuffer.ToString("0")}", ref aidPawnCountBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
-                    settings.tweak_royalPermitSettings[permit.defName].pawnCount = aidPawnCountBuffer;
-                    // Tweak: Aid Duration
-                    float aidDurationBuffer = settings.tweak_royalPermitSettings[permit.defName].aidDurationDays;
-                    listing.AddLabeledSlider($"- Aid Duration Days: {aidDurationBuffer.ToString("0.0")}", ref aidDurationBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
-                    settings.tweak_royalPermitSettings[permit.defName].aidDurationDays = aidDurationBuffer;
+                    // Tweak: Aid Favor Cost
+                    float favorCostBuffer = settings.tweak_royalPermitSettings[permit.defName].favorCost;
+                    listing.AddLabeledSlider($"- Aid Favor Cost: {favorCostBuffer.ToString("0")}", ref favorCostBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                    settings.tweak_royalPermitSettings[permit.defName].favorCost = favorCostBuffer;
+                    if (permit.royalAid.pawnKindDef != null)
+                    {
+                        // Tweak: Aid Pawn Count
+                        float aidPawnCountBuffer = settings.tweak_royalPermitSettings[permit.defName].pawnCount;
+                        listing.AddLabeledSlider($"- Aid Pawn Count: {aidPawnCountBuffer.ToString("0")}", ref aidPawnCountBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                        settings.tweak_royalPermitSettings[permit.defName].pawnCount = aidPawnCountBuffer;
+                        // Tweak: Aid Duration
+                        float aidDurationBuffer = settings.tweak_royalPermitSettings[permit.defName].aidDurationDays;
+                        listing.AddLabeledSlider($"- Aid Duration Days: {aidDurationBuffer.ToString("0.0")}", ref aidDurationBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                        settings.tweak_royalPermitSettings[permit.defName].aidDurationDays = aidDurationBuffer;
+                    }
                 }
+                listing.Gap();
             }
-            listing.Gap();
-            listing.GapLine();
         }
 
         public static void TitleFloatMenu(this Listing_Standard listing, string name, string minTitle, RoyalTitlePermitDef permit)

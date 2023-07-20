@@ -37,7 +37,7 @@ namespace TweaksGalore
 			[HarmonyPrefix]
 			public static bool Prefix(ref bool __result)
 			{
-				if (TweaksGaloreMod.settings.tweak_hunterMelee && TweaksGaloreMod.settings.tweak_hunterMelee_fistFighting)
+				if (TGTweakDefOf.Tweak_HuntersCanMelee.BoolValue && TGTweakDefOf.Tweak_HuntersCanMeleeFisting.BoolValue)
 				{
 					__result = true;
 					return false;
@@ -48,7 +48,7 @@ namespace TweaksGalore
 			[HarmonyPostfix]
 			public static void Postfix(Pawn p, ref bool __result)
 			{
-				if (!__result && TweaksGaloreMod.settings.tweak_hunterMelee)
+				if (!__result && TGTweakDefOf.Tweak_HuntersCanMelee.BoolValue)
 				{
 					__result = (p.equipment.Primary != null && p.equipment.Primary.def.IsMeleeWeapon && p.equipment.PrimaryEq.PrimaryVerb.HarmsHealth());
 					if (!(__result || !TweaksGaloreMod.settings.tweak_hunterMelee_allowSimpleSidearms || !Patches_HunterMelee.SimpleSidearmsLoaded || Patches_HunterMelee.getGuns == null))
@@ -71,8 +71,11 @@ namespace TweaksGalore
 				[HarmonyPostfix]
 				public static void Postfix(ref string ___defaultLabel, ref string ___defaultExplanation)
 				{
-					___defaultLabel = "TG_HunterLacksWeapon".Translate();
-					___defaultExplanation = "TG_HunterLacksWeaponDesc".Translate();
+					if (TGTweakDefOf.Tweak_HuntersCanMelee.BoolValue && TGTweakDefOf.Tweak_HuntersCanMeleeFisting.BoolValue)
+					{
+						___defaultLabel = "TG_HunterLacksWeapon".Translate();
+						___defaultExplanation = "TG_HunterLacksWeaponDesc".Translate();
+					}
 				}
 			}
 		}

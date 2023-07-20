@@ -18,7 +18,7 @@ namespace TweaksGalore
 		[HarmonyPrefix]
 		public static bool Prefix(ITab_Genes __instance, ref bool __result)
 		{
-			if (TweaksGaloreMod.settings.tweak_showGenesTab)
+			if (TGTweakDefOf.Tweak_ShowGenesTab.BoolValue)
             {
 				__result = false;
 				return false;
@@ -33,7 +33,7 @@ namespace TweaksGalore
 		[HarmonyPrefix]
 		public static bool Prefix(ITab_Genes __instance, ref bool __result)
 		{
-			if (TweaksGaloreMod.settings.tweak_showGenesTab)
+			if (TGTweakDefOf.Tweak_ShowGenesTab.BoolValue)
 			{
 				__result = false;
 				return false;

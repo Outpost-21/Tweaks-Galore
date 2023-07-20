@@ -1,13 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<!-- <TabulaRasa.UpdateDef>
-		<defName>TweaksGalore_24032023</defName>
-		<date>2023/03/24</date>
+	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_24072023</defName>
+		<date>2023/07/24</date>
 		<banner></banner>
-		<content></content>
+		<content><![CDATA[<b>Code & UI Overhaul</b>
+
+The options screen for Tweaks Galore has been completely overhauled, the previous pages have been collected together in pages for Vanilla, and each DLC individually with collapsable sections and a searchbar for finding specific tweaks. There's a massive amount of technical changes in the background, but to keep it short, this means I can now more easily add new tweaks, and so can anyone else using only XML to do so (assuming you're capable of making a simple def and patch anyway). The GitHub wiki linked in the Steam Workshop description has all the details for how if you're interested.
+
+If there's any issues or weirdness, let me know, there was a LOT to work through so I expect a couple minor mistakes here and there.
+
+<i>Old settings should still be set up how they were, they have been set up to migrate over to the new extendable system in place automatically when you loaded up the game, so they should all still be set to what you had them.</i>
+			
+<i>Left click to go to Workshop page, Right click to dismiss update.</i>]]></content>
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
-		<important>false</important>
-	</TabulaRasa.UpdateDef> -->
+		<important>true</important>
+	</TabulaRasa.UpdateDef>
 
 </Defs>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Ideology_Gauranlen</defName>
+		<label>Gauranlen</label>
+		<sectionWorker>TweaksGalore.SectionWorker_Gauranlen</sectionWorker>
+		<tweaks>
+			<li>Tweak_GauranlenTweaks</li>
+		</tweaks>
+		<subSections>
+			<li>TweakSubSection_GauranlenTree</li>
+			<li>TweakSubSection_Dryads</li>
+		</subSections>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenTweaks</defName>
+		<label>Enable Gauranlen Tweaks</label>
+		<description>This entire section is disabled by default for compatibility sake mostly, some Gauranlen related tweaks function regardless of if they've been changed (any changing a radius for example) so this allows them all to be skipped over without any potential for conflicts if you prefer another gauranlen tweak mod.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+			<enhanced>true</enhanced>
+		</formatting>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- ================== Gauranlen Tree ================== -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_GauranlenTree</defName>
+		<label>Gauranlen Tree</label>
+		<description>Tweaks specific to the Gauranlen tree itself.</description>
+		<tweaks>
+			<li>Tweak_ReplantableGauranlen</li>
+			<li>Tweak_GauranlenArtificialBuildingRadius</li>
+			<li>Tweak_GauranlenConnectionGain</li>
+			<li>Tweak_GauranlenConnectionLoss</li>
+			<li>Tweak_GauranlenConnectionLossBuildings</li>
+			<li>Tweak_GauranlenMossGrowthRadius</li>
+			<li>Tweak_GauranlenMossGrowthDays</li>
+			<li>Tweak_GauranlenInitialConnection</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ReplantableGauranlen</defName>
+		<label>Replantable Gauranlen</label>
+		<description>Makes it so you can move Gauranlen trees like any other.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenArtificialBuildingRadius</defName>
+		<label>Artificial Building Radius</label>
+		<description>The radius in which a debuff is applied to the trees effects if artificial buildings are built in it.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GauranlenArtificialRadius</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>7.9</defaultValue>
+		<floatRange>0~50</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenInitialConnection</defName>
+		<label>Initial Connection Range</label>
+		<description>Initial connection strength will be a random value in this range.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GauranlenInitialConnection</tweakWorker>
+		<tweakType>Custom</tweakType>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenConnectionGain</defName>
+		<label>Connection Gain</label>
+		<description>The amount of connection gained for each hour of pruning.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GauranlenConnectionGain</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>0.01</defaultValue>
+		<floatRange>0~1</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenConnectionLoss</defName>
+		<label>Connection Loss</label>
+		<description>A multiplier on the loss rate of the connection.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GauranlenConnectionLoss</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>1</defaultValue>
+		<floatRange>0~2</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenConnectionLossBuildings</defName>
+		<label>Connection Loss From Buildings</label>
+		<description>A multiplier on the loss rate of the connection specifically due to artificial buildings in range.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GauranlenConnectionLossBuildings</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>1</defaultValue>
+		<floatRange>0~2</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenMossGrowthRadius</defName>
+		<label>Moss Growth Radius</label>
+		<description>The radius in which gauranlen moss will grow inside.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GauranlenMossGrowthRadius</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>7.9</defaultValue>
+		<floatRange>0~50</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GauranlenMossGrowthDays</defName>
+		<label>Moss Growth Days</label>
+		<description>The number of days it takes for gauranlen moss to grow to maturity.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GauranlenMossGrowthDays</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>5</defaultValue>
+		<intRange>0~30</intRange>
+		<intIncrement>1</intIncrement>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- ================== Dryads ================== -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_Dryads</defName>
+		<label>Dryads</label>
+		<description>Tweaks specific to the dryads that come from the Gauranlen Tree.</description>
+		<tweaks>
+			<li>Tweak_DryadMaxCount</li>
+			<li>Tweak_DryadSpawnDays</li>
+			<li>Tweak_DryadCocoonDays</li>
+			<li>Tweak_GaumakerCocoonDays</li>
+			<li>Tweak_GaumakerPodDays</li>
+			<li>Tweak_GaumakerSeedYield</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DryadMaxCount</defName>
+		<label>Max Dryads</label>
+		<description>Max number of dryads when connection is full. This is technically done on a point curve with multiple values, but to keep it simple I just distribute the max linearly through it.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_DryadMaxCount</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>4</defaultValue>
+		<intRange>3~30</intRange>
+		<intIncrement>1</intIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DryadSpawnDays</defName>
+		<label>Dryad Spawn Days</label>
+		<description>Number of days between the spawning of Dryads.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_DryadSpawnDays</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>8</defaultValue>
+		<intRange>1~30</intRange>
+		<intIncrement>1</intIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DryadCocoonDays</defName>
+		<label>Dryad Cocoon Days</label>
+		<description>Number of days Dryads remain in their cocoons.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_DryadCocoonDays</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>6</defaultValue>
+		<intRange>1~30</intRange>
+		<intIncrement>1</intIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GaumakerCocoonDays</defName>
+		<label>Gaumaker Cocoon Days</label>
+		<description>Number of days Gaumaker Dryads remain in their cocoons.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GaumakerCocoonDays</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>6</defaultValue>
+		<intRange>1~30</intRange>
+		<intIncrement>1</intIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GaumakerPodDays</defName>
+		<label>Gaumaker Pod Days</label>
+		<description>Number of days it takes for a Gaumaker pod to mature.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GaumakerPodDays</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>4</defaultValue>
+		<intRange>1~30</intRange>
+		<intIncrement>1</intIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GaumakerSeedYield</defName>
+		<label>Gaumaker Seed Yield</label>
+		<description>Number of seeds obtained from a Gaumaker pod.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GaumakerSeedYield</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>1</defaultValue>
+		<intRange>1~10</intRange>
+		<intIncrement>1</intIncrement>
+	</TweaksGalore.TweakDef>
+	
+</Defs>

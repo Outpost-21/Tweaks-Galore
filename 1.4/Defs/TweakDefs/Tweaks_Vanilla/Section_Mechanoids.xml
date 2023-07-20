@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Mechanoids</defName>
+		<label>Mechanoids</label>
+		<tweaks>
+			<li>Tweak_MechanoidHeatArmor</li>
+			<li>Tweak_MechanoidAdaptation</li>
+			<li>Tweak_PreReleaseShipParts</li>
+		</tweaks>
+		<subSections>
+			<li>TweakSubSection_BetterGloomlight</li>
+			<li>TweakSubSection_PlayerMechs</li>
+		</subSections>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechanoidHeatArmor</defName>
+		<label>Mechanoid Heat Armor</label>
+		<description>Changes the heat armor mechanoids have, if you leave the setting at the max value (which is the vanilla default) then it'll be ignored.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>2.0</defaultValue>
+		<floatRange>0.1~2.0</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+		<incompatible>
+			<li>CETeam.CombatExtended</li>
+		</incompatible>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechanoidAdaptation</defName>
+		<label>Disable Mechanoid Adaptation</label>
+		<description>Disables the ability for Mechanoids to adapt to EMP, so EMP remains super effective regardless.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>true</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PreReleaseShipParts</defName>
+		<label>Pre-1.0 Ship Parts</label>
+		<description><![CDATA[Returns psychic and defoliator ship parts to their B18 state where they actually provide a decent reward.
+
+<b>Psychic Ship Part Leavings:</b>
+- 100x Steel
+- 35x Plasteel
+- 8x Steel Slag
+- 4x Industrial Components
+- 1x Spacer Components
+- 1x AI Persona Core
+
+<b>Defoliator Ship Part Leavings:</b>
+- 100x Steel
+- 35x Plasteel
+- 8x Steel Slag
+- 4x Industrial Component
+- 1x Spacer Component
+- 5x Glittertech Medicine]]></description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>		
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_BetterGloomlight</defName>
+		<label>Better Gloomlight</label>
+		<description>Changes the gloomlight often found in mech clusters to produce more light so it's actually useful.</description>
+		<tweaks>
+			<li>Tweak_BetterGloomlight</li>
+			<li>Tweak_BetterGloomlightSunlamp</li>
+			<li>Tweak_BetterGloomlightDarklight</li>
+		</tweaks>
+		<required>
+			<li>Ludeon.RimWorld.Royalty</li>
+		</required>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BetterGloomlight</defName>
+		<label>Enabled</label>
+		<description>Changes the gloomlight often found in mech clusters to produce more light so it's actually useful.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>		
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BetterGloomlightSunlamp</defName>
+		<label>Work As Sunlamp</label>
+		<description>With Better Gloomlight and this enabled, they'll instead produce enough light to be equal to that of a free sunlamp.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>		
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BetterGloomlightDarklight</defName>
+		<label>Darklight Glow</label>
+		<description>Changes the colour of the gloomlight to match that of 'Darklight'.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>		
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_PlayerMechs</defName>
+		<label>Player Mechanoid Stats</label>
+		<description>Allows the changing of work stats for player mechanoids so they don't suck nearly as much.</description>
+		<tweaks>
+			<li>Tweak_PlayerMechStats</li>
+			<li>Tweak_MechDischargeRate</li>
+			<li>Tweak_MechSkillLevel</li>
+			<li>Tweak_MechAdj_GlobalWorkSpeed</li>
+			<li>Tweak_MechAdj_ConstructoidWorkSpeed</li>
+			<li>Tweak_MechAdj_AgrihandWorkSpeed</li>
+			<li>Tweak_MechAdj_CleansweeperWorkSpeed</li>
+		</tweaks>
+		<required>
+			<li>Ludeon.RimWorld.Biotech</li>
+		</required>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PlayerMechStats</defName>
+		<label>Enabled</label>
+		<description>Allows the changing of mechanoid stats, useful for disabling if there's any compatibility issues.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_PlayerMechanoids</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+		</formatting>	
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechDischargeRate</defName>
+		<label>Energy Drain Rate</label>
+		<description>Controls the rate at which mechanoid energy drains.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.05~5.0</floatRange>
+		<floatIncrement>0.05</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechSkillLevel</defName>
+		<label>Skill Level</label>
+		<description>Controls the skill level all mechanoids have (vanilla is universal like this, it's weird).</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>10</defaultValue>
+		<intRange>1~20</intRange>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef Name="TweakBase_MechWorkAdjuster" Abstract="True">
+		<tweakWorker>TweaksGalore.TweakWorker_ModifyMechStat</tweakWorker>
+		<tweakType>Float</tweakType>
+		<floatRange>0.05~2.00</floatRange>
+		<floatIncrement>0.05</floatIncrement>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_GlobalWorkSpeed</defName>
+		<label>Global Work Speed</label>
+		<defaultValue>0.50</defaultValue>
+		<tweakStat>ConstructionSpeed</tweakStat>
+		<tweakThings>
+			<li>Mech_Constructoid</li>
+			<li>Mech_Fabricor</li>
+			<li>Mech_Agrihand</li>
+			<li>Mech_Cleansweeper</li>
+			<li>Mech_Paramedic</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_ConstructoidWorkSpeed</defName>
+		<label>Constructoid - Construction Speed</label>
+		<defaultValue>0.50</defaultValue>
+		<tweakStat>ConstructionSpeed</tweakStat>
+		<tweakThing>Mech_Constructoid</tweakThing>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_AgrihandWorkSpeed</defName>
+		<label>Agrihand - Plant Work Speed</label>
+		<defaultValue>0.80</defaultValue>
+		<tweakStat>PlantWorkSpeed</tweakStat>
+		<tweakThing>Mech_Agrihand</tweakThing>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_CleansweeperWorkSpeed</defName>
+		<label>Cleansweeper - Cleaning Speed</label>
+		<defaultValue>0.50</defaultValue>
+		<tweakStat>CleaningSpeed</tweakStat>
+		<tweakThing>Mech_Cleansweeper</tweakThing>
+	</TweaksGalore.TweakDef>
+	
+</Defs>

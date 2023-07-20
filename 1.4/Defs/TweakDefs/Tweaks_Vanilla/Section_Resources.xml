@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Resources</defName>
+		<label>Resources</label>
+		<description>This will only function against vanilla versions of the raid types, some modded raids use their own version and will bypass these tweaks.</description>
+		<tweaks>
+			<li>Tweak_MetalDoesntBurn</li>
+			<li>Tweak_NoMineableComponents</li>
+			<li>Tweak_NoMineablePlasteel</li>
+			<li>Tweak_OldComponentNames</li>
+			<li>Tweak_PrettyPreciousMetals</li>
+			<li>Tweak_StrongerSteel</li>
+		</tweaks>
+		<subSections>
+			<li>TweakSubSection_StackableChunks</li>
+		</subSections>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MetalDoesntBurn</defName>
+		<label>Metal Doesn't Burn</label>
+		<description>Removes flammability from Steel and Plasteel, setting gold and silver slightly above 0 so they can still 'melt'.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoMineableComponents</defName>
+		<label>No Mineable Components</label>
+		<description>Removes compacted components from map generation.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoMineablePlasteel</defName>
+		<label>No Mineable Plasteel</label>
+		<description>Removes compacted plasteel from map generation.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_OldComponentNames</defName>
+		<label>Old Component Names</label>
+		<description>Back in my day we had industrial and spacer components! Now you can too!</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PrettyPreciousMetals</defName>
+		<label>Pretty Precious Metals</label>
+		<description>Changes the beauty of gold and silver (the item, not as a material) from -4 to 4.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_StrongerSteel</defName>
+		<label>Stronger Steel</label>
+		<description>Doubles the durability of steel as a material.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_StackableChunks</defName>
+		<label>Stackable Chunks</label>
+		<description>Allows stone chunks and slag to be stackable. Changing this mid-save WILL cause issues.</description>
+		<tweaks>
+			<li>Tweak_StackableChunks</li>
+			<li>Tweak_StackableChunks_Stone</li>
+			<li>Tweak_StackableChunks_Slag</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_StackableChunks</defName>
+		<label>Enabled</label>
+		<description>Allows stone chunks and slag to be stackable. Changing this mid-save WILL cause issues.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_StackableChunks</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>		
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_StackableChunks_Stone</defName>
+		<label>Stone Chunk Stack Size</label>
+		<tweakType>Int</tweakType>
+		<defaultValue>5</defaultValue>
+		<intRange>5~500</intRange>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_StackableChunks_Slag</defName>
+		<label>Slag Chunk Stack Size</label>
+		<tweakType>Int</tweakType>
+		<defaultValue>5</defaultValue>
+		<intRange>5~500</intRange>		
+	</TweaksGalore.TweakDef>
+
+</Defs>

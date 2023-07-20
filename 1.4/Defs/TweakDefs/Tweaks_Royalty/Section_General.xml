@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Royalty_General</defName>
+		<label>General</label>
+		<tweaks>
+			<li>Tweak_AllowAnyBuildingsInThroneRoom</li>
+			<li>Tweak_AllowAltarInThroneRoom</li>
+			<li>Tweak_DelayedRoyalty</li>
+			<li>Tweak_FreeMeditation</li>
+			<li>Tweak_NoBackstoryLimits</li>
+			<li>Tweak_NoTradingPermit</li>
+			<li>Tweak_UninstallableMechShields</li>
+			<li>Tweak_WaitThisIsBetter</li>
+		</tweaks>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AllowAnyBuildingsInThroneRoom</defName>
+		<label>Allow Any Buildings In Throneroom</label>
+		<description>If enabled, removes building restrictions in thronerooms. Includes Altars.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AllowAltarInThroneRoom</defName>
+		<label>Allow Altar in Throneroom</label>
+		<description>If enabled, specifically allows altars to be built in thronerooms. Pointless if 'any' are allowed already.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DelayedRoyalty</defName>
+		<label>Delayed Royalty</label>
+		<description>Delays the Royalty starter quests by a few days more than usual to give additional time to get ready for them.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FreeMeditation</defName>
+		<label>Free Meditation</label>
+		<description>Allows any pawn to use any meditation focus building regardless of the focus types they have. Automatically patches all vanilla and modded meditation sources.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_FreeMeditation</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoBackstoryLimits</defName>
+		<label>No Backstory Limits</label>
+		<description>Allows any pawn to use Natural or Artistic meditation focus types regardless of backstory. If Vanilla Psycasts Expanded is active, this will also handle the psycaster paths being unlockable.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoTradingPermit</defName>
+		<label>No Trading Permit</label>
+		<description>If enabled, removes the need to hae a permit to trade with the Shattered Empire.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_UninstallableMechShields</defName>
+		<label>Uninstallable Mech Shields</label>
+		<description>If enabled, allows you to uninstall mech cluster shields for your own use. This also prevents them shutting down when the cluster is cleared so they remain useful.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_WaitThisIsBetter</defName>
+		<label>Wait, This Is Better</label>
+		<description>Adds previous tier tags to all royal acceptable apparel (including modded) so that apprel of a higher tier will satisfy pawns looking for a lower tier. Should really be the default.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+	
+</Defs>
