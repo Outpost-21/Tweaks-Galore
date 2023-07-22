@@ -3,7 +3,7 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>Tweak_SkilledStonecutting</li>
+			<li>Tweak_SkilledStoneCutting</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>
