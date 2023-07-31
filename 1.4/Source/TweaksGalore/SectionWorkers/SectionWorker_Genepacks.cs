@@ -27,6 +27,7 @@ namespace TweaksGalore
             sectionHeights[section] = value;
         }
 
+
         public Dictionary<GeneDef, ModContentPack> cachedGeneDictionary = new Dictionary<GeneDef, ModContentPack>();
 
         public Dictionary<GeneDef, ModContentPack> CachedGeneDictionary
@@ -76,7 +77,7 @@ namespace TweaksGalore
         {
             if (listing.ButtonTextLabeled("", "Restore Section Defaults"))
             {
-                DefaultUtil.RestoreSettings_Genepacks(settings);
+                settings.genepacksEnabled = settings.defaultGenepacksEnabled;
                 Messages.Message("Tweaks Galore: 'Genepacks' tweaks restored to defaults. Restart required to take effect.", MessageTypeDefOf.CautionInput);
             }
 
@@ -187,7 +188,7 @@ namespace TweaksGalore
             return results;
         }
 
-        public override void DoOnStartup(TweaksGaloreSettings settings)
+        public override void DoOnStartup()
         {
             if (settings.defaultGenepacksEnabled.NullOrEmpty())
             {

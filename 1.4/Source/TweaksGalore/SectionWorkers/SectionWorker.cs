@@ -80,7 +80,7 @@ namespace TweaksGalore
             }
         }
 
-        public virtual void DoOnStartup(TweaksGaloreSettings settings)
+        public virtual void DoOnStartup()
         {
 
         }

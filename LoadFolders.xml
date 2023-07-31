@@ -5,14 +5,25 @@
 		<li>1.3</li>
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.3/Mods/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.3/Mods/Ideology</li>
-		<li IfModActive="neronix17.toolbox">UpdateLog</li>
 	</v1.3>
 	<v1.4>
 		<li>/</li>
 		<li>1.4</li>
+		<!-- RimWorld DLC -->
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.4/Mods/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/Mods/Ideology</li>
 		<li IfModActive="Ludeon.RimWorld.Biotech">1.4/Mods/Biotech</li>
+		<!-- Tabula Rasa -->
 		<li IfModActive="neronix17.toolbox">1.4/Mods/UpdateLog</li>
+		<!-- Vanilla Psycasting Expanded -->
+		<li IfModActive="VanillaExpanded.VPsycastsE">1.4/Mods/VanillaExpanded/VE_Psycasting</li>
+		<!-- Vanilla Factions Expanded - Empire -->
+		<li IfModActive="OskarPotocki.VFE.Empire">1.4/Mods/VanillaExpanded/VFE_Empire</li>
+		<!-- Vanilla Factions Expanded - Insectoid -->
+		<li IfModActive="OskarPotocki.VFE.Insectoid">1.4/Mods/VanillaExpanded/VFE_Insectoids</li>
+		<!-- Vanilla Factions Expanded - Pirates -->
+		<li IfModActive="OskarPotocki.VFE.Pirates">1.4/Mods/VanillaExpanded/VFE_Pirates</li>
+		<!-- Vanilla Races Expanded - Android -->
+		<li IfModActive="vanillaracesexpanded.android">1.4/Mods/VanillaExpanded/VRE_Androids</li>
 	</v1.4>
 </loadFolders>

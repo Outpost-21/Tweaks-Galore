@@ -11,6 +11,8 @@ namespace TweaksGalore
 {
     public class SectionWorker_PennedAnimals : SectionWorker
     {
+        public Dictionary<string, float> defaultValues = new Dictionary<string, float>();
+
 
         public List<ThingDef> cachedAnimalListing = new List<ThingDef>();
 
@@ -40,12 +42,12 @@ namespace TweaksGalore
         {
             if (listing.ButtonTextLabeled("", "Restore defaults"))
             {
-                DefaultUtil.RestoreSettings_PennedAnimals(settings);
+                settings.tweak_pennedAnimalDict = defaultValues;
                 Messages.Message("Tweaks Galore: 'Penned Animal' tweaks restored to defaults. Restart required to take full effect.", MessageTypeDefOf.CautionInput);
             }
             // Tweak: Penned Animal Config
-            listing.CheckboxEnhanced("Penned Animal Config", "Allows control over which animals can be penned and how many days it takes for them to begin roaming if they are not in a pen.", ref settings.tweak_pennedAnimalConfig);
-            if (settings.tweak_pennedAnimalConfig)
+            listing.DoSettingBool("Penned Animal Config", "Allows control over which animals can be penned and how many days it takes for them to begin roaming if they are not in a pen.", def.defName, false, true);
+            if (settings.GetBoolSetting(def.defName, false))
             {
                 listing.GapLine();
                 for (int i = 0; i < CachedAnimalListing.Count; i++)
@@ -60,21 +62,39 @@ namespace TweaksGalore
             }
         }
 
-        public override void DoOnStartup(TweaksGaloreSettings settings)
+        public override void DoOnStartup()
         {
-            FillAnimalDict(settings);
-            if (settings.tweak_pennedAnimalConfig)
+            StoreDefaults();
+            UpdateAnimalDict();
+            if (settings.GetBoolSetting(def.defName, false))
             {
                 SetPennedAnimals(settings);
             }
         }
 
-        public static void FillAnimalDict(TweaksGaloreSettings settings)
+        public void StoreDefaults()
         {
-            if (settings.tweak_pennedAnimalDict.NullOrEmpty() || settings.restorePennedAnimals)
+            if (defaultValues.NullOrEmpty())
+            {
+                defaultValues = new Dictionary<string, float>();
+            }
+
+            List<ThingDef> list = (from x in DefDatabase<ThingDef>.AllDefs where (bool)(x.race?.Animal ?? false) select x).ToList();
+            foreach (ThingDef def in list)
+            {
+                if (!defaultValues.ContainsKey(def.defName))
+                {
+                    float roamMtbDays = def.race.roamMtbDays ?? 0f;
+                    defaultValues.Add(def.defName, roamMtbDays);
+                }
+            }
+        }
+
+        public void UpdateAnimalDict()
+        {
+            if (settings.tweak_pennedAnimalDict.NullOrEmpty())
             {
                 settings.tweak_pennedAnimalDict = new Dictionary<string, float>();
-                settings.restorePennedAnimals = false;
             }
 
             List<ThingDef> list = (from x in DefDatabase<ThingDef>.AllDefs where (bool)(x.race?.Animal ?? false) select x).ToList();
@@ -88,7 +108,7 @@ namespace TweaksGalore
             }
         }
 
-        public static void SetPennedAnimals(TweaksGaloreSettings settings)
+        public void SetPennedAnimals(TweaksGaloreSettings settings)
         {
             foreach (KeyValuePair<string, float> pair in settings.tweak_pennedAnimalDict)
             {

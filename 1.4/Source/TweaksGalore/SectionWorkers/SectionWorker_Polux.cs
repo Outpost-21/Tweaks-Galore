@@ -16,9 +16,9 @@ namespace TweaksGalore
             base.DoSectionContents(listing, filter);
         }
 
-        public override void DoOnStartup(TweaksGaloreSettings settings)
+        public override void DoOnStartup()
         {
-            base.DoOnStartup(settings);
+            base.DoOnStartup();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace TweaksGalore
 {
     public class TweakCategoryDef : Def
     {
-        public int orderID = 0;
+        public int orderID = 9999;
 
         public List<string> required = new List<string>();
 

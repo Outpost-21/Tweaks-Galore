@@ -20,7 +20,7 @@ namespace TweaksGalore
                     DoTitleSettings(listing, title);
                 }
             }
-            DoOnStartup(settings);
+            DoOnStartup();
         }
 
         public void DoTitleSettings(Listing_Standard listing, RoyalTitleDef title)
@@ -71,7 +71,7 @@ namespace TweaksGalore
             }
         }
 
-        public override void DoOnStartup(TweaksGaloreSettings settings)
+        public override void DoOnStartup()
         {
             if (settings.royalTitleSettingsDefaults.NullOrEmpty())
             {
@@ -114,7 +114,7 @@ namespace TweaksGalore
             }
         }
 
-        public static RoyalTitleSettings MakeNewRoyalTitleSetting(RoyalTitleDef title)
+        public RoyalTitleSettings MakeNewRoyalTitleSetting(RoyalTitleDef title)
         {
             return new RoyalTitleSettings()
             {

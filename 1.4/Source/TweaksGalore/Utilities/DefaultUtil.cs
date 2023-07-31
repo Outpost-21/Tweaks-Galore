@@ -95,7 +95,6 @@ namespace TweaksGalore
 
         public static void RestoreSettings_PennedAnimals(TweaksGaloreSettings s)
         {
-            s.restorePennedAnimals = true;
             s.tweak_pennedAnimalConfig = false;
         }
 

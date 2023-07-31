@@ -20,7 +20,7 @@ namespace TweaksGalore
                     DoPermitSettings(listing, permit);
                 }
             }
-            DoOnStartup(settings);
+            DoOnStartup();
         }
 
         public void DoPermitSettings(Listing_Standard listing, RoyalTitlePermitDef permit)
@@ -66,7 +66,7 @@ namespace TweaksGalore
             }
         }
 
-        public override void DoOnStartup(TweaksGaloreSettings settings)
+        public override void DoOnStartup()
         {
             if (settings.royalPermitSettingsDefaults.NullOrEmpty())
             {
@@ -107,7 +107,7 @@ namespace TweaksGalore
             }
         }
 
-        public static RoyalPermitSettings MakeNewRoyalPermitSetting(RoyalTitlePermitDef permit)
+        public RoyalPermitSettings MakeNewRoyalPermitSetting(RoyalTitlePermitDef permit)
         {
             RoyalPermitSettings s = new RoyalPermitSettings();
             s.minTitle = permit.minTitle.defName;

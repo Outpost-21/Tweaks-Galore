@@ -21,7 +21,7 @@ namespace TweaksGalore
             {
                 try
                 {
-                    section.Worker.DoOnStartup(settings);
+                    section.Worker.DoOnStartup();
                 }
                 catch (Exception e)
                 {

@@ -6,6 +6,7 @@
 		<label>Vanilla</label>
 		<sections>
 			<li>TweakSection_Vanilla_General</li>
+			<li>TweakSection_Vanilla_IncidentControl</li>
 			<li>TweakSection_Vanilla_Mechanoids</li>
 			<li>TweakSection_Vanilla_PennedAnimals</li>
 			<li>TweakSection_Vanilla_Power</li>
@@ -19,6 +20,12 @@
 		<defName>TweakSection_Vanilla_PennedAnimals</defName>
 		<label>Penned Animals</label>
 		<sectionWorker>TweaksGalore.SectionWorker_PennedAnimals</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_IncidentControl</defName>
+		<label>Incident Control</label>
+		<sectionWorker>TweaksGalore.SectionWorker_IncidentControl</sectionWorker>
 	</TweaksGalore.TweakSectionDef>
 
 </Defs>

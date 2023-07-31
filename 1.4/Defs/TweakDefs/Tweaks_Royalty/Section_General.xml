@@ -13,8 +13,25 @@
 			<li>Tweak_NoTradingPermit</li>
 			<li>Tweak_UninstallableMechShields</li>
 			<li>Tweak_WaitThisIsBetter</li>
+			<li>Tweak_NoDeathAcidifiers</li>
 		</tweaks>
 	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoBiocoding</defName>
+		<label>No Biocoding</label>
+		<description>If enabled, removes biocoding from weapons so they don't spawn with it. Does not affect any that have already spawned but will affect mod added ones.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoDeathAcidifiers</defName>
+		<label>No Death Acidifiers</label>
+		<description>If enabled, removes death acidifiers from pawnKinds so they don't spawn with them. Does not affect any pawns that have already spawned, but will affect mod added pawns.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_AllowAnyBuildingsInThroneRoom</defName>

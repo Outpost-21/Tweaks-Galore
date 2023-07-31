@@ -91,6 +91,7 @@
     <Compile Include="SectionWorkers\SectionWorker_Anima.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Gauranlen.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Genepacks.cs" />
+    <Compile Include="SectionWorkers\SectionWorker_IncidentControl.cs" />
     <Compile Include="SectionWorkers\SectionWorker_RoyalPermits.cs" />
     <Compile Include="SectionWorkers\SectionWorker_RoyalTitles.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Polux.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="TweakWorkers\Anima\TweakWorker_FreeMeditation.cs" />
     <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamStack.cs" />
     <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamImpact.cs" />
+    <Compile Include="TweakWorkers\General\TweakWorker_NoBackstoryIncapabilities.cs" />
     <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxIgnoreBuildings.cs" />
     <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxEffectRate.cs" />
     <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxEffectRadius.cs" />
@@ -167,7 +169,7 @@
     <Compile Include="Utilities\ApparelUtil.cs" />
     <Compile Include="Utilities\TweakUtil.cs" />
     <Compile Include="Utilities\SlaveryUtil.cs" />
-    <Compile Include="Utilities\DefaultUtil.cs" />
+    <None Include="Utilities\DefaultUtil.cs" />
     <Compile Include="DefOfs\TGHediffDefOf.cs" />
     <Compile Include="DefOfs\TGThingDefOf.cs" />
     <Compile Include="Harmony\Patch_Pawn_MechanitorTracker.cs" />

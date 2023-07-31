@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_NoTerrorism</li>
+		</settings>
+		<active Class="PatchOperationAddModExtension">
+			<xpath>Defs/FactionDef</xpath>
+			<value>
+				<li Class="VFEEmpire.FactionExtension_Deserters">
+					<canSendDeserters>false</canSendDeserters>
+				</li>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

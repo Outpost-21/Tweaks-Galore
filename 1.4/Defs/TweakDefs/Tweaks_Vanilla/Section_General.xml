@@ -30,6 +30,7 @@
 			<li>Tweak_NextRestockTimer</li>
 			<li>Tweak_NoBreakdowns</li>
 			<li>Tweak_SkilledStoneCutting</li>
+			<li>Tweak_NoBackstoryIncapabilities</li>
 		</tweaks>
 		<subSections>
 			<li>TweakSubSection_FasterSmoothing</li>
@@ -42,6 +43,15 @@
 			<li>TweakSubSection_TraitCountAdjustment</li>
 		</subSections>
 	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoBackstoryIncapabilities</defName>
+		<label>No Backstory Incapabilities</label>
+		<description>Removes all work incapabilities from backstories, both adulthood and childhood, including modded. Humanoid Alien Races backstories might not be affected as they use a separate def.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_NoBackstoryIncapabilities</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_BoomalopesBleedChemfuel</defName>

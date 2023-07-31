@@ -17,9 +17,10 @@ namespace TweaksGalore
         public bool overhaulFirstLoad = true;
 
         // Penned Animals
-        public bool restorePennedAnimals = false;
-        public bool tweak_pennedAnimalConfig = false;
         public Dictionary<string, float> tweak_pennedAnimalDict = new Dictionary<string, float>();
+
+        // Event Control
+        public Dictionary<string, float> tweak_eventControlDict = new Dictionary<string, float>();
 
         // Anima Psylink
         public List<int> tweak_animaPsylinkLevelNeeds = new List<int>();
@@ -171,6 +172,7 @@ namespace TweaksGalore
 
         // OLD SETTINGS
         // Only kept for backwards compatibility.
+        public bool tweak_pennedAnimalConfig = false;
         public bool tweak_insultingSpreeNerf = false;
         public bool tweak_lagFreeLamps = false;
         public bool tweak_fasterSmoothing = false;
@@ -361,9 +363,10 @@ namespace TweaksGalore
             Scribe_Collections.Look(ref floatRangeSetting, "floatRangeSetting");
 
             // Penned Animals
-            Scribe_Values.Look(ref restorePennedAnimals, "restorePennedAnimals", false);
-            Scribe_Values.Look(ref tweak_pennedAnimalConfig, "tweak_pennedAnimalConfig", false);
             Scribe_Collections.Look(ref tweak_pennedAnimalDict, "tweak_pennedAnimalDict");
+
+            // Event Control
+            Scribe_Collections.Look(ref tweak_eventControlDict, "tweak_eventcontrolDict");
 
             // Anima
             Scribe_Collections.Look(ref tweak_animaPsylinkLevelNeeds, "tweak_animaPsylinkLevelNeeds");
@@ -380,6 +383,7 @@ namespace TweaksGalore
 
             // OLD SETTINGS
             // Only kept for backwards compatibility.
+            Scribe_Values.Look(ref tweak_pennedAnimalConfig, "tweak_pennedAnimalConfig", false);
             Scribe_Values.Look(ref tweak_insultingSpreeNerf, "tweak_insultingSpreeNerf", false);
             Scribe_Values.Look(ref tweak_lagFreeLamps, "tweak_lagFreeLamps", false);
             Scribe_Values.Look(ref tweak_fasterSmoothing, "tweak_fasterSmoothing", false);
@@ -649,6 +653,7 @@ namespace TweaksGalore
                 SetBoolSetting("Tweak_BetterGloomlight", tweak_betterGloomlight);
                 SetBoolSetting("Tweak_BetterGloomlightSunlamp", tweak_gloomlightSunlamp);
                 SetBoolSetting("Tweak_BetterGloomlightDarklight", tweak_gloomlightDarklight);
+                SetBoolSetting("Tweak_PennedAnimalConfig", tweak_pennedAnimalConfig);
 
                 // Royalty
                 SetBoolSetting("Tweak_DelayedRoyalty", tweak_delayedRoyalty);
