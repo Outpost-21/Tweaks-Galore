@@ -11,11 +11,20 @@
 			<li>Tweak_ProperSuppression</li>
 			<li>Tweak_SuppressionThreshold</li>
 			<li>Tweak_UnlockedIdeologyBuildings</li>
+			<li>Tweak_YouLookFine</li>
 		</tweaks>
 		<subSections>
 			<li>TweakSubSection_AncientDeconstruction</li>
 		</subSections>
 	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_YouLookFine</defName>
+		<label>You Look Fine!</label>
+		<description>Stops pawns from changing their look at the style bench every five goddamn minutes, it's a story simulator not Barbies Makeup Challenge.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_DarklightGlowPods</defName>

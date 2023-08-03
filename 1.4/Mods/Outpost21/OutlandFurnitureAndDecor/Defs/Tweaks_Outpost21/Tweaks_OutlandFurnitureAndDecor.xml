@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_OutlandFurnitureAndDecor</defName>
+		<label>Outland - Furniture &amp; Decor</label>
+		<tweaks>
+			<li>Tweak_NoComponentsCosts</li>
+		</tweaks>
+		<required>
+			<li>Neronix17.Outland.FurnitureAndDecor</li>
+		</required>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoComponentsCosts</defName>
+		<label>No Component Costs</label>
+		<description>If enabled, removes the medieval component costs from doors and lighting.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<required>
+			<li>Neronix17.Outland.FurnitureAndDecor</li>
+		</required>
+	</TweaksGalore.TweakDef>
+
+</Defs>

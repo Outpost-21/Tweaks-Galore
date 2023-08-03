@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_SubpersonaShells</defName>
+		<label>Subpersona Shells</label>
+		<tweaks>
+			<li>Tweak_SubpersonaShellDrainRate</li>
+		</tweaks>
+		<required>
+			<li>Neronix17.SubpersonaShells</li>
+		</required>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SubpersonaShellDrainRate</defName>
+		<label>Mechadroid Drain Rate</label>
+		<description>Controls the rate at which a subpersona shells energy level drains.</description>
+		<tweakType>Float</tweakType>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.01~2.00</floatRange>
+		<required>
+			<li>Neronix17.SubpersonaShells</li>
+		</required>
+	</TweaksGalore.TweakDef>
+
+</Defs>

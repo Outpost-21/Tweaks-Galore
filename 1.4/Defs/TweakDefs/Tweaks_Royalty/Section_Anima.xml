@@ -4,7 +4,6 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Royalty_Anima</defName>
 		<label>Anima</label>
-		<sectionWorker>TweaksGalore.SectionWorker_Anima</sectionWorker>
 		<tweaks>
 			<li>Tweak_AnimaTweaks</li>
 			<li>Tweak_AnimaPsylinkLevelNeeds</li>

@@ -6,12 +6,12 @@
 		<label>Power</label>
 		<description>Allows tweaking the usage rate of some buildings. If they usually produce then it configures how much they output instead.</description>
 		<tweaks>
-			<li>Tweak_PowerAdjusting</li>
-			<li>Tweak_PowerAdj_StandingLamp</li>
-			<li>Tweak_PowerAdj_SunLamp</li>
-			<li>Tweak_PowerAdj_Autodoor</li>
-			<li>Tweak_PowerAdj_VanometricPowerCell</li>
+			<li>Tweak_EnergySavingLighting</li>
+			<li>Tweak_EnergySavingProduction</li>
 		</tweaks>
+		<subSections>
+			<li>TweakSubSection_PowerAdjusting</li>
+		</subSections>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -30,6 +30,45 @@
 		<tweakType>Int</tweakType>
 	</TweaksGalore.TweakDef>
 
+	<!-- ==================== Vanilla Buildings ==================== -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_PowerAdjusting</defName>
+		<label>Power Adjusting</label>
+		<description>If enabled, allows the below power changes to take effect. Requires restart for the values to actually work, as they're assigned on startup.</description>
+		<tweaks>
+			<!-- ========== Vanilla ========== -->
+			<li>Tweak_PowerAdjusting</li>
+			<li>Tweak_PowerAdj_StandingLamp</li>
+			<li>Tweak_PowerAdj_SunLamp</li>
+			<li>Tweak_PowerAdj_Autodoor</li>
+			<li>Tweak_PowerAdj_VanometricPowerCell</li>
+			<li>Tweak_PowerAdj_TubeTelevision</li>
+			<li>Tweak_PowerAdj_FlatscreenTelevision</li>
+			<li>Tweak_PowerAdj_MegascreenTelevision</li>
+			<!-- ========== Biotech ========== -->
+			<li>Tweak_PowerAdj_DeathrestCasket</li>
+			<li>Tweak_PowerAdj_DeathrestBuildings</li>
+			<li>Tweak_PowerAdj_DeathrestAccelerator</li>
+			<li>Tweak_PowerAdj_BandNode</li>
+			<li>Tweak_PowerAdj_ToxifierGenerator</li>
+			<li>Tweak_PowerAdj_GeneAssembler</li>
+			<li>Tweak_PowerAdj_GeneBank</li>
+			<li>Tweak_PowerAdj_GeneExtractor</li>
+			<li>Tweak_PowerAdj_GrowthVat</li>
+			<li>Tweak_PowerAdj_PollutionPump</li>
+			<li>Tweak_PowerAdj_WastepackAtomizer</li>
+			<li>Tweak_PowerAdj_GeneProcessor</li>
+			<li>Tweak_PowerAdj_MechBooster</li>
+			<li>Tweak_PowerAdj_MechGestator</li>
+			<li>Tweak_PowerAdj_LargeMechGestator</li>
+			<li>Tweak_PowerAdj_SubcoreEncoder</li>
+			<li>Tweak_PowerAdj_SubcoreScanners</li>
+			<li>Tweak_PowerAdj_BasicRecharger</li>
+			<li>Tweak_PowerAdj_StandardRecharger</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
 	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
 		<defName>Tweak_PowerAdj_StandingLamp</defName>
 		<label>Standing Lamp</label>
@@ -45,7 +84,9 @@
 		<label>Sun Lamp</label>
 		<defaultValue>2900</defaultValue>
 		<intRange>0~10000</intRange>
-		<tweakThing>SunLamp</tweakThing>
+		<tweakThings>
+			<li>SunLamp</li>
+		</tweakThings>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
@@ -53,7 +94,9 @@
 		<label>Auto-door</label>
 		<defaultValue>50</defaultValue>
 		<intRange>0~100</intRange>
-		<tweakThing>Autodoor</tweakThing>
+		<tweakThings>
+			<li>Autodoor</li>
+		</tweakThings>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
@@ -62,7 +105,266 @@
 		<defaultValue>1000</defaultValue>
 		<intRange>0~10000</intRange>
 		<invertUsage>true</invertUsage>
-		<tweakThing>VanometricPowerCell</tweakThing>
+		<tweakThings>
+			<li>VanometricPowerCell</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_TubeTelevision</defName>
+		<label>Tube Television</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>TubeTelevision</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_FlatscreenTelevision</defName>
+		<label>Flatscreen Television</label>
+		<defaultValue>330</defaultValue>
+		<intRange>0~3300</intRange>
+		<tweakThings>
+			<li>FlatscreenTelevision</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_MegascreenTelevision</defName>
+		<label>Megascreen Television</label>
+		<defaultValue>450</defaultValue>
+		<intRange>0~4500</intRange>
+		<tweakThings>
+			<li>MegascreenTelevision</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_OrbitalTradeBeacon</defName>
+		<label>Orbital Trade Beacon</label>
+		<defaultValue>40</defaultValue>
+		<intRange>0~400</intRange>
+		<tweakThings>
+			<li>OrbitalTradeBeacon</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_CommsConsole</defName>
+		<label>Comms Console</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>CommsConsole</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_MoisturePump</defName>
+		<label>Moisture Pump</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>Moisture Pump</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<!-- ==================== Biotech Buildings ==================== -->
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_DeathrestCasket</defName>
+		<label>Deathrest Casket</label>
+		<defaultValue>100</defaultValue>
+		<intRange>0~1000</intRange>
+		<tweakThings>
+			<li>DeathrestCasket</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_DeathrestBuildings</defName>
+		<label>Deathrest Buildings</label>
+		<defaultValue>100</defaultValue>
+		<intRange>0~1000</intRange>
+		<tweakThings>
+			<li>Hemopump</li>
+			<li>HemogenAmplifier</li>
+			<li>GlucosoidPump</li>
+			<li>PsychofluidPump</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_DeathrestAccelerator</defName>
+		<label>Deathrest Accelerator</label>
+		<defaultValue>100</defaultValue>
+		<intRange>0~1000</intRange>
+		<tweakThings>
+			<li>DeathrestAccelerator</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_BandNode</defName>
+		<label>Band Node</label>
+		<defaultValue>300</defaultValue>
+		<intRange>0~3000</intRange>
+		<tweakThings>
+			<li>BandNode</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_ToxifierGenerator</defName>
+		<label>Toxifier Generator</label>
+		<defaultValue>1400</defaultValue>
+		<intRange>0~14000</intRange>
+		<invertUsage>true</invertUsage>
+		<tweakThings>
+			<li>ToxifierGenerator</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_GeneAssembler</defName>
+		<label>Gene Assembler</label>
+		<defaultValue>100</defaultValue>
+		<intRange>0~1000</intRange>
+		<tweakThings>
+			<li>GeneAssembler</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_GeneBank</defName>
+		<label>Gene Bank</label>
+		<defaultValue>40</defaultValue>
+		<intRange>0~400</intRange>
+		<tweakThings>
+			<li>GeneBank</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_GeneExtractor</defName>
+		<label>Gene Extractor</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>GeneExtractor</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_GrowthVat</defName>
+		<label>Growth Vat</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>GrowthVat</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_PollutionPump</defName>
+		<label>Pollution Pump</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>PollutionPump</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_WastepackAtomizer</defName>
+		<label>Wastepack Atomizer</label>
+		<defaultValue>400</defaultValue>
+		<intRange>0~4000</intRange>
+		<tweakThings>
+			<li>WastepackAtomizer</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_GeneProcessor</defName>
+		<label>Gene Processor</label>
+		<defaultValue>50</defaultValue>
+		<intRange>0~500</intRange>
+		<tweakThings>
+			<li>GeneProcessor</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_MechBooster</defName>
+		<label>Mech Booster</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>MechBooster</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_MechGestator</defName>
+		<label>Mech Gestator</label>
+		<defaultValue>350</defaultValue>
+		<intRange>0~3500</intRange>
+		<tweakThings>
+			<li>MechGestator</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_LargeMechGestator</defName>
+		<label>Large Mech Gestator</label>
+		<defaultValue>500</defaultValue>
+		<intRange>0~5000</intRange>
+		<tweakThings>
+			<li>LargeMechGestator</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_SubcoreEncoder</defName>
+		<label>Subcore Encoder</label>
+		<defaultValue>50</defaultValue>
+		<intRange>0~500</intRange>
+		<tweakThings>
+			<li>SubcoreEncoder</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_SubcoreScanners</defName>
+		<label>Subcore Scanners</label>
+		<defaultValue>150</defaultValue>
+		<intRange>0~1500</intRange>
+		<tweakThings>
+			<li>SubcoreSoftscanner</li>
+			<li>SubcoreRipscanner</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_BasicRecharger</defName>
+		<label>mech recharger</label>
+		<defaultValue>200</defaultValue>
+		<intRange>0~2000</intRange>
+		<tweakThings>
+			<li>BasicRecharger</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
+		<defName>Tweak_PowerAdj_StandardRecharger</defName>
+		<label>large mech recharger</label>
+		<defaultValue>400</defaultValue>
+		<intRange>0~4000</intRange>
+		<tweakThings>
+			<li>StandardRecharger</li>
+		</tweakThings>
 	</TweaksGalore.TweakDef>
 
 </Defs>

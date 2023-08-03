@@ -124,7 +124,7 @@ namespace TweaksGalore
 			if (Widgets.ButtonText(rect2, def.LabelCap, true, true, true))
 			{
 				List<FloatMenuOption> list = new List<FloatMenuOption>();
-				List<TweakCategoryDef> categories = DefDatabase<TweakCategoryDef>.AllDefsListForReading;
+				List<TweakCategoryDef> categories = DefDatabase<TweakCategoryDef>.AllDefsListForReading.Where(tcd => !tcd.sections.NullOrEmpty()).ToList();
 				categories.SortBy(c => c.orderID);
 				foreach (TweakCategoryDef category in categories)
 				{

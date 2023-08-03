@@ -35,6 +35,8 @@ namespace TweaksGalore
 
         public List<string> required = new List<string>();
 
+        public List<TweakDef> requiredTweaks = new List<TweakDef>();
+
         public List<string> incompatible = new List<string>();
 
         public Type tweakWorker = typeof(TweakWorker);

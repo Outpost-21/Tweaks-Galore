@@ -27,36 +27,17 @@ namespace TweaksGalore
             {
                 if (listing.ButtonTextLabeled("", "Restore Section Defaults"))
                 {
-                    for (int i = 0; i < nestedTweaks.Count; i++)
-                    {
-                        TweakDef curTweak = nestedTweaks[i];
-                        switch (curTweak.tweakType)
-                        {
-                            case TweakType.Bool:
-                                settings.SetBoolSetting(curTweak.defName, curTweak.DefaultBool);
-                                break;
-                            case TweakType.Int:
-                                settings.SetIntSetting(curTweak.defName, curTweak.DefaultInt);
-                                break;
-                            case TweakType.IntRange:
-                                settings.SetIntRangeSetting(curTweak.defName, curTweak.DefaultIntRange);
-                                break;
-                            case TweakType.Float:
-                                settings.SetFloatSetting(curTweak.defName, curTweak.DefaultFloat);
-                                break;
-                            case TweakType.FloatRange:
-                                settings.SetFloatRangeSetting(curTweak.defName, curTweak.DefaultFloatRange);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
+                    DoSectionRestore();
                     Messages.Message($"Tweaks Galore: '{def.LabelCap}' tweaks restored to defaults. Restart required to take full effect.", MessageTypeDefOf.CautionInput);
                 }
             }
             // Do Individual Tweaks
             if (!def.tweaks.NullOrEmpty())
             {
+                if (def.sortTweaks)
+                {
+                    def.tweaks.SortBy(t => t.label);
+                }
                 for (int i = 0; i < def.tweaks.Count; i++)
                 {
                     TweakDef tweak = def.tweaks[i];
@@ -83,6 +64,16 @@ namespace TweaksGalore
         public virtual void DoOnStartup()
         {
 
+        }
+
+        public virtual void DoSectionRestore()
+        {
+            List<TweakDef> nestedTweaks = def.GetAllNestedTweaks();
+            for (int i = 0; i < nestedTweaks.Count; i++)
+            {
+                TweakDef curTweak = nestedTweaks[i];
+                curTweak.Worker.OnRestore();
+            }
         }
     }
 }

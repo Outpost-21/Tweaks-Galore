@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_OutlandCore</defName>
+		<label>Outland - Core</label>
+		<tweaks>
+			<li>Tweak_NoClothComponents</li>
+			<li>Tweak_ElectrifiedKalocite</li>
+		</tweaks>
+		<subSections>
+			<li>TweakSubSection_OutlandCore_RecipeAdjustments</li>
+		</subSections>
+		<required>
+			<li>Neronix17.Outland.Core</li>
+		</required>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_OutlandCore_RecipeAdjustments</defName>
+		<label>Recipe Time Adjustments</label>
+		<description>Allows work times for recipes to be multiplied for faster or slower crafting times.</description>
+		<tweaks>
+			<li>Tweak_AdobeBrickFormingTime</li>
+			<li>Tweak_ClayDiggingTime</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AdobeBrickFormingTime</defName>
+		<label>Adobe Brick Forming Time</label>
+		<description>Multiplies the time required to form clay at the workbench, the crafting spot does whatever that speed is at a slower rate so it'll affect both. Higher number takes longer.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.1~2.0</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ClayDiggingTime</defName>
+		<label>Clay Digging Time</label>
+		<description>Multiplies the time required to dig for clay at the workbench, the crafting spot does whatever that speed is at a slower rate so it'll affect both. Higher number takes longer.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.1~2.0</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ElectrifiedKalocite</defName>
+		<label>Electrified Kalocite</label>
+		<description>If enabled, kalocite grown over power conduits will provide a small electric charge. This was originally going to be a native feature but felt a little OP so now it's a tweak.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<required>
+			<li>Neronix17.Outland.Core</li>
+		</required>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoClothComponents</defName>
+		<label>No Cloth Components</label>
+		<description>If enabled, removes the need for cloth from medieval components, instead adding more wood to the cost to balance it out.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<required>
+			<li>Neronix17.Outland.Core</li>
+		</required>
+	</TweaksGalore.TweakDef>
+
+</Defs>

@@ -16,19 +16,19 @@ namespace TweaksGalore
             switch (def.tweakType)
             {
                 case TweakType.Bool:
-                    listing.DoSettingBool(def.LabelCap, def.description, def.defName, def.DefaultBool, def.formatting?.enhanced);
+                    listing.DoSettingBool(def.LabelCap, def.Worker.Description(), def.defName, def.DefaultBool, def.formatting?.enhanced);
                     break;
                 case TweakType.Int:
-                    listing.DoSettingInt(def.LabelCap, def.description, def.defName, def.DefaultInt, def.intRange.min, def.intRange.max, def.intIncrement);
+                    listing.DoSettingInt(def.LabelCap, def.Worker.Description(), def.defName, def.DefaultInt, def.intRange.min, def.intRange.max, def.intIncrement);
                     break;
                 case TweakType.IntRange:
-                    listing.DoSettingIntRange(def.LabelCap, def.description, def.defName, def.DefaultIntRange, def.intRange.min, def.intRange.max, def.intIncrement);
+                    listing.DoSettingIntRange(def.LabelCap, def.Worker.Description(), def.defName, def.DefaultIntRange, def.intRange.min, def.intRange.max, def.intIncrement);
                     break;
                 case TweakType.Float:
-                    listing.DoSettingFloat(def.LabelCap, def.description, def.defName, def.DefaultFloat, def.floatRange.min, def.floatRange.max, def.floatIncrement, def.formatting?.percentage);
+                    listing.DoSettingFloat(def.LabelCap, def.Worker.Description(), def.defName, def.DefaultFloat, def.floatRange.min, def.floatRange.max, def.floatIncrement, def.formatting?.percentage);
                     break;
                 case TweakType.FloatRange:
-                    //listing.DoSettingFloatRange(def.LabelCap, def.description, def.defName, def.DefaultFloatRange, def.floatRange.min, def.floatRange.max, def.floatIncrement, def.formatting?.percentage);
+                    //listing.DoSettingFloatRange(def.LabelCap, def.Worker.Description(), def.defName, def.DefaultFloatRange, def.floatRange.min, def.floatRange.max, def.floatIncrement, def.formatting?.percentage);
                     break;
                 default:
                     break;
@@ -62,8 +62,8 @@ namespace TweaksGalore
         /// </summary>
         public static void DoSettingFloat(this Listing_Standard listing, string label, string description, string key, float original, float min, float max, float? increment = null, bool? percentage = false)
         {
-            float tempfloat = Mathf.Round(TweaksGaloreMod.settings.GetFloatSetting(key, original));
-            listing.AddLabeledSlider(label + ": " + ((bool)percentage ? tempfloat.ToStringPercent("0.00") : tempfloat.ToString("0.00")), ref tempfloat, min, max, $"Min: {((bool)percentage ? min.ToStringPercent() : min.ToString())}", $"Max: {((bool)percentage ? max.ToStringPercent() : max.ToString())}", increment ?? Mathf.Max(0.01f, (max - min) / 100f));
+            float tempfloat = (float)Math.Round(TweaksGaloreMod.settings.GetFloatSetting(key, original), 2);
+            listing.AddLabeledSlider(label + ": " + ((bool)percentage ? tempfloat.ToStringPercent() : tempfloat.ToString("0.00")), ref tempfloat, min, max, $"Min: {((bool)percentage ? min.ToStringPercent() : min.ToString())}", $"Max: {((bool)percentage ? max.ToStringPercent() : max.ToString())}", increment ?? Mathf.Max(0.01f, (max - min) / 100f));
             TweaksGaloreMod.settings.SetFloatSetting(key, tempfloat);
         }
 

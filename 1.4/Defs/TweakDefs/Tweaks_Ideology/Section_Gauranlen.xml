@@ -4,7 +4,6 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Ideology_Gauranlen</defName>
 		<label>Gauranlen</label>
-		<sectionWorker>TweaksGalore.SectionWorker_Gauranlen</sectionWorker>
 		<tweaks>
 			<li>Tweak_GauranlenTweaks</li>
 		</tweaks>

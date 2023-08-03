@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Jobs</defName>
+		<label>Jobs</label>
+		<description>Tweaks specific to pawn jobs.</description>
+		<tweaks>
+			<li>Tweak_SkilledStoneCutting</li>
+			<li>Tweak_NoBackstoryIncapabilities</li>
+			<li>Tweak_SkilledTreeChopping</li>
+			<li>Tweak_HaulAfterSlaughter</li>
+			<li>Tweak_DeconstructFirst</li>
+			<li>Tweak_SmoothWallsBeforeFloors</li>
+			<li>Tweak_RepairAfterBuilding</li>
+			<li>Tweak_PrioritizeSleep</li>
+			<li>Tweak_PrioritizeRecreation</li>
+			<li>Tweak_PrioritizeResearch</li>
+			<li>Tweak_NoJobAuthors</li>
+			<li>Tweak_PrisonerRecreation</li>
+			<li>Tweak_PrisonerCleaning</li>
+			<li>Tweak_RepairInZone</li>
+			<li>Tweak_RecreationalDrums</li>
+		</tweaks>
+		<sortTweaks>true</sortTweaks>
+		<subSections>
+			<li>TweakSubSection_FasterCleaning</li>
+			<li>TweakSubSection_FasterSmoothing</li>
+			<li>TweakSubSection_HuntersCanMelee</li>
+			<li>TweakSubSection_Skills</li>
+		</subSections>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_RecreationalDrums</defName>
+		<label>Recreational Drums</label>
+		<description>If enabled, allows drums to be used for recreation, like other instruments.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_RepairInZone</defName>
+		<label>Repair In zone</label>
+		<description>If enabled, forces pawns to remain inside allowed zones when repairing. This is honestly more of a bug fix than a tweak, Ludeon c'mon.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PrisonerCleaning</defName>
+		<label>Prisoner Cleaning</label>
+		<description>If enabled, allows prisoners to perform cleaning tasks.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PrisonerRecreation</defName>
+		<label>Prisoner Recreation</label>
+		<description>If enabled, allows prisoners to perform recreation tasks.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoJobAuthors</defName>
+		<label>No Job Authors</label>
+		<description>If enabled, removes authors from crafted items so anyone can finish them. Quality is based on the pawn that finishes the job.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PrioritizeResearch</defName>
+		<label>Prioritize Research</label>
+		<description>If enabled, allows pawns to prioritize research.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PrioritizeRecreation</defName>
+		<label>Prioritize Recreation</label>
+		<description>If enabled, allows pawns to prioritize recreation.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PrioritizeSleep</defName>
+		<label>Prioritize Sleep</label>
+		<description>If enabled, allows pawns to prioritize sleep, as long as they are below 75% rest.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_RepairAfterBuilding</defName>
+		<label>Repair After Constructing</label>
+		<description>Pawns will repair after constructing with this enabled.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SmoothWallsBeforeFloors</defName>
+		<label>Smooth Walls Before Floors</label>
+		<description>Pawns will smooth walls before floors with this enabled.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DeconstructFirst</defName>
+		<label>Deconstruct First</label>
+		<description>Pawns will deconstruct before constructing with this enabled.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoBackstoryIncapabilities</defName>
+		<label>No Backstory Incapabilities</label>
+		<description>Removes all work incapabilities from backstories, both adulthood and childhood, including modded. Humanoid Alien Races backstories might not be affected as they use a separate def.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_NoBackstoryIncapabilities</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_HaulAfterSlaughter</defName>
+		<label>Haul After Slaughter</label>
+		<description>Similar to Skilled Stone Cutting, adds a skill that can be used to speed up chopping down trees specifically. Patches for a bunch of mods are already included so axes and the like will have an actual effect.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SkilledTreeChopping</defName>
+		<label>Skilled Tree Chopping</label>
+		<description>Similar to Skilled Stone Cutting, adds a skill that can be used to speed up chopping down trees specifically. Patches for a bunch of mods are already included so axes and the like will have an actual effect.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SkilledStoneCutting</defName>
+		<label>Skilled Stonecutting</label>
+		<description>Makes stonecutting give crafting skill increases, and makes more skilled crafters create blocks quicker.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<!-- ====================================================== -->
+	<!-- ================== Faster Cleaning ================== -->
+	<!-- ====================================================== -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_FasterCleaning</defName>
+		<label>Faster Cleaning</label>
+		<description>Changes the speed at which cleaning is done to a custom value.</description>
+		<tweaks>
+			<li>Tweak_FasterCleaning</li>
+			<li>Tweak_FasterCleaningFactor</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FasterCleaning</defName>
+		<label>Enabled</label>
+		<description>Changes the speed at which stone Cleaning is done to a custom value.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FasterCleaningFactor</defName>
+		<label>Speed Factor</label>
+		<description>Changes the speed at which stone Cleaning is done to a custom value.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>3.0</defaultValue>
+		<floatRange>0.1~10.0</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<!-- ====================================================== -->
+	<!-- ================== Faster Smoothing ================== -->
+	<!-- ====================================================== -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_FasterSmoothing</defName>
+		<label>Faster Smoothing</label>
+		<description>Changes the speed at which stone smoothing is done to a custom value.</description>
+		<tweaks>
+			<li>Tweak_FasterSmoothing</li>
+			<li>Tweak_FasterSmoothingFactor</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FasterSmoothing</defName>
+		<label>Enabled</label>
+		<description>Changes the speed at which stone smoothing is done to a custom value.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FasterSmoothingFactor</defName>
+		<label>Speed Factor</label>
+		<description>Changes the speed at which stone smoothing is done to a custom value.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>3.0</defaultValue>
+		<floatRange>0.1~10.0</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+	</TweaksGalore.TweakDef>
+
+	<!-- ============================================ -->
+	<!-- ================== Skills ================== -->
+	<!-- ============================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_Skills</defName>
+		<label>Skills</label>
+		<description>What you statistically speaking, lack.</description>
+		<tweaks>
+			<li>Tweak_SkillTweaks</li>
+			<li>Tweak_SkillLossMultiplier</li>
+			<li>Tweak_SkillGainMultiplier</li>
+			<li>Tweak_SkillLossThreshold</li>
+			<li>Tweak_SkillLearningPerDay</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SkillTweaks</defName>
+		<label>Enabled</label>
+		<description>If enabled, allows the skill tweaks to function.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SkillLossMultiplier</defName>
+		<label>Skill Loss Multiplier</label>
+		<description>Multiplier on rate of skill loss.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.0~2.0</floatRange>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SkillGainMultiplier</defName>
+		<label>Skill Gain Multiplier</label>
+		<description>Multiplier on rate of skill gain.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.0~2.0</floatRange>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SkillLossThreshold</defName>
+		<label>Skill Loss Threshold</label>
+		<description>The level a skill has to reach before skill loss starts happening, it will prevent skill loss entirely below that level.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>0</defaultValue>
+		<intRange>0~20</intRange>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SkillLearningPerDay</defName>
+		<label>Skill Learning Per Day</label>
+		<description>After a set amount of xp has been learnt for this skill since the last midnight passes, the amount that that can be learnt is lowered. This lets you change how much xp a pawn can gain in any given skill before that kicks in.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>4000</defaultValue>
+		<intRange>0~20000</intRange>
+	</TweaksGalore.TweakDef>
+
+	<!-- =========================================================== -->
+	<!-- ================== Hunters Can Use Melee ================== -->
+	<!-- =========================================================== -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_HuntersCanMelee</defName>
+		<label>Hunters Can Use Melee</label>
+		<description>Allows hunters to use melee, regardless of how well they can do so.</description>
+		<tweaks>
+			<li>Tweak_HuntersCanMelee</li>
+			<li>Tweak_HuntersCanMeleeFisting</li>
+		</tweaks>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_HuntersCanMelee</defName>
+		<label>Enabled</label>
+		<description>Allows hunters to use melee, regardless of how well they can do so.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_HuntersCanMeleeFisting</defName>
+		<label>Allow Fists</label>
+		<description>Allows hunters to use their fists to hunt, stupid but it works.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+</Defs>

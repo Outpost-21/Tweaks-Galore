@@ -4,7 +4,6 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Biotech_Polux</defName>
 		<label>Polux</label>
-		<sectionWorker>TweaksGalore.SectionWorker_Polux</sectionWorker>
 		<tweaks>
 			<li>Tweak_PoluxTweaks</li>
 			<li>Tweak_ReplantablePolux</li>

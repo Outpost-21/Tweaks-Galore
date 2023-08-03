@@ -16,7 +16,7 @@
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_RaidStratBreach</defName>
-		<label>Breach Raids</label>
+		<label>No Breach Raids</label>
 		<description>Prevents this type of raid.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
@@ -24,7 +24,7 @@
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_RaidStratDropPod</defName>
-		<label>Drop Pod Raids</label>
+		<label>No Drop Pod Raids</label>
 		<description>Prevents this type of raid.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
@@ -32,7 +32,7 @@
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_RaidStratSapper</defName>
-		<label>Sapper Raids</label>
+		<label>No Sapper Raids</label>
 		<description>Prevents this type of raid.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
@@ -40,7 +40,7 @@
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_RaidStratSiege</defName>
-		<label>Siege Raids</label>
+		<label>No Siege Raids</label>
 		<description>Prevents this type of raid.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
@@ -48,7 +48,7 @@
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_RaidStratCowardly</defName>
-		<label>Cowardly Raids</label>
+		<label>No Cowardly Raids</label>
 		<description>Prevents this type of raid.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>

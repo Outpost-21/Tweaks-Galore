@@ -22,6 +22,9 @@ namespace TweaksGalore
         // Event Control
         public Dictionary<string, float> tweak_eventControlDict = new Dictionary<string, float>();
 
+        // Stack Size Control
+        public Dictionary<string, int> tweak_stackSizeControl = new Dictionary<string, int>();
+
         // Anima Psylink
         public List<int> tweak_animaPsylinkLevelNeeds = new List<int>();
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_OuterRimCore</defName>
+		<label>Outer Rim - Core</label>
+		<tweaks>
+			<li>Tweak_AllBlastersIon</li>
+			<li>Tweak_FastIon</li>
+			<li>Tweak_ExplosiveIon</li>
+		</tweaks>
+		<required>
+			<li>Neronix17.OuterRim.Core</li>
+		</required>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AllBlastersIon</defName>
+		<label>All Blasters Are Ionized</label>
+		<description>If enabled, all blasters will have a 25% chance of adding Ion Buildup like Ion blasters are guaranteed to.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<required>
+			<li>Neronix17.OuterRim.Core</li>
+		</required>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FastIon</defName>
+		<label>Fast Ion</label>
+		<description>If enabled, changes Ion Buildup to be instantly maxed out instead of starting at 50% and increasing by 30% per following shot.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<required>
+			<li>Neronix17.OuterRim.Core</li>
+		</required>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ExplosiveIon</defName>
+		<label>Explosive Ion</label>
+		<description>If enabled, reverts Ion Buildup to its old behaviour where mechanoids would violently explode upon death.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<required>
+			<li>Neronix17.OuterRim.Core</li>
+		</required>
+	</TweaksGalore.TweakDef>
+
+</Defs>

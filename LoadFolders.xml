@@ -13,8 +13,22 @@
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.4/Mods/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/Mods/Ideology</li>
 		<li IfModActive="Ludeon.RimWorld.Biotech">1.4/Mods/Biotech</li>
+
 		<!-- Tabula Rasa -->
 		<li IfModActive="neronix17.toolbox">1.4/Mods/UpdateLog</li>
+		<!-- Outland - Core -->
+		<li IfModActive="Neronix17.Outland.Core">1.4/Mods/Outpost21/OutlandCore</li>
+		<!-- Outland - Furniture & Decor -->
+		<li IfModActive="Neronix17.Outland.FurnitureAndDecor">1.4/Mods/Outpost21/OutlandFurnitureAndDecor</li>
+		<!-- Outer Rim - Core -->
+		<li IfModActive="Neronix17.OuterRim.Core">1.4/Mods/Outpost21/OuterRimCore</li>
+		<!-- Outer Rim - Droid Depot -->
+		<li IfModActive="Neronix17.OuterRim.DroidDepot">1.4/Mods/Outpost21/OuterRimDroidDepot</li>
+		<!-- Subpersona Shells -->
+		<li IfModActive="Neronix17.SubpersonaShells">1.4/Mods/Outpost21/SubpersonaShells</li>
+		<!-- Mechadroids -->
+		<li IfModActive="Neronix17.Mechadroids">1.4/Mods/Outpost21/Mechadroids</li>
+
 		<!-- Vanilla Psycasting Expanded -->
 		<li IfModActive="VanillaExpanded.VPsycastsE">1.4/Mods/VanillaExpanded/VE_Psycasting</li>
 		<!-- Vanilla Factions Expanded - Empire -->

@@ -7,11 +7,15 @@
 		<sections>
 			<li>TweakSection_Vanilla_General</li>
 			<li>TweakSection_Vanilla_IncidentControl</li>
+			<li>TweakSection_Vanilla_Jobs</li>
 			<li>TweakSection_Vanilla_Mechanoids</li>
 			<li>TweakSection_Vanilla_PennedAnimals</li>
 			<li>TweakSection_Vanilla_Power</li>
 			<li>TweakSection_Vanilla_Raids</li>
+			<li>TweakSection_Vanilla_ResearchControl</li>
 			<li>TweakSection_Vanilla_Resources</li>
+			<li>TweakSection_Vanilla_StackSizeControl</li>
+			<li>TweakSection_Vanilla_WeatherControl</li>
 		</sections>
 		<orderID>-4</orderID>
 	</TweaksGalore.TweakCategoryDef>
@@ -24,8 +28,26 @@
 
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_IncidentControl</defName>
-		<label>Incident Control</label>
+		<label>Incidents</label>
 		<sectionWorker>TweaksGalore.SectionWorker_IncidentControl</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_ResearchControl</defName>
+		<label>Research</label>
+		<sectionWorker>TweaksGalore.SectionWorker_ResearchControl</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_WeatherControl</defName>
+		<label>Weather</label>
+		<sectionWorker>TweaksGalore.SectionWorker_WeatherControl</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_StackSizeControl</defName>
+		<label>Stack Sizes</label>
+		<sectionWorker>TweaksGalore.SectionWorker_StackSizeControl</sectionWorker>
 	</TweaksGalore.TweakSectionDef>
 
 </Defs>

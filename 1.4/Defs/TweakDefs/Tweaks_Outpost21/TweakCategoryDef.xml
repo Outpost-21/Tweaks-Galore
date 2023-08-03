@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_OutpostTwoOne</defName>
+		<label>Outpost 21</label>
+		<sections>
+			<li MayRequire="Neronix17.Outland.Core">TweakSection_OutlandCore</li>
+			<li MayRequire="Neronix17.Outland.FurnitureAndDecor">TweakSection_OutlandFurnitureAndDecor</li>
+			<li MayRequire="Neronix17.OuterRim.Core">TweakSection_OuterRimCore</li>
+			<li MayRequire="Neronix17.OuterRim.DroidDepot">TweakSection_OuterRimDroidDepot</li>
+			<li MayRequire="Neronix17.SubpersonaShells">TweakSection_SubpersonaShells</li>
+			<li MayRequire="Neronix17.Mechadroids">TweakSection_Mechadroids</li>
+		</sections>
+		<orderID>50</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+</Defs>

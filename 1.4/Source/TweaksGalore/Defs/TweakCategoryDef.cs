@@ -19,17 +19,16 @@ namespace TweaksGalore
 
         public List<TweakSectionDef> sections;
 
-        public List<TweakSubSectionDef> subsections;
-
-        public List<TweakDef> tweaks;
-
         public void DoCategoryContents(Listing_Standard listing, TweaksGaloreSettings settings, string filter)
         {
-            foreach(TweakSectionDef section in sections)
+            if(!sections.NullOrEmpty())
             {
-                if(filter.NullOrEmpty() || section.FilterForTweak(filter))
+                foreach (TweakSectionDef section in sections)
                 {
-                    listing.DoSection(section, filter);
+                    if (filter.NullOrEmpty() || section.FilterForTweak(filter))
+                    {
+                        listing.DoSection(section, filter);
+                    }
                 }
             }
         }

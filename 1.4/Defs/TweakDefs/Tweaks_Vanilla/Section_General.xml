@@ -29,26 +29,93 @@
 			<li>Tweak_MisanthropeTrait</li>
 			<li>Tweak_NextRestockTimer</li>
 			<li>Tweak_NoBreakdowns</li>
-			<li>Tweak_SkilledStoneCutting</li>
-			<li>Tweak_NoBackstoryIncapabilities</li>
+			<li>Tweak_BetterPyromania</li>
+			<li>Tweak_FilthVanishes</li>
+			<li>Tweak_AnimalsAreFun</li>
+			<li>Tweak_WhereIsMyWeapon</li>
+			<li>Tweak_EverybodyBuysSlaves</li>
+			<li>Tweak_TreesDontJustDie</li>
+			<li>Tweak_UghYouGotMe</li>
 		</tweaks>
+		<sortTweaks>true</sortTweaks>
 		<subSections>
-			<li>TweakSubSection_FasterSmoothing</li>
-			<li>TweakSubSection_HuntersCanMelee</li>
 			<li>TweakSubSection_NoFriendShapedManhunters</li>
 			<li>TweakSubSection_PrisonersDontHaveKeys</li>
-			<li>TweakSubSection_Skills</li>
 			<li>TweakSubSection_SlimRim</li>
 			<li>TweakSubSection_TaintedApparel</li>
 			<li>TweakSubSection_TraitCountAdjustment</li>
+			<li>TweakSubSection_WildAnimalSex</li>
 		</subSections>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
-		<defName>Tweak_NoBackstoryIncapabilities</defName>
-		<label>No Backstory Incapabilities</label>
-		<description>Removes all work incapabilities from backstories, both adulthood and childhood, including modded. Humanoid Alien Races backstories might not be affected as they use a separate def.</description>
-		<tweakWorker>TweaksGalore.TweakWorker_NoBackstoryIncapabilities</tweakWorker>
+		<defName>Tweak_UghYouGotMe</defName>
+		<label>Ugh You Got Me</label>
+		<description>Prevents social fights from going too far, ending the fight before too much damage is done, if damage was about to be done that would have been extreme (biting off an arm for example, it happens) then it negates that damage.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TreesDontJustDie</defName>
+		<label>Trees Don't Just Die</label>
+		<description>Patches trees so they have an infinite lifespan, it is kind of silly that they only live like 2 years in RimWorld.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_EverybodyBuysSlaves</defName>
+		<label>Everybody Buys Slaves</label>
+		<description>Universally patches traders to be able to buy slaves. No, this won't respect Ideology for any faction traders, because it can't, that's not how traders work.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_WhereIsMyWeapon</defName>
+		<label>Where Is My Weapon?</label>
+		<description>When a downed pawn drops their weapon, this will allow them to go and look for it when they can walk again.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AnimalsAreFun</defName>
+		<label>Animals Are Fun</label>
+		<description>Adds the ability for pawns to play with animals, gaining them recreation, as well as increasing the training of those animals.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_FilthVanishes</defName>
+		<label>Filth Vanishes</label>
+		<description>Changes filth so it gets washed away in the rain, and vanishes over time.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_EnergySavingProduction</defName>
+		<label>Energy Saving Production</label>
+		<description>Automatically turns off compatible production benches when not in use, may not apply to modded benches if they don't inherit from the vanilla classes.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_EnergySavingLighting</defName>
+		<label>Energy Saving Lighting</label>
+		<description>Automatically turns off lighting (as long as it uses vanilla lighting code) when pawns are not in the room, if they're exterior lighting then they remain on contstantly.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BetterPyromania</defName>
+		<label>Better Pyromania</label>
+		<description>Turns pyromania into a need, similar to chemical dependence, making it much easier to manage without bouts of the flamies.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 	</TweaksGalore.TweakDef>
@@ -249,77 +316,36 @@
 		</incompatible>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_SkilledStoneCutting</defName>
-		<label>Skilled Stonecutting</label>
-		<description>Makes stonecutting give crafting skill increases, and makes more skilled crafters create blocks quicker.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-	</TweaksGalore.TweakDef>
-
 	<!-- ====================================================== -->
-	<!-- ================== Faster Smoothing ================== -->
+	<!-- ================== Wild Animal Sex ================== -->
 	<!-- ====================================================== -->
 
 	<TweaksGalore.TweakSubSectionDef>
-		<defName>TweakSubSection_FasterSmoothing</defName>
-		<label>Faster Smoothing</label>
-		<description>Changes the speed at which stone smoothing is done to a custom value.</description>
+		<defName>TweakSubSection_WildAnimalSex</defName>
+		<label>Wild Animal Sex</label>
+		<description>Allows wild animals to reproduce, just like domestic ones.</description>
 		<tweaks>
-			<li>Tweak_FasterSmoothing</li>
-			<li>Tweak_FasterSmoothingFactor</li>
+			<li>Tweak_WildAnimalSex</li>
+			<li>Tweak_WildAnimalSexLimit</li>
 		</tweaks>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
-		<defName>Tweak_FasterSmoothing</defName>
+		<defName>Tweak_WildAnimalSex</defName>
 		<label>Enabled</label>
-		<description>Changes the speed at which stone smoothing is done to a custom value.</description>
+		<description>Allows wild animals to reproduce, just like domestic ones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
-		<defName>Tweak_FasterSmoothingFactor</defName>
-		<label>Speed Factor</label>
-		<description>Changes the speed at which stone smoothing is done to a custom value.</description>
-		<tweakType>Float</tweakType>
-		<formatting>
-			<percentage>true</percentage>
-		</formatting>
-		<defaultValue>3.0</defaultValue>
-		<floatRange>0.1~10.0</floatRange>
-		<floatIncrement>0.1</floatIncrement>
-	</TweaksGalore.TweakDef>
-
-	<!-- =========================================================== -->
-	<!-- ================== Hunters Can Use Melee ================== -->
-	<!-- =========================================================== -->
-
-	<TweaksGalore.TweakSubSectionDef>
-		<defName>TweakSubSection_HuntersCanMelee</defName>
-		<label>Hunters Can Use Melee</label>
-		<description>Allows hunters to use melee, regardless of how well they can do so.</description>
-		<tweaks>
-			<li>Tweak_HuntersCanMelee</li>
-			<li>Tweak_HuntersCanMeleeFisting</li>
-		</tweaks>
-	</TweaksGalore.TweakSubSectionDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_HuntersCanMelee</defName>
-		<label>Enabled</label>
-		<description>Allows hunters to use melee, regardless of how well they can do so.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_HuntersCanMeleeFisting</defName>
-		<label>Allow Fists</label>
-		<description>Allows hunters to use their fists to hunt, stupid but it works.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
+		<defName>Tweak_WildAnimalSexLimit</defName>
+		<label>Species Limit</label>
+		<description>Limits the max number of any given species to this value, it'll ignore any domestic population. This is primarily to keep it performance friendly as lower numbers means less TPS impact.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>30</defaultValue>
+		<intRange>8~100</intRange>
+		<intIncrement>1</intIncrement>
 	</TweaksGalore.TweakDef>
 
 	<!-- ================================================================= -->
@@ -393,73 +419,6 @@
 		<description>Prevents animals that fit the parameters from turning manhunter when taming.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-	</TweaksGalore.TweakDef>
-
-	<!-- ============================================ -->
-	<!-- ================== Skills ================== -->
-	<!-- ============================================ -->
-
-	<TweaksGalore.TweakSubSectionDef>
-		<defName>TweakSubSection_Skills</defName>
-		<label>Skills</label>
-		<description>What you statistically speaking, lack.</description>
-		<tweaks>
-			<li>Tweak_SkillTweaks</li>
-			<li>Tweak_SkillLossMultiplier</li>
-			<li>Tweak_SkillGainMultiplier</li>
-			<li>Tweak_SkillLossThreshold</li>
-			<li>Tweak_SkillLearningPerDay</li>
-		</tweaks>
-	</TweaksGalore.TweakSubSectionDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_SkillTweaks</defName>
-		<label>Enabled</label>
-		<description>If enabled, allows the skill tweaks to function.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_SkillLossMultiplier</defName>
-		<label>Skill Loss Multiplier</label>
-		<description>Multiplier on rate of skill loss.</description>
-		<tweakType>Float</tweakType>
-		<formatting>
-			<percentage>true</percentage>
-		</formatting>
-		<defaultValue>1.0</defaultValue>
-		<floatRange>0.0~2.0</floatRange>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_SkillGainMultiplier</defName>
-		<label>Skill Gain Multiplier</label>
-		<description>Multiplier on rate of skill gain.</description>
-		<tweakType>Float</tweakType>
-		<formatting>
-			<percentage>true</percentage>
-		</formatting>
-		<defaultValue>1.0</defaultValue>
-		<floatRange>0.0~2.0</floatRange>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_SkillLossThreshold</defName>
-		<label>Skill Loss Threshold</label>
-		<description>The level a skill has to reach before skill loss starts happening, it will prevent skill loss entirely below that level.</description>
-		<tweakType>Int</tweakType>
-		<defaultValue>0</defaultValue>
-		<intRange>0~20</intRange>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_SkillLearningPerDay</defName>
-		<label>Skill Learning Per Day</label>
-		<description>After a set amount of xp has been learnt for this skill since the last midnight passes, the amount that that can be learnt is lowered. This lets you change how much xp a pawn can gain in any given skill before that kicks in.</description>
-		<tweakType>Int</tweakType>
-		<defaultValue>4000</defaultValue>
-		<intRange>0~20000</intRange>
 	</TweaksGalore.TweakDef>
 
 	<!-- ===================================================== -->

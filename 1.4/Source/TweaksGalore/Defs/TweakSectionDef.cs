@@ -21,6 +21,8 @@ namespace TweaksGalore
 
         public List<TweakDef> tweaks;
 
+        public bool sortTweaks = true;
+
         public SectionWorker workerInt;
 
         public SectionWorker Worker

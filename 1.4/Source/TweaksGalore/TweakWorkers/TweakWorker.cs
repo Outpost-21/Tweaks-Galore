@@ -29,6 +29,49 @@ namespace TweaksGalore
 
         }
 
+        public virtual void OnRestore()
+        {
+            switch (def.tweakType)
+            {
+                case TweakType.Bool:
+                    settings.SetBoolSetting(def.defName, def.DefaultBool);
+                    break;
+                case TweakType.Int:
+                    settings.SetIntSetting(def.defName, def.DefaultInt);
+                    break;
+                case TweakType.IntRange:
+                    settings.SetIntRangeSetting(def.defName, def.DefaultIntRange);
+                    break;
+                case TweakType.Float:
+                    settings.SetFloatSetting(def.defName, def.DefaultFloat);
+                    break;
+                case TweakType.FloatRange:
+                    settings.SetFloatRangeSetting(def.defName, def.DefaultFloatRange);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public virtual string Description()
+        {
+            string desc = def.description;
+            if(def.tweakThing != null)
+            {
+                desc += "\n\nAffects:\n- " + def.tweakThing.LabelCap;
+            }
+            if(def.tweakThings != null)
+            {
+                desc += "\n\nAffects:";
+                foreach(ThingDef thing in def.tweakThings)
+                {
+                    desc += "\n- " + def.tweakThing.LabelCap;
+                }
+            }
+            return desc;
+
+        }
+
         public virtual void OnWriteSettings()
         {
 
