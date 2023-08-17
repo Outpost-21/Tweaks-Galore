@@ -55,17 +55,17 @@ namespace TweaksGalore
 
         public virtual string Description()
         {
-            string desc = def.description;
+            string desc = def.description ?? "No Description";
             if(def.tweakThing != null)
             {
                 desc += "\n\nAffects:\n- " + def.tweakThing.LabelCap;
             }
-            if(def.tweakThings != null)
+            if(!def.tweakThings.NullOrEmpty())
             {
                 desc += "\n\nAffects:";
                 foreach(ThingDef thing in def.tweakThings)
                 {
-                    desc += "\n- " + def.tweakThing.LabelCap;
+                    desc += "\n- " + thing.LabelCap;
                 }
             }
             return desc;

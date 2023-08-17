@@ -18,9 +18,9 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
-            if (TGTweakDefOf.Tweak_PowerAdjusting.BoolValue)
+            int value = settings.GetIntSetting(def.defName, def.DefaultInt);
+            if (TGTweakDefOf.Tweak_PowerAdjusting.BoolValue && value != def.DefaultInt)
             {
-                int value = settings.GetIntSetting(def.defName, def.DefaultInt);
                 if (def.tweakThing != null)
                 {
                     if (def.invertUsage) { def.tweakThing.SetPowerUsage(-value); } else { def.tweakThing.SetPowerUsage(value); }

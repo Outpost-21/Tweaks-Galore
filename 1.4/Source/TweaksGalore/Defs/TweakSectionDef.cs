@@ -9,13 +9,9 @@ using Verse;
 
 namespace TweaksGalore
 {
-    public class TweakSectionDef : Def
+    public class TweakSectionDef : TweakBaseDef
     {
         public Type sectionWorker = typeof(SectionWorker);
-
-        public List<string> required = new List<string>();
-
-        public List<string> incompatible = new List<string>();
 
         public List<TweakSubSectionDef> subSections;
 

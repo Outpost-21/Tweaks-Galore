@@ -43,9 +43,68 @@ namespace TweaksGalore
 
             try { InitializeSettingsDefs(settings); } catch (Exception e) { LogUtil.LogError("Caught Exception initialising settings: " + e); };
 
+            try { InitializePositionArrangements(settings); } catch (Exception e) { LogUtil.LogError("Caught Exception initialising position arrangements: " + e); };
+
             try { settings.ConvertOldSettings(); } catch (Exception e) { LogUtil.LogError("Caught Exception converting pre-overhaul settings: " + e); };
 
-            try { CompatibilityChecks(settings); } catch (Exception e) { LogUtil.LogError("Caught exeption in Tweaks Galore startup: " + e); };
+            try { CompatibilityChecks(settings); } catch (Exception e) { LogUtil.LogError("Caught exeption in compatibility checks: " + e); };
+        }
+
+        public static void InitializePositionArrangements(TweaksGaloreSettings settings)
+        {
+            foreach(TweakDef tweak in DefDatabase<TweakDef>.AllDefs)
+            {
+                if (tweak.subSection != null)
+                {
+                    if (tweak.subSection.tweaks.NullOrEmpty())
+                    {
+                        tweak.subSection.tweaks = new List<TweakDef>();
+                    }
+                    if (!tweak.subSection.tweaks.Contains(tweak))
+                    {
+                        tweak.subSection.tweaks.Add(tweak);
+                    }
+                }
+                if (tweak.section != null)
+                {
+                    if (tweak.section.tweaks.NullOrEmpty())
+                    {
+                        tweak.section.tweaks = new List<TweakDef>();
+                    }
+                    if (!tweak.section.tweaks.Contains(tweak))
+                    {
+                        tweak.section.tweaks.Add(tweak);
+                    }
+                }
+            }
+            foreach(TweakSubSectionDef subSection in DefDatabase<TweakSubSectionDef>.AllDefs)
+            {
+                if(subSection.section != null)
+                {
+                    if (subSection.section.subSections.NullOrEmpty())
+                    {
+                        subSection.section.subSections = new List<TweakSubSectionDef>();
+                    }
+                    if (!subSection.section.subSections.Contains(subSection))
+                    {
+                        subSection.section.subSections.Add(subSection);
+                    }
+                }
+            }
+            foreach(TweakSectionDef section in DefDatabase<TweakSectionDef>.AllDefs)
+            {
+                if(section.category != null)
+                {
+                    if (section.category.sections.NullOrEmpty())
+                    {
+                        section.category.sections = new List<TweakSectionDef>();
+                    }
+                    if (!section.category.sections.Contains(section))
+                    {
+                        section.category.sections.Add(section);
+                    }
+                }
+            }
         }
 
         public static void InitializeSettingsDefs(TweaksGaloreSettings settings)

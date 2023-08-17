@@ -19,6 +19,8 @@ namespace TweaksGalore
 
         public static TweakCategoryDef TweakCategory_Vanilla;
 
+        public static TweakSubSectionDef TweakSubSection_PowerAdjusting;
+
         public static TweakDef Tweak_NFSM_PreventByTrainability;
         public static TweakDef Tweak_NFSM_PreventByNuzzleable;
         public static TweakDef Tweak_NFSM_PreventByWildness;

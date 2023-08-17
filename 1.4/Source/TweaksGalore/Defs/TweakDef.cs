@@ -9,7 +9,7 @@ using Verse;
 
 namespace TweaksGalore
 {
-    public class TweakDef : Def
+    public class TweakDef : TweakBaseDef
     {
         public TweakType tweakType;
 
@@ -33,11 +33,7 @@ namespace TweaksGalore
 
         public TweakFormatting formatting = new TweakFormatting();
 
-        public List<string> required = new List<string>();
-
         public List<TweakDef> requiredTweaks = new List<TweakDef>();
-
-        public List<string> incompatible = new List<string>();
 
         public Type tweakWorker = typeof(TweakWorker);
 

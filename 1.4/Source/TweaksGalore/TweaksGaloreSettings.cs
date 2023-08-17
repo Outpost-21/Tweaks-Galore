@@ -28,6 +28,11 @@ namespace TweaksGalore
         // Anima Psylink
         public List<int> tweak_animaPsylinkLevelNeeds = new List<int>();
 
+        // Factions
+        public Dictionary<string, FactionRaidSettings> tweak_factionRaidSettings = new Dictionary<string, FactionRaidSettings>();
+        [Unsaved]
+        public Dictionary<string, FactionRaidSettings> factionRaidSettingsDefaults = new Dictionary<string, FactionRaidSettings>();
+
         // Titles
         public Dictionary<string, RoyalTitleSettings> tweak_royalTitleSettings = new Dictionary<string, RoyalTitleSettings>();
         [Unsaved]

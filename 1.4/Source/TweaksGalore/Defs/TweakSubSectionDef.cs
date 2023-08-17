@@ -9,12 +9,8 @@ using Verse;
 
 namespace TweaksGalore
 {
-    public class TweakSubSectionDef : Def
+    public class TweakSubSectionDef : TweakBaseDef
     {
-        public List<string> required = new List<string>();
-
-        public List<string> incompatible = new List<string>();
-
         public List<TweakDef> tweaks;
     }
 }

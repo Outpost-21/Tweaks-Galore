@@ -90,6 +90,7 @@
 		<tweaks>
 			<li>Tweak_AncientDeconstruction</li>
 			<li>Tweak_AncientDeconstructionProper</li>
+			<li>Tweak_AncientReconstruction</li>
 		</tweaks>
 	</TweaksGalore.TweakSubSectionDef>
 
@@ -107,6 +108,12 @@
 		<description>Changes returned items to some reasonable materials instead of just slag.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AncientReconstruction</defName>
+		<label>Reconstruction</label>
+		<description>Makes the Ancient Ruins buildable, using the same materials you would gain from deconstructing them.</description>
 	</TweaksGalore.TweakDef>
 
 </Defs>

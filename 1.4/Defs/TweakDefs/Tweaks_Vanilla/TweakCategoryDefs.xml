@@ -33,15 +33,21 @@
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_ResearchControl</defName>
-		<label>Research</label>
-		<sectionWorker>TweaksGalore.SectionWorker_ResearchControl</sectionWorker>
-	</TweaksGalore.TweakSectionDef>
-
-	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_WeatherControl</defName>
 		<label>Weather</label>
 		<sectionWorker>TweaksGalore.SectionWorker_WeatherControl</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_ResearchProjects</defName>
+		<label>Research Projects</label>
+		<sectionWorker>TweaksGalore.SectionWorker_ResearchProjects</sectionWorker>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Raids</defName>
+		<label>Raids</label>
+		<sectionWorker>TweaksGalore.SectionWorker_Raids</sectionWorker>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakSectionDef>

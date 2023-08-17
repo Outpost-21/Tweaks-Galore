@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Research</defName>
+		<label>Research</label>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_TechTraversal</defName>
+		<label>Tech Traversal</label>
+		<description>Tweaks specific the players tech level changing as they progress.</description>
+		<section>TweakSection_Vanilla_Research</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_Enabled</defName>
+		<label>Enabled</label>
+		<description>If enabled, allows the rest of the tweaks in the Tech Traversal subsection to function, otherwise they are disabled.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_AlwaysLowestLevel</defName>
+		<label>Always Lowest Level</label>
+		<description>If enabled, the players tech level will always be the lowest unfinished tech level. So if you start with the vanilla Crashlanded scenario, instead of starting Ultratech, you'd start Neolithic till you advance through everything.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_LowestTechLevel</defName>
+		<label>Lowest Tech Level</label>
+		<description>This allows you to set what the lowest tech level is allowed to be, Neolithic by default as there are no research projects lower than that in vanilla, however I've allowed you to go lower in the case where a mod adds research for that.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_LowestTechLevel</tweakWorker>
+		<tweakType>Custom</tweakType>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_HighestTechLevel</defName>
+		<label>Highest Tech Level</label>
+		<description>This allows you to set the highest possible tech level you can reach. You'll still see and be able to research tech higher, it'll just always come with the higher cost. If you want to hide research above this level too you can use the tweak further down called "Hide Higher Tech".</description>
+		<tweakWorker>TweaksGalore.TweakWorker_LowestTechLevel</tweakWorker>
+		<tweakType>Custom</tweakType>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_ShowTechCounter</defName>
+		<label>Show Tech Level &amp; Counter</label>
+		<description>If enabled, the vanilla research window will now have a small indicator of the tech level of the research project currently selected and have a counter telling you the total projects you have completed for that level.\n\nThis will only ever be applied the the vanilla window, if you want another mods UI to be affected, ask them, there is nothing stopping them implementing their own independant counter!</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_CostIncreasePerTechLevel</defName>
+		<label>Cost Increase Per Tech Level</label>
+		<description>This is the added cost per tech level between the players tech level and that of the specified research project. If you're a level below, in vanilla you'd have to spend 150% of the time compared to it being the same level. If you're two levels below, it'd be 200%. This lets you change that additional 50% per level to something else.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>0.5</defaultValue>
+		<floatRange>0.0~3.0</floatRange>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_CostDecreasePerTechLevel</defName>
+		<label>Cost Decrease Per Tech Level</label>
+		<description>In vanilla there is no discount for being a higher tech level than what you are attempting to research, this lets you change that. For each additional tech level above the project level you are attempting to research, it'll add this much of a discount, up to a max of 95% to avoid issues.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>0</defaultValue>
+		<floatRange>0.0~0.95</floatRange>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_PercentageNeeded</defName>
+		<label>Percentage Needed</label>
+		<description>This value dictates how much research of a specific level needs to be completed to move beyond it.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>0.80</defaultValue>
+		<floatRange>0.01~1.0</floatRange>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_HideUnreachable</defName>
+		<label>Hide Unreachable Research</label>
+		<description>If enabled, this hides any research projects you cannot currently research directly from even being visible.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_HideHigherTech</defName>
+		<label>Hide Higher Tech</label>
+		<description>If enabled, this hides any research projects of a tech level higher than your current tech level.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_IgnoreTechprints</defName>
+		<label>Don't Count Techprints</label>
+		<description>If enabled, this makes the counter and calculation completely ignore any research which requires a techprint.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_OnlyVanillaResearch</defName>
+		<label>Only Count Vanilla/DLC Research</label>
+		<description>If enabled, this makes the counter and calculation completely ignore any research added by mods.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_ExcludedMods</defName>
+		<label>Excluded Mods</label>
+		<description>If mod research is counted (the option above this is disabled), then you can exclude specific mods from the calculation instead using this list of checks, if it's got a green tick, it's counted, if it's a red cross, it's ignored.</description>
+		<tweakType>Custom</tweakType>
+		<subSection>TweakSubSection_TechTraversal</subSection>
+	</TweaksGalore.TweakDef>
+
+</Defs>

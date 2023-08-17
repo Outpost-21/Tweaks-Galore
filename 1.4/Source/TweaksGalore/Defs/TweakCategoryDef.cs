@@ -9,13 +9,9 @@ using Verse;
 
 namespace TweaksGalore
 {
-    public class TweakCategoryDef : Def
+    public class TweakCategoryDef : TweakBaseDef
     {
         public int orderID = 9999;
-
-        public List<string> required = new List<string>();
-
-        public List<string> incompatible = new List<string>();
 
         public List<TweakSectionDef> sections;
 
