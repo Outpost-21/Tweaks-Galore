@@ -153,6 +153,53 @@ namespace TweaksGalore
 			GUI.color = Color.white;
 			listing.Gap(6f);
 		}
+		public static void StackableThingDropdown(this Listing_Standard listing, string name, string explanation, out ThingDef def, float width)
+		{
+			def = null;
+			float curHeight = listing.CurHeight;
+			Rect rect = listing.GetRect(Text.LineHeight + listing.verticalSpacing);
+			Text.Font = GameFont.Small;
+			GUI.color = Color.white;
+			TextAnchor anchor = Text.Anchor;
+			Text.Anchor = TextAnchor.MiddleLeft;
+			Widgets.Label(rect, name);
+			Text.Anchor = TextAnchor.MiddleRight;
+
+			Rect rect2 = new Rect(width - 150f, 0f, 150f, 29f);
+			ThingDef custom = null;
+			if (Widgets.ButtonText(rect2, "Add Rule...", true, true, true))
+			{
+				List<FloatMenuOption> list = new List<FloatMenuOption>();
+				List<ThingDef> things = DefDatabase<ThingDef>.AllDefs.Where(t => t.stackLimit > 1).ToList();
+				things.SortBy(c => c.label);
+				foreach (ThingDef thing in things)
+				{
+					if (thing.stackLimit > 1)
+						list.Add(new FloatMenuOption(thing.LabelCap, delegate ()
+						{
+							custom = thing;
+						}));
+				}
+
+				Find.WindowStack.Add(new FloatMenu(list));
+			}
+			def = custom;
+
+			Text.Anchor = anchor;
+
+			Text.Font = GameFont.Tiny;
+			listing.ColumnWidth -= 34f;
+			GUI.color = Color.gray;
+			listing.Label(explanation);
+			listing.ColumnWidth += 34f;
+			Text.Font = GameFont.Small;
+
+			rect = listing.GetRect(0f);
+			rect.height = listing.CurHeight - curHeight;
+			rect.y -= rect.height;
+			GUI.color = Color.white;
+			listing.Gap(6f);
+		}
 
 		public static void LabelBacked(this Listing_Standard list, string inputText, Color color, bool translate = false)
 		{

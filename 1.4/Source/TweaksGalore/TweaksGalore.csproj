@@ -93,6 +93,7 @@
     <Compile Include="PatchOperation\PatchOperation_TweakBool.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Genepacks.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Raids.cs" />
+    <Compile Include="SectionWorkers\SectionWorker_ResearchProjects.cs" />
     <Compile Include="SectionWorkers\SectionWorker_StackSizeControl.cs" />
     <Compile Include="SectionWorkers\SectionWorker_ResearchControl.cs" />
     <Compile Include="SectionWorkers\SectionWorker_WeatherControl.cs" />
@@ -120,7 +121,9 @@
     <Compile Include="TweakWorkers\Anima\TweakWorker_FreeMeditation.cs" />
     <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamStack.cs" />
     <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamImpact.cs" />
+    <Compile Include="TweakWorkers\General\TweakWorker_HighestTechLevel.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_NoBackstoryIncapabilities.cs" />
+    <Compile Include="TweakWorkers\General\TweakWorker_LowestTechLevel.cs" />
     <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxIgnoreBuildings.cs" />
     <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxEffectRate.cs" />
     <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxEffectRadius.cs" />

@@ -44,7 +44,7 @@
 		<defName>Tweak_TechTraversal_HighestTechLevel</defName>
 		<label>Highest Tech Level</label>
 		<description>This allows you to set the highest possible tech level you can reach. You'll still see and be able to research tech higher, it'll just always come with the higher cost. If you want to hide research above this level too you can use the tweak further down called "Hide Higher Tech".</description>
-		<tweakWorker>TweaksGalore.TweakWorker_LowestTechLevel</tweakWorker>
+		<tweakWorker>TweaksGalore.TweakWorker_HighestTechLevel</tweakWorker>
 		<tweakType>Custom</tweakType>
 		<subSection>TweakSubSection_TechTraversal</subSection>
 	</TweaksGalore.TweakDef>
@@ -132,12 +132,12 @@
 		<subSection>TweakSubSection_TechTraversal</subSection>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_TechTraversal_ExcludedMods</defName>
 		<label>Excluded Mods</label>
 		<description>If mod research is counted (the option above this is disabled), then you can exclude specific mods from the calculation instead using this list of checks, if it's got a green tick, it's counted, if it's a red cross, it's ignored.</description>
 		<tweakType>Custom</tweakType>
 		<subSection>TweakSubSection_TechTraversal</subSection>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 </Defs>

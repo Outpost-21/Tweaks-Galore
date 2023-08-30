@@ -75,5 +75,10 @@ namespace TweaksGalore
                 curTweak.Worker.OnRestore();
             }
         }
+
+        public virtual void DoWriteSettings()
+        {
+
+        }
     }
 }

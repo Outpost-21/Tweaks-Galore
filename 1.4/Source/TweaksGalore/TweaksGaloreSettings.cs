@@ -16,6 +16,10 @@ namespace TweaksGalore
 
         public bool overhaulFirstLoad = true;
 
+        // Tech Traversal
+        public TechLevel tweak_tech_lowestTechLevel = TechLevel.Undefined;
+        public TechLevel tweak_tech_highestTechLevel = TechLevel.Undefined;
+
         // Penned Animals
         public Dictionary<string, float> tweak_pennedAnimalDict = new Dictionary<string, float>();
 
@@ -24,6 +28,7 @@ namespace TweaksGalore
 
         // Stack Size Control
         public Dictionary<string, int> tweak_stackSizeControl = new Dictionary<string, int>();
+        public Dictionary<string, float> tweak_stackSizeCategories = new Dictionary<string, float>();
 
         // Anima Psylink
         public List<int> tweak_animaPsylinkLevelNeeds = new List<int>();
@@ -369,6 +374,10 @@ namespace TweaksGalore
             Scribe_Collections.Look(ref intRangeSetting, "intRangeSetting");
             Scribe_Collections.Look(ref floatSetting, "floatSetting");
             Scribe_Collections.Look(ref floatRangeSetting, "floatRangeSetting");
+
+            // Research
+            Scribe_Values.Look(ref tweak_tech_lowestTechLevel, "tweak_tech_lowestTechLevel", TechLevel.Undefined);
+            Scribe_Values.Look(ref tweak_tech_highestTechLevel, "tweak_tech_highestTechLevel", TechLevel.Undefined);
 
             // Penned Animals
             Scribe_Collections.Look(ref tweak_pennedAnimalDict, "tweak_pennedAnimalDict");

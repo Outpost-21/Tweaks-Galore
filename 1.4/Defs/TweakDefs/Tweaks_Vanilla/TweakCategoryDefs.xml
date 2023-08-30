@@ -12,9 +12,10 @@
 			<li>TweakSection_Vanilla_PennedAnimals</li>
 			<li>TweakSection_Vanilla_Power</li>
 			<li>TweakSection_Vanilla_Raids</li>
-			<li>TweakSection_Vanilla_ResearchControl</li>
+			<li>TweakSection_Vanilla_Research</li>
+			<li>TweakSection_Vanilla_ResearchProjects</li>
 			<li>TweakSection_Vanilla_Resources</li>
-			<li>TweakSection_Vanilla_StackSizeControl</li>
+			<!-- <li>TweakSection_Vanilla_StackSizeControl</li> -->
 			<li>TweakSection_Vanilla_WeatherControl</li>
 		</sections>
 		<orderID>-4</orderID>
@@ -50,10 +51,10 @@
 		<sectionWorker>TweaksGalore.SectionWorker_Raids</sectionWorker>
 	</TweaksGalore.TweakSectionDef>
 
-	<TweaksGalore.TweakSectionDef>
+	<!-- <TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_StackSizeControl</defName>
 		<label>Stack Sizes</label>
 		<sectionWorker>TweaksGalore.SectionWorker_StackSizeControl</sectionWorker>
-	</TweaksGalore.TweakSectionDef>
+	</TweaksGalore.TweakSectionDef> -->
 
 </Defs>
