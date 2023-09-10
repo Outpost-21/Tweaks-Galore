@@ -4,13 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Biotech_General</defName>
 		<label>General</label>
-		<tweaks></tweaks>
-		<subSections>
-			<li>TweakSubSection_AncientDeconstruction</li>
-			<li>TweakSubSection_Biotech_GeneStats</li>
-			<li>TweakSubSection_Biotech_MechanitorTweaks</li>
-			<li>TweakSubSection_PlayerMechs</li>
-		</subSections>
+		<category>TweakCategory_Biotech</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -19,6 +13,7 @@
 		<description>By default the Genes tab is hidden on pawns, if you don't have another mod revealing it, you can use this to do so instead. Just keep in mind this was potentially hidden in vanilla for a reason.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Biotech_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -32,6 +27,7 @@
 		<defaultValue>0.03</defaultValue>
 		<floatRange>0.0~1.0</floatRange>
 		<floatIncrement>0.01</floatIncrement>
+		<section>TweakSection_Biotech_General</section>
 	</TweaksGalore.TweakDef>
 
 	<!-- ================================================ -->
@@ -41,11 +37,7 @@
 	<TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_Biotech_GeneStats</defName>
 		<label>Gene Stats</label>
-		<tweaks>
-			<li>Tweak_FlattenComplexity</li>
-			<li>Tweak_FlattenMetabolism</li>
-			<li>Tweak_FlattenArchites</li>
-		</tweaks>
+		<section>TweakSection_Biotech_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -55,6 +47,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_GeneDefComplexity</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_Biotech_GeneStats</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -64,6 +57,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_GeneDefMetabolism</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_Biotech_GeneStats</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -73,6 +67,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_GeneDefArchites</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_Biotech_GeneStats</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- ======================================================= -->
@@ -82,13 +77,7 @@
 	<TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_Biotech_MechanitorTweaks</defName>
 		<label>Mechanitor Tweaks</label>
-		<tweaks>
-			<li>Tweak_MechanitorTweaks</li>
-			<li>Tweak_MechanitorDisableRange</li>
-			<li>Tweak_MechanitorBandwidthBase</li>
-			<li>Tweak_MechanitorControlGroupBase</li>
-			<li>Tweak_BandwidthPerBandNode</li>
-		</tweaks>
+		<section>TweakSection_Biotech_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -98,6 +87,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_MechanitorTweaks</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_Biotech_MechanitorTweaks</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -106,6 +96,7 @@
 		<description>Makes mechanoids controllable regardless of distance to Mechanitor. If they can design a neural interface they can design something with better than cheap wifi range.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_Biotech_MechanitorTweaks</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -115,6 +106,7 @@
 		<tweakType>Int</tweakType>
 		<defaultValue>6</defaultValue>
 		<intRange>1~30</intRange>
+		<subSection>TweakSubSection_Biotech_MechanitorTweaks</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -124,6 +116,7 @@
 		<tweakType>Int</tweakType>
 		<defaultValue>2</defaultValue>
 		<intRange>1~10</intRange>
+		<subSection>TweakSubSection_Biotech_MechanitorTweaks</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -133,6 +126,7 @@
 		<tweakType>Int</tweakType>
 		<defaultValue>1</defaultValue>
 		<intRange>1~20</intRange>
+		<subSection>TweakSubSection_Biotech_MechanitorTweaks</subSection>
 	</TweaksGalore.TweakDef>
 
 </Defs>

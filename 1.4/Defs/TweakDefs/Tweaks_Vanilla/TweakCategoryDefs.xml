@@ -4,20 +4,6 @@
 	<TweaksGalore.TweakCategoryDef>
 		<defName>TweakCategory_Vanilla</defName>
 		<label>Vanilla</label>
-		<sections>
-			<li>TweakSection_Vanilla_General</li>
-			<li>TweakSection_Vanilla_IncidentControl</li>
-			<li>TweakSection_Vanilla_Jobs</li>
-			<li>TweakSection_Vanilla_Mechanoids</li>
-			<li>TweakSection_Vanilla_PennedAnimals</li>
-			<li>TweakSection_Vanilla_Power</li>
-			<li>TweakSection_Vanilla_Raids</li>
-			<li>TweakSection_Vanilla_Research</li>
-			<li>TweakSection_Vanilla_ResearchProjects</li>
-			<li>TweakSection_Vanilla_Resources</li>
-			<!-- <li>TweakSection_Vanilla_StackSizeControl</li> -->
-			<li>TweakSection_Vanilla_WeatherControl</li>
-		</sections>
 		<orderID>-4</orderID>
 	</TweaksGalore.TweakCategoryDef>
 
@@ -25,36 +11,42 @@
 		<defName>TweakSection_Vanilla_PennedAnimals</defName>
 		<label>Penned Animals</label>
 		<sectionWorker>TweaksGalore.SectionWorker_PennedAnimals</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_IncidentControl</defName>
 		<label>Incidents</label>
 		<sectionWorker>TweaksGalore.SectionWorker_IncidentControl</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_WeatherControl</defName>
 		<label>Weather</label>
 		<sectionWorker>TweaksGalore.SectionWorker_WeatherControl</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_ResearchProjects</defName>
 		<label>Research Projects</label>
 		<sectionWorker>TweaksGalore.SectionWorker_ResearchProjects</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_Raids</defName>
 		<label>Raids</label>
 		<sectionWorker>TweaksGalore.SectionWorker_Raids</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<!-- <TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_StackSizeControl</defName>
 		<label>Stack Sizes</label>
 		<sectionWorker>TweaksGalore.SectionWorker_StackSizeControl</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef> -->
 
 </Defs>

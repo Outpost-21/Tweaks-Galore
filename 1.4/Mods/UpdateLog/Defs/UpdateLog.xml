@@ -17,7 +17,7 @@
 Old settings should still be set up how they were, I attempted to make sure they were migrated over to the new system in place automatically when you loaded up the game the first time after this update.</text>
 			</li>
 			<li>
-				<header>Other New Tweaks</header>
+				<header>New Tweaks</header>
 				<text> There are too many to go into detail so this'll just be a list of their names, you can find a description of each tweak in the options anyway (in a tooltip when you hover over them). It's well over 100 new tweaks, so I may also just have missed some.
 
 -- No Backstory Incapabilities
@@ -46,7 +46,7 @@ Old settings should still be set up how they were, I attempted to make sure they
 -- Smooth Walls Before Floors
 -- Butcher Before Cooking
 -- Repair After Building
-- Collars Arent Clothes
+- Collars Aren't Clothes
 - Animal Resource Label
 - Automatic Night Owl
 -- Allow Prioritizing (Sleep, Recreation, Research)

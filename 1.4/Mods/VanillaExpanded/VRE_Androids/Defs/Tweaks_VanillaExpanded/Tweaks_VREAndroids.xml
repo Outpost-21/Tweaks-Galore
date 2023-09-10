@@ -4,13 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_VREAndroids</defName>
 		<label>Vanilla Races Expanded - Androids</label>
-		<tweaks>
-			<li>Tweak_AllowAwakenedModification</li>
-			<li>Tweak_DisableAwakening</li>
-		</tweaks>
-		<required>
-			<li>vanillaracesexpanded.android</li>
-		</required>
+		<category>TweakCategory_VanillaExpanded</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -19,9 +13,7 @@
 		<description>If enabled, allows awakened androids to be modified.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>vanillaracesexpanded.android</li>
-		</required>
+		<section>TweakSection_VREAndroids</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -30,9 +22,7 @@
 		<description>If enabled, unawakened androids from awakening.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>vanillaracesexpanded.android</li>
-		</required>
+		<section>TweakSection_VREAndroids</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

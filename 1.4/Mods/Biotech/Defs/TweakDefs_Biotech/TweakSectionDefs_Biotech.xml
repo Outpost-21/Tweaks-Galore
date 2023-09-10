@@ -4,14 +4,6 @@
 	<TweaksGalore.TweakCategoryDef>
 		<defName>TweakCategory_Biotech</defName>
 		<label>Biotech</label>
-		<sections>
-			<li>TweakSection_Biotech_General</li>
-			<li>TweakSection_Biotech_Polux</li>
-			<li>TweakSection_Biotech_Genepacks</li>
-		</sections>
-		<required>
-			<li>Ludeon.RimWorld.Biotech</li>
-		</required>
 		<orderID>-1</orderID>
 	</TweaksGalore.TweakCategoryDef>
 
@@ -19,6 +11,7 @@
 		<defName>TweakSection_Biotech_Genepacks</defName>
 		<label>Genepacks</label>
 		<sectionWorker>TweaksGalore.SectionWorker_Genepacks</sectionWorker>
+		<category>TweakCategory_Biotech</category>
 	</TweaksGalore.TweakSectionDef>
 
 </Defs>

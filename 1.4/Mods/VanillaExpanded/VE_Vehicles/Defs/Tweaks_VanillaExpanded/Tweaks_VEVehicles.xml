@@ -4,13 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_VanillaVehiclesExpanded</defName>
 		<label>Vanilla Vehicles Expanded</label>
-		<tweaks>
-			<li>Tweak_ResearchableTierThree</li>
-			<li>Tweak_CraftableTierFour</li>
-		</tweaks>
-		<required>
-			<li>OskarPotocki.VanillaVehiclesExpanded</li>
-		</required>
+		<category>TweakCategory_VanillaExpanded</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -19,9 +13,7 @@
 		<description>If enabled, allows tier 3 vehicles research to be performed normally, while still being able to unlock them via finding and repairing the wrecks.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>OskarPotocki.VanillaVehiclesExpanded</li>
-		</required>
+		<section>TweakSection_VanillaVehiclesExpanded</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -30,9 +22,7 @@
 		<description>If enabled, allows tier 4 vehicles to be researched and crafted just like other vehicles.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>OskarPotocki.VanillaVehiclesExpanded</li>
-		</required>
+		<section>TweakSection_VanillaVehiclesExpanded</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

@@ -4,16 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Royalty_Anima</defName>
 		<label>Anima</label>
-		<tweaks>
-			<li>Tweak_AnimaTweaks</li>
-			<li>Tweak_AnimaPsylinkLevelNeeds</li>
-			<li>Tweak_MeditationGain</li>
-		</tweaks>
-		<subSections>
-			<li>TweakSubSection_AnimaScream</li>
-			<li>TweakSubSection_AnimaTree</li>
-			<li>TweakSubSection_AnimaShrines</li>
-		</subSections>
+		<category>TweakCategory_Royalty</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -26,6 +17,7 @@
 			<gapLine>true</gapLine>
 			<enhanced>true</enhanced>
 		</formatting>
+		<section>TweakSection_Royalty_Anima</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -34,6 +26,7 @@
 		<description>The values are the amount of grass needed to be grown on top of what was already needed for the previous level.</description>
 		<tweakWorker>TweaksGalore.TweakWorker_AnimaPsylinkLevelNeeds</tweakWorker>
 		<tweakType>Custom</tweakType>
+		<section>TweakSection_Royalty_Anima</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -45,6 +38,7 @@
 		<defaultValue>0.5</defaultValue>
 		<floatRange>0~20</floatRange>
 		<floatIncrement>0.1</floatIncrement>
+		<section>TweakSection_Royalty_Anima</section>
 	</TweaksGalore.TweakDef>
 
 	<!-- ================================================== -->
@@ -55,12 +49,7 @@
 		<defName>TweakSubSection_AnimaScream</defName>
 		<label>Anima Scream</label>
 		<description>Tweaks specific to the anima scream from when you cut down the anima tree.</description>
-		<tweaks>
-			<li>Tweak_DisableAnimaScream</li>
-			<li>Tweak_AnimaScreamDebuff</li>
-			<li>Tweak_AnimaScreamDuration</li>
-			<li>Tweak_AnimaScreamStackLimit</li>
-		</tweaks>
+		<section>TweakSection_Royalty_Anima</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -70,6 +59,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_AnimaScreamDisabled</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AnimaScream</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -81,6 +71,7 @@
 		<defaultValue>-6</defaultValue>
 		<intRange>0~50</intRange>
 		<intIncrement>1</intIncrement>
+		<subSection>TweakSubSection_AnimaScream</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -92,6 +83,7 @@
 		<defaultValue>5</defaultValue>
 		<floatRange>0.01~20</floatRange>
 		<floatIncrement>0.01</floatIncrement>
+		<subSection>TweakSubSection_AnimaScream</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -103,6 +95,7 @@
 		<defaultValue>3</defaultValue>
 		<intRange>1~20</intRange>
 		<intIncrement>1</intIncrement>
+		<subSection>TweakSubSection_AnimaScream</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- ================================================ -->
@@ -113,12 +106,7 @@
 		<defName>TweakSubSection_AnimaTree</defName>
 		<label>Anima Tree</label>
 		<description>Tweaks specific to the anima tree itself.</description>
-		<tweaks>
-			<li>Tweak_ReplantableAnima</li>
-			<li>Tweak_AnimaArtificialBuildingRadius</li>
-			<li>Tweak_AnimaNaturalBuildingRadius</li>
-			<li>Tweak_AnimaNaturalBuildingMax</li>
-		</tweaks>
+		<section>TweakSection_Royalty_Anima</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -127,6 +115,7 @@
 		<description>Makes it so you can move Anima trees like any other.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AnimaTree</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -138,6 +127,7 @@
 		<defaultValue>34.9</defaultValue>
 		<floatRange>0~50</floatRange>
 		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_AnimaTree</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -149,6 +139,7 @@
 		<defaultValue>9.9</defaultValue>
 		<floatRange>0~50</floatRange>
 		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_AnimaTree</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -160,6 +151,7 @@
 		<defaultValue>4</defaultValue>
 		<intRange>0~40</intRange>
 		<intIncrement>1</intIncrement>
+		<subSection>TweakSubSection_AnimaTree</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- =================================================== -->
@@ -170,11 +162,7 @@
 		<defName>TweakSubSection_AnimaShrines</defName>
 		<label>Anima Shrines</label>
 		<description>These are specific to the nature shrines that can be built to enhance the Anima tree.</description>
-		<tweaks>
-			<li>Tweak_NatureShrinesAlwaysBuildable</li>
-			<li>Tweak_ShrineArtificialBuildingRadius</li>
-			<li>Tweak_ShrineNaturalBuildingRadius</li>
-		</tweaks>
+		<section>TweakSection_Royalty_Anima</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef Name="TweakBaseNatureShrines" Abstract="True">
@@ -186,12 +174,13 @@
 		</tweakThings>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef >
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_NatureShrinesAlwaysBuildable</defName>
 		<label>Nature Shrines Always Buildable</label>
 		<description>Nature Shrines are usually only buildable when you have a nature based Psycaster, this unlocks that limitation.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AnimaShrines</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef ParentName="TweakBaseNatureShrines">
@@ -203,6 +192,7 @@
 		<defaultValue>34.9</defaultValue>
 		<floatRange>0~50</floatRange>
 		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_AnimaShrines</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef ParentName="TweakBaseNatureShrines">
@@ -214,6 +204,7 @@
 		<defaultValue>9.9</defaultValue>
 		<floatRange>0~50</floatRange>
 		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_AnimaShrines</subSection>
 	</TweaksGalore.TweakDef>
 	
 </Defs>

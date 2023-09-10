@@ -29,6 +29,7 @@
 			<li>TweakSubSection_HuntersCanMelee</li>
 			<li>TweakSubSection_Skills</li>
 		</subSections>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>

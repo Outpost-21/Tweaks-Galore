@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ======================================================= -->
+	<!-- ================== Player Mech Stats ================== -->
+	<!-- ======================================================= -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_PlayerMechs</defName>
+		<label>Player Mechanoid Stats</label>
+		<description>Allows the changing of work stats for player mechanoids so they don't suck nearly as much.</description>
+		<section>TweakSection_Vanilla_Mechanoids</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PlayerMechStats</defName>
+		<label>Enabled</label>
+		<description>Allows the changing of mechanoid stats, useful for disabling if there's any compatibility issues.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_PlayerMechanoids</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+		</formatting>
+		<subSection>TweakSubSection_PlayerMechs</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechDischargeRate</defName>
+		<label>Energy Drain Rate</label>
+		<description>Controls the rate at which mechanoid energy drains.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.05~5.0</floatRange>
+		<floatIncrement>0.05</floatIncrement>
+		<subSection>TweakSubSection_PlayerMechs</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MechSkillLevel</defName>
+		<label>Skill Level</label>
+		<description>Controls the skill level all mechanoids have (vanilla is universal like this, it's weird).</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>10</defaultValue>
+		<intRange>1~20</intRange>
+		<subSection>TweakSubSection_PlayerMechs</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef Name="TweakBase_MechWorkAdjuster" Abstract="True">
+		<tweakWorker>TweaksGalore.TweakWorker_ModifyMechStat</tweakWorker>
+		<tweakType>Float</tweakType>
+		<floatRange>0.05~2.00</floatRange>
+		<floatIncrement>0.05</floatIncrement>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<subSection>TweakSubSection_PlayerMechs</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_GlobalWorkSpeed</defName>
+		<label>Global Work Speed</label>
+		<defaultValue>0.50</defaultValue>
+		<tweakStat>ConstructionSpeed</tweakStat>
+		<tweakThings>
+			<li>Mech_Constructoid</li>
+			<li>Mech_Fabricor</li>
+			<li>Mech_Agrihand</li>
+			<li>Mech_Cleansweeper</li>
+			<li>Mech_Paramedic</li>
+		</tweakThings>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_ConstructoidWorkSpeed</defName>
+		<label>Constructoid - Construction Speed</label>
+		<defaultValue>0.50</defaultValue>
+		<tweakStat>ConstructionSpeed</tweakStat>
+		<tweakThing>Mech_Constructoid</tweakThing>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_AgrihandWorkSpeed</defName>
+		<label>Agrihand - Plant Work Speed</label>
+		<defaultValue>0.80</defaultValue>
+		<tweakStat>PlantWorkSpeed</tweakStat>
+		<tweakThing>Mech_Agrihand</tweakThing>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
+		<defName>Tweak_MechAdj_CleansweeperWorkSpeed</defName>
+		<label>Cleansweeper - Cleaning Speed</label>
+		<defaultValue>0.50</defaultValue>
+		<tweakStat>CleaningSpeed</tweakStat>
+		<tweakThing>Mech_Cleansweeper</tweakThing>
+	</TweaksGalore.TweakDef>
+
+</Defs>

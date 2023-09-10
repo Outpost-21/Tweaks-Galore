@@ -4,18 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Ideology_General</defName>
 		<label>General</label>
-		<tweaks>
-			<li>Tweak_DarklightGlowPods</li>
-			<li>Tweak_DisableDesiredApparel</li>
-			<li>Tweak_NoMemeLimit</li>
-			<li>Tweak_ProperSuppression</li>
-			<li>Tweak_SuppressionThreshold</li>
-			<li>Tweak_UnlockedIdeologyBuildings</li>
-			<li>Tweak_YouLookFine</li>
-		</tweaks>
-		<subSections>
-			<li>TweakSubSection_AncientDeconstruction</li>
-		</subSections>
+		<category>TweakCategory_Ideology</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -24,6 +13,7 @@
 		<description>Stops pawns from changing their look at the style bench every five goddamn minutes, it's a story simulator not Barbies Makeup Challenge.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -32,6 +22,7 @@
 		<description>Makes glow pods spawned in insectoid nests use the darklight colour.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -40,6 +31,7 @@
 		<description>Disables default Ideology desired apparel from showing up, that random shit that factions use throughout them for no fucking reason.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -48,6 +40,7 @@
 		<description>Raises the limit of how many memes you can choose to 1000...so effectively no limit.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -56,6 +49,7 @@
 		<description>Changes suppression mechanics slightly so that rebellions never happen if your slaves are kept suppressed. Also prevents suppressed pawns from taking part in rebellions when they do happen.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -69,6 +63,7 @@
 		<defaultValue>1.0</defaultValue>
 		<floatRange>0.01~1.0</floatRange>
 		<floatIncrement>0.01</floatIncrement>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -77,6 +72,7 @@
 		<description>Removes the meme restriction on ideology buildings so you can use them regardless of what memes you have. Includes floors and apparel.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakDef>
 
 	<!-- ============================================================ -->
@@ -87,11 +83,7 @@
 		<defName>TweakSubSection_AncientDeconstruction</defName>
 		<label>Ancient Deconstruction</label>
 		<description>Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.</description>
-		<tweaks>
-			<li>Tweak_AncientDeconstruction</li>
-			<li>Tweak_AncientDeconstructionProper</li>
-			<li>Tweak_AncientReconstruction</li>
-		</tweaks>
+		<section>TweakSection_Ideology_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -100,6 +92,7 @@
 		<description>Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AncientDeconstruction</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -108,12 +101,16 @@
 		<description>Changes returned items to some reasonable materials instead of just slag.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AncientDeconstruction</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_AncientReconstruction</defName>
 		<label>Reconstruction</label>
 		<description>Makes the Ancient Ruins buildable, using the same materials you would gain from deconstructing them.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AncientDeconstruction</subSection>
 	</TweaksGalore.TweakDef>
 
 </Defs>

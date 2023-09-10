@@ -4,12 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_VFEPirates</defName>
 		<label>Vanilla Factions Expanded - Pirates</label>
-		<tweaks>
-			<li>Tweak_WorkingWarcaskets</li>
-		</tweaks>
-		<required>
-			<li>OskarPotocki.VFE.Pirates</li>
-		</required>
+		<category>TweakCategory_VanillaExpanded</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -18,9 +13,7 @@
 		<description>If enabled, allows warcaskets to work, and control what jobs they're allowed to do (unless prevented by some other modifier like traits or backstories).</description>
 		<tweakWorker>TG_VFEPirates.TweakWorker_WorkingWarcaskets</tweakWorker>
 		<tweakType>Custom</tweakType>
-		<required>
-			<li>OskarPotocki.VFE.Pirates</li>
-		</required>
+		<section>TweakSection_VFEPirates</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

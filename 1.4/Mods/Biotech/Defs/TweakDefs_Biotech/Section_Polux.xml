@@ -4,13 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Biotech_Polux</defName>
 		<label>Polux</label>
-		<tweaks>
-			<li>Tweak_PoluxTweaks</li>
-			<li>Tweak_ReplantablePolux</li>
-			<li>Tweak_IgnoreArtificialBuildings</li>
-			<li>Tweak_PoluxEffectRadius</li>
-			<li>Tweak_PoluxEffectRate</li>
-		</tweaks>
+		<category>TweakCategory_Biotech</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -23,6 +17,7 @@
 			<gapLine>true</gapLine>
 			<enhanced>true</enhanced>
 		</formatting>
+		<section>TweakSection_Biotech_Polux</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -31,6 +26,7 @@
 		<description>Makes it so you can move Polux trees like any other.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Biotech_Polux</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -40,6 +36,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_PoluxIgnoreBuildings</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Biotech_Polux</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -51,6 +48,7 @@
 		<defaultValue>7.9</defaultValue>
 		<floatRange>0~50</floatRange>
 		<floatIncrement>0.1</floatIncrement>
+		<section>TweakSection_Biotech_Polux</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -62,6 +60,7 @@
 		<defaultValue>1</defaultValue>
 		<floatRange>0~2</floatRange>
 		<floatIncrement>0.01</floatIncrement>
+		<section>TweakSection_Biotech_Polux</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

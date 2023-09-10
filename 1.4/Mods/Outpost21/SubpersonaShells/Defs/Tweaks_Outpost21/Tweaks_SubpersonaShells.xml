@@ -4,12 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_SubpersonaShells</defName>
 		<label>Subpersona Shells</label>
-		<tweaks>
-			<li>Tweak_SubpersonaShellDrainRate</li>
-		</tweaks>
-		<required>
-			<li>Neronix17.SubpersonaShells</li>
-		</required>
+		<category>TweakCategory_OutpostTwoOne</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -19,9 +14,7 @@
 		<tweakType>Float</tweakType>
 		<defaultValue>1.0</defaultValue>
 		<floatRange>0.01~2.00</floatRange>
-		<required>
-			<li>Neronix17.SubpersonaShells</li>
-		</required>
+		<section>TweakSection_SubpersonaShells</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

@@ -4,12 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_OuterRimDroidDepot</defName>
 		<label>Outer Rim - Droid Depot</label>
-		<tweaks>
-			<li>Tweak_DroidDrainRate</li>
-		</tweaks>
-		<required>
-			<li>Neronix17.OuterRim.DroidDepot</li>
-		</required>
+		<category>TweakCategory_OutpostTwoOne</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -19,9 +14,7 @@
 		<tweakType>Float</tweakType>
 		<defaultValue>1.0</defaultValue>
 		<floatRange>0.01~2.00</floatRange>
-		<required>
-			<li>Neronix17.OuterRim.DroidDepot</li>
-		</required>
+		<section>TweakSection_OuterRimDroidDepot</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

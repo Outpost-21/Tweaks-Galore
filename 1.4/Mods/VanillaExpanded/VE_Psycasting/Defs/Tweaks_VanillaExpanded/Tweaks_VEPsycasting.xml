@@ -4,12 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_VanillaPsycastingExpanded</defName>
 		<label>Vanilla Psycasting Expanded</label>
-		<tweaks>
-			<li>Tweak_HealableSacrificialFingers</li>
-		</tweaks>
-		<required>
-			<li>VanillaExpanded.VPsycastsE</li>
-		</required>
+		<category>TweakCategory_VanillaExpanded</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>

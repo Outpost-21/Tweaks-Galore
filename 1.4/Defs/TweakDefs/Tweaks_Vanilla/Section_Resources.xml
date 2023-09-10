@@ -16,6 +16,7 @@
 		<subSections>
 			<li>TweakSubSection_StackableChunks</li>
 		</subSections>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>

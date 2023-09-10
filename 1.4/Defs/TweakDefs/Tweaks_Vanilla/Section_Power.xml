@@ -5,33 +5,41 @@
 		<defName>TweakSection_Vanilla_Power</defName>
 		<label>Power</label>
 		<description>Allows tweaking the usage rate of some buildings.</description>
-		<tweaks>
-			<li>Tweak_EnergySavingLighting</li>
-			<li>Tweak_EnergySavingProduction</li>
-		</tweaks>
-		<subSections>
-			<li>TweakSubSection_PowerAdjusting</li>
-		</subSections>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_EnergySavingLighting</defName>
+		<label>Energy Saving Lighting</label>
+		<description>Automatically turns off lighting (as long as it uses vanilla lighting code) when pawns are not in the room, if they're exterior lighting then they remain on contstantly.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_Power</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_EnergySavingProduction</defName>
+		<label>Energy Saving Production</label>
+		<description>Automatically turns off compatible production benches when not in use, may not apply to modded benches if they don't inherit from the vanilla classes.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_Power</section>
+	</TweaksGalore.TweakDef>
 
 	<!-- 
 		The Tweaks for adjusting power usage/production are automatically generated when the game runs. Adding them manually using the exact name they would have had (Tweak_PowerAdj_[DEFNAME]) will prevent them from being automatically generated if you want to override any of them. The Standing Lamp one here is used purely as an example of how you would make one manually.
 	-->
 
-	<TweaksGalore.TweakDef Name="TweakBase_PowerAdjuster" Abstract="True">
+	<!-- <TweaksGalore.TweakDef Name="TweakBase_PowerAdjuster" Abstract="True">
 		<tweakWorker>TweaksGalore.TweakWorker_PowerValue</tweakWorker>
 		<tweakType>Int</tweakType>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_PowerAdjusting</defName>
 		<label>Power Adjusting</label>
 		<description>If enabled, allows the below power changes to take effect. If they usually produce then it configures how much they output instead, which will instead show as a negative value slider.</description>
-		<tweaks>
-			<!-- ========== Vanilla ========== -->
-			<li>Tweak_PowerAdjusting</li>
-			<li>Tweak_PowerAdj_StandingLamp</li>
-		</tweaks>
+		<section>TweakSection_Vanilla_Power</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -43,18 +51,6 @@
 		<formatting>
 			<gapLine>true</gapLine>
 		</formatting>
-	</TweaksGalore.TweakDef>
-
-	<!-- ==================== Vanilla Buildings ==================== -->
-
-	<TweaksGalore.TweakDef ParentName="TweakBase_PowerAdjuster">
-		<defName>Tweak_PowerAdj_StandingLamp</defName>
-		<label>Standing Lamp</label>
-		<defaultValue>30</defaultValue>
-		<intRange>0~100</intRange>
-		<tweakThings>
-			<li>StandingLamp</li>
-		</tweakThings>
 		<subSection>TweakSubSection_PowerAdjusting</subSection>
 	</TweaksGalore.TweakDef>
 

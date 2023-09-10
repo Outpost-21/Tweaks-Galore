@@ -4,12 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Mechadroids</defName>
 		<label>Mechadroids</label>
-		<tweaks>
-			<li>Tweak_MechadroidDrainRate</li>
-		</tweaks>
-		<required>
-			<li>Neronix17.Mechadroids</li>
-		</required>
+		<category>TweakCategory_OutpostTwoOne</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -19,9 +14,7 @@
 		<tweakType>Float</tweakType>
 		<defaultValue>1.0</defaultValue>
 		<floatRange>0.01~2.00</floatRange>
-		<required>
-			<li>Neronix17.Mechadroids</li>
-		</required>
+		<section>TweakSection_Mechadroids</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

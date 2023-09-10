@@ -4,12 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_VFEEmpire</defName>
 		<label>Vanilla Factions Expanded - Empire</label>
-		<tweaks>
-			<li>Tweak_NoTerrorism</li>
-		</tweaks>
-		<required>
-			<li>OskarPotocki.VFE.Empire</li>
-		</required>
+		<category>TweakCategory_VanillaExpanded</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -18,9 +13,7 @@
 		<description>If enabled, prevents deserters from showing up among factions.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>OskarPotocki.VFE.Empire</li>
-		</required>
+		<section>TweakSection_VFEEmpire</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>

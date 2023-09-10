@@ -4,49 +4,13 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_General</defName>
 		<label>General</label>
-		<tweaks>
-			<li>Tweak_BoomalopesBleedChemfuel</li>
-			<li>Tweak_ChattyComms</li>
-			<li>Tweak_DestroyAnything</li>
-			<li>Tweak_DisableNarrowHeads</li>
-			<li>Tweak_DontPackFood</li>
-			<li>Tweak_FullDeconstructReturn</li>
-			<li>Tweak_GlowingAmbrosia</li>
-			<li>Tweak_GlowingHealroot</li>
-			<li>Tweak_GrowableAmbrosia</li>
-			<li>Tweak_GrowableGrass</li>
-			<li>Tweak_GrowableMushrooms</li>
-			<li>Tweak_GrowableWildBerries</li>
-			<li>Tweak_HealrootToXerigium</li>
-			<li>Tweak_HiddenWires</li>
-			<li>Tweak_IncidentPawnStats</li>
-			<li>Tweak_InfestationBlockingFloors</li>
-			<li>Tweak_InsultingSpreeNerf</li>
-			<li>Tweak_ImpassableDeepWater</li>
-			<li>Tweak_LagFreeLamps</li>
-			<li>Tweak_LowerPrisonerExpectations</li>
-			<li>Tweak_MegaslothToMegatherium</li>
-			<li>Tweak_MisanthropeTrait</li>
-			<li>Tweak_NextRestockTimer</li>
-			<li>Tweak_NoBreakdowns</li>
-			<li>Tweak_BetterPyromania</li>
-			<li>Tweak_FilthVanishes</li>
-			<li>Tweak_AnimalsAreFun</li>
-			<li>Tweak_WhereIsMyWeapon</li>
-			<li>Tweak_EverybodyBuysSlaves</li>
-			<li>Tweak_TreesDontJustDie</li>
-			<li>Tweak_UghYouGotMe</li>
-		</tweaks>
 		<sortTweaks>true</sortTweaks>
-		<subSections>
-			<li>TweakSubSection_NoFriendShapedManhunters</li>
-			<li>TweakSubSection_PrisonersDontHaveKeys</li>
-			<li>TweakSubSection_SlimRim</li>
-			<li>TweakSubSection_TaintedApparel</li>
-			<li>TweakSubSection_TraitCountAdjustment</li>
-			<li>TweakSubSection_WildAnimalSex</li>
-		</subSections>
+		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
+
+	<!-- ======================================================= -->
+	<!-- ================== Individual Tweaks ================== -->
+	<!-- ======================================================= -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_UghYouGotMe</defName>
@@ -54,6 +18,7 @@
 		<description>Prevents social fights from going too far, ending the fight before too much damage is done, if damage was about to be done that would have been extreme (biting off an arm for example, it happens) then it negates that damage.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -62,6 +27,7 @@
 		<description>Patches trees so they have an infinite lifespan, it is kind of silly that they only live like 2 years in RimWorld.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -70,6 +36,7 @@
 		<description>Universally patches traders to be able to buy slaves. No, this won't respect Ideology for any faction traders, because it can't, that's not how traders work.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -78,6 +45,7 @@
 		<description>When a downed pawn drops their weapon, this will allow them to go and look for it when they can walk again.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -86,6 +54,7 @@
 		<description>Adds the ability for pawns to play with animals, gaining them recreation, as well as increasing the training of those animals.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -94,22 +63,7 @@
 		<description>Changes filth so it gets washed away in the rain, and vanishes over time.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_EnergySavingProduction</defName>
-		<label>Energy Saving Production</label>
-		<description>Automatically turns off compatible production benches when not in use, may not apply to modded benches if they don't inherit from the vanilla classes.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_EnergySavingLighting</defName>
-		<label>Energy Saving Lighting</label>
-		<description>Automatically turns off lighting (as long as it uses vanilla lighting code) when pawns are not in the room, if they're exterior lighting then they remain on contstantly.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -118,6 +72,7 @@
 		<description>Turns pyromania into a need, similar to chemical dependence, making it much easier to manage without bouts of the flamies.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -126,6 +81,7 @@
 		<description>Changes the blood def from boomalopes and boomrats to be chemfuel puddles instead.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -134,6 +90,7 @@
 		<description>Adds a recreation type to comms consoles allowing them to be used by pawns to gain recreation through 'chatting'.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -142,6 +99,7 @@
 		<description>Allows the smelting of pretty much anything anything in the crematorium aside from weapons, apparel and minified buildings. Be careful so you don't burn anything important.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -150,6 +108,7 @@
 		<description>Removes the narrow head shapes, they do not fit many of even the vanilla hair and beard styles properly and thanks to 1.4 making them defs it is very easy to just YEET. Can cause errors due to mods commonly directly referencing the removed head types.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -158,6 +117,7 @@
 		<description>Prevents pawns from stuffing food into their inventory to carry around.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -167,6 +127,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_FixDeconstructionReturn</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -175,6 +136,7 @@
 		<description>Gives Ambrosia a slight glow around it, making natural spawning Ambrosia easier to find on a map in the dark.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -183,6 +145,7 @@
 		<description>Gives Healroot a slight glow around it, making natural spawning Healroot easier to find on a map in the dark.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -191,6 +154,7 @@
 		<description>Allows the growing of Ambrosia in plant zones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -199,6 +163,7 @@
 		<description>Allows the growing of grass and tall grass in plant zones. If you have Biotech you can also grow grey grass from that.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -207,6 +172,7 @@
 		<description>Allows the growing of Glowstool and Agarilux in plant zones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -215,6 +181,7 @@
 		<description>Allows the growing of wild berries in plant zones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -223,6 +190,7 @@
 		<description>Reverts the old name change of the herbal medicine plant Healroot back to Xerigium like it used to be in older game versions.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -231,6 +199,7 @@
 		<description>Visually hides the ugly wires that connect to the power conduits from buildings that don't specifically need to be placed on top of conduits.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -239,6 +208,7 @@
 		<description>Displays the information of any pawns rewarded as part of incidents.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -247,6 +217,7 @@
 		<description>Prevents infestations happening on harder floors (anything crafted from metal or stone materials). Only prevents the event picking that spot, hives can still spawn on them if an event happens closeby.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -255,6 +226,7 @@
 		<description>Makes the Insulting Spree mental break less annoying to deal with.\n- Intensity: Minor to Major\n- Max Duration: 45,000 ticks to 20,000 ticks\n- Min Duration: 25,000 ticks to 2,500 ticks\n- Base Event Chance: 0.5 to 0.15</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -263,6 +235,7 @@
 		<description>Changes deep water to be impassable by pawns, preventing them from pathing through it.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -271,6 +244,7 @@
 		<description>Removes the fuel comp from fuelled lamps, so they now no longer run code constantly they impact performance that little bit less.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -279,6 +253,7 @@
 		<description>Brings prisoner expectations down to a more reasonable 'low expectations' level. They just tried to kill your colony most of the time, they don't deserve to have expectations.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -287,6 +262,7 @@
 		<description>Reverts the name change of the Megatherium so it retains the obviously cooler name.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -295,6 +271,7 @@
 		<description>Adds the misanthrope trait (dislikes humans), also makes it so if a pawn was going to spawn with both the misandrist and misogynist traits that they instead get the misanthrope trait.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -303,6 +280,7 @@
 		<description>Displays in the world map information of settlements whether or not they have restocked since you last visited and how long till their next restock.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -314,6 +292,7 @@
 		<incompatible>
 			<li>kentington.saveourship2</li>
 		</incompatible>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
 	<!-- ====================================================== -->
@@ -324,10 +303,7 @@
 		<defName>TweakSubSection_WildAnimalSex</defName>
 		<label>Wild Animal Sex</label>
 		<description>Allows wild animals to reproduce, just like domestic ones.</description>
-		<tweaks>
-			<li>Tweak_WildAnimalSex</li>
-			<li>Tweak_WildAnimalSexLimit</li>
-		</tweaks>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -336,6 +312,7 @@
 		<description>Allows wild animals to reproduce, just like domestic ones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_WildAnimalSex</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -346,6 +323,7 @@
 		<defaultValue>30</defaultValue>
 		<intRange>8~100</intRange>
 		<intIncrement>1</intIncrement>
+		<subSection>TweakSubSection_WildAnimalSex</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- ================================================================= -->
@@ -355,15 +333,8 @@
 	<TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_NoFriendShapedManhunters</defName>
 		<label>No Friend Shaped Manhunters</label>
-	<description>Sets parameters which decide if an animal can arrive as manhunter or not. This does not prevent it happening if they take damage. This can result in the initial Royalty quest not firing as it requires manhunting animal that specifically fits the parameters this tweak is designed to prevent, I'd recommend enabling this AFTER that quest.</description>
-		<tweaks>
-			<li>Tweak_NoFriendShapedManhunters</li>
-			<li>Tweak_NFSM_PreventByTrainability</li>
-			<li>Tweak_NFSM_PreventByNuzzleable</li>
-			<li>Tweak_NFSM_PreventWhenTaming</li>
-			<li>Tweak_NFSM_PreventByWildness</li>
-			<li>Tweak_NFSM_PreventByCombatPower</li>
-		</tweaks>
+		<description>Sets parameters which decide if an animal can arrive as manhunter or not. This does not prevent it happening if they take damage. This can result in the initial Royalty quest not firing as it requires manhunting animal that specifically fits the parameters this tweak is designed to prevent, I'd recommend enabling this AFTER that quest.</description>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -373,6 +344,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_NoFriendShapedManhunters</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_NoFriendShapedManhunters</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -382,6 +354,7 @@
 		<tweakWorker>TweaksGalore.TweakWorker_NFSMPreventByTrainability</tweakWorker>
 		<tweakType>Custom</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_NoFriendShapedManhunters</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -390,6 +363,7 @@
 		<description>If animal can nuzzle, it won't spawn as part of manhunter incidents.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_NoFriendShapedManhunters</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -402,6 +376,7 @@
 		</formatting>
 		<defaultValue>0.65</defaultValue>
 		<floatRange>0.01~1.0</floatRange>
+		<subSection>TweakSubSection_NoFriendShapedManhunters</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -411,6 +386,7 @@
 		<tweakType>Int</tweakType>
 		<defaultValue>60</defaultValue>
 		<intRange>0~200</intRange>
+		<subSection>TweakSubSection_NoFriendShapedManhunters</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -419,6 +395,7 @@
 		<description>Prevents animals that fit the parameters from turning manhunter when taming.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_NoFriendShapedManhunters</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- ===================================================== -->
@@ -429,11 +406,7 @@
 		<defName>TweakSubSection_TaintedApparel</defName>
 		<label>Tainted Apparel</label>
 		<description>Tweaks specific to tainted apparel.</description>
-		<tweaks>
-			<li>Tweak_TaintDisabled</li>
-			<li>Tweak_TaintOnRot</li>
-			<li>Tweak_OnlyTaintFirstLayer</li>
-		</tweaks>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -442,6 +415,7 @@
 		<description>If enabled, apparel will not be tainted at all, doesn't apply retroactively to existing tainted apparel.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TaintedApparel</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -450,6 +424,7 @@
 		<description>If enabled, apparel will be tainted when a pawn begins rotting rather than when they die.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TaintedApparel</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -458,6 +433,7 @@
 		<description>If enabled, only apparel covering the innermost layer will be tainted, typically this will result in armour being fine but clothing being tainted.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TaintedApparel</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- =============================================================== -->
@@ -468,12 +444,7 @@
 		<defName>TweakSubSection_PrisonersDontHaveKeys</defName>
 		<label>Prisoners Don't Have Keys</label>
 		<description>Selectively controls whether prisoners and slaves can open doors during breakout and rebellion.</description>
-		<tweaks>
-			<li>Tweak_PrisonersDontHaveKeys</li>
-			<li>Tweak_PDHKPrisoners</li>
-			<li>Tweak_PDHKSlaves</li>
-			<li>Tweak_PDHKOwnDoor</li>
-		</tweaks>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -482,6 +453,7 @@
 		<description>Selectively controls whether prisoners and slaves can open doors during breakout and rebellion.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_PrisonersDontHaveKeys</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -490,6 +462,7 @@
 		<description>Whether or not this applies to prisoners.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_PrisonersDontHaveKeys</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -498,6 +471,7 @@
 		<description>Whether or not this applies to slaves.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_PrisonersDontHaveKeys</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -506,6 +480,7 @@
 		<description>Whether or not escaping pawns can open their own door, the one leading into their cell.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_PrisonersDontHaveKeys</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- ============================================== -->
@@ -516,12 +491,7 @@
 		<defName>TweakSubSection_SlimRim</defName>
 		<label>Slim Rim</label>
 		<description>Allows the limiting of pawn body tpes on generation, the replacement will be either Male or Female depending on the pawns current gender.</description>
-		<tweaks>
-			<li>Tweak_SlimRim</li>
-			<li>Tweak_SlimRimFat</li>
-			<li>Tweak_SlimRimHulk</li>
-			<li>Tweak_SlimRimThin</li>
-		</tweaks>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -530,6 +500,7 @@
 		<description>Allows the limiting of pawn body types on generation, the replacement will be either Male or Female depending on the pawns current gender.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_SlimRim</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -538,6 +509,7 @@
 		<description>If enabled, limits the fat body type from spawning.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_SlimRim</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -546,6 +518,7 @@
 		<description>If enabled, limits the hulk body type from spawning.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_SlimRim</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -554,6 +527,7 @@
 		<description>If enabled, limits the thin body type from spawning.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_SlimRim</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- ============================================================ -->
@@ -564,10 +538,7 @@
 		<defName>TweakSubSection_TraitCountAdjustment</defName>
 		<label>Trait Count Adjustment</label>
 		<description>As of 1.4 this isn't fully functional, changes to the way traits generate made it so the first 1-3 can always generate like normal, regardless of what I do. So this is only usefuly currently for those who want to guarantee more than 1 or have more in general. Won't affect newborns/children as they have a complicated system for their growth.</description>
-		<tweaks>
-			<li>Tweak_TraitCountAdjustment</li>
-			<li>Tweak_TraitCountRange</li>
-		</tweaks>
+		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -576,6 +547,7 @@
 		<description>If enabled, allows the range to take effect.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TraitCountAdjustment</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -585,6 +557,7 @@
 		<tweakType>IntRange</tweakType>
 		<defaultValue>3~3</defaultValue>
 		<intRange>1~8</intRange>
+		<subSection>TweakSubSection_TraitCountAdjustment</subSection>
 	</TweaksGalore.TweakDef>
 
 </Defs>

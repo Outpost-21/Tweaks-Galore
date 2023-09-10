@@ -4,14 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_VFEInsectoids</defName>
 		<label>Vanilla Factions Expanded - Insectoids</label>
-		<tweaks>
-			<li>Tweak_AllowAwakenedModification</li>
-			<li>Tweak_CraftableSonicInfestationRepeller</li>
-			<li>Tweak_CraftableBioEngineering</li>
-		</tweaks>
-		<required>
-			<li>OskarPotocki.VFE.Insectoid</li>
-		</required>
+		<category>TweakCategory_VanillaExpanded</category>
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
@@ -20,9 +13,7 @@
 		<description>If enabled, increases the lifespan of vat grown insectoids to be more in line with normal ones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>OskarPotocki.VFE.Insectoid</li>
-		</required>
+		<section>TweakSection_VFEInsectoids</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -31,9 +22,7 @@
 		<description>If enabled, adds a somewhat balanced cost for the Sonic Infestation Repeller instead of only being available through rewards.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>OskarPotocki.VFE.Insectoid</li>
-		</required>
+		<section>TweakSection_VFEInsectoids</section>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -42,9 +31,7 @@
 		<description>If enabled, adds a somewhat balanced costs for the bio-engineering structures that are usually only available through rewards.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<required>
-			<li>OskarPotocki.VFE.Insectoid</li>
-		</required>
+		<section>TweakSection_VFEInsectoids</section>
 	</TweaksGalore.TweakDef>
 
 </Defs>
