@@ -56,6 +56,7 @@
 		<description>If enabled, the vanilla research window will now have a small indicator of the tech level of the research project currently selected and have a counter telling you the total projects you have completed for that level.\n\nThis will only ever be applied the the vanilla window, if you want another mods UI to be affected, ask them, there is nothing stopping them implementing their own independant counter!</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_TechTraversal</subSection>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>

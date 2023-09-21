@@ -4,13 +4,6 @@
 	<TweaksGalore.TweakCategoryDef>
 		<defName>TweakCategory_VanillaExpanded</defName>
 		<label>Vanilla Expanded</label>
-		<sections>
-			<li MayRequire="OskarPotocki.VFE.Empire">TweakSection_VFEEmpire</li>
-			<li MayRequire="VanillaExpanded.VPsycastsE">TweakSection_VanillaPsycastingExpanded</li>
-			<li MayRequire="OskarPotocki.VFE.Insectoid">TweakSection_VFEInsectoids</li>
-			<li MayRequire="OskarPotocki.VFE.Pirates">TweakSection_VFEPirates</li>
-			<li MayRequire="vanillaracesexpanded.android">TweakSection_VREAndroids</li>
-		</sections>
 		<orderID>100</orderID>
 	</TweaksGalore.TweakCategoryDef>
 

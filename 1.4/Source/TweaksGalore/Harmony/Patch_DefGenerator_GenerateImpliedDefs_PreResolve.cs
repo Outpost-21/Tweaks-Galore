@@ -26,6 +26,10 @@ namespace TweaksGalore
 
         public static IEnumerable<TweakDef> ImpliedPowerTweakDefs()
         {
+            if (TGTweakDefOf.TweakSubSection_PowerAdjusting.tweaks.NullOrEmpty())
+            {
+                TGTweakDefOf.TweakSubSection_PowerAdjusting.tweaks = new List<TweakDef>();
+            }
             foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs.Where(t => t.GetCompProperties<CompProperties_Power>() != null))
             {
                 string generatedDefName = "Tweak_PowerAdj_" + def.defName;
