@@ -13,6 +13,15 @@
 	<!-- ======================================================= -->
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableSpecialSkinShader</defName>
+		<label>Disable Special Skin Shader</label>
+		<description>In vanilla, skin that isn't overridden to a natural colour by genes has a special shader on it adding a pinkish red tint to it, which personally I think looks horrible on a lot of natural skin tones. This disables it and uses the shader typically assigned when they use an unnatural skin colour.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_UghYouGotMe</defName>
 		<label>Ugh You Got Me</label>
 		<description>Prevents social fights from going too far, ending the fight before too much damage is done, if damage was about to be done that would have been extreme (biting off an arm for example, it happens) then it negates that damage.</description>
