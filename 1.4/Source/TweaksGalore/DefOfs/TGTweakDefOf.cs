@@ -21,6 +21,14 @@ namespace TweaksGalore
 
         public static TweakSubSectionDef TweakSubSection_PowerAdjusting;
 
+        public static TweakDef Tweak_SkillTweaks;
+        public static TweakDef Tweak_SkillLossMultiplier;
+        public static TweakDef Tweak_SkillGainMultiplier;
+        public static TweakDef Tweak_SkillLossThreshold;
+        public static TweakDef Tweak_NotMyBestWork;
+        public static TweakDef Tweak_NotMyBestwork_BaseLevelCap;
+        public static TweakDef Tweak_NotMyBestwork_MinorPassionCap;
+        public static TweakDef Tweak_NotMyBestwork_MajorPassionCap;
         public static TweakDef Tweak_DisableSpecialSkinShader;
         public static TweakDef Tweak_NFSM_PreventByTrainability;
         public static TweakDef Tweak_NFSM_PreventByNuzzleable;

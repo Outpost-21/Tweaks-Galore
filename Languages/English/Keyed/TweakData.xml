@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<TweaksGalore.IncapableOf>Skill Limited Work Types</TweaksGalore.IncapableOf>
+	<TweaksGalore.CannotDoThisWork>{0} is only capable of doing this work to a limited skill level.</TweaksGalore.CannotDoThisWork>
+	<TweaksGalore.IsIncapableOfViolenceLower>{0} is non-violent and not assigned a weapon</TweaksGalore.IsIncapableOfViolenceLower>
+
+</LanguageData>

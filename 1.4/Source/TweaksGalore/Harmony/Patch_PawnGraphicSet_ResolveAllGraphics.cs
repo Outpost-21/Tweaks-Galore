@@ -23,9 +23,12 @@ namespace TweaksGalore
 				if (__instance.pawn.RaceProps.Humanlike)
 				{
 					LogUtil.LogMessage("Cutout Skin Shader Used");
-					__instance.nakedGraphic = GraphicDatabase.Get<Graphic_Multi>(__instance.pawn.story.bodyType.bodyNakedGraphicPath, ShaderDatabase.Cutout, Vector2.one, __instance.pawn.story.SkinColor);
-					PortraitsCache.SetDirty(__instance.pawn);
-					GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(__instance.pawn);
+					if(__instance.nakedGraphic.Shader == ShaderDatabase.CutoutSkin || __instance.nakedGraphic.Shader == ShaderDatabase.CutoutSkinColorOverride)
+                    {
+						__instance.nakedGraphic = GraphicDatabase.Get<Graphic_Multi>(__instance.nakedGraphic.path, ShaderDatabase.Cutout, __instance.nakedGraphic.drawSize, __instance.nakedGraphic.Color, __instance.nakedGraphic.ColorTwo);
+						PortraitsCache.SetDirty(__instance.pawn);
+						GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(__instance.pawn);
+					}
 				}
 			}
 		}
