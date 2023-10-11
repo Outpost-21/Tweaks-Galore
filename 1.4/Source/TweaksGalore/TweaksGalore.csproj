@@ -85,6 +85,8 @@
     <Compile Include="Defs\TweakBaseDef.cs" />
     <Compile Include="Harmony\Patch_Corpse_RotStageChanged.cs" />
     <Compile Include="Harmony\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs" />
+    <Compile Include="Harmony\Patch_HeadTypeDef_GetGraphic.cs" />
+    <Compile Include="Harmony\Patch_PawnGraphicSet_ResolveAllGraphics.cs" />
     <Compile Include="Harmony\Patch_ShaderUtility_GetSkinShader.cs" />
     <Compile Include="Harmony\Patch_Pawn_ApparelTracker_Notify_PawnKilled.cs" />
     <Compile Include="Harmony\Patch_SkillRecord_LearningSaturatedToday.cs" />
