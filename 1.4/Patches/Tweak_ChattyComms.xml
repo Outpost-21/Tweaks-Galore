@@ -5,47 +5,18 @@
 		<settings>
 			<li>Tweak_ChattyComms</li>
 		</settings>
+		<inactive Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/JoyGiverDef[defName="TweaksGalore_ChattyComms"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/JobDef[defName="TweaksGalore_ChattyComms"]</xpath>
+				</li>
+			</operations>
+		</inactive>
 		<active Class="PatchOperationSequence">
 			<operations>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs</xpath>
-					<value>
-						<JoyGiverDef>
-							<defName>TweaksGalore_ChattyComms</defName>
-							<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
-							<baseChance>4</baseChance>
-							<thingDefs>
-								<li>CommsConsole</li>
-								<li MayRequire="Neronix17.CosmoRim.Core">CosRim_MicroCommsConsole</li>
-								<li MayRequire="Neronix17.CosmoRim.MicroCommsConsole">CosRim_MicroCommsConsole</li>
-							</thingDefs>
-							<jobDef>TweaksGalore_ChattyComms</jobDef>
-							<desireSit>false</desireSit>
-							<joyKind>Social</joyKind>
-							<requiredCapacities>
-								<li>Sight</li>
-								<li>Hearing</li>
-								<li>Talking</li>
-								<li>Manipulation</li>
-							</requiredCapacities>
-						</JoyGiverDef>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs</xpath>
-					<value>
-						<JobDef>
-							<defName>TweaksGalore_ChattyComms</defName>
-							<driverClass>JobDriver_WatchBuilding</driverClass>
-							<reportString>Chatting on Comms</reportString>
-							<joyKind>Social</joyKind>
-							<joySkill>Social</joySkill>
-							<joyDuration>4000</joyDuration>
-							<joyXpPerTick>0.004</joyXpPerTick>
-							<joyMaxParticipants>1</joyMaxParticipants>
-						</JobDef>
-					</value>
-				</li>
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/ThingDef[defName="CommsConsole"]/building</xpath>
 					<match Class="PatchOperationAdd">

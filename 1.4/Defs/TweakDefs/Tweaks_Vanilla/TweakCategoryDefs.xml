@@ -8,9 +8,9 @@
 	</TweaksGalore.TweakCategoryDef>
 
 	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_PennedAnimals</defName>
-		<label>Penned Animals</label>
-		<sectionWorker>TweaksGalore.SectionWorker_PennedAnimals</sectionWorker>
+		<defName>TweakSection_Vanilla_General</defName>
+		<label>General</label>
+		<sortTweaks>true</sortTweaks>
 		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
@@ -22,9 +22,38 @@
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_WeatherControl</defName>
-		<label>Weather</label>
-		<sectionWorker>TweaksGalore.SectionWorker_WeatherControl</sectionWorker>
+		<defName>TweakSection_Vanilla_Jobs</defName>
+		<label>Jobs</label>
+		<description>Tweaks specific to pawn jobs.</description>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Vanilla</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Mechanoids</defName>
+		<label>Mechanoids</label>
+		<description>Tweaks specific to mechanoids.</description>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Vanilla</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_PennedAnimals</defName>
+		<label>Penned Animals</label>
+		<sectionWorker>TweaksGalore.SectionWorker_PennedAnimals</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Power</defName>
+		<label>Power</label>
+		<description>Allows tweaking the usage rate of some buildings.</description>
+		<category>TweakCategory_Vanilla</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Research</defName>
+		<label>Research</label>
 		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
@@ -32,6 +61,13 @@
 		<defName>TweakSection_Vanilla_ResearchProjects</defName>
 		<label>Research Projects</label>
 		<sectionWorker>TweaksGalore.SectionWorker_ResearchProjects</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_Resources</defName>
+		<label>Resources</label>
+		<description>This will only function against vanilla versions of the raid types, some modded raids use their own version and will bypass these tweaks.</description>
 		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
@@ -48,5 +84,12 @@
 		<sectionWorker>TweaksGalore.SectionWorker_StackSizeControl</sectionWorker>
 		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef> -->
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Vanilla_WeatherControl</defName>
+		<label>Weather</label>
+		<sectionWorker>TweaksGalore.SectionWorker_WeatherControl</sectionWorker>
+		<category>TweakCategory_Vanilla</category>
+	</TweaksGalore.TweakSectionDef>
 
 </Defs>

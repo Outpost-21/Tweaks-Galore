@@ -4,5 +4,8 @@
 	<TweaksGalore.IncapableOf>Skill Limited Work Types</TweaksGalore.IncapableOf>
 	<TweaksGalore.CannotDoThisWork>{0} is only capable of doing this work to a limited skill level.</TweaksGalore.CannotDoThisWork>
 	<TweaksGalore.IsIncapableOfViolenceLower>{0} is non-violent and not assigned a weapon</TweaksGalore.IsIncapableOfViolenceLower>
+	
+	<TG_HunterLacksWeapon>Hunter lacks weapon</TG_HunterLacksWeapon>
+	<TG_HunterLacksWeaponDesc>A hunter does not have a weapon.\n\nWhile they can still perform their job, it is highly recommended to give them a weapon.</TG_HunterLacksWeaponDesc>
 
 </LanguageData>

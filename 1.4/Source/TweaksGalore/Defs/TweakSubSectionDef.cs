@@ -11,6 +11,5 @@ namespace TweaksGalore
 {
     public class TweakSubSectionDef : TweakBaseDef
     {
-        public List<TweakDef> tweaks;
     }
 }

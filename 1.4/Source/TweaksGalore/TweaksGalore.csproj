@@ -79,6 +79,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Harmony\Patch_CompShearable_CompInspectStringExtra.cs" />
+    <Compile Include="Harmony\Patch_CompMilkable_CompInspectStringExtra.cs" />
     <Compile Include="Utilities\CodeMatch.cs" />
     <Compile Include="Utilities\CodeMatcher.cs" />
     <Compile Include="Data\RoyalPermitSettings.cs" />
@@ -186,7 +188,7 @@
     <Compile Include="Utilities\SettingsUtil.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Utilities\LogUtil.cs" />
-    <Compile Include="PatchOperation\PatchOperation_SettingActive.cs" />
+    <None Include="PatchOperation\PatchOperation_SettingActive.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />
     <Compile Include="Harmony\Patch_InfestationCellFinder_GetScoreAt.cs" />
     <Compile Include="Harmony\Patch_GetRewardStackElementsForThings.cs" />

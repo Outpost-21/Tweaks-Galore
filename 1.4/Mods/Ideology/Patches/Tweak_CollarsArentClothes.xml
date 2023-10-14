@@ -3,17 +3,14 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>Tweak_GrowableGrass</li>
+			<li>Tweak_CollarsArentClothes</li>
 		</settings>
 		<active Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Plant_GrayGrass"]/plant</xpath>
+			<xpath>/Defs/ThingDef[defName="Apparel_Collar"]/apparel</xpath>
 			<value>
-				<sowTags>
-					<li>Ground</li>
-				</sowTags>
+				<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			</value>
 		</active>
 	</Operation>
-
 
 </Patch>

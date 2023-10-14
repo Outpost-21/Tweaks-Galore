@@ -56,24 +56,24 @@ namespace TweaksGalore
             {
                 if (tweak.subSection != null)
                 {
-                    if (tweak.subSection.tweaks.NullOrEmpty())
+                    tweak.subSection.AddTweak(tweak);
+                }
+                if (!tweak.subSections.NullOrEmpty())
+                {
+                    for (int i = 0; i < tweak.subSections.Count; i++)
                     {
-                        tweak.subSection.tweaks = new List<TweakDef>();
-                    }
-                    if (!tweak.subSection.tweaks.Contains(tweak))
-                    {
-                        tweak.subSection.tweaks.Add(tweak);
+                        tweak.subSections[i].AddTweak(tweak);
                     }
                 }
                 if (tweak.section != null)
                 {
-                    if (tweak.section.tweaks.NullOrEmpty())
+                    tweak.section.AddTweak(tweak);
+                }
+                if (!tweak.sections.NullOrEmpty())
+                {
+                    for (int i = 0; i < tweak.sections.Count; i++)
                     {
-                        tweak.section.tweaks = new List<TweakDef>();
-                    }
-                    if (!tweak.section.tweaks.Contains(tweak))
-                    {
-                        tweak.section.tweaks.Add(tweak);
+                        tweak.sections[i].AddTweak(tweak);
                     }
                 }
             }
@@ -81,13 +81,13 @@ namespace TweaksGalore
             {
                 if(subSection.section != null)
                 {
-                    if (subSection.section.subSections.NullOrEmpty())
+                    subSection.section.AddSubSection(subSection);
+                }
+                if (!subSection.sections.NullOrEmpty())
+                {
+                    for (int i = 0; i < subSection.sections.Count; i++)
                     {
-                        subSection.section.subSections = new List<TweakSubSectionDef>();
-                    }
-                    if (!subSection.section.subSections.Contains(subSection))
-                    {
-                        subSection.section.subSections.Add(subSection);
+                        subSection.sections[i].AddSubSection(subSection);
                     }
                 }
             }
@@ -95,15 +95,51 @@ namespace TweaksGalore
             {
                 if(section.category != null)
                 {
-                    if (section.category.sections.NullOrEmpty())
+                    section.category.AddSection(section);
+                }
+                if (!section.categories.NullOrEmpty())
+                {
+                    for (int i = 0; i < section.categories.Count; i++)
                     {
-                        section.category.sections = new List<TweakSectionDef>();
-                    }
-                    if (!section.category.sections.Contains(section))
-                    {
-                        section.category.sections.Add(section);
+                        section.categories[i].AddSection(section);
                     }
                 }
+            }
+        }
+
+        public static void AddTweak(this TweakBaseDef holder, TweakDef tweak)
+        {
+            if (holder.heldTweaks.NullOrEmpty())
+            {
+                holder.heldTweaks = new List<TweakDef>();
+            }
+            if (!holder.heldTweaks.Contains(tweak))
+            {
+                holder.heldTweaks.Add(tweak);
+            }
+        }
+
+        public static void AddSubSection(this TweakSectionDef holder, TweakSubSectionDef subSect)
+        {
+            if (holder.heldSubSections.NullOrEmpty())
+            {
+                holder.heldSubSections = new List<TweakSubSectionDef>();
+            }
+            if (!holder.heldSubSections.Contains(subSect))
+            {
+                holder.heldSubSections.Add(subSect);
+            }
+        }
+
+        public static void AddSection(this TweakCategoryDef holder, TweakSectionDef sect)
+        {
+            if (holder.heldSections.NullOrEmpty())
+            {
+                holder.heldSections = new List<TweakSectionDef>();
+            }
+            if (!holder.heldSections.Contains(sect))
+            {
+                holder.heldSections.Add(sect);
             }
         }
 

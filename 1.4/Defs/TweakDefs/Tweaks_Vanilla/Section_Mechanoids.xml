@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_Mechanoids</defName>
-		<label>Mechanoids</label>
-		<description>Tweaks specific to mechanoids.</description>
-		<sortTweaks>true</sortTweaks>
-		<category>TweakCategory_Vanilla</category>
-	</TweaksGalore.TweakSectionDef>
-
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_MechanoidHeatArmor</defName>
 		<label>Mechanoid Heat Armor</label>

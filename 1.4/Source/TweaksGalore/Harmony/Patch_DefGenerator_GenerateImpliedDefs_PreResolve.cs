@@ -26,9 +26,9 @@ namespace TweaksGalore
 
         public static IEnumerable<TweakDef> ImpliedPowerTweakDefs()
         {
-            if (TGTweakDefOf.TweakSubSection_PowerAdjusting.tweaks.NullOrEmpty())
+            if (TGTweakDefOf.TweakSubSection_PowerAdjusting.heldTweaks.NullOrEmpty())
             {
-                TGTweakDefOf.TweakSubSection_PowerAdjusting.tweaks = new List<TweakDef>();
+                TGTweakDefOf.TweakSubSection_PowerAdjusting.heldTweaks = new List<TweakDef>();
             }
             foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs.Where(t => t.GetCompProperties<CompProperties_Power>() != null))
             {
@@ -42,7 +42,7 @@ namespace TweaksGalore
                 {
                     continue;
                 }
-                if (!TGTweakDefOf.TweakSubSection_PowerAdjusting.tweaks.Any(t => t.defName == generatedDefName))
+                if (!TGTweakDefOf.TweakSubSection_PowerAdjusting.heldTweaks.Any(t => t.defName == generatedDefName))
                 {
                     yield return CreatePowerTweakDef(def, generatedDefName, comp);
                 }

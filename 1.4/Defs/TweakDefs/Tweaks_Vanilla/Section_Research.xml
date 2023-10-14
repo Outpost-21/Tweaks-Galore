@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_Research</defName>
-		<label>Research</label>
-		<category>TweakCategory_Vanilla</category>
-	</TweaksGalore.TweakSectionDef>
-
 	<TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_TechTraversal</defName>
 		<label>Tech Traversal</label>

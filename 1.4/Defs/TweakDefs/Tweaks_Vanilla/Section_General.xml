@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_General</defName>
-		<label>General</label>
-		<sortTweaks>true</sortTweaks>
-		<category>TweakCategory_Vanilla</category>
-	</TweaksGalore.TweakSectionDef>
-
 	<!-- ======================================================= -->
 	<!-- ================== Individual Tweaks ================== -->
 	<!-- ======================================================= -->
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AnimalResourceLabel</defName>
+		<label>Animal Resource Label</label>
+		<description>Attaches details to milkable and shearable animals info that tells you how long is left till they can be harvested and what you'll get out of it.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_DisableSpecialSkinShader</defName>
@@ -88,6 +91,15 @@
 		<defName>Tweak_BoomalopesBleedChemfuel</defName>
 		<label>Boomalopes Bleed Chemfuel</label>
 		<description>Changes the blood def from boomalopes and boomrats to be chemfuel puddles instead.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BuildablePackedDirt</defName>
+		<label>Buildable Packed Dirt</label>
+		<description>Simply adds a buildable version of the packed dirt paths from vanilla.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
@@ -567,6 +579,47 @@
 		<defaultValue>3~3</defaultValue>
 		<intRange>1~8</intRange>
 		<subSection>TweakSubSection_TraitCountAdjustment</subSection>
+	</TweaksGalore.TweakDef>
+
+	<!-- ============================================================ -->
+	<!-- ================== Ancient Deconstruction ================== -->
+	<!-- ============================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_AncientDeconstruction</defName>
+		<label>Ancient Deconstruction</label>
+		<description>Makes the Ancient Ruins added by Ideology and/or Biotech deconstructable instead of having to destroy them.</description>
+		<sections>
+			<li>TweakSection_Ideology_General</li>
+			<li>TweakSection_Biotech_General</li>
+		</sections>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AncientDeconstruction</defName>
+		<label>Enabled</label>
+		<description>Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AncientDeconstruction</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AncientDeconstructionProper</defName>
+		<label>Give Proper Materials</label>
+		<description>Changes returned items to some reasonable materials instead of just slag.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AncientDeconstruction</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_AncientReconstruction</defName>
+		<label>Reconstruction</label>
+		<description>Makes the Ancient Ruins buildable, using the same materials you would gain from deconstructing them.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_AncientDeconstruction</subSection>
 	</TweaksGalore.TweakDef>
 
 </Defs>

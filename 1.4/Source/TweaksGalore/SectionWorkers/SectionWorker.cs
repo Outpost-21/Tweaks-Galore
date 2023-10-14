@@ -32,15 +32,15 @@ namespace TweaksGalore
                 }
             }
             // Do Individual Tweaks
-            if (!def.tweaks.NullOrEmpty())
+            if (!def.heldTweaks.NullOrEmpty())
             {
                 if (def.sortTweaks)
                 {
-                    def.tweaks.SortBy(t => t.label);
+                    def.heldTweaks.SortBy(t => t.label);
                 }
-                for (int i = 0; i < def.tweaks.Count; i++)
+                for (int i = 0; i < def.heldTweaks.Count; i++)
                 {
-                    TweakDef tweak = def.tweaks[i];
+                    TweakDef tweak = def.heldTweaks[i];
                     if ((tweak.label.ToLower().Contains(filter.ToLower()) || tweak.description.ToLower().Contains(filter.ToLower())) && (tweak.required.NullOrEmpty() || tweak.required.All(r => ModLister.GetActiveModWithIdentifier(r) != null)) && (tweak.incompatible.NullOrEmpty() || tweak.incompatible.All(i => ModLister.GetActiveModWithIdentifier(i) == null)))
                     {
                         tweak.Worker.DoTweakContents(listing, filter);
@@ -48,11 +48,11 @@ namespace TweaksGalore
                 }
             }
             // Do Sub-Sections
-            if (!def.subSections.NullOrEmpty())
+            if (!def.heldSubSections.NullOrEmpty())
             {
-                for (int i = 0; i < def.subSections.Count; i++)
+                for (int i = 0; i < def.heldSubSections.Count; i++)
                 {
-                    TweakSubSectionDef subSection = def.subSections[i];
+                    TweakSubSectionDef subSection = def.heldSubSections[i];
                     if (subSection.FilterForTweak(filter) && (subSection.required.NullOrEmpty() || subSection.required.All(r => ModLister.GetActiveModWithIdentifier(r) != null)) && (subSection.incompatible.NullOrEmpty() || subSection.incompatible.All(i => ModLister.GetActiveModWithIdentifier(i) == null)))
                     {
                         listing.DoSubSection(subSection);

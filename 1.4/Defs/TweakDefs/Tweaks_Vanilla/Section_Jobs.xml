@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_Jobs</defName>
-		<label>Jobs</label>
-		<description>Tweaks specific to pawn jobs.</description>
-		<sortTweaks>true</sortTweaks>
-		<category>TweakCategory_Vanilla</category>
-	</TweaksGalore.TweakSectionDef>
-
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_RecreationalDrums</defName>
 		<label>Recreational Drums</label>

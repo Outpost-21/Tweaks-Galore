@@ -21,6 +21,7 @@ namespace TweaksGalore
 
         public static TweakSubSectionDef TweakSubSection_PowerAdjusting;
 
+        public static TweakDef Tweak_AnimalResourceLabel;
         public static TweakDef Tweak_SkillTweaks;
         public static TweakDef Tweak_SkillLossMultiplier;
         public static TweakDef Tweak_SkillGainMultiplier;

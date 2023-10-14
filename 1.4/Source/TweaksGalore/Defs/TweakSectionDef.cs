@@ -13,9 +13,7 @@ namespace TweaksGalore
     {
         public Type sectionWorker = typeof(SectionWorker);
 
-        public List<TweakSubSectionDef> subSections;
-
-        public List<TweakDef> tweaks;
+        public List<TweakSubSectionDef> heldSubSections;
 
         public bool sortTweaks = true;
 

@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_Resources</defName>
-		<label>Resources</label>
-		<description>This will only function against vanilla versions of the raid types, some modded raids use their own version and will bypass these tweaks.</description>
-		<category>TweakCategory_Vanilla</category>
-	</TweaksGalore.TweakSectionDef>
-
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_MetalDoesntBurn</defName>
 		<label>Metal Doesn't Burn</label>

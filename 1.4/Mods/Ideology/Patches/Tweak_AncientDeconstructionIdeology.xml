@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>tweak_ancientDeconstruction</li>
+			<li>Tweak_AncientDeconstruction</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-				<li Class="TweaksGalore.PatchOperation_SettingActive">
+				<li Class="TweaksGalore.PatchOperation_TweakBool">
 					<settings>
-						<li>tweak_ancientDeconstruction_mode</li>
+						<li>Tweak_AncientDeconstructionProper</li>
 					</settings>
 					<!-- inactive means the mode is set to Slag -->
 					<inactive Class="PatchOperationSequence">

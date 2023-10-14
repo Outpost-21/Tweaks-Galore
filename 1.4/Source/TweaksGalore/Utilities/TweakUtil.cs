@@ -129,7 +129,7 @@ namespace TweaksGalore
             {
                 listing.Note(def.description, GameFont.Tiny);
                 // Get Sub-Section Tweaks
-                IEnumerable<TweakDef> tweakIEnumerable = from x in def.tweaks
+                IEnumerable<TweakDef> tweakIEnumerable = from x in def.heldTweaks
                                                          where (x.required.NullOrEmpty() || x.required.All(r => ModLister.GetActiveModWithIdentifier(r) != null)) 
                                                          && (x.incompatible.NullOrEmpty() || x.incompatible.All(i => ModLister.GetActiveModWithIdentifier(i) == null))
                                                          select x;
@@ -144,11 +144,11 @@ namespace TweaksGalore
 
         public static bool FilterForTweak(this TweakSectionDef def, string filter)
         {
-            if (def.tweaks?.Any(t => t.FilterForTweak(filter)) ?? false)
+            if (def.heldTweaks?.Any(t => t.FilterForTweak(filter)) ?? false)
             {
                 return true;
             }
-            if (def.subSections?.Any(ss => ss.FilterForTweak(filter)) ?? false)
+            if (def.heldSubSections?.Any(ss => ss.FilterForTweak(filter)) ?? false)
             {
                 return true;
             }
@@ -157,7 +157,7 @@ namespace TweaksGalore
 
         public static bool FilterForTweak(this TweakSubSectionDef def, string filter)
         {
-            if (def.tweaks?.Any(t => t.FilterForTweak(filter)) ?? false)
+            if (def.heldTweaks?.Any(t => t.FilterForTweak(filter)) ?? false)
             {
                 return true;
             }
@@ -177,9 +177,9 @@ namespace TweaksGalore
         {
             List<TweakDef> result = new List<TweakDef>();
 
-            if (!def.tweaks.NullOrEmpty())
+            if (!def.heldTweaks.NullOrEmpty())
             {
-                foreach (TweakDef tweakDef in def.tweaks)
+                foreach (TweakDef tweakDef in def.heldTweaks)
                 {
                     if (!result.Contains(tweakDef))
                     {
@@ -188,13 +188,13 @@ namespace TweaksGalore
                 }
             }
 
-            if (!def.subSections.NullOrEmpty())
+            if (!def.heldSubSections.NullOrEmpty())
             {
-                foreach (TweakSubSectionDef subSection in def.subSections)
+                foreach (TweakSubSectionDef subSection in def.heldSubSections)
                 {
-                    if (!subSection.tweaks.NullOrEmpty())
+                    if (!subSection.heldTweaks.NullOrEmpty())
                     {
-                        foreach (TweakDef tweakDef in subSection.tweaks)
+                        foreach (TweakDef tweakDef in subSection.heldTweaks)
                         {
                             if (!result.Contains(tweakDef))
                             {

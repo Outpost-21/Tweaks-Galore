@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>tweak_betterGloomlight</li>
+			<li>Tweak_BetterGloomlight</li>
 		</settings>
-		<active Class="TweaksGalore.PatchOperation_SettingActive">
+		<active Class="TweaksGalore.PatchOperation_TweakBool">
 			<settings>
-				<li>tweak_gloomlightSunlamp</li>
+				<li>Tweak_BetterGloomlightSunlamp</li>
 			</settings>
-			<active Class="TweaksGalore.PatchOperation_SettingActive">
+			<active Class="TweaksGalore.PatchOperation_TweakBool">
 				<settings>
-					<li>tweak_gloomlightDarklight</li>
+					<li>Tweak_BetterGloomlightDarklight</li>
 				</settings>
 				<active Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Gloomlight"]/comps</xpath>
@@ -38,9 +38,9 @@
 					</value>
 				</inactive>
 			</active>
-			<inactive Class="TweaksGalore.PatchOperation_SettingActive">
+			<inactive Class="TweaksGalore.PatchOperation_TweakBool">
 				<settings>
-					<li>tweak_gloomlightDarklight</li>
+					<li>Tweak_BetterGloomlightDarklight</li>
 				</settings>
 				<active Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Gloomlight"]/comps</xpath>

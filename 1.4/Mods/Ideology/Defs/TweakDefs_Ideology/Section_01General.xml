@@ -8,6 +8,24 @@
 	</TweaksGalore.TweakSectionDef>
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_StrapsArentClothes</defName>
+		<label>Slave Straps For Nudists</label>
+		<description>Makes slave straps acceptable for nudists, it makes no real sense that they'd be clothes so this feels like a bugfix honestly.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_CollarsArentClothes</defName>
+		<label>Slave Collars For Nudists</label>
+		<description>Makes slave collars acceptable for nudists, it makes no real sense that they'd be clothes so this feels like a bugfix honestly.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_YouLookFine</defName>
 		<label>You Look Fine!</label>
 		<description>Stops pawns from changing their look at the style bench every five goddamn minutes, it's a story simulator not Barbies Makeup Challenge.</description>
@@ -73,44 +91,6 @@
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Ideology_General</section>
-	</TweaksGalore.TweakDef>
-
-	<!-- ============================================================ -->
-	<!-- ================== Ancient Deconstruction ================== -->
-	<!-- ============================================================ -->
-
-	<TweaksGalore.TweakSubSectionDef>
-		<defName>TweakSubSection_AncientDeconstruction</defName>
-		<label>Ancient Deconstruction</label>
-		<description>Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.</description>
-		<section>TweakSection_Ideology_General</section>
-	</TweaksGalore.TweakSubSectionDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_AncientDeconstruction</defName>
-		<label>Enabled</label>
-		<description>Makes the Ancient Ruins added by Ideology and Biotech deconstructable instead of having to destroy them.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<subSection>TweakSubSection_AncientDeconstruction</subSection>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_AncientDeconstructionProper</defName>
-		<label>Give Proper Materials</label>
-		<description>Changes returned items to some reasonable materials instead of just slag.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<subSection>TweakSubSection_AncientDeconstruction</subSection>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_AncientReconstruction</defName>
-		<label>Reconstruction</label>
-		<description>Makes the Ancient Ruins buildable, using the same materials you would gain from deconstructing them.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<subSection>TweakSubSection_AncientDeconstruction</subSection>
 	</TweaksGalore.TweakDef>
 
 </Defs>

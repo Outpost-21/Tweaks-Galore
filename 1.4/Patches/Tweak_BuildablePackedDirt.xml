@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_BuildablePackedDirt</li>
+		</settings>
+		<inactive Class="PatchOperationRemove">
+			<xpath>/Defs[defName="TweaksGalore_PlayerPackedDirt"]</xpath>
+		</inactive>
+	</Operation>
+
+
+</Patch>

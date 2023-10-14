@@ -13,13 +13,13 @@ namespace TweaksGalore
     {
         public int orderID = 9999;
 
-        public List<TweakSectionDef> sections;
+        public List<TweakSectionDef> heldSections;
 
         public void DoCategoryContents(Listing_Standard listing, TweaksGaloreSettings settings, string filter)
         {
-            if(!sections.NullOrEmpty())
+            if(!heldSections.NullOrEmpty())
             {
-                foreach (TweakSectionDef section in sections)
+                foreach (TweakSectionDef section in heldSections)
                 {
                     if (filter.NullOrEmpty() || section.FilterForTweak(filter))
                     {

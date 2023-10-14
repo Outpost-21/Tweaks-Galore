@@ -17,8 +17,16 @@ namespace TweaksGalore
 
         public TweakCategoryDef category;
 
+        public List<TweakCategoryDef> categories;
+
         public TweakSectionDef section;
 
+        public List<TweakSectionDef> sections;
+
         public TweakSubSectionDef subSection;
+
+        public List<TweakSubSectionDef> subSections;
+
+        public List<TweakDef> heldTweaks;
     }
 }
