@@ -15,9 +15,9 @@
 					</value>
 				</li>
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()=MineableComponentsIndustrial]</xpath>
+					<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()="MineableComponentsIndustrial"]</xpath>
 					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()=MineableComponentsIndustrial]</xpath>
+						<xpath>Defs/ThingDef[defName="PreciousLump"]/genStep/li[text()="MineableComponentsIndustrial"]</xpath>
 					</match>
 				</li>
 			</operations>

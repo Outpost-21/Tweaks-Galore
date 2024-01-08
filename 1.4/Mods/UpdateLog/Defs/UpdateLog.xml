@@ -53,18 +53,16 @@ Old settings should still be set up how they were, I attempted to make sure they
 -- Slave Collars for Nudists
 -- Slave Straps for Nudists
 -- Animal Resource Label
-- Automatic Night Owl
 -- Allow Prioritizing (Sleep, Recreation, Research)
-- Keep Doors Clear
-- Dynamic Population
-- Useful Grass
-- Useful Bushes
-- Hay Doesnt Need Cooling
+-- Dynamic Population
+-- Useful Grass
+-- Useful Bushes
+-- Hay Doesn't Need Cooling
 -- No Job Authors
-- No Lethal Damage Threshold
-- Realistic Rooms
+-- No Lethal Damage Threshold
+-- Realistic Rooms
 -- Prisoner Recreation
-- Trader Info Alert
+-- Trader Info Alert
 -- Repair In Zone
 - Custom Prisoner Interactions
 - More Slaves
@@ -174,7 +172,7 @@ Old settings should still be set up how they were, I attempted to make sure they
 - [VE Vehicles] Researchable Tier 3
 - [VE Vehicles] Craftable Tier 4
 - [VPE Mushrooms] Just Let Me Grow!
-- [VRE Saurids] Fictionalised Cold Blooded
+-- [VRE Saurids] Alternate Cold Blooded
 - [VFE Mechanoids] Craftable Mechanoid Components</text>
 			</li>
 			<li>

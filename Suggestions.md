@@ -222,7 +222,7 @@ Decision: Nope, I'm not adding any bulk recipes.
 Original: https://steamcommunity.com/sharedfiles/filedetails/?id=2056012179
 Author: Ben
 Summary: Automatically assigns the sleep schedule for starting, newly recruited, and PrepareCarefully pawns with the night owl trait.
-Decision: Yeah sure. Probably a different implementation since I'm sure as fuck not doing compatibility for PC when the author has shown no interest in making it compatible with *anything* themselves.
+Decision: Nah, pass.
 
 ### Caravan Mood Buff
 Original: https://steamcommunity.com/sharedfiles/filedetails/?id=2680751877

@@ -6,6 +6,70 @@
 	<!-- ======================================================= -->
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_TraderPawnAlert</defName>
+		<label>Trader Pawn Alert</label>
+		<description>Shows an alert if there's a trader on the colony map.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_OrbitalTraderAlert</defName>
+		<label>Orbital Trader Alert</label>
+		<description>Shows an alert if there's an orbital trader, if you have a comms console built.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_RealisticRooms</defName>
+		<label>Realistic Rooms</label>
+		<description>Adjusts room requirements so you can get away with smaller spaces, each size is lowered to roughly half of the vanilla values.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_RealisticRooms</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableLethalDamageThreshold</defName>
+		<label>Disable Lethal Damage Threshold</label>
+		<description>Vanilla RimWorld has it so pawns can recieve a maximum of 150 damage across all body parts before killing them. This removes that threshold, so they instead only die from an actual cause.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_HayDoesntNeedCooling</defName>
+		<label>hay doesn't need cooling</label>
+		<description>Patches hay so it won't rot if it isn't cooled.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_UsefulGrass</defName>
+		<label>useful grass</label>
+		<description>Patches grass and tall grass so when it's cut it provides 2 Hay.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_UsefulBushes</defName>
+		<label>useful bushes</label>
+		<description>Patches bushes so they provide 2 Wood when cut.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_AnimalResourceLabel</defName>
 		<label>Animal Resource Label</label>
 		<description>Attaches details to milkable and shearable animals info that tells you how long is left till they can be harvested and what you'll get out of it.</description>
@@ -13,7 +77,6 @@
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
-
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_DisableSpecialSkinShader</defName>
@@ -100,6 +163,15 @@
 		<defName>Tweak_BuildablePackedDirt</defName>
 		<label>Buildable Packed Dirt</label>
 		<description>Simply adds a buildable version of the packed dirt paths from vanilla.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MinifiableCryptosleep</defName>
+		<label>Minifiable Cryptosleep Caskets</label>
+		<description>Allows cryptosleep caskets to be moved.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
@@ -620,6 +692,89 @@
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<subSection>TweakSubSection_AncientDeconstruction</subSection>
+	</TweaksGalore.TweakDef>
+
+	<!-- ======================================================== -->
+	<!-- ================== Dynamic Population ================== -->
+	<!-- ======================================================== -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_DynamicPopulation</defName>
+		<label>Dynamic Population</label>
+		<description>Provides control over the population thresholds universally, overriding storyteller limitations.</description>
+		<sections>
+			<li>TweakSection_Vanilla_General</li>
+		</sections>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DynamicPopulation</defName>
+		<label>Enabled</label>
+		<description>When enabled, will use the values below to handle population thresholds.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_DynamicPopulation</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_DynamicPopulation</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DynamicPopulation_CriticallyLow</defName>
+		<label>Critically Low</label>
+		<description>Population below or equal to this is considered critically low.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>0</defaultValue>
+		<intRange>0~200</intRange>
+		<subSection>TweakSubSection_DynamicPopulation</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DynamicPopulation_Low</defName>
+		<label>Low</label>
+		<description>Population below or equal to this is considered low.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>1</defaultValue>
+		<intRange>0~200</intRange>
+		<subSection>TweakSubSection_DynamicPopulation</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DynamicPopulation_Typical</defName>
+		<label>Typical</label>
+		<description>Population below or equal to this is considered typical.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>4</defaultValue>
+		<intRange>0~200</intRange>
+		<subSection>TweakSubSection_DynamicPopulation</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DynamicPopulation_High</defName>
+		<label>High</label>
+		<description>Population below or equal to this is considered high.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>7</defaultValue>
+		<intRange>0~200</intRange>
+		<subSection>TweakSubSection_DynamicPopulation</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DynamicPopulation_CriticallyHigh</defName>
+		<label>Critically High</label>
+		<description>Population below or equal to this is considered critically high.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>11</defaultValue>
+		<intRange>0~200</intRange>
+		<subSection>TweakSubSection_DynamicPopulation</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DynamicPopulation_Maximum</defName>
+		<label>Maximum</label>
+		<description>Population below or equal to this is considered maximum.</description>
+		<tweakType>Int</tweakType>
+		<defaultValue>20</defaultValue>
+		<intRange>0~200</intRange>
+		<subSection>TweakSubSection_DynamicPopulation</subSection>
 	</TweaksGalore.TweakDef>
 
 </Defs>

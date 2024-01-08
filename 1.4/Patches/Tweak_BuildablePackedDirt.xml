@@ -6,7 +6,7 @@
 			<li>Tweak_BuildablePackedDirt</li>
 		</settings>
 		<inactive Class="PatchOperationRemove">
-			<xpath>/Defs[defName="TweaksGalore_PlayerPackedDirt"]</xpath>
+			<xpath>/Defs/TerrainDef[defName="TweaksGalore_PlayerPackedDirt"]</xpath>
 		</inactive>
 	</Operation>
 

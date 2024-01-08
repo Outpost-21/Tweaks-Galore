@@ -77,5 +77,14 @@ namespace TweaksGalore
         public static TweakDef Tweak_GauranlenTweaks;
         public static TweakDef Tweak_GauranlenConnectionLossBuildings;
         public static TweakDef Tweak_PoluxTweaks;
+        public static TweakDef Tweak_DynamicPopulation_CriticallyLow;
+        public static TweakDef Tweak_DynamicPopulation_Low;
+        public static TweakDef Tweak_DynamicPopulation_Typical;
+        public static TweakDef Tweak_DynamicPopulation_High;
+        public static TweakDef Tweak_DynamicPopulation_CriticallyHigh;
+        public static TweakDef Tweak_DynamicPopulation_Maximum;
+        public static TweakDef Tweak_DisableLethalDamageThreshold;
+        public static TweakDef Tweak_TraderPawnAlert;
+        public static TweakDef Tweak_OrbitalTraderAlert;
     }
 }
