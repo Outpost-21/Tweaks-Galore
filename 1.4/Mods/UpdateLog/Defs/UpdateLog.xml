@@ -111,7 +111,6 @@ Old settings should still be set up how they were, I attempted to make sure they
 - Uniform Crops
 - Water Pathing Cost
 - Wolves Are Dogs
-- Research Control
 - Animal Medical Alerts
 - Animals Auto-Follow Masters
 - Auto-Deconstruct Finished Moisture Pumps
@@ -183,11 +182,7 @@ Old settings should still be set up how they were, I attempted to make sure they
 - [Outland - Furniture &amp; Decor] No Component Costs
 - [Outer Rim - Core] All Blasters Are Ionized
 - [Outer Rim - Core] Fast Ion
-- [Outer Rim - Core] Explosive Ion
-- [Outer Rim - Droid Depot] Droid Drain Rate
-- [Outer Rim - Droid Depot] Craftable Droid Brain
-- [Supersona Shells] Shell Drain Rate
-- [Mechadroids] Mechadroid Drain Rate</text>
+- [Outer Rim - Core] Explosive Ion</text>
 			</li>
 		</contentList>
 		<links>
