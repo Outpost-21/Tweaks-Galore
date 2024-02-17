@@ -29,9 +29,13 @@ namespace TweaksGalore
 						return;
 					}
 				}
-				Graphic_Multi graphic_Multi = (Graphic_Multi)GraphicDatabase.Get<Graphic_Multi>(__instance.graphicPath, shader, Vector2.one, color);
-				__instance.graphics.Add(new KeyValuePair<Color, Graphic_Multi>(color, graphic_Multi));
-				__result = graphic_Multi;
+				if(__result.Shader == ShaderDatabase.CutoutSkin)
+				{
+					Graphic_Multi graphic_Multi = (Graphic_Multi)GraphicDatabase.Get<Graphic_Multi>(__instance.graphicPath, shader, Vector2.one, color);
+					__instance.graphics.Add(new KeyValuePair<Color, Graphic_Multi>(color, graphic_Multi));
+					__result = graphic_Multi;
+					return;
+				}
 			}
 		}
 	}
