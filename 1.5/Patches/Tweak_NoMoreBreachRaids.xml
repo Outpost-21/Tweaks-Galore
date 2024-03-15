@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_RaidStratBreach</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RaidStrategyDef[@Name="BreachingBase"]/selectionWeightPerPointsCurve/points</xpath>
+					<value>
+						<points>
+							<li>(700, 0)</li>
+							<li>(2000, 0)</li>
+						</points>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RaidStrategyDef[@Name="BreachingBase"]/selectionWeightCurvesPerFaction</xpath>
+					<value>
+						<selectionWeightCurvesPerFaction>
+							<li>
+								<faction>Mechanoid</faction>
+								<selectionWeightPerPointsCurve>
+									<points>
+										<li>(700, 0)</li>
+										<li>(1000, 0)</li>
+									</points>
+								</selectionWeightPerPointsCurve>
+							</li>
+						</selectionWeightCurvesPerFaction>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

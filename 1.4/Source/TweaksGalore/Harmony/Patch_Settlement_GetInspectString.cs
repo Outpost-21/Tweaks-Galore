@@ -20,7 +20,7 @@ namespace TweaksGalore
         public static void Postfix(ref Settlement __instance, ref string __result)
 		{
 			string text = __result;
-            if (TGTweakDefOf.Tweak_NextRestockTimer.BoolValue)
+            if (TweaksGaloreMod.settings.patch_settlementTraderTimer)
 			{
 				if(__instance.Faction != null && __instance.Faction != Faction.OfPlayer && !text.NullOrEmpty() && __instance.trader != null && __instance.trader.EverVisited)
                 {

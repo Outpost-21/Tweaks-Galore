@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
 		<settings>
-			<li>Tweak_NoBackstoryLimits</li>
+			<li>tweak_animaRemoveBackstoryLimits</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>

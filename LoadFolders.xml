@@ -3,6 +3,7 @@
 	<v1.3>
 		<li>/</li>
 		<li>1.3</li>
+		<!-- RimWorld DLC -->
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.3/Mods/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.3/Mods/Ideology</li>
 	</v1.3>
@@ -13,31 +14,40 @@
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.4/Mods/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/Mods/Ideology</li>
 		<li IfModActive="Ludeon.RimWorld.Biotech">1.4/Mods/Biotech</li>
+	</v1.4>
+	<v1.5>
+		<li>/</li>
+		<li>1.5</li>
+		<!-- RimWorld DLC -->
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.5/Mods/Royalty</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/Mods/Ideology</li>
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.5/Mods/Biotech</li>
+		<li IfModActive="Ludeon.RimWorld.Anomaly">1.5/Mods/Anomaly</li>
 
 		<!-- Tabula Rasa -->
-		<li IfModActive="neronix17.toolbox">1.4/Mods/UpdateLog</li>
+		<li IfModActive="neronix17.toolbox">1.5/Mods/UpdateLog</li>
 		<!-- Outland - Core -->
-		<li IfModActive="Neronix17.Outland.Core">1.4/Mods/Outpost21/OutlandCore</li>
+		<li IfModActive="Neronix17.Outland.Core">1.5/Mods/Outpost21/OutlandCore</li>
 		<!-- Outland - Furniture & Decor -->
-		<li IfModActive="Neronix17.Outland.FurnitureAndDecor">1.4/Mods/Outpost21/OutlandFurnitureAndDecor</li>
+		<li IfModActive="Neronix17.Outland.FurnitureAndDecor">1.5/Mods/Outpost21/OutlandFurnitureAndDecor</li>
 		<!-- Outer Rim - Core -->
-		<li IfModActive="Neronix17.OuterRim.Core">1.4/Mods/Outpost21/OuterRimCore</li>
+		<li IfModActive="Neronix17.OuterRim.Core">1.5/Mods/Outpost21/OuterRimCore</li>
 		<!-- Outer Rim - Droid Depot -->
-		<li IfModActive="Neronix17.OuterRim.DroidDepot">1.4/Mods/Outpost21/OuterRimDroidDepot</li>
+		<li IfModActive="Neronix17.OuterRim.DroidDepot">1.5/Mods/Outpost21/OuterRimDroidDepot</li>
 		<!-- Subpersona Shells -->
-		<li IfModActive="Neronix17.SubpersonaShells">1.4/Mods/Outpost21/SubpersonaShells</li>
+		<li IfModActive="Neronix17.SubpersonaShells">1.5/Mods/Outpost21/SubpersonaShells</li>
 		<!-- Mechadroids -->
-		<li IfModActive="Neronix17.Mechadroids">1.4/Mods/Outpost21/Mechadroids</li>
+		<li IfModActive="Neronix17.Mechadroids">1.5/Mods/Outpost21/Mechadroids</li>
 
 		<!-- Vanilla Psycasting Expanded -->
-		<li IfModActive="VanillaExpanded.VPsycastsE">1.4/Mods/VanillaExpanded/VE_Psycasting</li>
+		<li IfModActive="VanillaExpanded.VPsycastsE">1.5/Mods/VanillaExpanded/VE_Psycasting</li>
 		<!-- Vanilla Factions Expanded - Empire -->
-		<li IfModActive="OskarPotocki.VFE.Empire">1.4/Mods/VanillaExpanded/VFE_Empire</li>
+		<li IfModActive="OskarPotocki.VFE.Empire">1.5/Mods/VanillaExpanded/VFE_Empire</li>
 		<!-- Vanilla Factions Expanded - Insectoid -->
-		<li IfModActive="OskarPotocki.VFE.Insectoid">1.4/Mods/VanillaExpanded/VFE_Insectoids</li>
+		<li IfModActive="OskarPotocki.VFE.Insectoid">1.5/Mods/VanillaExpanded/VFE_Insectoids</li>
 		<!-- Vanilla Factions Expanded - Pirates -->
-		<li IfModActive="OskarPotocki.VFE.Pirates">1.4/Mods/VanillaExpanded/VFE_Pirates</li>
+		<li IfModActive="OskarPotocki.VFE.Pirates">1.5/Mods/VanillaExpanded/VFE_Pirates</li>
 		<!-- Vanilla Races Expanded - Android -->
-		<li IfModActive="vanillaracesexpanded.android">1.4/Mods/VanillaExpanded/VRE_Androids</li>
-	</v1.4>
+		<li IfModActive="vanillaracesexpanded.android">1.5/Mods/VanillaExpanded/VRE_Androids</li>
+	</v1.5>
 </loadFolders>

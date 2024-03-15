@@ -37,6 +37,10 @@
       <HintPath>packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Assembly-CSharp_public_1.4">
       <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp_public_1.4.dll</HintPath>
       <Private>False</Private>
@@ -79,111 +83,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alerts\Alert_OrbitalTrader.cs" />
-    <Compile Include="Alerts\Alert_PawnTrader.cs" />
-    <Compile Include="DefOfs\TGRoomStatDefOf.cs" />
-    <Compile Include="Harmony\Patch_CompShearable_CompInspectStringExtra.cs" />
-    <Compile Include="Harmony\Patch_CompMilkable_CompInspectStringExtra.cs" />
-    <Compile Include="Harmony\Patch_Pawn_HealthTracker_ShouldBeDeadFromLethalDamageThreshold.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_RealisticRooms.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_DynamicPopulation.cs" />
-    <Compile Include="Utilities\CodeMatch.cs" />
-    <Compile Include="Utilities\CodeMatcher.cs" />
     <Compile Include="Data\RoyalPermitSettings.cs" />
-    <Compile Include="Data\FactionRaidSettings.cs" />
-    <Compile Include="DefOfs\TGTweakDefOf.cs" />
-    <Compile Include="Defs\TweakBaseDef.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuUtility_GetMeleeAttackAction.cs" />
-    <Compile Include="Harmony\Patch_Corpse_RotStageChanged.cs" />
-    <Compile Include="Harmony\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs" />
-    <Compile Include="Harmony\Patch_HeadTypeDef_GetGraphic.cs" />
-    <Compile Include="Harmony\Patch_PawnGraphicSet_ResolveAllGraphics.cs" />
-    <Compile Include="Harmony\Patch_ShaderUtility_GetSkinShader.cs" />
-    <Compile Include="Harmony\Patch_Pawn_ApparelTracker_Notify_PawnKilled.cs" />
-    <Compile Include="Harmony\Patch_SkillRecord_LearningSaturatedToday.cs" />
     <Compile Include="Harmony\Patch_ThoughtWorker_Expectations_CurrentStateInternal.cs" />
-    <Compile Include="PatchOperation\PatchOperation_TweakInt.cs" />
-    <Compile Include="PatchOperation\PatchOperation_TweakFloat.cs" />
-    <Compile Include="PatchOperation\PatchOperation_TweakBool.cs" />
-    <Compile Include="Harmony\Patch_CharacterCardUtility_DrawCharacterCard.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuMakerMap_AddHumanlikeOrders.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuMakerMap_AddUndraftedOrders.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuMakerMap_ChoicesAtFor.cs" />
-    <Compile Include="Harmony\Patch_PawnGenerator_GenerateSkills.cs" />
-    <Compile Include="Harmony\Patch_Pawn_WorkTagIsDisabled.cs" />
-    <Compile Include="Harmony\Patch_Pawn_WorkTypeIsDisabled.cs" />
-    <Compile Include="Harmony\Patch_SkillRecord_CalculateTotallyDisabled.cs" />
-    <Compile Include="Harmony\Patch_WidgetsWork_TipForPawnWorker.cs" />
-    <Compile Include="Harmony\Patch_WITab_Caravan_Gear_TryEquipDraggedItem.cs" />
-    <Compile Include="Harmony\Patch_WorkTab_Pawn_Extensions_AllowedToDo.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_Genepacks.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_Raids.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_ResearchProjects.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_StackSizeControl.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_ResearchControl.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_WeatherControl.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_IncidentControl.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_RoyalPermits.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_RoyalTitles.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_PennedAnimals.cs" />
-    <Compile Include="SectionWorkers\SectionWorker.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Anima.cs" />
     <Compile Include="Harmony\Patch_CanParticipateInSlaveRebellion.cs" />
     <Compile Include="Harmony\Patch_PowerNetGraphics_PrintWirePieceConnecting.cs" />
     <Compile Include="Data\RoyalTitleSettings.cs" />
-    <Compile Include="Defs\TweakDef.cs" />
-    <Compile Include="Data\TweakType.cs" />
-    <Compile Include="Defs\TweakSectionDef.cs" />
-    <Compile Include="Defs\TweakSubSectionDef.cs" />
-    <Compile Include="Defs\TweakCategoryDef.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_MeditationRate.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaNaturalMax.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_ShrineNaturalRadius.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_ShrineArtificialRadius.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaNaturalRadius.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamDuration.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamDisabled.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaArtificialRadius.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_FreeMeditation.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamStack.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaScreamImpact.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_HighestTechLevel.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_LowestTechLevel.cs" />
-    <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxIgnoreBuildings.cs" />
-    <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxEffectRate.cs" />
-    <Compile Include="TweakWorkers\Polux\TweakWorker_PoluxEffectRadius.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GaumakerCocoonDays.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_DryadCocoonDays.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GaumakerSeedYield.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GaumakerPodDays.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_DryadSpawnDays.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GauranlenMossGrowthDays.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_DryadMaxCount.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GauranlenMossGrowthRadius.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GauranlenConnectionLossBuildings.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GauranlenConnectionLoss.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GauranlenConnectionGain.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GauranlenInitialConnection.cs" />
-    <Compile Include="TweakWorkers\Gauranlen\TweakWorker_GauranlenArtificialRadius.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_PlayerMechanoids.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_ModifyMechStat.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_MechanitorTweaks.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_PregnancyChance.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_InfestationBlockFloors.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_MechanoidHeatArmor.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_StackableChunks.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_FixDeconstructionReturn.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_PowerValue.cs" />
-    <Compile Include="TweakWorkers\Anima\TweakWorker_AnimaPsylinkLevelNeeds.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_NFSMPreventByTrainability.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_WaitThisIsBetter.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_GeneDefArchites.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_GeneDefMetabolism.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_GeneDefComplexity.cs" />
-    <Compile Include="TweakWorkers\TweakWorker.cs" />
-    <Compile Include="TweakWorkers\General\TweakWorker_NoFriendShapedManhunters.cs" />
-    <Compile Include="Utilities\ApparelUtil.cs" />
-    <Compile Include="Utilities\TweakUtil.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Biotech.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Defaults.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Gauranlen.cs" />
+    <Compile Include="SettingsPages\SettingsPage_GenePacks.cs" />
+    <Compile Include="SettingsPages\SettingsPage_General.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Ideology.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Mechanoids.cs" />
+    <Compile Include="SettingsPages\SettingsPage_PennedAnimals.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Polux.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Power.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Raids.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Resources.cs" />
+    <Compile Include="SettingsPages\SettingsPage_Royalty.cs" />
+    <Compile Include="SettingsPages\SettingsPage_RoyaltyPermits.cs" />
+    <Compile Include="SettingsPages\SettingsPage_RoyaltyTitles.cs" />
     <Compile Include="Utilities\SlaveryUtil.cs" />
+    <Compile Include="Utilities\DefaultUtil.cs" />
     <Compile Include="DefOfs\TGHediffDefOf.cs" />
     <Compile Include="DefOfs\TGThingDefOf.cs" />
     <Compile Include="Harmony\Patch_Pawn_MechanitorTracker.cs" />
@@ -194,7 +116,7 @@
     <Compile Include="Utilities\SettingsUtil.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Utilities\LogUtil.cs" />
-    <None Include="PatchOperation\PatchOperation_SettingActive.cs" />
+    <Compile Include="PatchOperation\PatchOperation_SettingActive.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />
     <Compile Include="Harmony\Patch_InfestationCellFinder_GetScoreAt.cs" />
     <Compile Include="Harmony\Patch_GetRewardStackElementsForThings.cs" />
@@ -217,6 +139,5 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

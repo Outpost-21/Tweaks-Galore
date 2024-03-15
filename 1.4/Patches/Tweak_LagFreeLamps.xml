@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
 		<settings>
-			<li>Tweak_LagFreeLamps</li>
+			<li>tweak_lagFreeLamps</li>
 		</settings>
+		
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
@@ -58,14 +59,14 @@
 					<xpath>/Defs/ThingDef[defName="Outland_OilLantern"]</xpath>
 					<success>Always</success>
 					<match Class="PatchOperationRemove">
-						<xpath>/Defs/ThingDef[defName="Outland_OilLantern" or defName="Outland_OilStreetLamp" or defName="Outland_3x3TableHearth" or @Name="OutlandOilWallLanternBase" or @Name="OutlandWallSconceBase"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+						<xpath>/Defs/ThingDef[defName="Outland_OilLantern" or defName="Outland_OilStreetLamp" or defName="Outland_3x3TableHearth" or defName="Outland_WallLantern" or defName="Outland_WallLantern_Darklight" or defName="Outland_WallSconce"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
 					</match>
 				</li>
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/ThingDef[defName="Outland_StoneEndTableWithLamp"]</xpath>
 					<success>Always</success>
 					<match Class="PatchOperationRemove">
-						<xpath>/Defs/ThingDef[defName="Outland_StoneEndTableWithLamp" or defName="Outland_StoneOilLantern" or defName="Outland_StoneOilStreetLamp" or defName="Outland_Stone3x3TableHearth" or @Name="OutlandStoneWallSconceBase"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+						<xpath>/Defs/ThingDef[defName="Outland_StoneEndTableWithLamp" or defName="Outland_StoneOilLantern" or defName="Outland_StoneOilStreetLamp" or defName="Outland_Stone3x3TableHearth" or defName="Outland_StoneWallSconce"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
 					</match>
 				</li>
 				<!-- Outland - Eastborn Empire -->
@@ -73,7 +74,7 @@
 					<xpath>/Defs/ThingDef[defName="Outland_Toro"]</xpath>
 					<success>Always</success>
 					<match Class="PatchOperationRemove">
-						<xpath>/Defs/ThingDef[defName="Outland_Toro" or @Name="OutlandWallLanternBase"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+						<xpath>/Defs/ThingDef[defName="Outland_Toro" or defName="Outland_WallBoxLantern" or defName="Outland_WallBoxLantern_Darklight"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
 					</match>
 				</li>
 				<!-- Simple Utilities: Wall -->

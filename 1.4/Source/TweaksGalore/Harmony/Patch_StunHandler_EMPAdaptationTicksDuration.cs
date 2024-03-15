@@ -18,7 +18,7 @@ namespace TweaksGalore
         [HarmonyPostfix]
         public static void Postfix(ref int __result, ref StunHandler __instance, Thing ___parent)
         {
-            if (TGTweakDefOf.Tweak_MechanoidAdaptation.BoolValue)
+            if (TweaksGaloreMod.settings.patch_disableMechanoidAdapting)
             {
                 __result = 0;
             }

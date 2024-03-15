@@ -18,7 +18,7 @@ namespace TweaksGalore
 		[HarmonyPrefix]
 		public static bool Prefix(ref IEnumerable<Thing> things, ref bool detailsHidden)
 		{
-            if (TGTweakDefOf.Tweak_IncidentPawnStats.BoolValue)
+            if (TweaksGaloreMod.settings.patch_incidentPawnStats)
 			{
 				detailsHidden = false;
 			}

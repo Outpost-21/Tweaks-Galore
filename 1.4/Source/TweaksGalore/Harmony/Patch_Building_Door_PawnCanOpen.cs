@@ -18,21 +18,21 @@ namespace TweaksGalore
 		[HarmonyPostfix]
 		public static void Postfix(Pawn p, ref bool __result)
 		{
-			if (__result && TGTweakDefOf.Tweak_PrisonersDontHaveKeys.BoolValue)
+			if (__result && TweaksGaloreMod.settings.patch_prisonersDontHaveKeys)
 			{
-				if (TGTweakDefOf.Tweak_PDHKPrisoners.BoolValue && p.IsPrisonerOfColony)
+				if (TweaksGaloreMod.settings.patch_pdhk_prisoners && p.IsPrisonerOfColony)
 				{
 					if (PrisonBreakUtility.IsPrisonBreaking(p))
 					{
-						__result = (TGTweakDefOf.Tweak_PDHKOwnDoor.BoolValue && p.GetRoom(RegionType.Set_All).IsPrisonCell);
+						__result = (TweaksGaloreMod.settings.patch_pdhk_ownDoor && p.GetRoom(RegionType.Set_All).IsPrisonCell);
 						return;
 					}
 				}
-				else if (TGTweakDefOf.Tweak_PDHKSlaves.BoolValue && p.IsSlaveOfColony)
+				else if (TweaksGaloreMod.settings.patch_pdhk_slaves && p.IsSlaveOfColony)
 				{
 					if (SlaveRebellionUtility.IsRebelling(p))
 					{
-						if (TGTweakDefOf.Tweak_PDHKOwnDoor.BoolValue)
+						if (TweaksGaloreMod.settings.patch_pdhk_ownDoor)
 						{
 							__result = p.GetRoom(RegionType.Set_All).ContainedBeds.Any((Building_Bed bed) => bed.ForSlaves);
 							return;

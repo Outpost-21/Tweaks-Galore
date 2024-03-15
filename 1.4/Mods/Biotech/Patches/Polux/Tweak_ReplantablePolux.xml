@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
 		<settings>
-			<li>Tweak_ReplantablePolux</li>
+			<li>tweak_replantablePolux</li>
 		</settings>
 		<active Class="PatchOperationConditional">
 			<xpath>/Defs/ThingDef[defName="Plant_TreePolux"]/minifiedDef</xpath>

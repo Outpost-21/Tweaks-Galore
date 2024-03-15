@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_RaidStratDropPod</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<!-- Generalised -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RaidStrategyDef/arriveModes/li[text()="EdgeDrop" or text()="CenterDrop" or text()="RandomDrop" or text()="EdgeDropGroups"]</xpath>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
 		<settings>
-			<li>Tweak_PreReleaseShipParts</li>
+			<li>tweak_preReleaseShipParts</li>
 		</settings>
+		
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationConditional">

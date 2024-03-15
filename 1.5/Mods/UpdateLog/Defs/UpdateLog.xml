@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_15082023</defName>
+		<date>2023/08/15</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>UI Overhaul</header>
+				<text>The options screen for Tweaks Galore has been completely overhauled, the previous pages have been collected together in pages for vanilla and each separate DLC, with collapsable sections and a searchbar for finding specific tweaks easily. Most will probably only see this as a purely visual change, it's far from it though.</text>
+			</li>
+			<li>
+				<header>Code Overhaul</header>
+				<text>Tweaks have now been converted into defs so anyone can use this system to very easily add tweaks for their own mods, new tweaks, pages and sections can be added very easily with just XML, and values given in-game can be used to replace values in XML using new types of PatchOperations. For more info click the GitHub link at the top of the update.
+					
+Old settings from 1.4 will not carry over. I attempted to have them moved to the new system and it just ended up causing issues, new RimWorld version anyway.</text>
+			</li>
+			<li>
+				<header>Export/Import</header>
+				<text>Tweak settings can now be imported/exported, it'll just use text that you copy/paste. So if you want to store different configs you totally can now, or share them, with the way tweaks work it won't care if you import a config that has tweaks/mods you don't have.</text>
+			</li>
+			<li>
+				<header>New Tweaks</header>
+				<text> There are too many to go into detail so this'll just be a list of their names, you can find a description of each tweak in the options anyway (in a tooltip when you hover over them). It's well over 100 new tweaks, so I may also just have missed some.
+
+-- Disable Skin Shader
+-- Skill Learning Per Day
+-- Disable Taint
+-- Taint on Rot
+-- Only Taint First Layer
+-- Power Tweaks for Anything
+-- Incident Control
+-- Weather Control
+-- Better Pyromania
+-- Energy Saving Lighting
+-- Energy Saving Production
+-- Filth Vanishes
+-- Stack Size Control
+-- Animals Are Fun
+-- Where Is My Weapon?
+-- Everybody Buys Slaves
+-- Trees Don't Just Die
+-- Ugh You Got Me
+-- Skilled Tree Chopping
+-- Faster Cleaning
+-- Haul After Slaughter
+-- Wild Animal Sex
+-- Deconstruct First
+-- Smooth Walls Before Floors
+-- Butcher Before Cooking
+-- Repair After Building
+-- Slave Collars for Nudists
+-- Slave Straps for Nudists
+-- Animal Resource Label
+-- Allow Prioritizing (Sleep, Recreation, Research)
+-- Dynamic Population
+-- Useful Grass
+-- Useful Bushes
+-- Hay Doesn't Need Cooling
+-- No Job Authors
+-- No Lethal Damage Threshold
+-- Realistic Rooms
+-- Prisoner Recreation
+-- Trader Info Alert
+-- Repair In Zone
+- Custom Prisoner Interactions
+- More Slaves
+- Slave Strap Over Clothing
+- Drop All Inventory
+- Safe Insect Jelly
+-- Prisoners Clean Up
+- Turrets Target Prisoners
+- Traders Have More Silver
+- Map Edge Control
+-- Buildable Packed Dirt
+- Job Display
+- Toggle Harvest
+- Recipe Icons
+- Show Both Temperatures
+- Tooltipped Long Labels
+- Stone Production Benches
+- Metal Crematorium
+-- Recreational Drums
+- Craftable Neutroamine
+- Craftable Luciferium
+- Craftable Glitterworld Medicine
+- Craftable Plasteel
+- More Steel from Slag
+- Milkable Muffalos
+- Practical Pemmican
+- Trade Price Adjustments
+- Friendly Fire Adjustments
+- Smokeleaf Adjustments
+- Better Mechanoid Disassembly
+- Keep Turrets Refueled
+- Animals Don't Eat Random Things
+- Bed Rest Effectiveness
+- Better Quest Rewards
+- Moisture Pump Speed
+- Safe Tasty Foods
+- Herd Migration On Any Biome
+- Indestructible Power Conduits
+- Grow Trees Indoors
+- Quest Frequency Adjustment
+- No Banishing Debuff
+- No Human Filth
+- No Improvised Weapons
+- Research Control
+- Sealed Power Armour
+- Uniform Crops
+- Water Pathing Cost
+- Wolves Are Dogs
+- Animal Medical Alerts
+- Animals Auto-Follow Masters
+- Auto-Deconstruct Finished Moisture Pumps
+- Show Alerts for Medical Treatment in Bed
+- Show Gender/Age/Xenotype in Caravan Window
+- [Royalty] Prestige Helmet Buffs
+- [Royalty] No Death Acidifiers
+- [Royalty] No Biocoding
+- [Royalty] Royal Title Display
+- [Royalty] Lending Asks For Less
+- [Royalty] Buyable Psy Equipment
+- [Ideology] You Look Fine!
+- [Ideology] Unrestricted Roles
+- [Ideology] Increased Specialist Limit
+- [Ideology] Roles Can Work
+- [Ideology] Slave Recreation
+- [Ideology] Production Includes Artists
+- [Ideology] More Worksite Resources
+- [Ideology] Controllable Berserk Trance
+- [Ideology] Biosculptor Restores Parts
+- [Ideology] Conversion Ritual Effectiveness
+- [Ideology] Neural Superchaarger Cooldown
+- [Ideology] Idealized Pain Threshold
+- [Ideology] People required For Roles
+- [Ideology] No Work Speed Debuff For Raiders
+- [Ideology] No Work Speed Debuff For Ranchers
+- [Biotech] Xenotype Control
+- [Biotech] Xenotype Adjustments
+- [Biotech] Mechanoid Work Speeds
+- [Biotech] Rebalanced Mechanoid Research
+- [Biotech] Self Coagulate
+- [Biotech] Indestructible Mechanoid Chips
+- [Biotech] No Lactating Debuff
+- [Biotech] Larger Gene Banks
+- [Biotech] Wastepacks Per Recharge
+- [Biotech] Atomizer Speed Adjustment
+- [Biotech] Atomizer Stack Limit
+- [Biotech] More Genepacks On Traders
+- [Biotech] More Polux Seeds On Traders
+- [Biotech] Pollution Pump Range
+- [Biotech] Pollution Pump Speed
+- [Biotech] Pollution Pump Tiles Per Wastepack
+- [Biotech] Xenogene Regrow Time</text>
+			</li>
+			<li>
+				<header>Vanilla Expanded Tweaks</header>
+				<text>With the new method of adding tweaks I've made it easy enough that I'm willing to add a small amount of Vanilla Expanded tweaks. Only tweaks for mods you have enabled will show up in the options. If you don't have any VE mods you won't even see the page for it in the dropdown.
+
+- [VE Psycasts] Healable Sacrificial Fingers
+- [VFE Empire] No Terrorists
+- [VFE Insectoids] Craftable Bio-Engineering Buildings
+- [VFE Insectoids] Craftable Sonic Infestation Repeller
+- [VFE Insectoids] Vat Grown Insectoids Live Longer
+- [VFE Pirates] Working Warcaskets
+- [VRE Androids] Disable Awakening
+- [VRE Androids] Non-Colonist Scans
+- [VRE Androids] Allow Awakened Modification
+- [VE Vehicles] Researchable Tier 3
+- [VE Vehicles] Craftable Tier 4
+- [VPE Mushrooms] Just Let Me Grow!
+-- [VRE Saurids] Alternate Cold Blooded
+- [VFE Mechanoids] Craftable Mechanoid Components</text>
+			</li>
+			<li>
+				<header>Outpost 21 Tweaks</header>
+				<text>It wouldn't really be fair of me to add a bunch of tweaks for VE and not my own mods would it.
+
+- [Outland - Core] No Cloth Components
+- [Outland - Furniture &amp; Decor] No Component Costs
+- [Outer Rim - Core] All Blasters Are Ionized
+- [Outer Rim - Core] Fast Ion
+- [Outer Rim - Core] Explosive Ion</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+
+</Defs>

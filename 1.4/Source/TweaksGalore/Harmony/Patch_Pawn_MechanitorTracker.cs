@@ -18,8 +18,9 @@ namespace TweaksGalore
 		[HarmonyPrefix]
 		public static bool Prefix()
 		{
-			if(TGTweakDefOf.Tweak_MechanitorTweaks.BoolValue && TGTweakDefOf.Tweak_MechanitorDisableRange.BoolValue)
+			if(TweaksGaloreMod.settings.tweak_mechanitorTweaks && TweaksGaloreMod.settings.tweak_mechanitorDisableRange)
             {
+				// No need to do anything, just disabling the drawing.
 				return false;
             }
 			return true;
@@ -32,7 +33,7 @@ namespace TweaksGalore
 		[HarmonyPrefix]
 		public static bool Prefix(Pawn_MechanitorTracker __instance, ref LocalTargetInfo target, ref bool __result)
 		{
-			if (TGTweakDefOf.Tweak_MechanitorTweaks.BoolValue && TGTweakDefOf.Tweak_MechanitorDisableRange.BoolValue)
+			if (TweaksGaloreMod.settings.tweak_mechanitorTweaks && TweaksGaloreMod.settings.tweak_mechanitorDisableRange)
 			{
 				if (!target.Cell.InBounds(__instance.pawn.MapHeld))
 				{

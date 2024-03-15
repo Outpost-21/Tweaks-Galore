@@ -9,7 +9,6 @@ using System.Windows;
 using UnityEngine;
 using RimWorld;
 using Verse;
-using Verse.Sound;
 
 namespace TweaksGalore
 {
@@ -109,7 +108,7 @@ namespace TweaksGalore
 			listing.Gap(6f);
 		}
 
-		public static void SettingsCategoryDropdown(this Listing_Standard listing, string name, string explanation, ref TweakCategoryDef def, float width)
+		public static void SettingsDropdown(this Listing_Standard listing, string name, string explanation, ref TweaksGaloreSettingsPage value, float width)
 		{
 			float curHeight = listing.CurHeight;
 			Rect rect = listing.GetRect(Text.LineHeight + listing.verticalSpacing);
@@ -121,17 +120,15 @@ namespace TweaksGalore
 			Text.Anchor = TextAnchor.MiddleRight;
 
 			Rect rect2 = new Rect(width - 150f, 0f, 150f, 29f);
-			if (Widgets.ButtonText(rect2, def.LabelCap, true, true, true))
+			if (Widgets.ButtonText(rect2, value.ToString().Replace("_", " "), true, true, true))
 			{
 				List<FloatMenuOption> list = new List<FloatMenuOption>();
-				List<TweakCategoryDef> categories = DefDatabase<TweakCategoryDef>.AllDefsListForReading.Where(tcd => !tcd.heldSections.NullOrEmpty()).ToList();
-				categories.SortBy(c => c.orderID);
-				foreach (TweakCategoryDef category in categories)
+				List<TweaksGaloreSettingsPage> enumValues = Enum.GetValues(typeof(TweaksGaloreSettingsPage)).Cast<TweaksGaloreSettingsPage>().ToList();
+				foreach (TweaksGaloreSettingsPage enumValue in enumValues)
 				{
-					if ((category.required.NullOrEmpty() || category.required.All(r => ModLister.GetActiveModWithIdentifier(r) != null)) && (category.incompatible.NullOrEmpty() || category.incompatible.All(i => ModLister.GetActiveModWithIdentifier(i) == null)))
-					list.Add(new FloatMenuOption(category.LabelCap, delegate ()
+					list.Add(new FloatMenuOption(enumValue.ToString().Replace("_", " "), delegate ()
 					{
-						TweaksGaloreMod.mod.currentCategory = category;
+						TweaksGaloreMod.mod.currentPage = enumValue;
 					}));
 				}
 
@@ -152,120 +149,6 @@ namespace TweaksGalore
 			rect.y -= rect.height;
 			GUI.color = Color.white;
 			listing.Gap(6f);
-		}
-		public static void StackableThingDropdown(this Listing_Standard listing, string name, string explanation, out ThingDef def, float width)
-		{
-			def = null;
-			float curHeight = listing.CurHeight;
-			Rect rect = listing.GetRect(Text.LineHeight + listing.verticalSpacing);
-			Text.Font = GameFont.Small;
-			GUI.color = Color.white;
-			TextAnchor anchor = Text.Anchor;
-			Text.Anchor = TextAnchor.MiddleLeft;
-			Widgets.Label(rect, name);
-			Text.Anchor = TextAnchor.MiddleRight;
-
-			Rect rect2 = new Rect(width - 150f, 0f, 150f, 29f);
-			ThingDef custom = null;
-			if (Widgets.ButtonText(rect2, "Add Rule...", true, true, true))
-			{
-				List<FloatMenuOption> list = new List<FloatMenuOption>();
-				List<ThingDef> things = DefDatabase<ThingDef>.AllDefs.Where(t => t.stackLimit > 1).ToList();
-				things.SortBy(c => c.label);
-				foreach (ThingDef thing in things)
-				{
-					if (thing.stackLimit > 1)
-						list.Add(new FloatMenuOption(thing.LabelCap, delegate ()
-						{
-							custom = thing;
-						}));
-				}
-
-				Find.WindowStack.Add(new FloatMenu(list));
-			}
-			def = custom;
-
-			Text.Anchor = anchor;
-
-			Text.Font = GameFont.Tiny;
-			listing.ColumnWidth -= 34f;
-			GUI.color = Color.gray;
-			listing.Label(explanation);
-			listing.ColumnWidth += 34f;
-			Text.Font = GameFont.Small;
-
-			rect = listing.GetRect(0f);
-			rect.height = listing.CurHeight - curHeight;
-			rect.y -= rect.height;
-			GUI.color = Color.white;
-			listing.Gap(6f);
-		}
-
-		public static void LabelBacked(this Listing_Standard list, string inputText, Color color, bool translate = false)
-		{
-			string text = (translate ? inputText.Translate() : inputText);
-			TextAnchor anchor = Text.Anchor;
-			Text.Anchor = TextAnchor.MiddleLeft;
-			float height = Text.CalcHeight(text, list.ColumnWidth - 3f - 6f) + 6f;
-			Rect rect = list.GetRect(height).Rounded();
-			Color color2 = color;
-			color2.r *= 0.25f;
-			color2.g *= 0.25f;
-			color2.b *= 0.25f;
-			color2.a *= 0.2f;
-			GUI.color = color2;
-			Rect position = rect.ContractedBy(1f);
-			position.yMax -= 2f;
-			GUI.DrawTexture(position, BaseContent.WhiteTex);
-			GUI.color = color;
-			rect.xMin += 6f;
-			Widgets.Label(rect, text);
-			GUI.color = Color.white;
-			Text.Anchor = anchor;
-		}
-
-		public static void LabelBackedHeader(this Listing_Standard list, string inputText, Color color, ref bool collapsed, GameFont font = GameFont.Medium, bool translate = false)
-		{
-			Text.Font = font;
-			string text = (translate ? inputText.Translate() : inputText);
-			TextAnchor anchor = Text.Anchor;
-			Text.Anchor = TextAnchor.MiddleLeft;
-			float height = Text.CalcHeight(text, list.ColumnWidth - 3f - 6f) + 6f;
-			Rect rect = list.GetRect(height).Rounded();
-			Color color2 = color;
-			color2.r *= 0.25f;
-			color2.g *= 0.25f;
-			color2.b *= 0.25f;
-			color2.a *= 0.2f;
-			GUI.color = color2;
-			Rect position = rect.ContractedBy(1f);
-			position.yMax -= 2f;
-			GUI.DrawTexture(position, BaseContent.WhiteTex);
-			GUI.color = color;
-			rect.xMin += 6f;
-			Rect position2 = new Rect(rect.x, rect.y + (rect.height - 18f) / 2f, 18f, 18f);
-			GUI.DrawTexture(position2, collapsed ? TexButton.Reveal : TexButton.Collapse);
-			if (Widgets.ButtonInvisible(rect))
-			{
-				collapsed = !collapsed;
-				if (collapsed)
-				{
-					SoundDefOf.TabClose.PlayOneShotOnCamera();
-				}
-				else
-				{
-					SoundDefOf.TabOpen.PlayOneShotOnCamera();
-				}
-			}
-			if (Mouse.IsOver(rect))
-			{
-				Widgets.DrawHighlight(rect);
-			}
-			Rect textRect = new Rect(rect.x + 18f, rect.y, rect.width - 18f, rect.height);
-			Widgets.Label(textRect, text);
-			GUI.color = Color.white;
-			Text.Anchor = anchor;
-			Text.Font = GameFont.Small;
 		}
 	}
 

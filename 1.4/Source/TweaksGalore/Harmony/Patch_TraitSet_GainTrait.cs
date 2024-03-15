@@ -19,7 +19,7 @@ namespace TweaksGalore
 		{
 			Pawn pawn = (Pawn)AccessTools.DeclaredField(typeof(TraitSet), "pawn").GetValue(__instance);
 
-			if (TGTweakDefOf.Tweak_MisanthropeTrait.BoolValue)
+			if (TweaksGaloreMod.settings.tweak_misanthropeTrait)
 			{
 				TraitDef dislikesHumanity = DefDatabase<TraitDef>.GetNamed("DislikesHumanity");
 				if (pawn.story.traits.HasTrait(TraitDefOf.DislikesMen) && trait.def == TraitDefOf.DislikesWomen)

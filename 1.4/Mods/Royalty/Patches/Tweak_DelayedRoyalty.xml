@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+	<Operation Class="TweaksGalore.PatchOperation_SettingActive">
 		<settings>
-			<li>Tweak_DelayedRoyalty</li>
+			<li>tweak_delayedRoyalty</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>
