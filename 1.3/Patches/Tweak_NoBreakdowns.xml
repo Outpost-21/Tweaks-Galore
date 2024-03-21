@@ -6,15 +6,8 @@
 			<li>tweak_noBreakdowns</li>
 		</settings>
 		<label>No Breakdowns</label>
-		<active Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[not(defName="VPE_NuclearGenerator")]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef/comps[not(*)]</xpath>
-				</li>
-			</operations>
+		<active Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[not(defName="VPE_NuclearGenerator")]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
 		</active>
 	</Operation>
 
