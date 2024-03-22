@@ -6,18 +6,8 @@
 			<li>Tweak_NoBreakdowns</li>
 		</settings>
 		
-		<active Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[not(defName="VPE_NuclearGenerator")]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<!-- Remove all empty comps, as long as they don't have attributes (to avoid bugs). -->
-					<xpath>/Defs/ThingDef/comps[not(*) and not(@*)]</xpath>
-					<!-- Needs to always succeed to prevent errors when there's no empty comps to remove. -->
-					<success>Always</success>
-				</li>
-			</operations>
+		<active Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[not(defName="VPE_NuclearGenerator")]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
 		</active>
 	</Operation>
 
