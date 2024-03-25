@@ -153,6 +153,7 @@ namespace TweaksGalore
 			GUI.color = Color.white;
 			listing.Gap(6f);
 		}
+
 		public static void StackableThingDropdown(this Listing_Standard listing, string name, string explanation, out ThingDef def, float width)
 		{
 			def = null;
@@ -415,7 +416,82 @@ namespace TweaksGalore
 			listing_Standard.LineRectSpilter(out Rect rect, out Rect rect2, 0.5f, null);
 			Widgets.Label(rect, label);
 			float num = value;
-			value = Widgets.HorizontalSlider(GenUI.BottomPart(rect2, 0.7f), num, leftValue, rightValue, middleAlignment, null, leftAlignedLabel, rightAlignedLabel, roundTo);
+			value = HorizontalSlider(GenUI.BottomPart(rect2, 0.7f), num, leftValue, rightValue, middleAlignment, null, leftAlignedLabel, rightAlignedLabel, roundTo);
+		}
+
+		public static float HorizontalSlider(Rect rect, float value, float min, float max, bool middleAlignment = false, string label = null, string leftAlignedLabel = null, string rightAlignedLabel = null, float roundTo = -1f)
+		{
+			float num = value;
+			if (middleAlignment || !label.NullOrEmpty())
+			{
+				rect.y += Mathf.Round((rect.height - 10f) / 2f);
+			}
+			if (!label.NullOrEmpty())
+			{
+				rect.y += 5f;
+			}
+			int hashCode = UI.GUIToScreenPoint(new Vector2(rect.x, rect.y)).GetHashCode();
+			hashCode = Gen.HashCombine(hashCode, rect.width);
+			hashCode = Gen.HashCombine(hashCode, rect.height);
+			hashCode = Gen.HashCombine(hashCode, min);
+			hashCode = Gen.HashCombine(hashCode, max);
+			Rect rect2 = rect;
+			rect2.xMin += 6f;
+			rect2.xMax -= 6f;
+			GUI.color = Widgets.RangeControlTextColor;
+			Rect rect3 = new Rect(rect2.x, rect2.y + 2f, rect2.width, 8f);
+			Widgets.DrawAtlas(rect3, Widgets.SliderRailAtlas);
+			GUI.color = Color.white;
+			float x = Mathf.Clamp(rect2.x - 6f + rect2.width * Mathf.InverseLerp(min, max, num), rect2.xMin - 6f, rect2.xMax - 6f);
+			GUI.DrawTexture(new Rect(x, rect3.center.y - 6f, 12f, 12f), Widgets.SliderHandle);
+			if (Event.current.type == EventType.MouseDown && Mouse.IsOver(rect) && Widgets.sliderDraggingID != hashCode)
+			{
+				Widgets.sliderDraggingID = hashCode;
+				SoundDefOf.DragSlider.PlayOneShotOnCamera();
+				Event.current.Use();
+			}
+			if (Widgets.sliderDraggingID == hashCode && UnityGUIBugsFixer.MouseDrag())
+			{
+				num = Mathf.Clamp((Event.current.mousePosition.x - rect2.x) / rect2.width * (max - min) + min, min, max);
+				if (Event.current.type == EventType.MouseDrag)
+				{
+					Event.current.Use();
+				}
+			}
+			if (!label.NullOrEmpty() || !leftAlignedLabel.NullOrEmpty() || !rightAlignedLabel.NullOrEmpty())
+			{
+				TextAnchor anchor = Text.Anchor;
+				GameFont font = Text.Font;
+				Text.Font = GameFont.Tiny;
+				float num2 = (label.NullOrEmpty() ? 18f : Text.CalcSize(label).y);
+				rect.y = rect.y - num2 + 3f;
+				if (!leftAlignedLabel.NullOrEmpty())
+				{
+					Text.Anchor = TextAnchor.UpperLeft;
+					Widgets.Label(rect, leftAlignedLabel);
+				}
+				if (!rightAlignedLabel.NullOrEmpty())
+				{
+					Text.Anchor = TextAnchor.UpperRight;
+					Widgets.Label(rect, rightAlignedLabel);
+				}
+				if (!label.NullOrEmpty())
+				{
+					Text.Anchor = TextAnchor.UpperCenter;
+					Widgets.Label(rect, label);
+				}
+				Text.Anchor = anchor;
+				Text.Font = font;
+			}
+			if (roundTo > 0f)
+			{
+				num = (float)Mathf.RoundToInt(num / roundTo) * roundTo;
+			}
+			if (value != num)
+			{
+				Widgets.CheckPlayDragSliderSound();
+			}
+			return num;
 		}
 
 		public static void AddColorPickerButton(this Listing_Standard listing_Standard, string label, Color color, Action<Color> callback, string buttonText = "Change")

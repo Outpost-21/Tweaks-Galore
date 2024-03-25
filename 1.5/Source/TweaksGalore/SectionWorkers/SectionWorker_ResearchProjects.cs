@@ -11,122 +11,113 @@ namespace TweaksGalore
 {
     public class SectionWorker_ResearchProjects : SectionWorker
     {
-        public Dictionary<string, int> defaultResearchValues = new Dictionary<string, int>();
-
-        public List<ThingDef> cachedStackableListing = new List<ThingDef>();
-
-        public List<ThingDef> CachedStackableListing
-        {
-            get
-            {
-                if (cachedStackableListing.NullOrEmpty())
-                {
-                    cachedStackableListing = new List<ThingDef>();
-                }
-                foreach(ThingDef thing in DefDatabase<ThingDef>.AllDefs.Where(t => t.stackLimit > 1 || defaultResearchValues.ContainsKey(t.defName)))
-                {
-                    if (!cachedStackableListing.Contains(thing))
-                    {
-                        cachedStackableListing.Add(thing);
-                    }
-                }
-                return cachedStackableListing;
-            }
-        }
-
         public override void DoSectionContents(Listing_Standard listing, string filter)
         {
-            if (listing.ButtonTextLabeled("", "Restore defaults"))
+            foreach (ResearchProjectDef research in DefDatabase<ResearchProjectDef>.AllDefs)
             {
-                Messages.Message("Tweaks Galore: 'Stack Size Control' tweaks restored to defaults. Restart required to take full effect.", MessageTypeDefOf.CautionInput);
+                DoResearchProjectSettings(listing, research);
             }
-            // Tweak: Penned Animal Config
-            listing.DoSettingBool("Stack Size Control", "Allows controlling stack size for categories as well as individual item stack overrides. If it's unstackable in vanilla, this won't make it stackable, as that very often leads to issues. Restarting the game is required to apply these settings.", def.defName, false, true);
-            if (settings.GetBoolSetting(def.defName, false))
-            {
-                listing.GapLine();
-                for (int i = 0; i < CachedStackableListing.Count; i++)
-                {
-                    ThingDef curThing = CachedStackableListing[i];
-                    float value = settings.tweak_stackSizeControl[curThing.defName];
-                    int max = defaultResearchValues[curThing.defName] * 10;
-                    listing.AddLabeledSlider(curThing.LabelCap + ": " + value, ref value, 1, max, "1", max.ToString(), 1);
-                    settings.tweak_stackSizeControl[curThing.defName] = Mathf.RoundToInt(value);
-                }
-            }
+            DoOnStartup();
         }
 
-        public override void DoWriteSettings()
+        public void DoResearchProjectSettings(Listing_Standard listing, ResearchProjectDef research)
         {
-            base.DoWriteSettings();
-            if (settings.GetBoolSetting(def.defName, false))
+            string categoryString = "Cat_ResearchProject_" + research.defName;
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader(research.LabelCap, mod.subHeaderColor, ref categoryToggle, GameFont.Small);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
             {
-                ApplyStackValues(settings.tweak_stackSizeControl);
+                if (!research.heldByFactionCategoryTags.NullOrEmpty())
+                {
+                    listing.Note($"Faction Categories: {research.heldByFactionCategoryTags.ToArray().ToCommaList()}", GameFont.Tiny, Color.gray);
+                    listing.GapLine();
+                }
+                else
+                {
+                    listing.Note("No factions hold techprints for this research.");
+                }
+                // Tweak: Base Cost
+                {
+                    float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].baseCost;
+                    float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].baseCost / 10f;
+                    float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].baseCost * 10f;
+                    listing.AddLabeledSlider("TweaksGalore.ResearchCost".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
+                    settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                }
+                // Tweak: Tech Level
+                listing.TechLevelMenu("TweaksGalore.TechLevelValue".Translate(), "", settings.tweak_researchProjectSettings[research.defName].techLevel, listing.ColumnWidth);
+                // Tweak: Techprint Count
+                {
+                    float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCount;
+                    float baseCostMin = 0;
+                    float baseCostMax = 10;
+                    listing.AddLabeledSlider("TweaksGalore.TechprintCount".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), 1f);
+                    settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                    listing.Note("TweaksGalore.TechprintCountNote".Translate(), GameFont.Tiny);
+                }
+                // Tweak: Techprint Commonality
+                {
+                    float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCommonality;
+                    float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality / 10f;
+                    float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality * 10f;
+                    listing.AddLabeledSlider("TweaksGalore.TechprintCommonality".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
+                    settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                }
+                // Tweak: Techprint Market Value
+                {
+                    float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintMarketValue;
+                    float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue / 10f;
+                    float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue * 10f;
+                    listing.AddLabeledSlider("TweaksGalore.TechprintMarketValue".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
+                    settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                }
+                // Tweak: Techprint Held By Empire
+                // Tweak: Techprint Held By Outlanders
+                listing.Gap();
             }
         }
 
         public override void DoOnStartup()
         {
-            StoreDefaultValues();
-            UpdateStackSizeDict();
-            if (settings.GetBoolSetting(def.defName, false))
+            if (settings.researchProjectSettingsDefaults.NullOrEmpty())
             {
-                ApplyStackValues(settings.tweak_stackSizeControl);
+                settings.researchProjectSettingsDefaults = new Dictionary<string, ResearchProjectSettings>();
             }
-        }
-
-        public override void DoSectionRestore()
-        {
-            settings.tweak_stackSizeControl = defaultResearchValues;
-        }
-
-        public void StoreDefaultValues()
-        {
-            if (defaultResearchValues.NullOrEmpty())
+            if (settings.tweak_researchProjectSettings.NullOrEmpty())
             {
-                defaultResearchValues = new Dictionary<string, int>();
+                settings.tweak_researchProjectSettings = new Dictionary<string, ResearchProjectSettings>();
             }
-            foreach(ThingDef thing in DefDatabase<ThingDef>.AllDefs.Where(t => t.stackLimit > 1))
+            foreach (ResearchProjectDef research in DefDatabase<ResearchProjectDef>.AllDefs)
             {
-                if (!defaultResearchValues.ContainsKey(thing.defName))
+                if (!settings.researchProjectSettingsDefaults.ContainsKey(research.defName))
                 {
-                    defaultResearchValues.Add(thing.defName, thing.stackLimit);
+                    settings.researchProjectSettingsDefaults.Add(research.defName, MakeNewRoyalPermitSetting(research));
                 }
-            }
-        }
-
-        public void ApplyStackValues(Dictionary<string, int> source)
-        {
-            if (!source.NullOrEmpty())
-            {
-                foreach (ThingDef thing in DefDatabase<ThingDef>.AllDefs.Where(t => t.stackLimit > 1))
+                if (!settings.tweak_researchProjectSettings.ContainsKey(research.defName))
                 {
-                    if(defaultResearchValues[thing.defName] != source[thing.defName])
-                    {
-                        SetStackSizeValue(thing, source[thing.defName]);
-                    }
+                    settings.tweak_researchProjectSettings.Add(research.defName, MakeNewRoyalPermitSetting(research));
                 }
+                ResearchProjectSettings researchSettings = settings.tweak_researchProjectSettings[research.defName];
+                research.baseCost = researchSettings.baseCost;
+                research.techLevel = researchSettings.techLevel;
+                research.techprintCount = researchSettings.techprintCount;
+                research.techprintCommonality = researchSettings.techprintCommonality;
+                research.techprintMarketValue = researchSettings.techprintMarketValue;
             }
         }
 
-        public void UpdateStackSizeDict()
+        public ResearchProjectSettings MakeNewRoyalPermitSetting(ResearchProjectDef permit)
         {
-            if (settings.tweak_stackSizeControl.NullOrEmpty())
-            {
-                defaultResearchValues = new Dictionary<string, int>();
-            }
-            foreach (ThingDef thing in DefDatabase<ThingDef>.AllDefs.Where(t => t.stackLimit > 1))
-            {
-                if (!settings.tweak_stackSizeControl.ContainsKey(thing.defName))
-                {
-                    settings.tweak_stackSizeControl.Add(thing.defName, thing.stackLimit);
-                }
-            }
-        }
-
-        public void SetStackSizeValue(ThingDef def, int value)
-        {
-            def.stackLimit = value;
+            ResearchProjectSettings s = new ResearchProjectSettings();
+            s.baseCost = permit.baseCost;
+            s.techLevel = permit.techLevel;
+            s.techprintCount = permit.techprintCount;
+            s.techprintCommonality = permit.techprintCommonality;
+            s.techprintMarketValue = permit.techprintMarketValue;
+            s.heldByEmpire = permit.heldByFactionCategoryTags?.Contains("Empire") ?? false;
+            s.heldByOutlanders = permit.heldByFactionCategoryTags?.Contains("Outlander") ?? false;
+            return s;
         }
     }
 }

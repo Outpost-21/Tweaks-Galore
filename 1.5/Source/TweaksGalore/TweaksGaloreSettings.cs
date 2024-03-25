@@ -20,15 +20,16 @@ namespace TweaksGalore
         public TechLevel tweak_tech_lowestTechLevel = TechLevel.Undefined;
         public TechLevel tweak_tech_highestTechLevel = TechLevel.Undefined;
 
+        // Research Projects
+        public Dictionary<string, ResearchProjectSettings> tweak_researchProjectSettings = new Dictionary<string, ResearchProjectSettings>();
+        [Unsaved]
+        public Dictionary<string, ResearchProjectSettings> researchProjectSettingsDefaults = new Dictionary<string, ResearchProjectSettings>();
+
         // Penned Animals
         public Dictionary<string, float> tweak_pennedAnimalDict = new Dictionary<string, float>();
 
         // Event Control
         public Dictionary<string, float> tweak_eventControlDict = new Dictionary<string, float>();
-
-        // Stack Size Control
-        public Dictionary<string, int> tweak_stackSizeControl = new Dictionary<string, int>();
-        public Dictionary<string, float> tweak_stackSizeCategories = new Dictionary<string, float>();
 
         // Anima Psylink
         public List<int> tweak_animaPsylinkLevelNeeds = new List<int>();
@@ -199,6 +200,7 @@ namespace TweaksGalore
             // Research
             Scribe_Values.Look(ref tweak_tech_lowestTechLevel, "tweak_tech_lowestTechLevel", TechLevel.Undefined);
             Scribe_Values.Look(ref tweak_tech_highestTechLevel, "tweak_tech_highestTechLevel", TechLevel.Undefined);
+            Scribe_Collections.Look(ref tweak_researchProjectSettings, "tweak_researchProjectSettings");
 
             // Penned Animals
             Scribe_Collections.Look(ref tweak_pennedAnimalDict, "tweak_pennedAnimalDict");

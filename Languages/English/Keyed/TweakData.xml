@@ -22,4 +22,18 @@
 	<TweaksGalore.TraderShipsDesc>These traders are currently in orbit:\n\n{0}\nUse the Comms console to trade with them.</TweaksGalore.TraderShipsDesc>
 	<TweaksGalore.Shipfrom>Ship from </TweaksGalore.Shipfrom>
 
+	<!-- General Worker Text -->
+	<TweaksGalore.RestoreDefaults>Restore defaults</TweaksGalore.RestoreDefaults>
+	<TweaksGalore.DefaultsRestoredRestartRequired>Tweaks Galore: '{0}' tweaks restored to defaults. Restart required to take full effect.</TweaksGalore.DefaultsRestoredRestartRequired>
+	<TweaksGalore.SliderMinValue>Min: {0}</TweaksGalore.SliderMinValue>
+	<TweaksGalore.SliderMaxValue>Max: {0}</TweaksGalore.SliderMaxValue>
+	<TweaksGalore.TechLevelValue>TechLevel:</TweaksGalore.TechLevelValue>
+
+	<!-- Research Projects -->
+	<TweaksGalore.ResearchCost>Base Cost: {0}</TweaksGalore.ResearchCost>
+	<TweaksGalore.TechprintCount>Techprint Count: {0}</TweaksGalore.TechprintCount>
+	<TweaksGalore.TechprintCountNote>The techprint count controls how many techprints are needed to fully unlock the research project. Setting to 0 means no tech prints will be needed.</TweaksGalore.TechprintCountNote>
+	<TweaksGalore.TechprintCommonality>Techprint Commonality: {0}</TweaksGalore.TechprintCommonality>
+	<TweaksGalore.TechprintMarketValue>Techprint Market Value: {0}</TweaksGalore.TechprintMarketValue>
+
 </LanguageData>

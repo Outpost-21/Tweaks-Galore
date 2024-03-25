@@ -60,6 +60,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_ResearchProjects</defName>
 		<label>Research Projects</label>
+		<description>Allows control over the cost and tech print needs of any given Research Project. Restarting the game is required to apply these settings.</description>
 		<sectionWorker>TweaksGalore.SectionWorker_ResearchProjects</sectionWorker>
 		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
@@ -77,13 +78,6 @@
 		<sectionWorker>TweaksGalore.SectionWorker_Raids</sectionWorker>
 		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
-
-	<!-- <TweaksGalore.TweakSectionDef>
-		<defName>TweakSection_Vanilla_StackSizeControl</defName>
-		<label>Stack Sizes</label>
-		<sectionWorker>TweaksGalore.SectionWorker_StackSizeControl</sectionWorker>
-		<category>TweakCategory_Vanilla</category>
-	</TweaksGalore.TweakSectionDef> -->
 
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_WeatherControl</defName>

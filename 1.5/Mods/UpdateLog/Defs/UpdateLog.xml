@@ -12,17 +12,13 @@
 			</li>
 			<li>
 				<header>Code Overhaul</header>
-				<text>Tweaks have now been converted into defs so anyone can use this system to very easily add tweaks for their own mods, new tweaks, pages and sections can be added very easily with just XML, and values given in-game can be used to replace values in XML using new types of PatchOperations. For more info click the GitHub link at the top of the update.
+				<text>Tweaks have now been converted into defs so anyone can use this system to very easily add tweaks for their own mods, new tweaks, pages and sections can be added very easily with just XML, and values given in-game can be used to replace values in XML using new types of PatchOperations. In simple terms, this just means future updates are going to be significantly less tedious for me to do. For more info click the GitHub link at the top of this window.
 					
 Old settings from 1.4 will not carry over. I attempted to have them moved to the new system and it just ended up causing issues, new RimWorld version anyway.</text>
 			</li>
 			<li>
-				<header>Export/Import</header>
-				<text>Tweak settings can now be imported/exported, it'll just use text that you copy/paste. So if you want to store different configs you totally can now, or share them, with the way tweaks work it won't care if you import a config that has tweaks/mods you don't have.</text>
-			</li>
-			<li>
 				<header>New Tweaks</header>
-				<text> There are too many to go into detail so this'll just be a list of their names, you can find a description of each tweak in the options anyway (in a tooltip when you hover over them). It's well over 100 new tweaks, so I may also just have missed some.
+				<text>There are quite a few additional tweaks now, and with Anomaly just around the corner there will no doubt be plenty more to come still, there's too many to realistically list here, and since settings won't carry over this update you'd be best just having a look through all the options anyway.
 
 -- Disable Skin Shader
 -- Skill Learning Per Day
@@ -64,7 +60,6 @@ Old settings from 1.4 will not carry over. I attempted to have them moved to the
 -- Prisoner Recreation
 -- Trader Info Alert
 -- Repair In Zone
-- Custom Prisoner Interactions
 - More Slaves
 - Slave Strap Over Clothing
 - Drop All Inventory
@@ -179,7 +174,6 @@ Old settings from 1.4 will not carry over. I attempted to have them moved to the
 				<text>It wouldn't really be fair of me to add a bunch of tweaks for VE and not my own mods would it.
 
 - [Outland - Core] No Cloth Components
-- [Outland - Furniture &amp; Decor] No Component Costs
 - [Outer Rim - Core] All Blasters Are Ionized
 - [Outer Rim - Core] Fast Ion
 - [Outer Rim - Core] Explosive Ion</text>
