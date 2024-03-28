@@ -28,15 +28,6 @@ namespace TweaksGalore
             mod.SetCollapsedCategoryState(categoryString, categoryToggle);
             if (!categoryToggle)
             {
-                if (!research.heldByFactionCategoryTags.NullOrEmpty())
-                {
-                    listing.Note($"Faction Categories: {research.heldByFactionCategoryTags.ToArray().ToCommaList()}", GameFont.Tiny, Color.gray);
-                    listing.GapLine();
-                }
-                else
-                {
-                    listing.Note("No factions hold techprints for this research.");
-                }
                 // Tweak: Base Cost
                 {
                     float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].baseCost;
@@ -47,33 +38,49 @@ namespace TweaksGalore
                 }
                 // Tweak: Tech Level
                 listing.TechLevelMenu("TweaksGalore.TechLevelValue".Translate(), "", settings.tweak_researchProjectSettings[research.defName].techLevel, listing.ColumnWidth);
-                // Tweak: Techprint Count
+                if (ModLister.RoyaltyInstalled)
                 {
-                    float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCount;
-                    float baseCostMin = 0;
-                    float baseCostMax = 10;
-                    listing.AddLabeledSlider("TweaksGalore.TechprintCount".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), 1f);
-                    settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
-                    listing.Note("TweaksGalore.TechprintCountNote".Translate(), GameFont.Tiny);
+                    // Tweak: Techprint Count
+                    {
+                        float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCount;
+                        float baseCostMin = 0;
+                        float baseCostMax = 10;
+                        listing.AddLabeledSlider("TweaksGalore.TechprintCount".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), 1f);
+                        settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                        listing.Note("TweaksGalore.TechprintCountNote".Translate(), GameFont.Tiny);
+                    }
+                    // Tweak: Techprint Commonality
+                    {
+                        float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCommonality;
+                        float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality / 10f;
+                        float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality * 10f;
+                        listing.AddLabeledSlider("TweaksGalore.TechprintCommonality".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
+                        settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                    }
+                    // Tweak: Techprint Market Value
+                    {
+                        float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintMarketValue;
+                        float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue / 10f;
+                        float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue * 10f;
+                        listing.AddLabeledSlider("TweaksGalore.TechprintMarketValue".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
+                        settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                    }
+                    // Tweak: Techprint Tags
+                    {
+                        listing.GapLine();
+                        if (research.heldByFactionCategoryTags.NullOrEmpty()) { listing.Note("TweaksGalore.TechprintNoFactions".Translate()); }
+                        else { listing.Note(research.heldByFactionCategoryTags.ToArray().ToCommaList()); }
+
+                        if (listing.ButtonText("TweaksGalore.ButtonAdd".Translate()))
+                        {
+                            // Do adding tag dropdown
+                        }
+                        if (listing.ButtonText("TweaksGalore.ButtonRemove".Translate()))
+                        {
+                            // Do removing tag dropdown
+                        }
+                    }
                 }
-                // Tweak: Techprint Commonality
-                {
-                    float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCommonality;
-                    float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality / 10f;
-                    float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality * 10f;
-                    listing.AddLabeledSlider("TweaksGalore.TechprintCommonality".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
-                    settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
-                }
-                // Tweak: Techprint Market Value
-                {
-                    float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintMarketValue;
-                    float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue / 10f;
-                    float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue * 10f;
-                    listing.AddLabeledSlider("TweaksGalore.TechprintMarketValue".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
-                    settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
-                }
-                // Tweak: Techprint Held By Empire
-                // Tweak: Techprint Held By Outlanders
                 listing.Gap();
             }
         }
@@ -104,19 +111,19 @@ namespace TweaksGalore
                 research.techprintCount = researchSettings.techprintCount;
                 research.techprintCommonality = researchSettings.techprintCommonality;
                 research.techprintMarketValue = researchSettings.techprintMarketValue;
+                research.heldByFactionCategoryTags = researchSettings.techprintTags;
             }
         }
 
-        public ResearchProjectSettings MakeNewRoyalPermitSetting(ResearchProjectDef permit)
+        public ResearchProjectSettings MakeNewRoyalPermitSetting(ResearchProjectDef researchDef)
         {
             ResearchProjectSettings s = new ResearchProjectSettings();
-            s.baseCost = permit.baseCost;
-            s.techLevel = permit.techLevel;
-            s.techprintCount = permit.techprintCount;
-            s.techprintCommonality = permit.techprintCommonality;
-            s.techprintMarketValue = permit.techprintMarketValue;
-            s.heldByEmpire = permit.heldByFactionCategoryTags?.Contains("Empire") ?? false;
-            s.heldByOutlanders = permit.heldByFactionCategoryTags?.Contains("Outlander") ?? false;
+            s.baseCost = researchDef.baseCost;
+            s.techLevel = researchDef.techLevel;
+            s.techprintCount = researchDef.techprintCount;
+            s.techprintCommonality = researchDef.techprintCommonality;
+            s.techprintMarketValue = researchDef.techprintMarketValue;
+            s.techprintTags = researchDef.heldByFactionCategoryTags;
             return s;
         }
     }

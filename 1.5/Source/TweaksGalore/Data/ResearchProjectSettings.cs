@@ -16,8 +16,7 @@ namespace TweaksGalore
         public int techprintCount;
         public float techprintCommonality;
         public float techprintMarketValue;
-        public bool heldByEmpire;
-        public bool heldByOutlanders;
+        public List<string> techprintTags;
 
         public void ExposeData()
         {
@@ -26,8 +25,7 @@ namespace TweaksGalore
             Scribe_Values.Look(ref techprintCount, "techprintCount");
             Scribe_Values.Look(ref techprintCommonality, "techprintCommonality");
             Scribe_Values.Look(ref techprintMarketValue, "techprintMarketValue");
-            Scribe_Values.Look(ref heldByEmpire, "heldByEmpire");
-            Scribe_Values.Look(ref heldByOutlanders, "heldByOutlanders");
+            Scribe_Collections.Look(ref techprintTags, "techprintTags");
         }
     }
 }

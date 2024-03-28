@@ -28,6 +28,8 @@
 	<TweaksGalore.SliderMinValue>Min: {0}</TweaksGalore.SliderMinValue>
 	<TweaksGalore.SliderMaxValue>Max: {0}</TweaksGalore.SliderMaxValue>
 	<TweaksGalore.TechLevelValue>TechLevel:</TweaksGalore.TechLevelValue>
+	<TweaksGalore.ButtonAdd>Add...</TweaksGalore.ButtonAdd>
+	<TweaksGalore.ButtonRemove>Remove...</TweaksGalore.ButtonRemove>
 
 	<!-- Research Projects -->
 	<TweaksGalore.ResearchCost>Base Cost: {0}</TweaksGalore.ResearchCost>
@@ -35,5 +37,7 @@
 	<TweaksGalore.TechprintCountNote>The techprint count controls how many techprints are needed to fully unlock the research project. Setting to 0 means no tech prints will be needed.</TweaksGalore.TechprintCountNote>
 	<TweaksGalore.TechprintCommonality>Techprint Commonality: {0}</TweaksGalore.TechprintCommonality>
 	<TweaksGalore.TechprintMarketValue>Techprint Market Value: {0}</TweaksGalore.TechprintMarketValue>
+	<TweaksGalore.TechprintNoFactions>No factions hold techprints for this research. If this is the default, it may be they are obtained through other means than Royalty typically uses.</TweaksGalore.TechprintNoFactions>
+	<TweaksGalore.TechprintFactionsHeld>Factions holding this techprint: {0}</TweaksGalore.TechprintFactionsHeld>
 
 </LanguageData>
