@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_MakeSarcophagiUnescapable</li>
+		</settings>
+		<active Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Sarcophagus"]/building/isEscapableContainer</xpath>
+			<value>
+				<isEscapableContainer>false</isEscapableContainer>
+			</value>
+		</active>
+	</Operation>
+
+
+</Patch>

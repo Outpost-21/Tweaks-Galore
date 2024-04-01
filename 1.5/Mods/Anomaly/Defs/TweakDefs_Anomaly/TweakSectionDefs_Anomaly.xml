@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_Anomaly</defName>
+		<label>Anomaly</label>
+		<orderID>-1</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+</Defs>

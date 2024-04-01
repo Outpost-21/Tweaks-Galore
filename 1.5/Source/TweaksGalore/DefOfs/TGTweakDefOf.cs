@@ -92,5 +92,8 @@ namespace TweaksGalore
 
         [MayRequireBiotech]
         public static TweakDef Tweak_MechSkillLevel, Tweak_MechDischargeRate, Tweak_SpawnPregnancyChance;
+
+        [MayRequireAnomaly]
+        public static TweakDef Tweak_MakeStoneSarcophagiUnescapable;
     }
 }
