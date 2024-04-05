@@ -99,7 +99,6 @@
     <Compile Include="Data\FactionRaidSettings.cs" />
     <Compile Include="DefOfs\TGTweakDefOf.cs" />
     <Compile Include="Defs\TweakBaseDef.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuUtility_GetMeleeAttackAction.cs" />
     <Compile Include="Harmony\Patch_Corpse_RotStageChanged.cs" />
     <Compile Include="Harmony\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs" />
     <Compile Include="Harmony\Patch_HeadTypeDef_GetGraphic.cs" />
@@ -111,17 +110,6 @@
     <Compile Include="PatchOperation\PatchOperation_TweakInt.cs" />
     <Compile Include="PatchOperation\PatchOperation_TweakFloat.cs" />
     <Compile Include="PatchOperation\PatchOperation_TweakBool.cs" />
-    <Compile Include="Harmony\Patch_CharacterCardUtility_DrawCharacterCard.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuMakerMap_AddHumanlikeOrders.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuMakerMap_AddUndraftedOrders.cs" />
-    <Compile Include="Harmony\Patch_FloatMenuMakerMap_ChoicesAtFor.cs" />
-    <Compile Include="Harmony\Patch_PawnGenerator_GenerateSkills.cs" />
-    <Compile Include="Harmony\Patch_Pawn_WorkTagIsDisabled.cs" />
-    <Compile Include="Harmony\Patch_Pawn_WorkTypeIsDisabled.cs" />
-    <Compile Include="Harmony\Patch_SkillRecord_CalculateTotallyDisabled.cs" />
-    <Compile Include="Harmony\Patch_WidgetsWork_TipForPawnWorker.cs" />
-    <Compile Include="Harmony\Patch_WITab_Caravan_Gear_TryEquipDraggedItem.cs" />
-    <Compile Include="Harmony\Patch_WorkTab_Pawn_Extensions_AllowedToDo.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Genepacks.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Raids.cs" />
     <Compile Include="SectionWorkers\SectionWorker_ResearchProjects.cs" />

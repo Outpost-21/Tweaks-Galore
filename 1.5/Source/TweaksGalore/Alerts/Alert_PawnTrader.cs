@@ -70,7 +70,7 @@ namespace TweaksGalore
 				list.Add("TweaksGalore.Shipfrom".Translate() + traderShip.Label + Environment.NewLine + traderShip.GetInspectString());
 			}
 			TaggedString taggedString = string.Join(Environment.NewLine + Environment.NewLine, list);
-			return "TweaksGalore.PawnTraderDesc".Translate().Replace("{0}", "") + taggedString;
+			return "TweaksGalore.PawnTraderDesc".Translate() + taggedString;
 		}
 
 		public override AlertReport GetReport()

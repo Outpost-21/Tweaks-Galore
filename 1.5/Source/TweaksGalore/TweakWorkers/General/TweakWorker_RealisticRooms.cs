@@ -18,7 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
-            base.OnStartup();
+            if (!def.ShouldRunTweak()) { return; }
             if (def.BoolValue)
             {
                 List<RoomStatScoreStage> scoreStages = TGRoomStatDefOf.Space.scoreStages;

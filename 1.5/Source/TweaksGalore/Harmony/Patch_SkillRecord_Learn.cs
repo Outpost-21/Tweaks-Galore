@@ -15,10 +15,10 @@ namespace TweaksGalore
     public class Patch_SkillRecord_Learn
     {
         [HarmonyPrefix]
-        public static bool Prefix(ref float xp, bool direct, SkillRecord __instance)
+        public static void Prefix(ref float xp, bool direct, SkillRecord __instance)
         {
             // Skill Tweaks
-            if (TweaksGaloreMod.settings.GetBoolSetting("Tweak_SkillTweaks", false))
+            if (TGTweakDefOf.Tweak_SkillTweaks.BoolValue)
             {
                 if (xp < 0f)
                 {
@@ -33,36 +33,6 @@ namespace TweaksGalore
                     xp *= TGTweakDefOf.Tweak_SkillGainMultiplier.FloatValue;
                 }
             }
-
-            // Not My Best Work
-            if (TweaksGaloreMod.settings.GetBoolSetting("Tweak_NotMyBestWork", false) && __instance.TotallyDisabled)
-            {
-                Pawn pawn = __instance?.pawn;
-                // Finds settings for limits.
-                int levelLimit = 0;
-                switch (__instance.passion)
-                {
-                    case Passion.Minor:
-                        levelLimit = TGTweakDefOf.Tweak_NotMyBestwork_MinorPassionCap.IntValue;
-                        break;
-                    case Passion.Major:
-                        levelLimit = TGTweakDefOf.Tweak_NotMyBestwork_MajorPassionCap.IntValue;
-                        break;
-                    default:
-                        levelLimit = TGTweakDefOf.Tweak_NotMyBestwork_BaseLevelCap.IntValue;
-                        break;
-                }
-
-                if (__instance.levelInt >= levelLimit)
-                {
-                    // Prevents levelling up.
-                    if (__instance.xpSinceLastLevel + xp > __instance.XpRequiredForLevelUp)
-                    {
-                        xp *= 0f;
-                    }
-                }
-            }
-            return true;
         }
     }
 }

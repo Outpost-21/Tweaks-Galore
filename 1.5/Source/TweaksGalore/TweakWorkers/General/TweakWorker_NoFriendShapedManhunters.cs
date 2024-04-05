@@ -13,7 +13,7 @@ namespace TweaksGalore
     {
         public override void OnStartup()
         {
-            base.OnStartup();
+            if (!def.ShouldRunTweak()) { return; }
             if (def.BoolValue)
             {
                 List<PawnKindDef> animalPawnKinds = DefDatabase<PawnKindDef>.AllDefs.Where(pk => pk.RaceProps.Animal).ToList();

@@ -18,7 +18,7 @@ namespace TweaksGalore
 		[HarmonyPostfix]
 		public static void Postfix(CompProjectileInterceptor __instance)
 		{
-            if (TGTweakDefOf.Tweak_UninstallableMechShields.BoolValue)
+			if (TGTweakDefOf.Tweak_UninstallableMechShields.BoolValue)
             {
 				__instance.shutDown = false;
 			}

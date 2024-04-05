@@ -103,7 +103,7 @@
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_HaulAfterSlaughter</defName>
 		<label>Haul After Slaughter</label>
-		<description>Similar to Skilled Stone Cutting, adds a skill that can be used to speed up chopping down trees specifically. Patches for a bunch of mods are already included so axes and the like will have an actual effect.</description>
+		<description>Pawns will haul the products from a slaughtering recipe after completing it with this enabled.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
@@ -125,56 +125,6 @@
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
-
-	<!-- ====================================================== -->
-	<!-- ================== Not My Best Work ================== -->
-	<!-- ====================================================== -->
-
-	<TweaksGalore.TweakSubSectionDef>
-		<defName>TweakSubSection_NotMyBestWork</defName>
-		<label>Not My Best Work</label>
-		<description>Provides a way for pawns to do jobs they otherwise would be incapable of with a balance of your choosing.</description>
-		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakSubSectionDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_NotMyBestWork</defName>
-		<label>Enabled</label>
-		<description>Changes whether pawns are capable of normally incapable skills.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<subSection>TweakSubSection_NotMyBestWork</subSection>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_NotMyBestwork_BaseLevelCap</defName>
-		<label>Base Level Cap</label>
-		<description>The level cap for pawns with no passions in a particular skill they would usually have disabled due to incapability.</description>
-		<tweakType>Int</tweakType>
-		<defaultValue>5</defaultValue>
-		<intRange>0~20</intRange>
-		<subSection>TweakSubSection_NotMyBestWork</subSection>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_NotMyBestwork_MinorPassionCap</defName>
-		<label>Minor Passion Cap</label>
-		<description>The level cap for pawns with a minor passion in a particular skill they would usually have disabled due to incapability.</description>
-		<tweakType>Int</tweakType>
-		<defaultValue>10</defaultValue>
-		<intRange>0~20</intRange>
-		<subSection>TweakSubSection_NotMyBestWork</subSection>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_NotMyBestwork_MajorPassionCap</defName>
-		<label>Major Passion Cap</label>
-		<description>The level cap for pawns with a major passion in a particular skill they would usually have disabled due to incapability.</description>
-		<tweakType>Int</tweakType>
-		<defaultValue>15</defaultValue>
-		<intRange>0~20</intRange>
-		<subSection>TweakSubSection_NotMyBestWork</subSection>
 	</TweaksGalore.TweakDef>
 
 	<!-- ====================================================== -->

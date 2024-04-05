@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            if (!def.ShouldRunTweak()) { return; }
             base.OnStartup();
             if (def.BoolValue)
             {

@@ -24,12 +24,13 @@
 		</affordances>
 		<generatedFilth>Filth_Dirt</generatedFilth>
 		<fertility>0.0</fertility>
-		<tags>
+		<tags Inherit="False">
 			<li>Floor</li>
 		</tags>
 		<designationCategory>Floors</designationCategory>
-		<layerable>true</layerable>
+		<layerable>false</layerable>
 		<constructEffect>ConstructDirt</constructEffect>
+		<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
 	</TerrainDef>
 
 </Defs>

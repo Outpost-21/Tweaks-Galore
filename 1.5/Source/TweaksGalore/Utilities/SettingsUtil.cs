@@ -15,7 +15,7 @@ namespace TweaksGalore
 {
 	public static class SettingsUtil
 	{
-		public static void CheckboxEnhanced(this Listing_Standard listing, string name, string explanation, ref bool value, string tooltip = null)
+		public static void CheckboxEnhanced(this Listing_Standard listing, string name, string explanation, ref bool value, List<string> incompatibles = null, string tooltip = null)
 		{
 			float curHeight = listing.CurHeight;
 			Text.Font = GameFont.Small;
@@ -32,10 +32,29 @@ namespace TweaksGalore
 			rect.y -= rect.height;
 			if (Mouse.IsOver(rect))
 			{
-				Widgets.DrawHighlight(rect);
+				string tooltipFinal = "";
 				if (!tooltip.NullOrEmpty())
+                {
+					tooltipFinal = tooltip;
+                }
+				if (!incompatibles.NullOrEmpty())
+                {
+                    if (!tooltipFinal.NullOrEmpty()) { tooltipFinal += "\n\n"; }
+					tooltipFinal += "TweaksGalore.TooltipIncompatibleMods".Translate();
+					for (int i = 0; i < incompatibles.Count; i++)
+                    {
+						if(i > 0) { tooltipFinal += "\n"; }
+						ModMetaData modData = ModLister.GetActiveModWithIdentifier(incompatibles[i]);
+						if (modData != null)
+						{
+							tooltipFinal += "TweaksGalore.IncompatibleMod".Translate(modData.Name);
+						}
+                    }
+                }
+				Widgets.DrawHighlight(rect);
+				if (!tooltipFinal.NullOrEmpty())
 				{
-					TooltipHandler.TipRegion(rect, tooltip);
+					TooltipHandler.TipRegion(rect, tooltipFinal);
 				}
 			}
 			GUI.color = Color.white;

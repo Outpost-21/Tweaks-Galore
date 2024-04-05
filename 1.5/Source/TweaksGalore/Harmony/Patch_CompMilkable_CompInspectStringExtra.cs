@@ -17,7 +17,7 @@ namespace TweaksGalore
 		[HarmonyPostfix]
 		public static void Postfix(ref string __result, CompMilkable __instance)
 		{
-            if (TGTweakDefOf.Tweak_AnimalResourceLabel.BoolValue)
+			if (TGTweakDefOf.Tweak_AnimalResourceLabel.BoolValue)
             {
 				int ticks = Mathf.RoundToInt((1f - __instance.Fullness) * 60000f * __instance.GatherResourcesIntervalDays);
 				__result += $"({ticks.ToStringTicksToPeriod()} => {__instance.ResourceAmount} {__instance.ResourceDef.label})";

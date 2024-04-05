@@ -64,6 +64,10 @@ namespace TweaksGalore
         {
             float tempfloat = (float)Math.Round(TweaksGaloreMod.settings.GetFloatSetting(key, original), 2);
             listing.AddLabeledSlider(label + ": " + ((bool)percentage ? tempfloat.ToStringPercent() : tempfloat.ToString("0.00")), ref tempfloat, min, max, $"Min: {((bool)percentage ? min.ToStringPercent() : min.ToString())}", $"Max: {((bool)percentage ? max.ToStringPercent() : max.ToString())}", increment ?? Mathf.Max(0.01f, (max - min) / 100f));
+            if(!description.NullOrEmpty())
+            {
+                listing.Note(description, GameFont.Tiny, Color.gray);
+            }
             TweaksGaloreMod.settings.SetFloatSetting(key, tempfloat);
         }
 
@@ -74,6 +78,10 @@ namespace TweaksGalore
         {
             float tempInt = TweaksGaloreMod.settings.GetIntSetting(key, original);
             listing.AddLabeledSlider(label + ": " + tempInt.ToString(), ref tempInt, min, max, $"Min: {min}", $"Max: {max}", increment ?? Mathf.RoundToInt(Mathf.Max(1f, (max - min) / 100f)));
+            if (!description.NullOrEmpty())
+            {
+                listing.Note(description, GameFont.Tiny, Color.gray);
+            }
             TweaksGaloreMod.settings.SetIntSetting(key, Mathf.RoundToInt(tempInt));
         }
 
@@ -306,7 +314,7 @@ namespace TweaksGalore
 
         public static bool ShouldRunTweak(this TweakDef tweak)
         {
-            if (tweak.incompatible.Any(inc => ModLister.AllInstalledMods.Any(mod => mod.PackageId == inc)))
+            if (tweak.incompatible.Any(inc => ModLister.GetActiveModWithIdentifier(inc) != null))
             {
                 return false;
             }

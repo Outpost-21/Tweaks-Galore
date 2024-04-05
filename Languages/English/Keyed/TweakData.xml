@@ -8,19 +8,14 @@
 	<TG_HunterLacksWeapon>Hunter lacks weapon</TG_HunterLacksWeapon>
 	<TG_HunterLacksWeaponDesc>A hunter does not have a weapon.\n\nWhile they can still perform their job, it is highly recommended to give them a weapon.</TG_HunterLacksWeaponDesc>
 	
-	<TweaksGalore.PawnTrader>Trader{0} available</TweaksGalore.PawnTrader>
 	<TweaksGalore.PawnTraderSingle>Trader available</TweaksGalore.PawnTraderSingle>
 	<TweaksGalore.PawnTraderMulti>Traders available</TweaksGalore.PawnTraderMulti>
 	<TweaksGalore.PawnTraderDesc>Traders from these factions are visiting the colony:\n\n{0}</TweaksGalore.PawnTraderDesc>
-	<TweaksGalore.OrbitalTrader>Orbital trader{0} available</TweaksGalore.OrbitalTrader>
 	<TweaksGalore.OrbitalTraderSingle>Orbital trader available</TweaksGalore.OrbitalTraderSingle>
 	<TweaksGalore.OrbitalTraderMulti>Orbital traders available</TweaksGalore.OrbitalTraderMulti>
 	<TweaksGalore.OrbitalTraderDesc>These traders are currently in orbit:\n\n{0}\nUse the Comms console to trade with them.</TweaksGalore.OrbitalTraderDesc>
-	<TweaksGalore.TraderShips>Trader ship{0} available</TweaksGalore.TraderShips>
-	<TweaksGalore.TraderShipsSingle>Trader ship available</TweaksGalore.TraderShipsSingle>
-	<TweaksGalore.TraderShipsMulti>Trader ships available</TweaksGalore.TraderShipsMulti>
-	<TweaksGalore.TraderShipsDesc>These traders are currently in orbit:\n\n{0}\nUse the Comms console to trade with them.</TweaksGalore.TraderShipsDesc>
 	<TweaksGalore.Shipfrom>Ship from </TweaksGalore.Shipfrom>
+	<TweaksGalore.LeavesIn>- Leaves in {0}</TweaksGalore.LeavesIn>
 
 	<!-- General Worker Text -->
 	<TweaksGalore.RestoreDefaults>Restore defaults</TweaksGalore.RestoreDefaults>
@@ -30,6 +25,8 @@
 	<TweaksGalore.TechLevelValue>TechLevel:</TweaksGalore.TechLevelValue>
 	<TweaksGalore.ButtonAdd>Add...</TweaksGalore.ButtonAdd>
 	<TweaksGalore.ButtonRemove>Remove...</TweaksGalore.ButtonRemove>
+	<TweaksGalore.TooltipIncompatibleMods>Incompatible Mods:</TweaksGalore.TooltipIncompatibleMods>
+	<TweaksGalore.IncompatibleMod>- {0}</TweaksGalore.IncompatibleMod>
 
 	<!-- Research Projects -->
 	<TweaksGalore.ResearchCost>Base Cost: {0}</TweaksGalore.ResearchCost>

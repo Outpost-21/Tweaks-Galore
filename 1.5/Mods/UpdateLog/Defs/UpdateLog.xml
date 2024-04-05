@@ -1,182 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<TabulaRasa.UpdateDef>
-		<defName>TweaksGalore_15082023</defName>
-		<date>2023/08/15</date>
+	<!-- <TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_01012024</defName>
+		<date>2024/01/01</date>
 		<banner />
 		<contentList>
 			<li>
-				<header>UI Overhaul</header>
-				<text>The options screen for Tweaks Galore has been completely overhauled, the previous pages have been collected together in pages for vanilla and each separate DLC, with collapsable sections and a searchbar for finding specific tweaks easily. Most will probably only see this as a purely visual change, it's far from it though.</text>
+				<header></header>
+				<text></text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
 			</li>
 			<li>
-				<header>Code Overhaul</header>
-				<text>Tweaks have now been converted into defs so anyone can use this system to very easily add tweaks for their own mods, new tweaks, pages and sections can be added very easily with just XML, and values given in-game can be used to replace values in XML using new types of PatchOperations. In simple terms, this just means future updates are going to be significantly less tedious for me to do. For more info click the GitHub link at the top of this window.
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef> -->
+
+	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_10042024</defName>
+		<date>2024/04/10</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>1.5 Ready...Hopefully.</header>
+				<text>This is essentially a ground up rewrite of Tweaks Galore for 1.5, and alongside the potential of broken tweaks due to changes in RimWorld itself there's also a risk of that just from the change over to this new version of the mod. So keep in mind that if anything seems off, restart the game first to make sure your settings are actually taking effect, check if you can repeat the issue, and then let me know on the Workshop page.\n\nInclude a HugsLib Log (Ctrl + F12) too of course, they're mandatory if you expect it to be fixed.</text>
+			</li>
+			<li>
+				<header>Code/UI Overhaul</header>
+				<text>The options screen for Tweaks Galore has been completely overhauled, the previous pages have been collected together in pages for vanilla and each separate DLC, with collapsable sections and a searchbar for finding specific tweaks easily. Most will probably only see this as a purely visual change, it's far from it though.\n\nTweaks have now been converted into defs so anyone can use this system to very easily add tweaks for their own mods, new tweaks, pages and sections can be added very easily with just XML, and values given in-game can be used to replace values in XML using new types of PatchOperations. In simple terms, this just means future updates are going to be significantly less tedious for me to do.
 					
-Old settings from 1.4 will not carry over. I attempted to have them moved to the new system and it just ended up causing issues, new RimWorld version anyway.</text>
+Old settings from 1.4 will not carry over. I attempted to have them moved to the new system and it just ended up causing issues, new RimWorld version anyway so better to just have a clean slate than add risk.</text>
 			</li>
 			<li>
 				<header>New Tweaks</header>
-				<text>There are quite a few additional tweaks now, and with Anomaly just around the corner there will no doubt be plenty more to come still, there's too many to realistically list here, and since settings won't carry over this update you'd be best just having a look through all the options anyway.
-
--- Disable Skin Shader
--- Skill Learning Per Day
--- Disable Taint
--- Taint on Rot
--- Only Taint First Layer
--- Power Tweaks for Anything
--- Incident Control
--- Weather Control
--- Better Pyromania
--- Energy Saving Lighting
--- Energy Saving Production
--- Filth Vanishes
--- Stack Size Control
--- Animals Are Fun
--- Where Is My Weapon?
--- Everybody Buys Slaves
--- Trees Don't Just Die
--- Ugh You Got Me
--- Skilled Tree Chopping
--- Faster Cleaning
--- Haul After Slaughter
--- Wild Animal Sex
--- Deconstruct First
--- Smooth Walls Before Floors
--- Butcher Before Cooking
--- Repair After Building
--- Slave Collars for Nudists
--- Slave Straps for Nudists
--- Animal Resource Label
--- Allow Prioritizing (Sleep, Recreation, Research)
--- Dynamic Population
--- Useful Grass
--- Useful Bushes
--- Hay Doesn't Need Cooling
--- No Job Authors
--- No Lethal Damage Threshold
--- Realistic Rooms
--- Prisoner Recreation
--- Trader Info Alert
--- Repair In Zone
-- More Slaves
-- Slave Strap Over Clothing
-- Drop All Inventory
-- Safe Insect Jelly
--- Prisoners Clean Up
-- Turrets Target Prisoners
-- Traders Have More Silver
-- Map Edge Control
--- Buildable Packed Dirt
-- Job Display
-- Toggle Harvest
-- Recipe Icons
-- Show Both Temperatures
-- Tooltipped Long Labels
-- Stone Production Benches
-- Metal Crematorium
--- Recreational Drums
-- Craftable Neutroamine
-- Craftable Luciferium
-- Craftable Glitterworld Medicine
-- Craftable Plasteel
-- More Steel from Slag
-- Milkable Muffalos
-- Practical Pemmican
-- Trade Price Adjustments
-- Friendly Fire Adjustments
-- Smokeleaf Adjustments
-- Better Mechanoid Disassembly
-- Keep Turrets Refueled
-- Animals Don't Eat Random Things
-- Bed Rest Effectiveness
-- Better Quest Rewards
-- Moisture Pump Speed
-- Safe Tasty Foods
-- Herd Migration On Any Biome
-- Indestructible Power Conduits
-- Grow Trees Indoors
-- Quest Frequency Adjustment
-- No Banishing Debuff
-- No Human Filth
-- No Improvised Weapons
-- Research Control
-- Sealed Power Armour
-- Uniform Crops
-- Water Pathing Cost
-- Wolves Are Dogs
-- Animal Medical Alerts
-- Animals Auto-Follow Masters
-- Auto-Deconstruct Finished Moisture Pumps
-- Show Alerts for Medical Treatment in Bed
-- Show Gender/Age/Xenotype in Caravan Window
-- [Royalty] Prestige Helmet Buffs
-- [Royalty] No Death Acidifiers
-- [Royalty] No Biocoding
-- [Royalty] Royal Title Display
-- [Royalty] Lending Asks For Less
-- [Royalty] Buyable Psy Equipment
-- [Ideology] You Look Fine!
-- [Ideology] Unrestricted Roles
-- [Ideology] Increased Specialist Limit
-- [Ideology] Roles Can Work
-- [Ideology] Slave Recreation
-- [Ideology] Production Includes Artists
-- [Ideology] More Worksite Resources
-- [Ideology] Controllable Berserk Trance
-- [Ideology] Biosculptor Restores Parts
-- [Ideology] Conversion Ritual Effectiveness
-- [Ideology] Neural Superchaarger Cooldown
-- [Ideology] Idealized Pain Threshold
-- [Ideology] People required For Roles
-- [Ideology] No Work Speed Debuff For Raiders
-- [Ideology] No Work Speed Debuff For Ranchers
-- [Biotech] Xenotype Control
-- [Biotech] Xenotype Adjustments
-- [Biotech] Mechanoid Work Speeds
-- [Biotech] Rebalanced Mechanoid Research
-- [Biotech] Self Coagulate
-- [Biotech] Indestructible Mechanoid Chips
-- [Biotech] No Lactating Debuff
-- [Biotech] Larger Gene Banks
-- [Biotech] Wastepacks Per Recharge
-- [Biotech] Atomizer Speed Adjustment
-- [Biotech] Atomizer Stack Limit
-- [Biotech] More Genepacks On Traders
-- [Biotech] More Polux Seeds On Traders
-- [Biotech] Pollution Pump Range
-- [Biotech] Pollution Pump Speed
-- [Biotech] Pollution Pump Tiles Per Wastepack
-- [Biotech] Xenogene Regrow Time</text>
-			</li>
-			<li>
-				<header>Vanilla Expanded Tweaks</header>
-				<text>With the new method of adding tweaks I've made it easy enough that I'm willing to add a small amount of Vanilla Expanded tweaks. Only tweaks for mods you have enabled will show up in the options. If you don't have any VE mods you won't even see the page for it in the dropdown.
-
-- [VE Psycasts] Healable Sacrificial Fingers
-- [VFE Empire] No Terrorists
-- [VFE Insectoids] Craftable Bio-Engineering Buildings
-- [VFE Insectoids] Craftable Sonic Infestation Repeller
-- [VFE Insectoids] Vat Grown Insectoids Live Longer
-- [VFE Pirates] Working Warcaskets
-- [VRE Androids] Disable Awakening
-- [VRE Androids] Non-Colonist Scans
-- [VRE Androids] Allow Awakened Modification
-- [VE Vehicles] Researchable Tier 3
-- [VE Vehicles] Craftable Tier 4
-- [VPE Mushrooms] Just Let Me Grow!
--- [VRE Saurids] Alternate Cold Blooded
-- [VFE Mechanoids] Craftable Mechanoid Components</text>
-			</li>
-			<li>
-				<header>Outpost 21 Tweaks</header>
-				<text>It wouldn't really be fair of me to add a bunch of tweaks for VE and not my own mods would it.
-
-- [Outland - Core] No Cloth Components
-- [Outer Rim - Core] All Blasters Are Ionized
-- [Outer Rim - Core] Fast Ion
-- [Outer Rim - Core] Explosive Ion</text>
+				<text>There are a few additional tweaks now, and with Anomaly just around the corner there will no doubt be plenty more to come still.</text>
 			</li>
 		</contentList>
 		<links>

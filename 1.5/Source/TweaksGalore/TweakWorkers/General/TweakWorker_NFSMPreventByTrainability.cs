@@ -20,7 +20,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
-            base.OnStartup();
+            if (!def.ShouldRunTweak()) { return; }
             settings.GetBoolSetting(def.defName + "Intermediate", def.DefaultBool);
             settings.GetBoolSetting(def.defName + "Advanced", def.DefaultBool);
         }

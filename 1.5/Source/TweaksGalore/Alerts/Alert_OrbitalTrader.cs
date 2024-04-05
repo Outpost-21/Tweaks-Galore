@@ -31,10 +31,10 @@ namespace TweaksGalore
 				foreach (PassingShip passingShip in map.passingShipManager.passingShips)
 				{
 					stringBuilder.AppendLine(passingShip.FullTitle);
-					stringBuilder.AppendLine("Leaves in " + passingShip.ticksUntilDeparture.ToStringTicksToPeriod());
+					stringBuilder.AppendLine("TweaksGalore.LeavesIn".Translate(passingShip.ticksUntilDeparture.ToStringTicksToPeriod()));
 				}
 			}
-			return string.Format("TweaksGalore.OrbitalTraderDesc".Translate(), stringBuilder);
+			return "TweaksGalore.OrbitalTraderDesc".Translate(stringBuilder);
 		}
 
 		public override AlertReport GetReport()

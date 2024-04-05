@@ -21,6 +21,7 @@ namespace TweaksGalore
         public override void OnStartup()
         {
             base.OnStartup();
+            if (!def.ShouldRunTweak()) { return; }
             if (def.FloatValue == 2f) { return; }
 
             if (!GetAllMechanoids.EnumerableNullOrEmpty())

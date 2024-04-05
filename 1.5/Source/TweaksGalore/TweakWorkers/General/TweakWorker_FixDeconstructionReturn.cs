@@ -18,7 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
-            base.OnStartup();
+            if (!def.ShouldRunTweak()) { return; }
             if (def.BoolValue)
             {
                 foreach (BuildableDef buildableDef in DefDatabase<BuildableDef>.AllDefs)
