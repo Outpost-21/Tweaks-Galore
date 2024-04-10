@@ -39,7 +39,7 @@ namespace TweaksGalore
 
 		public override AlertReport GetReport()
 		{
-			if(!TGTweakDefOf.Tweak_OrbitalTraderAlert.BoolValue)
+            if (!TGTweakDefOf.Tweak_OrbitalTraderAlert.BoolValue) { return false; }
 			foreach (Map map in Find.Maps)
 			{
 				if (map.passingShipManager.passingShips.Count > 0)

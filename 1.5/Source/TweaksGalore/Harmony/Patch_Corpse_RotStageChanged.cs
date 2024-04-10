@@ -16,11 +16,11 @@ namespace TweaksGalore
 	public class Patch_Corpse_RotStageChanged
 	{
         [HarmonyPrefix]
-        public static bool Prefix(Corpse __instance)
+        public static void Prefix(Corpse __instance)
         {
             if (TGTweakDefOf.Tweak_TaintDisabled.BoolValue)
             {
-                return true;
+                return;
             }
             Pawn pawn = __instance.InnerPawn;
             if (pawn.apparel != null && TGTweakDefOf.Tweak_TaintOnRot.BoolValue)
@@ -35,7 +35,7 @@ namespace TweaksGalore
                     wornApparel.TaintAll();
                 }
             }
-            return true;
+            return;
         }
     }
 }

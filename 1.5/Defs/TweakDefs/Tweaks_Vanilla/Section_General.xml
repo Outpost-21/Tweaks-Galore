@@ -23,7 +23,7 @@
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_RealisticRooms</defName>
 		<label>Realistic Rooms</label>
 		<description>Adjusts room requirements so you can get away with smaller spaces, each size is lowered to roughly half of the vanilla values.</description>
@@ -31,7 +31,7 @@
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_DisableLethalDamageThreshold</defName>
@@ -87,68 +87,68 @@
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_UghYouGotMe</defName>
 		<label>Ugh You Got Me</label>
 		<description>Prevents social fights from going too far, ending the fight before too much damage is done, if damage was about to be done that would have been extreme (biting off an arm for example, it happens) then it negates that damage.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_TreesDontJustDie</defName>
 		<label>Trees Don't Just Die</label>
 		<description>Patches trees so they have an infinite lifespan, it is kind of silly that they only live like 2 years in RimWorld.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_EverybodyBuysSlaves</defName>
 		<label>Everybody Buys Slaves</label>
 		<description>Universally patches traders to be able to buy slaves. No, this won't respect Ideology for any faction traders, because it can't, that's not how traders work.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_WhereIsMyWeapon</defName>
 		<label>Where Is My Weapon?</label>
 		<description>When a downed pawn drops their weapon, this will allow them to go and look for it when they can walk again.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_AnimalsAreFun</defName>
 		<label>Animals Are Fun</label>
 		<description>Adds the ability for pawns to play with animals, gaining them recreation, as well as increasing the training of those animals.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_FilthVanishes</defName>
 		<label>Filth Vanishes</label>
 		<description>Changes filth so it gets washed away in the rain, and vanishes over time.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_BetterPyromania</defName>
 		<label>Better Pyromania</label>
 		<description>Turns pyromania into a need, similar to chemical dependence, making it much easier to manage without bouts of the flamies.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_BoomalopesBleedChemfuel</defName>
@@ -392,7 +392,7 @@
 	<!-- ================== Wild Animal Sex ================== -->
 	<!-- ====================================================== -->
 
-	<TweaksGalore.TweakSubSectionDef>
+	<!-- <TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_WildAnimalSex</defName>
 		<label>Wild Animal Sex</label>
 		<description>Allows wild animals to reproduce, just like domestic ones.</description>
@@ -417,7 +417,7 @@
 		<intRange>8~100</intRange>
 		<intIncrement>1</intIncrement>
 		<subSection>TweakSubSection_WildAnimalSex</subSection>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<!-- ================================================================= -->
 	<!-- ================== No Friend Shaped Manhunters ================== -->

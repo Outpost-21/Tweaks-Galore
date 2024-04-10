@@ -39,13 +39,9 @@ namespace TweaksGalore
 
         public override void DoSectionContents(Listing_Standard listing, string filter)
         {
-            if (listing.ButtonTextLabeled("", "Restore defaults"))
-            {
-                settings.tweak_eventControlDict = defaultValues;
-                Messages.Message("Tweaks Galore: 'Incident Control' tweaks restored to defaults. Restart required to take full effect.", MessageTypeDefOf.CautionInput);
-            }
+            base.DoSectionContents(listing, filter);
             // Tweak: Penned Animal Config
-            listing.DoSettingBool("Incident Control", "Allows control over the chances of incidents happening, even reducing them to zero, because why not. Incidents set to zero chance of happening may still be triggered through other means, so this doesn't always result in disabling them.", def.defName, false, true);
+            listing.DoSettingBool("TweaksGalore.IncidentControlBool".Translate(), "TweaksGalore.IncidentControlBoolDesc".Translate(), def.defName, false, true);
             if (settings.GetBoolSetting(def.defName, false))
             {
                 listing.GapLine();
@@ -53,11 +49,17 @@ namespace TweaksGalore
                 {
                     IncidentDef curIncident = CachedIncidentListing[i];
                     float value = settings.tweak_eventControlDict[curIncident.defName];
-                    listing.AddLabeledSlider(curIncident.LabelCap + ": " + (value == 0f ? "Never" : (value)), ref value, 0f, 10f, "Disabled", "High Chance", 0.01f);
+                    listing.AddLabeledSlider(curIncident.LabelCap + ": " + (value == 0f ? "TweaksGalore.SliderNever".Translate() : (value)), ref value, 0f, 10f, "TweaksGalore.SliderDisabled".Translate(), "TweaksGalore.SliderHighChance".Translate(), 0.01f);
                     settings.tweak_eventControlDict[curIncident.defName] = value;
                 }
                 SetIncidentChances();
             }
+        }
+
+        public override void DoSectionRestore()
+        {
+            base.DoSectionRestore();
+            settings.tweak_eventControlDict = defaultValues;
         }
 
         public override void DoOnStartup()

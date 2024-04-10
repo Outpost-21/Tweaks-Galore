@@ -28,7 +28,6 @@ namespace TweaksGalore
         public static TweakDef Tweak_StackableChunks_Stone;
         public static TweakDef Tweak_StackableChunks_Slag;
         public static TweakDef Tweak_WaitThisIsBetter;
-        public static TweakDef Tweak_UninstallableMechShields;
         public static TweakDef Tweak_IncidentPawnStats;
         public static TweakDef Tweak_InfestationBlockingFloors;
         public static TweakDef Tweak_HiddenWires;
@@ -40,6 +39,16 @@ namespace TweaksGalore
         public static TweakDef Tweak_DisableLethalDamageThreshold;
         public static TweakDef Tweak_TraderPawnAlert;
         public static TweakDef Tweak_OrbitalTraderAlert;
+
+        public static TweakDef
+            Tweak_TechTraversal_Enabled,
+            Tweak_TechTraversal_AlwaysLowestLevel,
+            Tweak_TechTraversal_ShowTechCounter,
+            //Tweak_TechTraversal_CostIncreasePerTechLevel,
+            //Tweak_TechTraversal_CostDecreasePerTechLevel,
+            Tweak_TechTraversal_PercentageNeeded,
+            Tweak_TechTraversal_IgnoreTechprints,
+            Tweak_TechTraversal_OnlyVanillaResearch;
 
         public static TweakDef 
             Tweak_NFSM_PreventByTrainability,
@@ -68,7 +77,7 @@ namespace TweaksGalore
             Tweak_HuntersCanMelee,
             Tweak_HuntersCanMeleeFisting;
 
-        public static TweakDef 
+        public static TweakDef
             Tweak_TaintDisabled,
             Tweak_TaintOnRot,
             Tweak_OnlyTaintFirstLayer;
@@ -90,7 +99,8 @@ namespace TweaksGalore
         [MayRequireRoyalty]
         public static TweakDef
             Tweak_AnimaTweaks,
-            Tweak_DisableAnimaScream;
+            Tweak_DisableAnimaScream,
+            Tweak_UninstallableMechShields;
 
         [MayRequireIdeology]
         public static TweakDef 
@@ -114,8 +124,8 @@ namespace TweaksGalore
             Tweak_ShowGenesTab,
             Tweak_PoluxTweaks;
 
-        [MayRequireAnomaly]
-        public static TweakDef 
-            Tweak_MakeStoneSarcophagiUnescapable;
+        //[MayRequireAnomaly]
+        //public static TweakDef 
+        //    Tweak_MakeStoneSarcophagiUnescapable;
     }
 }

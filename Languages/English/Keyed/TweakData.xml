@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+	<TweaksGalore.RestoreSectionButton>Restore Section Defaults</TweaksGalore.RestoreSectionButton>
+	<TweaksGalore.SectionRestoredRestart>Tweaks Galore: '{0}' tweaks restored to defaults. Restart required to take full effect.</TweaksGalore.SectionRestoredRestart>
+
+	<TweaksGalore.IncidentControlBool>Incident Control</TweaksGalore.IncidentControlBool>
+	<TweaksGalore.IncidentControlBoolDesc>Allows control over the chances of incidents happening, even reducing them to zero, because why not. Incidents set to zero chance of happening may still be triggered through other means, so this doesn't always result in disabling them.</TweaksGalore.IncidentControlBoolDesc>
+	<TweaksGalore.SliderNever>Never</TweaksGalore.SliderNever>
+	<TweaksGalore.SliderDisabled>Disabled</TweaksGalore.SliderDisabled>
+	<TweaksGalore.SliderHighChance>High Chance</TweaksGalore.SliderHighChance>
+
+	<TweaksGalore.PennedAnimalsBool>Penned Animal Config</TweaksGalore.PennedAnimalsBool>
+	<TweaksGalore.PennedAnimalsBoolDesc>Allows control over which animals can be penned and how many days it takes for them to begin roaming if they are not in a pen.</TweaksGalore.PennedAnimalsBoolDesc>
+	<TweaskGalore.SliderNotPennable>Not Pennable</TweaskGalore.SliderNotPennable>
+	<TweaksGalore.SliderDays> Days</TweaksGalore.SliderDays>
+	<TweaksGalore.SliderDisabled>Disabled</TweaksGalore.SliderDisabled>
+	<TweaksGalore.Slider20Days>20 Days</TweaksGalore.Slider20Days>
+
+	<TweaksGalore.PermitFaction>Faction: {0}</TweaksGalore.PermitFaction>
+	<TweaksGalore.PermitMinTitle>- Minimum Title</TweaksGalore.PermitMinTitle>
+	<TweaksGalore.PermitPointCost>- Permit Point Cost: {0}</TweaksGalore.PermitPointCost>
+	<TweaksGalore.PermitCooldownDays>- Cooldown Days: {0}</TweaksGalore.PermitCooldownDays>
+	<TweaksGalore.PermitAidFavorCost>- Aid Favor Cost: {0}</TweaksGalore.PermitAidFavorCost>
+	<TweaksGalore.PermitAidPawnCount>- Aid Pawn Count: {0}</TweaksGalore.PermitAidPawnCount>
+	<TweaksGalore.PermitAidDuration>- Aid Duration Days: {0}</TweaksGalore.PermitAidDuration>
+
+	<TweaksGalore.TitleTags>Tags: {0}</TweaksGalore.TitleTags>
+	<TweaksGalore.TitleFavorCost>- Favor Cost: {0}</TweaksGalore.TitleFavorCost>
+	<TweaksGalore.TitleHeirQuestPoints>- Heir Quest Points: {0}</TweaksGalore.TitleHeirQuestPoints>
+	<TweaksGalore.TitlePermitPoints>- Permit Points: {0}</TweaksGalore.TitlePermitPoints>
+	<TweaksGalore.TitleDignifiedMeditation>- Enable Dignified Meditation</TweaksGalore.TitleDignifiedMeditation>
+	<TweaksGalore.TitleDignifiedMeditationDesc>If enabled, this title activates Dignified Meditation for the pawn, allowing them to meditate on a throne.</TweaksGalore.TitleDignifiedMeditationDesc>
+	<TweaksGalore.TitleNoDisabledWork>- No Disabled Work</TweaksGalore.TitleNoDisabledWork>
+	<TweaksGalore.TitleNoDisabledWorkDesc>If enabled, clears any disabled work from the title.</TweaksGalore.TitleNoDisabledWorkDesc>
+	<TweaksGalore.TitleDisableBedroomReqs>- Disable Bedroom Requirements</TweaksGalore.TitleDisableBedroomReqs>
+	<TweaksGalore.TitleDisableBedroomReqsDesc>If enabled, clears any requirements for bedrooms from the title.</TweaksGalore.TitleDisableBedroomReqsDesc>
+	<TweaksGalore.TitleDisableThroneroomReqs>- Disable Throneroom Requirements</TweaksGalore.TitleDisableThroneroomReqs>
+	<TweaksGalore.TitleDisableThroneroomReqsDesc>If enabled, clears any requirements for thronerooms from the title.</TweaksGalore.TitleDisableThroneroomReqsDesc>
+
 	<TweaksGalore.IncapableOf>Skill Limited Work Types</TweaksGalore.IncapableOf>
 	<TweaksGalore.CannotDoThisWork>{0} is only capable of doing this work to a limited skill level.</TweaksGalore.CannotDoThisWork>
 	<TweaksGalore.IsIncapableOfViolenceLower>{0} is non-violent and not assigned a weapon</TweaksGalore.IsIncapableOfViolenceLower>

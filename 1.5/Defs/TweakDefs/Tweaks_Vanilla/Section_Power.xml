@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_EnergySavingLighting</defName>
 		<label>Energy Saving Lighting</label>
 		<description>Automatically turns off lighting (as long as it uses vanilla lighting code) when pawns are not in the room, if they're exterior lighting then they remain on contstantly.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Power</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_EnergySavingProduction</defName>
 		<label>Energy Saving Production</label>
 		<description>Automatically turns off compatible production benches when not in use, may not apply to modded benches if they don't inherit from the vanilla classes.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Power</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<!-- 
-		The Tweaks for adjusting power usage/production are automatically generated when the game runs. Adding them manually using the exact name they would have had (Tweak_PowerAdj_[DEFNAME]) will prevent them from being automatically generated if you want to override any of them. The Standing Lamp one here is used purely as an example of how you would make one manually.
+		The Tweaks for adjusting power usage/production are automatically generated when the game runs.
 	-->
 
 	<!-- <TweaksGalore.TweakDef Name="TweakBase_PowerAdjuster" Abstract="True">

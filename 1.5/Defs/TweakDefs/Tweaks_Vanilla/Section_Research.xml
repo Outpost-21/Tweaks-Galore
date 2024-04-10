@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_TechTraversal_ShowTechCounter</defName>
+		<label>Show Tech Level &amp; Counter</label>
+		<description>If enabled, the vanilla research window will now have a small indicator of the tech level of the research project currently selected and have a counter telling you the total projects you have completed for that level.\n\nThis will only ever be applied the the vanilla window, if you want another mods UI to be affected, ask them, there is nothing stopping them implementing their own independant counter!</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_Research</section>
+	</TweaksGalore.TweakDef>
+
 	<TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_TechTraversal</defName>
 		<label>Tech Traversal</label>
@@ -35,25 +44,16 @@
 		<subSection>TweakSubSection_TechTraversal</subSection>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_TechTraversal_HighestTechLevel</defName>
 		<label>Highest Tech Level</label>
 		<description>This allows you to set the highest possible tech level you can reach. You'll still see and be able to research tech higher, it'll just always come with the higher cost. If you want to hide research above this level too you can use the tweak further down called "Hide Higher Tech".</description>
 		<tweakWorker>TweaksGalore.TweakWorker_HighestTechLevel</tweakWorker>
 		<tweakType>Custom</tweakType>
 		<subSection>TweakSubSection_TechTraversal</subSection>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_TechTraversal_ShowTechCounter</defName>
-		<label>Show Tech Level &amp; Counter</label>
-		<description>If enabled, the vanilla research window will now have a small indicator of the tech level of the research project currently selected and have a counter telling you the total projects you have completed for that level.\n\nThis will only ever be applied the the vanilla window, if you want another mods UI to be affected, ask them, there is nothing stopping them implementing their own independant counter!</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<subSection>TweakSubSection_TechTraversal</subSection>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_TechTraversal_CostIncreasePerTechLevel</defName>
 		<label>Cost Increase Per Tech Level</label>
 		<description>This is the added cost per tech level between the players tech level and that of the specified research project. If you're a level below, in vanilla you'd have to spend 150% of the time compared to it being the same level. If you're two levels below, it'd be 200%. This lets you change that additional 50% per level to something else.</description>
@@ -77,7 +77,7 @@
 		<defaultValue>0</defaultValue>
 		<floatRange>0.0~0.95</floatRange>
 		<subSection>TweakSubSection_TechTraversal</subSection>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_TechTraversal_PercentageNeeded</defName>
@@ -92,23 +92,23 @@
 		<subSection>TweakSubSection_TechTraversal</subSection>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_TechTraversal_HideUnreachable</defName>
 		<label>Hide Unreachable Research</label>
 		<description>If enabled, this hides any research projects you cannot currently research directly from even being visible.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<subSection>TweakSubSection_TechTraversal</subSection>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_TechTraversal_HideHigherTech</defName>
 		<label>Hide Higher Tech</label>
 		<description>If enabled, this hides any research projects of a tech level higher than your current tech level.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<subSection>TweakSubSection_TechTraversal</subSection>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_TechTraversal_IgnoreTechprints</defName>

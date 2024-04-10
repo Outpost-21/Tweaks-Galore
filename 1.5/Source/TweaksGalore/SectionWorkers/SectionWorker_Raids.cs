@@ -40,12 +40,35 @@ namespace TweaksGalore
 
         public override void DoOnStartup()
         {
+            if (settings.factionRaidSettingsDefaults.NullOrEmpty())
+            {
+                settings.factionRaidSettingsDefaults = new Dictionary<string, FactionRaidSettings>();
+            }
+            if (settings.tweak_factionRaidSettings.NullOrEmpty())
+            {
+                settings.tweak_factionRaidSettings = new Dictionary<string, FactionRaidSettings>();
+            }
+            foreach (FactionDef faction in DefDatabase<FactionDef>.AllDefs)
+            {
+                if (faction != null)
+                {
+                    if (!settings.factionRaidSettingsDefaults.ContainsKey(faction.defName))
+                    {
+                        settings.factionRaidSettingsDefaults.Add(faction.defName, MakeNewFactionRaidSetting(faction));
+                    }
+                    if (!settings.tweak_factionRaidSettings.ContainsKey(faction.defName))
+                    {
+                        settings.tweak_factionRaidSettings.Add(faction.defName, MakeNewFactionRaidSetting(faction));
+                    }
+                    FactionRaidSettings raidSettings = settings.tweak_factionRaidSettings[faction.defName];
 
+                }
+            }
         }
 
         public override void DoSectionRestore()
         {
-
+            settings.tweak_factionRaidSettings = settings.factionRaidSettingsDefaults;
         }
 
         public void DoFactionRaidSettings(Listing_Standard listing, FactionDef faction)

@@ -72,12 +72,12 @@
 		<category>TweakCategory_Vanilla</category>
 	</TweaksGalore.TweakSectionDef>
 
-	<TweaksGalore.TweakSectionDef>
+	<!-- <TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_Raids</defName>
 		<label>Raids</label>
 		<sectionWorker>TweaksGalore.SectionWorker_Raids</sectionWorker>
 		<category>TweakCategory_Vanilla</category>
-	</TweaksGalore.TweakSectionDef>
+	</TweaksGalore.TweakSectionDef> -->
 
 	<!-- <TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Vanilla_WeatherControl</defName>

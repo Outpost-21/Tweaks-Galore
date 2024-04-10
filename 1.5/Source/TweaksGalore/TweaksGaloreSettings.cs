@@ -17,7 +17,8 @@ namespace TweaksGalore
         public bool overhaulFirstLoad = true;
 
         // Tech Traversal
-        public TechLevel tweak_tech_lowestTechLevel = TechLevel.Undefined;
+        public Dictionary<FactionDef, TechLevel> factionTechMap = new Dictionary<FactionDef, TechLevel>();
+        public TechLevel tweak_tech_lowestTechLevel = TechLevel.Neolithic;
         public TechLevel tweak_tech_highestTechLevel = TechLevel.Undefined;
 
         // Research Projects

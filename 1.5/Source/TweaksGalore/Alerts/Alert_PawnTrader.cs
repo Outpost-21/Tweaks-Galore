@@ -75,10 +75,7 @@ namespace TweaksGalore
 
 		public override AlertReport GetReport()
 		{
-            if (!TGTweakDefOf.Tweak_TraderPawnAlert.BoolValue)
-            {
-				return false;
-            }
+            if (!TGTweakDefOf.Tweak_TraderPawnAlert.BoolValue) { return false; }
 			if (!TraderPawns.Any() && !TraderShips.Any())
 			{
 				return false;

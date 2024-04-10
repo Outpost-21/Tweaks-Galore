@@ -40,13 +40,9 @@ namespace TweaksGalore
 
         public override void DoSectionContents(Listing_Standard listing, string filter)
         {
-            if (listing.ButtonTextLabeled("", "Restore defaults"))
-            {
-                settings.tweak_pennedAnimalDict = defaultValues;
-                Messages.Message("Tweaks Galore: 'Penned Animal' tweaks restored to defaults. Restart required to take full effect.", MessageTypeDefOf.CautionInput);
-            }
+            base.DoSectionContents(listing, filter);
             // Tweak: Penned Animal Config
-            listing.DoSettingBool("Penned Animal Config", "Allows control over which animals can be penned and how many days it takes for them to begin roaming if they are not in a pen.", def.defName, false, true);
+            listing.DoSettingBool("TweaksGalore.PennedAnimalsBool".Translate(), "TweaksGalore.PennedAnimalsBoolDesc".Translate(), def.defName, false, true);
             if (settings.GetBoolSetting(def.defName, false))
             {
                 listing.GapLine();
@@ -54,12 +50,18 @@ namespace TweaksGalore
                 {
                     ThingDef curAnimal = CachedAnimalListing[i];
                     float value = settings.tweak_pennedAnimalDict[curAnimal.defName];
-                    listing.AddLabeledSlider(curAnimal.LabelCap + ": " + (value == 0f ? "Not Pennable" : (value + " Days")), ref value, 0f, 20f, "Disabled", "20 Days");
+                    listing.AddLabeledSlider(curAnimal.LabelCap + ": " + (value == 0f ? (string)"TweaskGalore.SliderNotPennable".Translate() : (value + "TweaksGalore.SliderDays".Translate())), ref value, 0f, 20f, "TweaksGalore.SliderDisabled".Translate(), "TweaksGalore.Slider20Days".Translate());
                     settings.tweak_pennedAnimalDict[curAnimal.defName] = value;
                 }
 
                 SetPennedAnimals(settings);
             }
+        }
+
+        public override void DoSectionRestore()
+        {
+            base.DoSectionRestore();
+            settings.tweak_pennedAnimalDict = defaultValues;
         }
 
         public override void DoOnStartup()

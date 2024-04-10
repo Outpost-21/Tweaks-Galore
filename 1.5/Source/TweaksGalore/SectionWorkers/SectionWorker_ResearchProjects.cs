@@ -13,11 +13,11 @@ namespace TweaksGalore
     {
         public override void DoSectionContents(Listing_Standard listing, string filter)
         {
+            base.DoSectionContents(listing, filter);
             foreach (ResearchProjectDef research in DefDatabase<ResearchProjectDef>.AllDefs)
             {
                 DoResearchProjectSettings(listing, research);
             }
-            DoOnStartup();
         }
 
         public void DoResearchProjectSettings(Listing_Standard listing, ResearchProjectDef research)
@@ -37,7 +37,7 @@ namespace TweaksGalore
                     settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
                 }
                 // Tweak: Tech Level
-                listing.TechLevelMenu("TweaksGalore.TechLevelValue".Translate(), "", settings.tweak_researchProjectSettings[research.defName].techLevel, listing.ColumnWidth);
+                listing.AddLabeledSlider<TechLevel>("TweaksGalore.TechLevelValue".Translate(), ref settings.tweak_researchProjectSettings[research.defName].techLevel);
                 if (ModLister.RoyaltyInstalled)
                 {
                     // Tweak: Techprint Count
@@ -99,11 +99,11 @@ namespace TweaksGalore
             {
                 if (!settings.researchProjectSettingsDefaults.ContainsKey(research.defName))
                 {
-                    settings.researchProjectSettingsDefaults.Add(research.defName, MakeNewRoyalPermitSetting(research));
+                    settings.researchProjectSettingsDefaults.Add(research.defName, MakeNewResearchProjectSetting(research));
                 }
                 if (!settings.tweak_researchProjectSettings.ContainsKey(research.defName))
                 {
-                    settings.tweak_researchProjectSettings.Add(research.defName, MakeNewRoyalPermitSetting(research));
+                    settings.tweak_researchProjectSettings.Add(research.defName, MakeNewResearchProjectSetting(research));
                 }
                 ResearchProjectSettings researchSettings = settings.tweak_researchProjectSettings[research.defName];
                 research.baseCost = researchSettings.baseCost;
@@ -115,7 +115,14 @@ namespace TweaksGalore
             }
         }
 
-        public ResearchProjectSettings MakeNewRoyalPermitSetting(ResearchProjectDef researchDef)
+        public override void DoSectionRestore()
+        {
+            base.DoSectionRestore();
+            settings.tweak_researchProjectSettings = settings.researchProjectSettingsDefaults;
+
+        }
+
+        public ResearchProjectSettings MakeNewResearchProjectSetting(ResearchProjectDef researchDef)
         {
             ResearchProjectSettings s = new ResearchProjectSettings();
             s.baseCost = researchDef.baseCost;
@@ -124,6 +131,18 @@ namespace TweaksGalore
             s.techprintCommonality = researchDef.techprintCommonality;
             s.techprintMarketValue = researchDef.techprintMarketValue;
             s.techprintTags = researchDef.heldByFactionCategoryTags;
+            return s;
+        }
+
+        public ResearchProjectSettings MakeNewResearchProjectSetting(ResearchProjectSettings otherSettings)
+        {
+            ResearchProjectSettings s = new ResearchProjectSettings();
+            s.baseCost = otherSettings.baseCost;
+            s.techLevel = otherSettings.techLevel;
+            s.techprintCount = otherSettings.techprintCount;
+            s.techprintCommonality = otherSettings.techprintCommonality;
+            s.techprintMarketValue = otherSettings.techprintMarketValue;
+            s.techprintTags = otherSettings.techprintTags;
             return s;
         }
     }

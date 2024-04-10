@@ -75,11 +75,7 @@ namespace TweaksGalore
 
         public override void DoSectionContents(Listing_Standard listing, string filter)
         {
-            if (listing.ButtonTextLabeled("", "Restore Section Defaults"))
-            {
-                settings.genepacksEnabled = settings.defaultGenepacksEnabled;
-                Messages.Message("Tweaks Galore: 'Genepacks' tweaks restored to defaults. Restart required to take effect.", MessageTypeDefOf.CautionInput);
-            }
+            base.DoSectionContents(listing, filter);
 
             listing.CheckboxEnhanced("Enable Genepack Tweaks", "This entire section is disabled by default for compatibility sake mostly, so there's no conflicting with other mods that choose to do this sort of tweak. These options allow you to choose whether or not a gene can spawn in genepacks.", ref settings.tweak_genepackTweaks);
             if (settings.tweak_genepackTweaks)
@@ -93,6 +89,12 @@ namespace TweaksGalore
             }
 
             SetGeneSettingsValues(settings);
+        }
+
+        public override void DoSectionRestore()
+        {
+            base.DoSectionRestore();
+            settings.genepacksEnabled = settings.defaultGenepacksEnabled;
         }
 
         public void DrawBiotechGenepackSettings(Listing_Standard listing)

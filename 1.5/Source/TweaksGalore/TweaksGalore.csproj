@@ -89,7 +89,9 @@
     <Compile Include="DefOfs\TGRoomStatDefOf.cs" />
     <Compile Include="Harmony\Patch_CompShearable_CompInspectStringExtra.cs" />
     <Compile Include="Harmony\Patch_CompMilkable_CompInspectStringExtra.cs" />
-    <Compile Include="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
+    <Compile Include="Harmony\Patch_ResearchManager_ReapplyAllMods.cs" />
+    <Compile Include="Harmony\Patch_MainTabWindow_Research_DrawLeftRect.cs" />
+    <None Include="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
     <Compile Include="Harmony\Patch_Pawn_HealthTracker_ShouldBeDeadFromLethalDamageThreshold.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_RealisticRooms.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_DynamicPopulation.cs" />
@@ -113,7 +115,6 @@
     <Compile Include="SectionWorkers\SectionWorker_Genepacks.cs" />
     <Compile Include="SectionWorkers\SectionWorker_Raids.cs" />
     <Compile Include="SectionWorkers\SectionWorker_ResearchProjects.cs" />
-    <Compile Include="SectionWorkers\SectionWorker_ResearchControl.cs" />
     <Compile Include="SectionWorkers\SectionWorker_WeatherControl.cs" />
     <Compile Include="SectionWorkers\SectionWorker_IncidentControl.cs" />
     <Compile Include="SectionWorkers\SectionWorker_RoyalPermits.cs" />

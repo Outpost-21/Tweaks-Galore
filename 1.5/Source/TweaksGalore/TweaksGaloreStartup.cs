@@ -17,6 +17,8 @@ namespace TweaksGalore
 
         static TweaksGaloreStartup()
         {
+            BackupOriginalTechLevels();
+
             try { InitializeSettingsDefs(settings); } catch (Exception e) { LogUtil.LogError("Caught Exception initialising settings: " + e); };
 
             try { InitializePositionArrangements(settings); } catch (Exception e) { LogUtil.LogError("Caught Exception initialising position arrangements: " + e); };
@@ -42,6 +44,17 @@ namespace TweaksGalore
                 catch (Exception e)
                 {
                     LogUtil.LogError($"Caught Exception initialising '{tweak.defName}' tweak:\n" + e);
+                }
+            }
+        }
+
+        public static void BackupOriginalTechLevels()
+        {
+            foreach (FactionDef faction in DefDatabase<FactionDef>.AllDefsListForReading)
+            {
+                if (faction != null && faction.humanlikeFaction && !TweaksGaloreMod.settings.factionTechMap.ContainsKey(faction))
+                {
+                    TweaksGaloreMod.settings.factionTechMap.Add(faction, faction.techLevel);
                 }
             }
         }

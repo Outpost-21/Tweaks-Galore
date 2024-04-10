@@ -14,7 +14,7 @@ namespace TweaksGalore
         public override void DoTweakContents(Listing_Standard listing, string filter = null)
         {
             listing.AddLabeledSlider<TechLevel>(def.LabelCap, ref settings.tweak_tech_highestTechLevel);
-            listing.Note(def.description, GameFont.Tiny);
+            listing.Note(def.description, GameFont.Tiny, Color.gray);
         }
 
         public override void OnRestore()

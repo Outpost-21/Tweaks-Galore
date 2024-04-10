@@ -1,122 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_RecreationalDrums</defName>
 		<label>Recreational Drums</label>
 		<description>If enabled, allows drums to be used for recreation, like other instruments.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_RepairInZone</defName>
 		<label>Repair In zone</label>
 		<description>If enabled, forces pawns to remain inside allowed zones when repairing. This is honestly more of a bug fix than a tweak, Ludeon c'mon.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_PrisonerCleaning</defName>
 		<label>Prisoner Cleaning</label>
 		<description>If enabled, allows prisoners to perform cleaning tasks.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_PrisonerRecreation</defName>
 		<label>Prisoner Recreation</label>
 		<description>If enabled, allows prisoners to perform recreation tasks.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_NoJobAuthors</defName>
 		<label>No Job Authors</label>
 		<description>If enabled, removes authors from crafted items so anyone can finish them. Quality is based on the pawn that finishes the job.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_PrioritizeResearch</defName>
 		<label>Prioritize Research</label>
 		<description>If enabled, allows pawns to prioritize research.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_PrioritizeRecreation</defName>
 		<label>Prioritize Recreation</label>
 		<description>If enabled, allows pawns to prioritize recreation.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_PrioritizeSleep</defName>
 		<label>Prioritize Sleep</label>
 		<description>If enabled, allows pawns to prioritize sleep, as long as they are below 75% rest.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_RepairAfterBuilding</defName>
 		<label>Repair After Constructing</label>
 		<description>Pawns will repair after constructing with this enabled.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_SmoothWallsBeforeFloors</defName>
 		<label>Smooth Walls Before Floors</label>
 		<description>Pawns will smooth walls before floors with this enabled.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_DeconstructFirst</defName>
 		<label>Deconstruct First</label>
 		<description>Pawns will deconstruct before constructing with this enabled.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_HaulAfterSlaughter</defName>
 		<label>Haul After Slaughter</label>
 		<description>Pawns will haul the products from a slaughtering recipe after completing it with this enabled.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_SkilledTreeChopping</defName>
 		<label>Skilled Tree Chopping</label>
 		<description>Similar to Skilled Stone Cutting, adds a skill that can be used to speed up chopping down trees specifically. Patches for a bunch of mods are already included so axes and the like will have an actual effect.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Jobs</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_SkilledStoneCutting</defName>
@@ -131,7 +131,7 @@
 	<!-- ================== Faster Cleaning ================== -->
 	<!-- ====================================================== -->
 
-	<TweaksGalore.TweakSubSectionDef>
+	<!-- <TweaksGalore.TweakSubSectionDef>
 		<defName>TweakSubSection_FasterCleaning</defName>
 		<label>Faster Cleaning</label>
 		<description>Changes the speed at which cleaning is done to a custom value.</description>
@@ -159,7 +159,7 @@
 		<floatRange>0.1~10.0</floatRange>
 		<floatIncrement>0.1</floatIncrement>
 		<subSection>TweakSubSection_FasterCleaning</subSection>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<!-- ====================================================== -->
 	<!-- ================== Faster Smoothing ================== -->

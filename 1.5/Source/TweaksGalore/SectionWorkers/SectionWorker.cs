@@ -22,14 +22,10 @@ namespace TweaksGalore
         public virtual void DoSectionContents(Listing_Standard listing, string filter)
         {
             // Do Defaults Button
-            List<TweakDef> nestedTweaks = def.GetAllNestedTweaks();
-            if (!nestedTweaks.NullOrEmpty())
+            if (listing.ButtonTextLabeled("", "TweaksGalore.RestoreSectionButton".Translate()))
             {
-                if (listing.ButtonTextLabeled("", "Restore Section Defaults"))
-                {
-                    DoSectionRestore();
-                    Messages.Message($"Tweaks Galore: '{def.LabelCap}' tweaks restored to defaults. Restart required to take full effect.", MessageTypeDefOf.CautionInput);
-                }
+                DoSectionRestore();
+                Messages.Message("TweaksGalore.SectionRestoredRestart".Translate(def.LabelCap), MessageTypeDefOf.CautionInput);
             }
             // Do Individual Tweaks
             if (!def.heldTweaks.NullOrEmpty())

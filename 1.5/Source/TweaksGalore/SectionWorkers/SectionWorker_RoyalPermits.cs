@@ -13,6 +13,7 @@ namespace TweaksGalore
     {
         public override void DoSectionContents(Listing_Standard listing, string filter)
         {
+            base.DoSectionContents(listing, filter);
             foreach (RoyalTitlePermitDef permit in DefDatabase<RoyalTitlePermitDef>.AllDefs)
             {
                 if (permit.faction != null)
@@ -31,39 +32,45 @@ namespace TweaksGalore
             mod.SetCollapsedCategoryState(categoryString, categoryToggle);
             if (!categoryToggle)
             {
-                listing.Note($"Faction: {permit.faction.LabelCap}", GameFont.Tiny, Color.gray);
+                listing.Note("TweaksGalore.PermitFaction".Translate(permit.faction.LabelCap), GameFont.Tiny, Color.gray);
                 // Tweak: Minimum Title
                 string minTitleBuffer = settings.tweak_royalPermitSettings[permit.defName].minTitle;
-                listing.TitleFloatMenu("- Minimum Title", minTitleBuffer, permit);
+                listing.TitleFloatMenu("TweaksGalore.PermitMinTitle".Translate(), minTitleBuffer, permit);
                 settings.tweak_royalPermitSettings[permit.defName].minTitle = minTitleBuffer;
                 // Tweak: Permit Point Cost
                 float permitPointBuffer = settings.tweak_royalPermitSettings[permit.defName].permitPointCost;
-                listing.AddLabeledSlider($"- Permit Point Cost: {permitPointBuffer.ToString("0")}", ref permitPointBuffer, 1f, 20f, "Min: 1", "Max: 20", 1f);
+                listing.AddLabeledSlider("TweaksGalore.PermitPointCost".Translate(permitPointBuffer.ToString("0")), ref permitPointBuffer, 1f, 20f, "Min: 1", "Max: 20", 1f);
                 settings.tweak_royalPermitSettings[permit.defName].permitPointCost = permitPointBuffer;
                 // Tweak: Cooldown Days
                 float cooldownDaysBuffer = settings.tweak_royalPermitSettings[permit.defName].cooldownDays;
-                listing.AddLabeledSlider($"- Cooldown Days: {cooldownDaysBuffer.ToString("0.0")}", ref cooldownDaysBuffer, 0.5f, 100f, "Min: 0.5", "Max: 100", 0.5f);
+                listing.AddLabeledSlider("TweaksGalore.PermitCooldownDays".Translate(cooldownDaysBuffer.ToString("0.0")), ref cooldownDaysBuffer, 0.5f, 100f, "Min: 0.5", "Max: 100", 0.5f);
                 settings.tweak_royalPermitSettings[permit.defName].cooldownDays = cooldownDaysBuffer;
                 if (permit.royalAid != null)
                 {
                     // Tweak: Aid Favor Cost
                     float favorCostBuffer = settings.tweak_royalPermitSettings[permit.defName].favorCost;
-                    listing.AddLabeledSlider($"- Aid Favor Cost: {favorCostBuffer.ToString("0")}", ref favorCostBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                    listing.AddLabeledSlider("TweaksGalore.PermitAidFavorCost".Translate(favorCostBuffer.ToString("0")), ref favorCostBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
                     settings.tweak_royalPermitSettings[permit.defName].favorCost = favorCostBuffer;
                     if (permit.royalAid.pawnKindDef != null)
                     {
                         // Tweak: Aid Pawn Count
                         float aidPawnCountBuffer = settings.tweak_royalPermitSettings[permit.defName].pawnCount;
-                        listing.AddLabeledSlider($"- Aid Pawn Count: {aidPawnCountBuffer.ToString("0")}", ref aidPawnCountBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                        listing.AddLabeledSlider("TweaksGalore.PermitAidPawnCount".Translate(aidPawnCountBuffer.ToString("0")), ref aidPawnCountBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
                         settings.tweak_royalPermitSettings[permit.defName].pawnCount = aidPawnCountBuffer;
                         // Tweak: Aid Duration
                         float aidDurationBuffer = settings.tweak_royalPermitSettings[permit.defName].aidDurationDays;
-                        listing.AddLabeledSlider($"- Aid Duration Days: {aidDurationBuffer.ToString("0.0")}", ref aidDurationBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
+                        listing.AddLabeledSlider("TweaksGalore.PermitAidDuration".Translate(aidDurationBuffer.ToString("0.0")), ref aidDurationBuffer, 0f, 20f, "Min: 0", "Max: 20", 1f);
                         settings.tweak_royalPermitSettings[permit.defName].aidDurationDays = aidDurationBuffer;
                     }
                 }
                 listing.Gap();
             }
+        }
+
+        public override void DoSectionRestore()
+        {
+            base.DoSectionRestore();
+            settings.tweak_royalPermitSettings = settings.royalPermitSettingsDefaults;
         }
 
         public override void DoOnStartup()
