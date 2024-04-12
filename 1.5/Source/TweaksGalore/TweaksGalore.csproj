@@ -93,6 +93,7 @@
     <Compile Include="Harmony\Patch_MainTabWindow_Research_DrawLeftRect.cs" />
     <None Include="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
     <Compile Include="Harmony\Patch_Pawn_HealthTracker_ShouldBeDeadFromLethalDamageThreshold.cs" />
+    <Compile Include="TweakWorkers\General\TweakWorker_LagFreeLamps.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_RealisticRooms.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_DynamicPopulation.cs" />
     <Compile Include="Utilities\CodeMatch.cs" />
@@ -199,7 +200,7 @@
     <Compile Include="Harmony\Patch_Building_Door_PawnCanOpen.cs" />
     <Compile Include="Harmony\Patch_SkillRecord_Learn.cs" />
     <Compile Include="Harmony\Patch_StunHandler_CanAdaptToDamage.cs" />
-    <Compile Include="Harmony\Patch_TraitSet_GainTrait.cs" />
+    <None Include="Harmony\Patch_TraitSet_GainTrait.cs" />
     <Compile Include="Harmony\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatParts\StatPart_FasterSmoothing.cs" />

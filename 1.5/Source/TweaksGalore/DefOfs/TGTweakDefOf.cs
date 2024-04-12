@@ -35,7 +35,7 @@ namespace TweaksGalore
         public static TweakDef Tweak_SkillLearningPerDay;
         public static TweakDef Tweak_MechanoidAdaptation;
         public static TweakDef Tweak_LowerPrisonerExpectations;
-        public static TweakDef Tweak_MisanthropeTrait;
+        //public static TweakDef Tweak_MisanthropeTrait;
         public static TweakDef Tweak_DisableLethalDamageThreshold;
         public static TweakDef Tweak_TraderPawnAlert;
         public static TweakDef Tweak_OrbitalTraderAlert;

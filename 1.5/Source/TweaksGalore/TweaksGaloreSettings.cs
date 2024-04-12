@@ -14,7 +14,9 @@ namespace TweaksGalore
     {
         public bool debugMode = false;
 
-        public bool overhaulFirstLoad = true;
+        // Lag Free Lamps
+        public Dictionary<string, bool> lagFreeLampsDefaults = new Dictionary<string, bool>();
+        public Dictionary<string, bool> lagFreeLampsSettings = new Dictionary<string, bool>();
 
         // Tech Traversal
         public Dictionary<FactionDef, TechLevel> factionTechMap = new Dictionary<FactionDef, TechLevel>();
@@ -189,7 +191,6 @@ namespace TweaksGalore
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref overhaulFirstLoad, "overhaulFirstLoad", true);
 
             // Dynamic Settings
             Scribe_Collections.Look(ref boolSetting, "boolSetting");

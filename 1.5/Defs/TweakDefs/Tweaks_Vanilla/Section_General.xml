@@ -335,6 +335,7 @@
 		<defName>Tweak_LagFreeLamps</defName>
 		<label>Lag Free Lamps</label>
 		<description>Removes the fuel comp from fuelled lamps, so they now no longer run code constantly they impact performance that little bit less.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_LagFreeLamps</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
@@ -358,14 +359,14 @@
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
-	<TweaksGalore.TweakDef>
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_MisanthropeTrait</defName>
 		<label>Misanthrope Trait</label>
 		<description>Adds the misanthrope trait (dislikes humans), also makes it so if a pawn was going to spawn with both the misandrist and misogynist traits that they instead get the misanthrope trait.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_NextRestockTimer</defName>

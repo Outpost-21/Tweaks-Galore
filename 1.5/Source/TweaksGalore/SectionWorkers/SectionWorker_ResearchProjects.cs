@@ -38,49 +38,52 @@ namespace TweaksGalore
                 }
                 // Tweak: Tech Level
                 listing.AddLabeledSlider<TechLevel>("TweaksGalore.TechLevelValue".Translate(), ref settings.tweak_researchProjectSettings[research.defName].techLevel);
-                if (ModLister.RoyaltyInstalled)
-                {
-                    // Tweak: Techprint Count
-                    {
-                        float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCount;
-                        float baseCostMin = 0;
-                        float baseCostMax = 10;
-                        listing.AddLabeledSlider("TweaksGalore.TechprintCount".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), 1f);
-                        settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
-                        listing.Note("TweaksGalore.TechprintCountNote".Translate(), GameFont.Tiny);
-                    }
-                    // Tweak: Techprint Commonality
-                    {
-                        float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCommonality;
-                        float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality / 10f;
-                        float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality * 10f;
-                        listing.AddLabeledSlider("TweaksGalore.TechprintCommonality".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
-                        settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
-                    }
-                    // Tweak: Techprint Market Value
-                    {
-                        float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintMarketValue;
-                        float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue / 10f;
-                        float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue * 10f;
-                        listing.AddLabeledSlider("TweaksGalore.TechprintMarketValue".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
-                        settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
-                    }
-                    // Tweak: Techprint Tags
-                    {
-                        listing.GapLine();
-                        if (research.heldByFactionCategoryTags.NullOrEmpty()) { listing.Note("TweaksGalore.TechprintNoFactions".Translate()); }
-                        else { listing.Note(research.heldByFactionCategoryTags.ToArray().ToCommaList()); }
+                //if (ModLister.RoyaltyInstalled)
+                //{
+                //    // Tweak: Techprint Count
+                //    {
+                //        float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCount;
+                //        float baseCostMin = 0;
+                //        float baseCostMax = 10;
+                //        listing.AddLabeledSlider("TweaksGalore.TechprintCount".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), 1f);
+                //        settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                //        listing.Note("TweaksGalore.TechprintCountNote".Translate(), GameFont.Tiny);
+                //    }
+                //    if(settings.tweak_researchProjectSettings[research.defName].techprintCount > 0)
+                //    {
+                //        // Tweak: Techprint Commonality
+                //        {
+                //            float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintCommonality;
+                //            float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality / 10f;
+                //            float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintCommonality * 10f;
+                //            listing.AddLabeledSlider("TweaksGalore.TechprintCommonality".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
+                //            settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                //        }
+                //        // Tweak: Techprint Market Value
+                //        {
+                //            float baseCostBuffer = settings.tweak_researchProjectSettings[research.defName].techprintMarketValue;
+                //            float baseCostMin = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue / 10f;
+                //            float baseCostMax = settings.researchProjectSettingsDefaults[research.defName].techprintMarketValue * 10f;
+                //            listing.AddLabeledSlider("TweaksGalore.TechprintMarketValue".Translate(baseCostBuffer.ToString("0")), ref baseCostBuffer, baseCostMin, baseCostMax, "TweaksGalore.SliderMinValue".Translate(baseCostMin), "TweaksGalore.SliderMaxValue".Translate(baseCostMax), baseCostMin);
+                //            settings.tweak_researchProjectSettings[research.defName].baseCost = baseCostBuffer;
+                //        }
+                //        // Tweak: Techprint Tags
+                //        {
+                //            listing.GapLine();
+                //            if (research.heldByFactionCategoryTags.NullOrEmpty()) { listing.Note("TweaksGalore.TechprintNoFactions".Translate()); }
+                //            else { listing.Note(research.heldByFactionCategoryTags.ToArray().ToCommaList()); }
 
-                        if (listing.ButtonText("TweaksGalore.ButtonAdd".Translate()))
-                        {
-                            // Do adding tag dropdown
-                        }
-                        if (listing.ButtonText("TweaksGalore.ButtonRemove".Translate()))
-                        {
-                            // Do removing tag dropdown
-                        }
-                    }
-                }
+                //            if (listing.ButtonText("TweaksGalore.ButtonAdd".Translate()))
+                //            {
+                //                throw new NotImplementedException();
+                //            }
+                //            if (listing.ButtonText("TweaksGalore.ButtonRemove".Translate()))
+                //            {
+                //                throw new NotImplementedException();
+                //            }
+                //        }
+                //    }
+                //}
                 listing.Gap();
             }
         }

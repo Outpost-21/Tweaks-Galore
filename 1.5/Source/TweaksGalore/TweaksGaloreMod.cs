@@ -111,7 +111,7 @@ namespace TweaksGalore
         public void DoOptionsCategoryContents(Listing_Standard listing)
         {
             if(currentCategory == null) { currentCategory = TGTweakDefOf.TweakCategory_Vanilla; }
-            listing.SettingsCategoryDropdown("Current Page", "Setting descriptions are in tooltips. The Searchbar only works for the currently selected page.\nYou will need to restart the game for many of these settings to take effect.", ref currentCategory, listing.ColumnWidth);
+            listing.SettingsCategoryDropdown("TweaksGalore.MainCurrentPage".Translate(), "TweaksGalore.MainCurrentPageDesc".Translate(), ref currentCategory, listing.ColumnWidth);
             Rect rect = listing.GetRect(30f);
             quickSearchWidget.OnGUI(rect);
             tweakFilter = quickSearchWidget.filter.Text;

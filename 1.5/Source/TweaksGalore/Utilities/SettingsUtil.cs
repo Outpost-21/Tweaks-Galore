@@ -540,7 +540,7 @@ namespace TweaksGalore
 
 		public static float Slider(this Listing_Standard listing_Standard, float val, float min, float max, string label = null, string leftAlignedLabel = null, string rightAlignedLabel = null, float roundTo = -1f, bool middleAlignment = false)
 		{
-			float result = Widgets.HorizontalSlider(listing_Standard.GetRect(22f), val, min, max, middleAlignment, label, leftAlignedLabel, rightAlignedLabel, roundTo);
+			float result = HorizontalSlider(listing_Standard.GetRect(22f), val, min, max, middleAlignment, label, leftAlignedLabel, rightAlignedLabel, roundTo);
 			listing_Standard.Gap(listing_Standard.verticalSpacing);
 			return result;
 		}
@@ -552,7 +552,7 @@ namespace TweaksGalore
 			listing_Standard.LineRectSpilter(out Rect rect, out Rect rect2, 0.5f, null);
 			Widgets.Label(rect, label);
 			float num = (float)Convert.ToInt32(value2);
-			float num2 = Widgets.HorizontalSlider(GenUI.BottomPart(rect2, 0.7f), num, 0f, (float)(Enum.GetValues(typeof(T)).Length - 1), true, Enum.GetName(typeof(T), value), null, null, 1f);
+			float num2 = HorizontalSlider(GenUI.BottomPart(rect2, 0.7f), num, 0f, (float)(Enum.GetValues(typeof(T)).Length - 1), true, Enum.GetName(typeof(T), value), null, null, 1f);
 			value = (T)((object)Enum.ToObject(typeof(T), (int)num2));
 		}
 

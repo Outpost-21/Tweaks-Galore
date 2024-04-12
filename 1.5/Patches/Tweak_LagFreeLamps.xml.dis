@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+	<!-- Replaced by automated process. -->
+
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
 			<li>Tweak_LagFreeLamps</li>

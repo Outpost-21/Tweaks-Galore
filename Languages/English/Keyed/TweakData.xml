@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+	<TweaksGalore.MainCurrentPage>Current Page</TweaksGalore.MainCurrentPage>
+	<TweaksGalore.MainCurrentPageDesc>Setting descriptions are in tooltips. The Searchbar only works for the currently selected page.\nYou will need to restart the game for many of these settings to take effect.</TweaksGalore.MainCurrentPageDesc>
+
 	<TweaksGalore.RestoreSectionButton>Restore Section Defaults</TweaksGalore.RestoreSectionButton>
 	<TweaksGalore.SectionRestoredRestart>Tweaks Galore: '{0}' tweaks restored to defaults. Restart required to take full effect.</TweaksGalore.SectionRestoredRestart>
 
