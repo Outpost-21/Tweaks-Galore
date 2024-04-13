@@ -27,7 +27,6 @@ namespace TweaksGalore
         public static TweakDef Tweak_PowerAdjusting;
         public static TweakDef Tweak_StackableChunks_Stone;
         public static TweakDef Tweak_StackableChunks_Slag;
-        public static TweakDef Tweak_WaitThisIsBetter;
         public static TweakDef Tweak_IncidentPawnStats;
         public static TweakDef Tweak_InfestationBlockingFloors;
         public static TweakDef Tweak_HiddenWires;
@@ -100,7 +99,8 @@ namespace TweaksGalore
         public static TweakDef
             Tweak_AnimaTweaks,
             Tweak_DisableAnimaScream,
-            Tweak_UninstallableMechShields;
+            Tweak_UninstallableMechShields,
+            Tweak_WaitThisIsBetter;
 
         [MayRequireIdeology]
         public static TweakDef 

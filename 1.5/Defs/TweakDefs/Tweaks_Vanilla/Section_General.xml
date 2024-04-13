@@ -54,7 +54,7 @@
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_UsefulGrass</defName>
 		<label>useful grass</label>
-		<description>Patches grass and tall grass so when it's cut it provides 2 Hay.</description>
+		<description>Patches grass and tall grass so when it's cut it provides 2 Hay (less if not fully grown).</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
@@ -63,7 +63,7 @@
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_UsefulBushes</defName>
 		<label>useful bushes</label>
-		<description>Patches bushes so they provide 2 Wood when cut.</description>
+		<description>Patches bushes so they provide 2 Wood when cut (less if not fully grown).</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
