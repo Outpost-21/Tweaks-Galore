@@ -17,15 +17,6 @@
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
-		<defName>Tweak_CollarsArentClothes</defName>
-		<label>Slave Collars For Nudists</label>
-		<description>Makes slave collars acceptable for nudists, it makes no real sense that they'd be clothes so this feels like a bugfix honestly.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<section>TweakSection_Ideology_General</section>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
 		<defName>Tweak_YouLookFine</defName>
 		<label>You Look Fine!</label>
 		<description>Stops pawns from changing their look at the style bench every five goddamn minutes, it's a story simulator not Barbies Makeup Challenge.</description>

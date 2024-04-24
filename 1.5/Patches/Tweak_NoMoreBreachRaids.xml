@@ -3,7 +3,7 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>Tweak_RaidStratBreach</li>
+			<li>Tweak_DisableRaidStrat_BreachRaids</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>

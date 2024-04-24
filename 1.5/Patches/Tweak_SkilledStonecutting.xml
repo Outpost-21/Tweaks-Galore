@@ -40,13 +40,12 @@
 						</StatDef>
 					</value>
 				</li>
-				<!-- <li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[@Name="MakeStoneBlocksBase"]</xpath>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[@Name="MakeStoneBlocksBase"]/workSkillLearnFactor</xpath>
 					<value>
-						<workSkill>Crafting</workSkill>
 						<workSkillLearnFactor>0.25</workSkillLearnFactor>
 					</value>
-				</li> -->
+				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[@Name="MakeStoneBlocksBase"]/workSpeedStat</xpath>
 					<value>

@@ -308,6 +308,7 @@
 		<defName>Tweak_InfestationBlockingFloors</defName>
 		<label>Infestation Blocking Floors</label>
 		<description>Prevents infestations happening on harder floors (anything crafted from metal or stone materials). Only prevents the event picking that spot, hives can still spawn on them if an event happens closeby.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_InfestationBlockFloors</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
@@ -358,15 +359,6 @@
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
-
-	<!-- <TweaksGalore.TweakDef>
-		<defName>Tweak_MisanthropeTrait</defName>
-		<label>Misanthrope Trait</label>
-		<description>Adds the misanthrope trait (dislikes humans), also makes it so if a pawn was going to spawn with both the misandrist and misogynist traits that they instead get the misanthrope trait.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<section>TweakSection_Vanilla_General</section>
-	</TweaksGalore.TweakDef> -->
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_NextRestockTimer</defName>
@@ -663,8 +655,8 @@
 		<label>Ancient Deconstruction</label>
 		<description>Makes the Ancient Ruins added by Ideology and/or Biotech deconstructable instead of having to destroy them.</description>
 		<sections>
-			<li>TweakSection_Ideology_General</li>
-			<li>TweakSection_Biotech_General</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">TweakSection_Ideology_General</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">TweakSection_Biotech_General</li>
 		</sections>
 	</TweaksGalore.TweakSubSectionDef>
 
@@ -776,6 +768,71 @@
 		<defaultValue>20</defaultValue>
 		<intRange>0~200</intRange>
 		<subSection>TweakSubSection_DynamicPopulation</subSection>
+	</TweaksGalore.TweakDef>
+
+	<!-- ======================================================== -->
+	<!-- ==================== Raid Strategies =================== -->
+	<!-- ======================================================== -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_RaidStrategies</defName>
+		<label>Raid Strategies</label>
+		<description>Provides control over the raid strategies which can be used by factions. Keep in mind that if a faction only uses strategies you have disabled, they will never be seen, it hasn't come up yet though.</description>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableRaidStrat_AutoFlee</defName>
+		<label>Disable Raiders Fleeing</label>
+		<description>When enabled, will prevent raiders from fleeing.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_RaidStrategies</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableRaidStrat_BreachRaids</defName>
+		<label>Disable Breach Raids</label>
+		<description>When enabled, will prevent breach raids.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_RaidStrategies</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableRaidStrat_DropPods</defName>
+		<label>Disable Drop Pod Raids</label>
+		<description>When enabled, will prevent drop pod raids.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_RaidStrategies</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableRaidStrat_SapperRaids</defName>
+		<label>Disable Sapper Raids</label>
+		<description>When enabled, will prevent sapper raids.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_RaidStrategies</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableRaidStrat_SiegeRaids</defName>
+		<label>Disable Siege Raids</label>
+		<description>When enabled, will prevent siege raids.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_RaidStrategies</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableRaidStrat_WaterRaids</defName>
+		<label>Disable Water Raids</label>
+		<description>When enabled, will prevent water raids.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_RaidStrategies</subSection>
 	</TweaksGalore.TweakDef>
 
 </Defs>

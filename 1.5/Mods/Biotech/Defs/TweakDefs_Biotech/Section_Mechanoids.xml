@@ -9,7 +9,10 @@
 		<defName>TweakSubSection_PlayerMechs</defName>
 		<label>Player Mechanoid Stats</label>
 		<description>Allows the changing of work stats for player mechanoids so they don't suck nearly as much.</description>
-		<section>TweakSection_Vanilla_Mechanoids</section>
+		<sections>
+			<li>TweakSection_Biotech_General</li>
+			<li>TweakSection_Vanilla_Mechanoids</li>
+		</sections>
 	</TweaksGalore.TweakSubSectionDef>
 
 	<TweaksGalore.TweakDef>

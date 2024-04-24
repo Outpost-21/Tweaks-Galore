@@ -21,9 +21,12 @@ namespace TweaksGalore
                 IEnumerable<ThingDef> potentialLamps = GetAllLamps();
                 foreach(ThingDef thing in potentialLamps)
                 {
-                    CompProperties_Refuelable refuelable = thing.GetCompProperties<CompProperties_Refuelable>();
-                    thing.comps.Remove(refuelable);
-                    affectedLamps.AppendLine($"{thing.LabelCap} ({thing.defName})");
+                    if (!thing.HasComp<CompGatherSpot>())
+                    {
+                        CompProperties_Refuelable refuelable = thing.GetCompProperties<CompProperties_Refuelable>();
+                        thing.comps.Remove(refuelable);
+                        affectedLamps.AppendLine($"{thing.LabelCap} ({thing.defName})");
+                    }
                 }
                 LogUtil.LogMessage(affectedLamps.ToString());
             }

@@ -39,7 +39,7 @@ namespace TweaksGalore
             }
             if (!TweaksGaloreMod.settings.floatSetting.ContainsKey(setting))
             {
-                LogUtil.LogWarning($"PatchOperation_TweakFloat attempted to search for a setting with the key '{setting}' which will always return null as it doesn't exist.");
+                //LogUtil.LogWarning($"PatchOperation_TweakFloat attempted to search for a setting with the key '{setting}' which will always return null as it doesn't exist.");
                 return false;
             }
             return true;

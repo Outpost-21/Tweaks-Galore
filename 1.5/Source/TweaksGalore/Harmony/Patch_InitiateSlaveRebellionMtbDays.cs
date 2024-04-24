@@ -18,7 +18,7 @@ namespace TweaksGalore
         [HarmonyPrefix]
         public static bool Prefix(ref float __result, Pawn pawn)
 		{
-            if (TGTweakDefOf.Tweak_ProperSuppression.BoolValue)
+            if (ModLister.IdeologyInstalled && TGTweakDefOf.Tweak_ProperSuppression.BoolValue)
 			{
 				Need_Suppression need_Suppression = pawn.needs.TryGetNeed<Need_Suppression>();
 				if (need_Suppression != null && !need_Suppression.IsSuppressed())

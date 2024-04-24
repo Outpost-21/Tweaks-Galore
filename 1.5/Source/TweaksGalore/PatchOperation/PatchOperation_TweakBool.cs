@@ -59,7 +59,8 @@ namespace TweaksGalore
             {
                 if (!TweaksGaloreMod.settings.boolSetting.ContainsKey(settings[i]))
                 {
-                    LogUtil.LogWarning($"PatchOperation_TweakBool attempted to search for a setting with the key '{settings[i]}' which will always return false as it doesn't exist.");
+                    //LogUtil.LogWarning($"PatchOperation_TweakBool attempted to search for a setting with the key '{settings[i]}' which will always return false as it doesn't exist.");
+                    return false;
                 }
                 else if (TweaksGaloreMod.settings.boolSetting[settings[i]])
                 {

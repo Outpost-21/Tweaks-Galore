@@ -3,12 +3,12 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>Tweak_RaidStratSiege</li>
+			<li>Tweak_DisableRaidStrat_SapperRaids</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/RaidStrategyDef[defName="Siege"]/selectionWeightPerPointsCurve/points</xpath>
+					<xpath>/Defs/RaidStrategyDef[defName="ImmediateAttackSappers"]/selectionWeightPerPointsCurve/points</xpath>
 					<value>
 						<points>
 							<li>(700, 0)</li>

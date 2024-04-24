@@ -21,18 +21,9 @@ namespace TweaksGalore
             if (!def.ShouldRunTweak()) { return; }
             if (def.BoolValue)
             {
-                SetImplantShit(settings);
                 SetMechanoidSkills(settings);
                 SetPowerUsage(settings);
             }
-        }
-
-        public void SetImplantShit(TweaksGaloreSettings settings)
-        {
-            HediffDef implantDef = TGHediffDefOf.MechlinkImplant;
-            HediffStage implantStage = implantDef.stages.First();
-            implantStage.statOffsets.Find(sm => sm.stat == StatDefOf.MechBandwidth).value = TGTweakDefOf.Tweak_MechanitorBandwidthBase.IntValue;
-            implantStage.statOffsets.Find(sm => sm.stat == StatDefOf.MechControlGroups).value = TGTweakDefOf.Tweak_MechanitorControlGroupBase.IntValue;
         }
 
         public void SetMechanoidSkills(TweaksGaloreSettings settings)

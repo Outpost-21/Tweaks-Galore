@@ -21,6 +21,7 @@ namespace TweaksGalore
             if (!def.ShouldRunTweak()) { return; }
             if (def.BoolValue)
             {
+                StringBuilder results = new StringBuilder("Infestation Blocking Terrains:");
                 List<TerrainDef> strongFloors = new List<TerrainDef>();
 
                 foreach (TerrainDef terrain in DefDatabase<TerrainDef>.AllDefs)
@@ -45,7 +46,10 @@ namespace TweaksGalore
                         strongFloors[i].tags = new List<string>();
                     }
                     strongFloors[i].tags.Add("BlocksInfestations");
+                    results.AppendLine($"{strongFloors[i].LabelCap} ({strongFloors[i]})");
                 }
+
+                LogUtil.LogMessage(results.ToString());
             }
         }
 

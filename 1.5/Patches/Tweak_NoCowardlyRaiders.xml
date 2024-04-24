@@ -3,13 +3,18 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>Tweak_RaidStratDropPod</li>
+			<li>Tweak_DisableRaidStrat_AutoFlee</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>
-				<!-- Generalised -->
 				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RaidStrategyDef/arriveModes/li[text()="EdgeDrop" or text()="CenterDrop" or text()="RandomDrop" or text()="EdgeDropGroups"]</xpath>
+					<xpath>/Defs/FactionDef/autoFlee</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef</xpath>
+					<value>
+						<autoFlee>false</autoFlee>
+					</value>
 				</li>
 			</operations>
 		</active>
