@@ -28,7 +28,7 @@
 			<li>Floor</li>
 		</tags>
 		<designationCategory>Floors</designationCategory>
-		<layerable>false</layerable>
+		<layerable>true</layerable>
 		<constructEffect>ConstructDirt</constructEffect>
 		<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
 	</TerrainDef>

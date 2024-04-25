@@ -21,6 +21,10 @@ namespace TweaksGalore
             if (!def.ShouldRunTweak()) { return; }
             if (def.BoolValue)
             {
+                StringBuilder sb1 = new StringBuilder();
+                sb1.AppendLine("Stone Chunks Patched:");
+                StringBuilder sb2 = new StringBuilder();
+                sb2.AppendLine("Slag Chunks Patched:");
                 foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefs)
                 {
                     if (!thingDef.thingCategories.NullOrEmpty())
@@ -28,19 +32,29 @@ namespace TweaksGalore
                         if (thingDef.thingCategories.Contains(ThingCategoryDefOf.StoneChunks))
                         {
                             thingDef.stackLimit = TGTweakDefOf.Tweak_StackableChunks_Stone.IntValue;
+                            thingDef.drawGUIOverlay = true;
+                            thingDef.passability = default(Traversability);
+                            thingDef.saveCompressible = default(bool);
                             thingDef.ResolveReferences();
                             thingDef.PostLoad();
                             ResourceCounter.ResetDefs();
+                            sb1.AppendLine($"{thingDef.LabelCap} ({thingDef.defName})");
                         }
                         if (thingDef.thingCategories.Contains(ThingCategoryDefOf.Chunks))
                         {
                             thingDef.stackLimit = TGTweakDefOf.Tweak_StackableChunks_Slag.IntValue;
+                            thingDef.drawGUIOverlay = true;
+                            thingDef.passability = default(Traversability);
+                            thingDef.saveCompressible = default(bool);
                             thingDef.ResolveReferences();
                             thingDef.PostLoad();
                             ResourceCounter.ResetDefs();
+                            sb2.AppendLine($"{thingDef.LabelCap} ({thingDef.defName})");
                         }
                     }
                 }
+                LogUtil.LogMessage(sb1.ToString());
+                LogUtil.LogMessage(sb2.ToString());
             }
         }
 
