@@ -265,6 +265,9 @@
 		<description>Allows the growing of Glowstool and Agarilux in plant zones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
+		<incompatible>
+			<li>ReGrowth.BOTR.Core</li>
+		</incompatible>
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 

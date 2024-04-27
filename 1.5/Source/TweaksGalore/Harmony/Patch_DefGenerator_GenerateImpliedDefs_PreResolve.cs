@@ -30,8 +30,15 @@ namespace TweaksGalore
             {
                 TGTweakDefOf.TweakSubSection_PowerAdjusting.heldTweaks = new List<TweakDef>();
             }
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Power Tweaks Skipped Defs:");
             foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs.Where(t => t.GetCompProperties<CompProperties_Power>() != null))
             {
+                if (def.label != null && Def.DisallowedLabelCharsRegex.IsMatch(def.label))
+                {
+                    sb.AppendLine($"{def.LabelCap} ({def.defName})");
+                    continue;
+                }
                 string generatedDefName = "Tweak_PowerAdj_" + def.defName;
                 CompProperties_Power comp = def.GetCompProperties<CompProperties_Power>();
                 if(comp.basePowerConsumption == 0)
@@ -47,6 +54,7 @@ namespace TweaksGalore
                     yield return CreatePowerTweakDef(def, generatedDefName, comp);
                 }
             }
+            LogUtil.LogMessage(sb.ToString());
         }
 
         public static TweakDef CreatePowerTweakDef(ThingDef thingDef, string generatedDefName, CompProperties_Power comp)

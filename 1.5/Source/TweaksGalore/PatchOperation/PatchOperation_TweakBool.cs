@@ -57,15 +57,7 @@ namespace TweaksGalore
         {
             for (int i = 0; i < settings.Count(); i++)
             {
-                if (!TweaksGaloreMod.settings.boolSetting.ContainsKey(settings[i]))
-                {
-                    //LogUtil.LogWarning($"PatchOperation_TweakBool attempted to search for a setting with the key '{settings[i]}' which will always return false as it doesn't exist.");
-                    return false;
-                }
-                else if (TweaksGaloreMod.settings.boolSetting[settings[i]])
-                {
-                    return true;
-                }
+                return IsSettingEnabled(settings[i]);
             }
             return false;
         }
@@ -75,20 +67,24 @@ namespace TweaksGalore
             int num = 0;
             for (int i = 0; i < settings.Count; i++)
             {
-
-                if (!TweaksGaloreMod.settings.boolSetting.ContainsKey(settings[i]))
-                {
-                    LogUtil.LogWarning($"PatchOperation_TweakBool attempted to search for a setting with the key '{settings[i]}' which will always return false as it doesn't exist.");
-                }
-                else if(TweaksGaloreMod.settings.boolSetting[settings[i]])
+                if (IsSettingEnabled(settings[i]))
                 {
                     num++;
                 }
             }
-            if(num > settings.Count)
+            if(num >= settings.Count)
             {
                 return true;
             }
+            return false;
+        }
+
+        public bool IsSettingEnabled(string defName)
+        {
+            TweakDef tweakDef = DefDatabase<TweakDef>.GetNamedSilentFail(defName);
+            if (tweakDef == null) { return false; }
+            if (!tweakDef.BoolValue) { return false; }
+            if (tweakDef.incompatible.Any(r => ModLister.GetActiveModWithIdentifier(r) != null)) { return false; }
             return false;
         }
     }
