@@ -55,9 +55,18 @@ namespace TweaksGalore
 
         public bool HasAnySetting()
         {
-            for (int i = 0; i < settings.Count(); i++)
+            for (int i = 0; i < settings.Count; i++)
             {
-                return IsSettingEnabled(settings[i]);
+                if (!TweaksGaloreMod.settings.boolSetting.ContainsKey(settings[i]))
+                {
+                    //LogUtil.LogWarning($"PatchOperation_TweakBool attempted to search for a setting with the key '{settings[i]}' which will always return false as it doesn't exist.");
+                    return false;
+                }
+                else if (TweaksGaloreMod.settings.boolSetting[settings[i]])
+                {
+                    //LogUtil.LogMessage($"Setting Enabled: {settings[i]}");
+                    return true;
+                }
             }
             return false;
         }
@@ -67,7 +76,11 @@ namespace TweaksGalore
             int num = 0;
             for (int i = 0; i < settings.Count; i++)
             {
-                if (IsSettingEnabled(settings[i]))
+                if (!TweaksGaloreMod.settings.boolSetting.ContainsKey(settings[i]))
+                {
+                    //LogUtil.LogWarning($"PatchOperation_TweakBool attempted to search for a setting with the key '{settings[i]}' which will always return false as it doesn't exist.");
+                }
+                else if (TweaksGaloreMod.settings.boolSetting[settings[i]])
                 {
                     num++;
                 }
@@ -83,8 +96,7 @@ namespace TweaksGalore
         {
             TweakDef tweakDef = DefDatabase<TweakDef>.GetNamedSilentFail(defName);
             if (tweakDef == null) { return false; }
-            if (!tweakDef.BoolValue) { return false; }
-            if (tweakDef.incompatible.Any(r => ModLister.GetActiveModWithIdentifier(r) != null)) { return false; }
+            if (tweakDef.incompatible.Any(r => ModLister.GetActiveModWithIdentifier(r) != null)) { return TweaksGaloreMod.settings.GetBoolSetting(defName); }
             return false;
         }
     }
