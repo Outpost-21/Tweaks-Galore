@@ -265,9 +265,6 @@
 		<description>Allows the growing of Glowstool and Agarilux in plant zones.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<incompatible>
-			<li>ReGrowth.BOTR.Core</li>
-		</incompatible>
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
@@ -382,6 +379,20 @@
 			<li>kentington.saveourship2</li>
 		</incompatible>
 		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_RitualsDontSuck</defName>
+		<label>Rituals Don't Suck</label>
+		<description>At 100% effectiveness, rituals shouldn't still have a chance to be dogshit bad, RNG still taking part at that point is stupid! This is listed in multiple categories because technically there's a ritual in vanilla and every dlc besides Anomaly. Clear as mud like always, Tynan.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<sections>
+			<li>TweakSection_Vanilla_General</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">TweakSection_Royalty_General</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">TweakSection_Ideology_General</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">TweakSection_Biotech_General</li>
+		</sections>
 	</TweaksGalore.TweakDef>
 
 	<!-- ====================================================== -->
@@ -719,7 +730,7 @@
 		<description>Population below or equal to this is considered critically low.</description>
 		<tweakType>Int</tweakType>
 		<defaultValue>0</defaultValue>
-		<intRange>0~200</intRange>
+		<intRange>0~100</intRange>
 		<subSection>TweakSubSection_DynamicPopulation</subSection>
 	</TweaksGalore.TweakDef>
 
@@ -729,7 +740,7 @@
 		<description>Population below or equal to this is considered low.</description>
 		<tweakType>Int</tweakType>
 		<defaultValue>1</defaultValue>
-		<intRange>0~200</intRange>
+		<intRange>0~100</intRange>
 		<subSection>TweakSubSection_DynamicPopulation</subSection>
 	</TweaksGalore.TweakDef>
 
@@ -739,7 +750,7 @@
 		<description>Population below or equal to this is considered typical.</description>
 		<tweakType>Int</tweakType>
 		<defaultValue>4</defaultValue>
-		<intRange>0~200</intRange>
+		<intRange>0~100</intRange>
 		<subSection>TweakSubSection_DynamicPopulation</subSection>
 	</TweaksGalore.TweakDef>
 
@@ -749,7 +760,7 @@
 		<description>Population below or equal to this is considered high.</description>
 		<tweakType>Int</tweakType>
 		<defaultValue>7</defaultValue>
-		<intRange>0~200</intRange>
+		<intRange>0~100</intRange>
 		<subSection>TweakSubSection_DynamicPopulation</subSection>
 	</TweaksGalore.TweakDef>
 
@@ -759,7 +770,7 @@
 		<description>Population below or equal to this is considered critically high.</description>
 		<tweakType>Int</tweakType>
 		<defaultValue>11</defaultValue>
-		<intRange>0~200</intRange>
+		<intRange>0~100</intRange>
 		<subSection>TweakSubSection_DynamicPopulation</subSection>
 	</TweaksGalore.TweakDef>
 
@@ -769,7 +780,7 @@
 		<description>Population below or equal to this is considered maximum.</description>
 		<tweakType>Int</tweakType>
 		<defaultValue>20</defaultValue>
-		<intRange>0~200</intRange>
+		<intRange>0~100</intRange>
 		<subSection>TweakSubSection_DynamicPopulation</subSection>
 	</TweaksGalore.TweakDef>
 

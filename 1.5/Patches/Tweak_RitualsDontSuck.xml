@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_RitualsDontSuck</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RitualOutcomeEffectDef/outcomeChances/li[label="Terrible"
+						or label="Lackluster"
+						or label="Boring"
+						or label="Awkward"
+						or label="Unimpressive"
+						or label="exonerated"
+						or label="Ineffective"
+						or label="Failed"
+						or label="Inscrutable"
+						or label="Squamous"
+						or label="Accursed"
+						or label="Blasphemous"
+						or label="Loathsome"
+						or label="Uninteresting"
+						or label="Grotesque"
+						or label="Poorly Organized"
+						or label="Unexciting"
+						or label="Rational"
+						or label="Deranged"
+						or label="Lame"
+						or label="Uninspiring"]/chance</xpath>
+					<value>
+						<chance>0.0</chance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RitualOutcomeEffectDef/outcomeChances/li[label="Good"
+						or label="Fun"
+						or label="Satisfying"
+						or label="Effective"
+						or label="Honorable"
+						or label="Rousing"
+						or label="Sexy"
+						or label="Liberating"
+						or label="Psychotic"
+						or label="Entertaining"]/chance</xpath>
+					<value>
+						<chance>0.75</chance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RitualOutcomeEffectDef/outcomeChances/li[label="Heartwarming"
+						or label="Unforgettable"
+						or label="Spectacular"
+						or label="Masterful"
+						or label="Entrancing"
+						or label="Exhilarating"
+						or label="Amazing"
+						or label="Well Organized"
+						or label="Wondrous"
+						or label="Glorious"
+						or label="Sublime"
+						or label="Insane"
+						or label="Grandiose"]/chance</xpath>
+					<value>
+						<chance>0.15</chance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RitualOutcomeEffectDef/outcomeChances/li[label="convicted"
+						or label="Successful"
+						or label="Beautiful"]/chance</xpath>
+					<value>
+						<chance>1.0</chance>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
