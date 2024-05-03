@@ -93,6 +93,7 @@
     <Compile Include="Harmony\Patch_MainTabWindow_Research_DrawLeftRect.cs" />
     <None Include="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
     <Compile Include="Harmony\Patch_Pawn_HealthTracker_ShouldBeDeadFromLethalDamageThreshold.cs" />
+    <Compile Include="TweakWorkers\General\TweakWorker_WaterproofElectronics.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_LagFreeLamps.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_RealisticRooms.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_DynamicPopulation.cs" />

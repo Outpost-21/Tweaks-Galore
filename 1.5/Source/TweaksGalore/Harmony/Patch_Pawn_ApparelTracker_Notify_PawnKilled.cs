@@ -18,7 +18,7 @@ namespace TweaksGalore
         [HarmonyPrefix]
         public static bool Prefix(Pawn_ApparelTracker __instance, DamageInfo? dinfo)
         {
-            if (TGTweakDefOf.Tweak_TaintOnRot.BoolValue)
+            if (TGTweakDefOf.Tweak_TaintOnRot.BoolValue || TGTweakDefOf.Tweak_TaintDisabled.BoolValue)
 			{
 				DamageApparel(__instance, dinfo);
 				return false;

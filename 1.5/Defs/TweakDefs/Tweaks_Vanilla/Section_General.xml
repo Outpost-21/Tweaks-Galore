@@ -382,6 +382,16 @@
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_WaterproofElectronics</defName>
+		<label>Waterproof Electronics</label>
+		<description>Prevents electronics that normally would short circuit in the rain from doing so.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_WaterproofElectronics</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_RitualsDontSuck</defName>
 		<label>Rituals Don't Suck</label>
 		<description>At 100% effectiveness, rituals shouldn't still have a chance to be dogshit bad, RNG still taking part at that point is stupid! This is listed in multiple categories because technically there's a ritual in vanilla and every dlc besides Anomaly. Clear as mud like always, Tynan.</description>
@@ -393,7 +403,7 @@
 			<li MayRequire="Ludeon.RimWorld.Ideology">TweakSection_Ideology_General</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech">TweakSection_Biotech_General</li>
 		</sections>
-	</TweaksGalore.TweakDef>
+	</TweaksGalore.TweakDef> -->
 
 	<!-- ====================================================== -->
 	<!-- ================== Wild Animal Sex ================== -->
