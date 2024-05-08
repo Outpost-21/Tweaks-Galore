@@ -391,6 +391,15 @@
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_LowerShellLayering</defName>
+		<label>Lower Shell Layering</label>
+		<description>Changes the shell layer of all vanilla apparel that as of 1.5 renders over hair when it really should render under it.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
 	<!-- <TweaksGalore.TweakDef>
 		<defName>Tweak_RitualsDontSuck</defName>
 		<label>Rituals Don't Suck</label>

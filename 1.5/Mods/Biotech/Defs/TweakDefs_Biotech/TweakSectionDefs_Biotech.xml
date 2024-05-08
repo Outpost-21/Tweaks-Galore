@@ -4,7 +4,7 @@
 	<TweaksGalore.TweakCategoryDef>
 		<defName>TweakCategory_Biotech</defName>
 		<label>Biotech</label>
-		<orderID>-1</orderID>
+		<orderID>-2</orderID>
 	</TweaksGalore.TweakCategoryDef>
 
 	<TweaksGalore.TweakSectionDef>

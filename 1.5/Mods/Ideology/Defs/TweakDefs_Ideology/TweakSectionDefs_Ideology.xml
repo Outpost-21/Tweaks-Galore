@@ -4,7 +4,7 @@
 	<TweaksGalore.TweakCategoryDef>
 		<defName>TweakCategory_Ideology</defName>
 		<label>Ideology</label>
-		<orderID>-2</orderID>
+		<orderID>-3</orderID>
 	</TweaksGalore.TweakCategoryDef>
 
 </Defs>

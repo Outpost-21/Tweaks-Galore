@@ -24,6 +24,36 @@
 			</li>
 		</links>
 	</TabulaRasa.UpdateDef> -->
+	
+	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_08052024</defName>
+		<date>2024/05/08</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>New Tweaks</header>
+				<text>- Replantable Harbinger Tree
+
+Don't expect many of these till a while after Ludeon stops patching the game every few days, I don't want to add something that'll be broken/redundant in a matter of days.</text>
+			</li>
+			<li>
+				<header>Fixes</header>
+				<text>I lost track of what fixes there have been but there's been a few I found during playtesting.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
 
 	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_10042024</defName>

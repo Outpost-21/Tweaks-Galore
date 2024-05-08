@@ -68,7 +68,7 @@ namespace TweaksGalore
             {
                 listing.Note(description, GameFont.Tiny, Color.gray);
             }
-            TweaksGaloreMod.settings.SetFloatSetting(key, tempfloat);
+            TweaksGaloreMod.settings.SetFloatSetting(key, (float)Math.Round(tempfloat, 2));
         }
 
         /// <summary>

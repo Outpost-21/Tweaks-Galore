@@ -17,6 +17,8 @@ namespace TweaksGalore
 
         static TweaksGaloreStartup()
         {
+            LogSettings();
+
             BackupOriginalTechLevels();
 
             try { InitializeSettingsDefs(settings); } catch (Exception e) { LogUtil.LogError("Caught Exception initialising settings: " + e); };
@@ -45,6 +47,55 @@ namespace TweaksGalore
                 {
                     LogUtil.LogError($"Caught Exception initialising '{tweak.defName}' tweak:\n" + e);
                 }
+            }
+        }
+
+        public static void LogSettings()
+        {
+            if(!settings.boolSetting.NullOrEmpty())
+            {
+                StringBuilder sbBool = new StringBuilder("Bool Settings:");
+                foreach (string key in settings.boolSetting.Keys)
+                {
+                    sbBool.Append($" [ {key} :: {settings.boolSetting[key]} ]");
+                }
+                Log.Message(sbBool.ToString());
+            }
+            if (!settings.intSetting.NullOrEmpty())
+            {
+                StringBuilder sbInt = new StringBuilder("Int Settings:");
+                foreach (string key in settings.intSetting.Keys)
+                {
+                    sbInt.Append($" [ {key} :: {settings.intSetting[key]} ]");
+                }
+                Log.Message(sbInt.ToString());
+            }
+            if (!settings.intRangeSetting.NullOrEmpty())
+            {
+                StringBuilder sbIntRange = new StringBuilder("Int Range Settings:");
+                foreach (string key in settings.intRangeSetting.Keys)
+                {
+                    sbIntRange.Append($" [ {key} :: {settings.intRangeSetting[key]} ]");
+                }
+                Log.Message(sbIntRange.ToString());
+            }
+            if (!settings.floatSetting.NullOrEmpty())
+            {
+                StringBuilder sbFloat = new StringBuilder("Float Settings:");
+                foreach (string key in settings.floatSetting.Keys)
+                {
+                    sbFloat.Append($" [ {key} :: {settings.floatSetting[key]} ]");
+                }
+                Log.Message(sbFloat.ToString());
+            }
+            if (!settings.floatRangeSetting.NullOrEmpty())
+            {
+                StringBuilder sbFloatRange = new StringBuilder("Float Range Settings:");
+                foreach (string key in settings.floatRangeSetting.Keys)
+                {
+                    sbFloatRange.Append($" [ {key} :: {settings.floatRangeSetting[key]} ]");
+                }
+                Log.Message(sbFloatRange.ToString());
             }
         }
 

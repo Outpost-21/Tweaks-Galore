@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ============================================== -->
+	<!-- ================== Entities ================== -->
+	<!-- ============================================== -->
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_AnomalyEntities</defName>
+		<label>Entities</label>
+		<category>TweakCategory_Anomaly</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<!-- ==================================================== -->
+	<!-- ================== Harbinger Tree ================== -->
+	<!-- ==================================================== -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_HarbingerTree</defName>
+		<label>Habringer Tree</label>
+		<description>Tweaks specific to the Harbinger tree.</description>
+		<section>TweakSection_AnomalyEntities</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_HabringerTweaks</defName>
+		<label>Enable Habringer Tweaks</label>
+		<description>This entire section is disabled by default for compatibility sake, and must be enabled for the tweaks inside it to do anything.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+			<enhanced>true</enhanced>
+		</formatting>
+		<subSection>TweakSubSection_HarbingerTree</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ReplantableHarbinger</defName>
+		<label>Replantable Harbinger</label>
+		<description>Makes it so you can move Harbinger trees like any other.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_HarbingerTree</subSection>
+	</TweaksGalore.TweakDef>
+
+</Defs>
