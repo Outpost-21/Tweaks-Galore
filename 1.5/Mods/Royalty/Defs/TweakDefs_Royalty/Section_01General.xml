@@ -11,6 +11,7 @@
 		<defName>Tweak_NoBiocoding</defName>
 		<label>No Biocoding</label>
 		<description>If enabled, removes biocoding from weapons so they don't spawn with it. Does not affect any that have already spawned but will affect mod added ones.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_NoBiocoding</tweakWorker>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Royalty_General</section>
@@ -20,6 +21,16 @@
 		<defName>Tweak_NoDeathAcidifiers</defName>
 		<label>No Death Acidifiers</label>
 		<description>If enabled, removes death acidifiers from pawnKinds so they don't spawn with them. Does not affect any pawns that have already spawned, but will affect mod added pawns.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_NoDeathAcidifiers</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Royalty_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PinataDeathAcidifiers</defName>
+		<label>Pinata Death Acidifiers</label>
+		<description>If enabled, changes death acidifier functionality to instead drop all equipment on the ground, and instantly dessicate the pawn. As opposed to their vanilla behaviour of destroying the equipment. Cus why not? Everyone loves a loot pinata.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Royalty_General</section>
@@ -74,7 +85,7 @@
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_NoTradingPermit</defName>
 		<label>No Trading Permit</label>
-		<description>If enabled, removes the need to hae a permit to trade with the Shattered Empire.</description>
+		<description>If enabled, removes the need to have a permit to trade with the Shattered Empire.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Royalty_General</section>

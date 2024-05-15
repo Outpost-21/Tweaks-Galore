@@ -89,10 +89,13 @@
     <Compile Include="DefOfs\TGRoomStatDefOf.cs" />
     <Compile Include="Harmony\Patch_CompShearable_CompInspectStringExtra.cs" />
     <Compile Include="Harmony\Patch_CompMilkable_CompInspectStringExtra.cs" />
+    <Compile Include="Harmony\Patch_HediffComp_DissolveGearOnDeath_Notify_PawnKilled.cs" />
     <Compile Include="Harmony\Patch_ResearchManager_ReapplyAllMods.cs" />
     <Compile Include="Harmony\Patch_MainTabWindow_Research_DrawLeftRect.cs" />
     <None Include="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
     <Compile Include="Harmony\Patch_Pawn_HealthTracker_ShouldBeDeadFromLethalDamageThreshold.cs" />
+    <Compile Include="TweakWorkers\General\TweakWorker_NoDeathAcidifiers.cs" />
+    <Compile Include="TweakWorkers\General\TweakWorker_NoBiocoding.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_WaterproofElectronics.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_LagFreeLamps.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_RealisticRooms.cs" />

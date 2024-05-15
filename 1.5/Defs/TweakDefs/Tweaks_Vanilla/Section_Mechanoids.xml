@@ -24,7 +24,7 @@
 		<label>Disable Mechanoid Adaptation</label>
 		<description>Disables the ability for Mechanoids to adapt to EMP, so EMP remains super effective regardless.</description>
 		<tweakType>Bool</tweakType>
-		<defaultValue>true</defaultValue>
+		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_Mechanoids</section>
 	</TweaksGalore.TweakDef>
 

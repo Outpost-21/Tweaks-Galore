@@ -100,7 +100,8 @@ namespace TweaksGalore
             Tweak_AnimaTweaks,
             Tweak_DisableAnimaScream,
             Tweak_UninstallableMechShields,
-            Tweak_WaitThisIsBetter;
+            Tweak_WaitThisIsBetter,
+            Tweak_PinataDeathAcidifiers;
 
         [MayRequireIdeology]
         public static TweakDef 

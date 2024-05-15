@@ -22,5 +22,8 @@ namespace TweaksGalore
 
         [MayRequireBiotech]
         public static ThingDef Plant_TreePolux;
+
+        [MayRequireRoyalty]
+        public static ThingDef DeathAcidifier;
     }
 }
