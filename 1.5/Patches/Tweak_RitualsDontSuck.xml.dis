@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+	<!-- === Needs a lot of work to be functional as intended without errors. === -->
+
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
 			<li>Tweak_RitualsDontSuck</li>
