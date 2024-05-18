@@ -26,19 +26,21 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
-		<defName>TweaksGalore_08052024</defName>
-		<date>2024/05/08</date>
+		<defName>TweaksGalore_18052024</defName>
+		<date>2024/05/18</date>
 		<banner />
 		<contentList>
 			<li>
-				<header>New Tweaks</header>
+				<header>New Tweak for Anomly</header>
 				<text>- Replantable Harbinger Tree
 
-I'm holding off on adding any other Anomaly tweaks till Ludeon are done tweaking the DLC and 1.5 update, there's already been changes that would have broke or made redundant tweaks I otherwise would have done.</text>
+Now that Ludeon aren't updating every other day I'll likely be looking at more tweaks to add for Anomaly, this was just a quick and dirty one.</text>
 			</li>
 			<li>
 				<header>Fixes</header>
-				<text>I lost track of what fixes there have been but there's been a few I found during playtesting.</text>
+				<text>I lost track of what fixes there have been but there's been quite a few I found during playtesting and from the comments. Big ones were Disable Mechanoid Adaptation being on by default, and some WIP research tweak code that wasn't disabled, wouldn't have affected most people but there may have been some weirdness in anything touching techprints.
+					
+If your issue wasn't fixed, I either just didn't get to it yet, or you failed to include a HugsLib log.</text>
 			</li>
 		</contentList>
 		<links>

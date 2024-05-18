@@ -111,10 +111,10 @@ namespace TweaksGalore
                 ResearchProjectSettings researchSettings = settings.tweak_researchProjectSettings[research.defName];
                 research.baseCost = researchSettings.baseCost;
                 research.techLevel = researchSettings.techLevel;
-                research.techprintCount = researchSettings.techprintCount;
-                research.techprintCommonality = researchSettings.techprintCommonality;
-                research.techprintMarketValue = researchSettings.techprintMarketValue;
-                research.heldByFactionCategoryTags = researchSettings.techprintTags;
+                // research.techprintCount = researchSettings.techprintCount;
+                // research.techprintCommonality = researchSettings.techprintCommonality;
+                // research.techprintMarketValue = researchSettings.techprintMarketValue;
+                // research.heldByFactionCategoryTags = researchSettings.techprintTags;
             }
         }
 
