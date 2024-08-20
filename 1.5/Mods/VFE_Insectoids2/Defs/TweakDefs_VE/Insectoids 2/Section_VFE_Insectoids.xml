@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakCategory_VanillaExpanded_Insectoids</defName>
+		<label>VFE - Insectoids 2</label>
+		<category>TweakCategory_VanillaExpanded</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_VFEInsectoids_DisableWallPopping</defName>
+		<label>Disable Insectoid Wall Popping</label>
+		<description>If enabled, this will turn off the destruction of adjacent wall when an insectoid wall is destroyed.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakCategory_VanillaExpanded_Insectoids</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_VFEInsectoids_StrongerWalls</defName>
+		<label>Stronger Insectoid Walls</label>
+		<description>If enabled, increases insectoid wall health to be closer to wood in health, with the free to build hive wall being less durable.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakCategory_VanillaExpanded_Insectoids</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_VFEInsectoids_FasterCreep</defName>
+		<label>Faster Creep</label>
+		<description>If enabled, rapidly increases the rate at which creep spreads from a Creeper. Instead of taking a small eternity to spread fully now it'll do so in the space of a few days.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakCategory_VanillaExpanded_Insectoids</section>
+	</TweaksGalore.TweakDef>
+	
+</Defs>

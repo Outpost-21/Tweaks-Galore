@@ -25,5 +25,8 @@
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.5/Mods/Anomaly</li>
 		<!-- Tabula Rasa -->
 		<li IfModActive="neronix17.toolbox">1.5/Mods/UpdateLog</li>
+		<!-- Vanilla Expanded -->
+		<li>1.5/Mods/VanillaExpanded</li>
+		<li IfModActive="OskarPotocki.VFE.Insectoid2">1.5/Mods/VFE_Insectoids2</li>
 	</v1.5>
 </loadFolders>

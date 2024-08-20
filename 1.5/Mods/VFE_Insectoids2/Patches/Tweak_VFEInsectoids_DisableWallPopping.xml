@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_VFEInsectoids_DisableWallPopping</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VFEI_HiveWall"]/comps/li[@Class="VFEInsectoids.CompProperties_OnDestroyWall"]/chaining</xpath>
+					<value>
+						<chaining>false</chaining>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VFEI2_InsectJellyWall"]/comps/li[@Class="VFEInsectoids.CompProperties_OnDestroyWall"]/chaining</xpath>
+					<value>
+						<chaining>false</chaining>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
