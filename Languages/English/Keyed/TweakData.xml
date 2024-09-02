@@ -17,7 +17,6 @@
 	<TweaksGalore.PennedAnimalsBoolDesc>Allows control over which animals can be penned and how many days it takes for them to begin roaming if they are not in a pen.</TweaksGalore.PennedAnimalsBoolDesc>
 	<TweaskGalore.SliderNotPennable>Not Pennable</TweaskGalore.SliderNotPennable>
 	<TweaksGalore.SliderDays> Days</TweaksGalore.SliderDays>
-	<TweaksGalore.SliderDisabled>Disabled</TweaksGalore.SliderDisabled>
 	<TweaksGalore.Slider20Days>20 Days</TweaksGalore.Slider20Days>
 
 	<TweaksGalore.PermitFaction>Faction: {0}</TweaksGalore.PermitFaction>
