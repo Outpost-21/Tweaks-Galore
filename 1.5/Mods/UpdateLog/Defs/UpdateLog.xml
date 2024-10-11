@@ -26,6 +26,42 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_07102024</defName>
+		<date>2024/10/07</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>New Tweaks</header>
+				<text>- Recreational Smokeleaf
+- Sturdier Bridges
+- Cheaper Hidden Conduits
+- Don't Generate Relations
+- Tradeable Meals</text>
+			</li>
+			<li>
+				<header>Vanilla Factions Expanded - Insectoids 2</header>
+				<text>- Disable Insectoid Wall Popping
+- Stronger Insectoid Walls
+- Persistent Foampods
+- Craftable Creep
+- Faster Jelly Farms</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_18052024</defName>
 		<date>2024/05/18</date>
 		<banner />

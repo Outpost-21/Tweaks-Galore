@@ -3,15 +3,15 @@
 
 	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
 		<settings>
-			<li>Tweak_VFEInsectoids_FasterCreep</li>
+			<li>Tweak_VFEInsectoids_FasterJellyFarms</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="VFEI2_Creeper"]/comps/li[@Class="VFEInsectoids.CompProperties_Terraform"]/spawnTickRate</xpath>
+					<xpath>/Defs/ThingDef[defName="VFEI2_JellyFarm"]/comps/li[@Class="CompProperties_Spawner"]/spawnIntervalRange</xpath>
 					<value>
-						<spawnTickRate>6000</spawnTickRate>
+						<spawnIntervalRange>20000~28000</spawnIntervalRange>
 					</value>
 				</li>
 			</operations>

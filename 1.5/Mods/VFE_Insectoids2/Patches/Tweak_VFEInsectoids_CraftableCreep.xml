@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_VFEInsectoids_CraftableCreep</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TerrainDef[defName="VFEI2_Creep"]/designationCategory</xpath>
+					<value>
+						<designationCategory>VFEI2_Insectoids</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TerrainDef[defName="VFEI2_Creep"]</xpath>
+					<value>
+						<li Class="VFEInsectoids.InsectBuilding"/>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

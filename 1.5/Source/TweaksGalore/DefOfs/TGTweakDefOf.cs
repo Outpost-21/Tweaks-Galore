@@ -38,6 +38,8 @@ namespace TweaksGalore
         public static TweakDef Tweak_DisableLethalDamageThreshold;
         public static TweakDef Tweak_TraderPawnAlert;
         public static TweakDef Tweak_OrbitalTraderAlert;
+        public static TweakDef Tweak_DontGenerateRelations;
+        public static TweakDef Tweak_TradeableMeals;
 
         public static TweakDef
             Tweak_TechTraversal_Enabled,

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_CheaperHiddenConduits</li>
+		</settings>
+		<active Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="HiddenConduit"]/costList</xpath>
+			<value>
+				<costList>
+					<Steel>1</Steel>
+				</costList>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

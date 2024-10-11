@@ -6,6 +6,16 @@
 	<!-- ======================================================= -->
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_TradeableMeals</defName>
+		<label>Tradeable Meals</label>
+		<description>Allows all meals in the "meals" category to be traded with any trader, includes any modded items in that category too.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_TradeableMeals</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_TraderPawnAlert</defName>
 		<label>Trader Pawn Alert</label>
 		<description>Shows an alert if there's a trader on the colony map.</description>
@@ -18,6 +28,15 @@
 		<defName>Tweak_OrbitalTraderAlert</defName>
 		<label>Orbital Trader Alert</label>
 		<description>Shows an alert if there's an orbital trader, if you have a comms console built.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DontGenerateRelations</defName>
+		<label>Don't Generate Relations</label>
+		<description>Prevents random relationships from being generated automatically. Will not affect manually created relations through other means.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>
@@ -324,6 +343,15 @@
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_CheaperHiddenConduits</defName>
+		<label>Cheaper Hidden Conduits</label>
+		<description>If enabled, changes the cost of hidden conduits to be the same as normal conduits. They already take much longer to build, 2 steel instead of the normal 1 steel on top of that is just rude.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_ImpassableDeepWater</defName>
 		<label>Impassable Deep Water</label>
 		<description>Changes deep water to be impassable by pawns, preventing them from pathing through it.</description>
@@ -364,6 +392,24 @@
 		<defName>Tweak_NextRestockTimer</defName>
 		<label>Next Restock Timer</label>
 		<description>Displays in the world map information of settlements whether or not they have restocked since you last visited and how long till their next restock.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SturdierBridges</defName>
+		<label>Sturdier Bridges</label>
+		<description>Changes bridge capabilities to handle medium and heavy buildings, now you can build a stone wall over that river raiders keep wandering in through.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_RecreationalSmokeleaf</defName>
+		<label>Recreational Smokeleaf</label>
+		<description>Changes smokeleaf to no longer have a chance of life threatening health conditions, and lowers the debuffs applied by smokeleaf high.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakSection_Vanilla_General</section>

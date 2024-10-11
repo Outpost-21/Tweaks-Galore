@@ -26,9 +26,27 @@
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
-		<defName>Tweak_VFEInsectoids_FasterCreep</defName>
-		<label>Faster Creep</label>
-		<description>If enabled, rapidly increases the rate at which creep spreads from a Creeper. Instead of taking a small eternity to spread fully now it'll do so in the space of a few days.</description>
+		<defName>Tweak_VFEInsectoids_PermanentFoampods</defName>
+		<label>Persistent Foampods</label>
+		<description>If enabled, removes the expiring timer on foampods, so they do not die from time passing.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakCategory_VanillaExpanded_Insectoids</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_VFEInsectoids_CraftableCreep</defName>
+		<label>Craftable Creep</label>
+		<description>If enabled, allows worker insectoids to build the creep terrain directly, just like the insectoid walls.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakCategory_VanillaExpanded_Insectoids</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_VFEInsectoids_FasterJellyFarms</defName>
+		<label>Faster Jelly Farms</label>
+		<description>If enabled, makes jelly farms slightly faster than hives at producing jelly, since that's their sole purpose, you can adjust how much jelly they provide in the VFE-I2 options.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
 		<section>TweakCategory_VanillaExpanded_Insectoids</section>
