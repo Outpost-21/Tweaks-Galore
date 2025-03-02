@@ -34,19 +34,31 @@ namespace TweaksGalore
             sb.AppendLine("Power Tweaks Skipped Defs:");
             foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs.Where(t => t.GetCompProperties<CompProperties_Power>() != null))
             {
-                if (def.label != null && Def.DisallowedLabelCharsRegex.IsMatch(def.label))
+                if (def.label == null)
                 {
-                    sb.AppendLine($"{def.LabelCap} ({def.defName})");
+                    sb.AppendLine($"NULL LABEL ({def.defName}) due to null label.");
+                    continue;
+                }
+                if (Def.DisallowedLabelCharsRegex.IsMatch(def.label))
+                {
+                    sb.AppendLine($"{def.LabelCap} ({def.defName}) due to disallowed label characters.");
                     continue;
                 }
                 string generatedDefName = "Tweak_PowerAdj_" + def.defName;
                 CompProperties_Power comp = def.GetCompProperties<CompProperties_Power>();
+                if (float.IsInfinity(comp.basePowerConsumption))
+                {
+                    sb.AppendLine($"{def.LabelCap} ({def.defName}) due to infinite power setting.");
+                    continue;
+                }
                 if(comp.basePowerConsumption == 0)
                 {
+                    sb.AppendLine($"{def.LabelCap} ({def.defName}) due to zero power setting.");
                     continue;
                 }
                 if (DefDatabase<TweakDef>.GetNamedSilentFail(generatedDefName) != null)
                 {
+                    sb.AppendLine($"{def.LabelCap} ({def.defName}) due pre-defined tweak.");
                     continue;
                 }
                 if (!TGTweakDefOf.TweakSubSection_PowerAdjusting.heldTweaks.Any(t => t.defName == generatedDefName))
