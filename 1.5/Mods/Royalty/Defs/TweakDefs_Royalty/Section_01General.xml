@@ -18,25 +18,6 @@
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
-		<defName>Tweak_NoDeathAcidifiers</defName>
-		<label>No Death Acidifiers</label>
-		<description>If enabled, removes death acidifiers from pawnKinds so they don't spawn with them. Does not affect any pawns that have already spawned, but will affect mod added pawns.</description>
-		<tweakWorker>TweaksGalore.TweakWorker_NoDeathAcidifiers</tweakWorker>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<section>TweakSection_Royalty_General</section>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
-		<defName>Tweak_PinataDeathAcidifiers</defName>
-		<label>Pinata Death Acidifiers</label>
-		<description>If enabled, changes death acidifier functionality to instead drop all equipment on the ground, and instantly dessicate the pawn. As opposed to their vanilla behaviour of destroying the equipment. Cus why not? Everyone loves a loot pinata.</description>
-		<tweakType>Bool</tweakType>
-		<defaultValue>false</defaultValue>
-		<section>TweakSection_Royalty_General</section>
-	</TweaksGalore.TweakDef>
-
-	<TweaksGalore.TweakDef>
 		<defName>Tweak_AllowAnyBuildingsInThroneRoom</defName>
 		<label>Allow Any Buildings In Throneroom</label>
 		<description>If enabled, removes building restrictions in thronerooms. Includes Altars.</description>

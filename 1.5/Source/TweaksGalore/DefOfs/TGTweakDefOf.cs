@@ -40,6 +40,7 @@ namespace TweaksGalore
         public static TweakDef Tweak_OrbitalTraderAlert;
         public static TweakDef Tweak_DontGenerateRelations;
         public static TweakDef Tweak_TradeableMeals;
+        public static TweakDef Tweak_PinataDeathAcidifiers;
 
         public static TweakDef
             Tweak_TechTraversal_Enabled,
@@ -102,8 +103,7 @@ namespace TweaksGalore
             Tweak_AnimaTweaks,
             Tweak_DisableAnimaScream,
             Tweak_UninstallableMechShields,
-            Tweak_WaitThisIsBetter,
-            Tweak_PinataDeathAcidifiers;
+            Tweak_WaitThisIsBetter;
 
         [MayRequireIdeology]
         public static TweakDef 

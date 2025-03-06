@@ -6,6 +6,25 @@
 	<!-- ======================================================= -->
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoDeathAcidifiers</defName>
+		<label>No Death Acidifiers</label>
+		<description>If enabled, removes death acidifiers from pawnKinds so they don't spawn with them. Does not affect any pawns that have already spawned, but will affect mod added pawns.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_NoDeathAcidifiers</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PinataDeathAcidifiers</defName>
+		<label>Pinata Death Acidifiers</label>
+		<description>If enabled, changes death acidifier functionality to instead drop all equipment on the ground, and instantly dessicate the pawn. As opposed to their vanilla behaviour of destroying the equipment. Cus why not? Everyone loves a loot pinata.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_TradeableMeals</defName>
 		<label>Tradeable Meals</label>
 		<description>Allows all meals in the "meals" category to be traded with any trader, includes any modded items in that category too.</description>
