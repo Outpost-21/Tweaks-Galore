@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Ideology_General</defName>
+		<label>General</label>
+		<category>TweakCategory_Ideology</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_StrapsArentClothes</defName>
+		<label>Slave Straps For Nudists</label>
+		<description>Makes slave straps acceptable for nudists, it makes no real sense that they'd be clothes so this feels like a bugfix honestly.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_YouLookFine</defName>
+		<label>You Look Fine!</label>
+		<description>Stops pawns from changing their look at the style bench every five goddamn minutes, it's a story simulator not Barbies Makeup Challenge.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DarklightGlowPods</defName>
+		<label>Darklight Glow Pods</label>
+		<description>Makes glow pods spawned in insectoid nests use the darklight colour.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_DisableDesiredApparel</defName>
+		<label>Disable Desired Apparel</label>
+		<description>Disables default Ideology desired apparel from showing up, that random shit that factions use throughout them for no fucking reason.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_NoMemeLimit</defName>
+		<label>No Meme Limit</label>
+		<description>Raises the limit of how many memes you can choose to 1000...so effectively no limit.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ProperSuppression</defName>
+		<label>Proper Suppression</label>
+		<description>Changes suppression mechanics slightly so that rebellions never happen if your slaves are kept suppressed. Also prevents suppressed pawns from taking part in rebellions when they do happen.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_SuppressionThreshold</defName>
+		<label>Suppression Threshold</label>
+		<description>Controls the percentage at which rebellions are considered suppressed, if Proper Suppression is enabled this is the threshold at which rebellions would be disabled entirely.</description>
+		<tweakType>Float</tweakType>
+		<formatting>
+			<percentage>true</percentage>
+		</formatting>
+		<defaultValue>1.0</defaultValue>
+		<floatRange>0.01~1.0</floatRange>
+		<floatIncrement>0.01</floatIncrement>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_UnlockedIdeologyBuildings</defName>
+		<label>Unlocked Ideology Buildings</label>
+		<description>Removes the meme restriction on ideology buildings so you can use them regardless of what memes you have. Includes floors and apparel.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Ideology_General</section>
+	</TweaksGalore.TweakDef>
+
+</Defs>

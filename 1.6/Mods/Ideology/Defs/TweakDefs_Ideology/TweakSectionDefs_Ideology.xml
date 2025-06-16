@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_Ideology</defName>
+		<label>Ideology</label>
+		<orderID>-4</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+</Defs>

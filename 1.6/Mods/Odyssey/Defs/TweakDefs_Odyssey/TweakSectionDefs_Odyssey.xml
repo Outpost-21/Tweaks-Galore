@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_Odyssey</defName>
+		<label>Odyssey</label>
+		<orderID>-1</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_General</defName>
+		<label>General</label>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_Fishing</defName>
+		<label>Fishing</label>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_Gravships</defName>
+		<label>Gravships</label>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+</Defs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Anomaly_General</defName>
+		<label>General</label>
+		<category>TweakCategory_Anomaly</category>
+	</TweaksGalore.TweakSectionDef>
+
+</Defs>

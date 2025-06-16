@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_StrapsArentClothes</li>
+		</settings>
+		<active Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Apparel_BodyStrap"]/apparel</xpath>
+			<value>
+				<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

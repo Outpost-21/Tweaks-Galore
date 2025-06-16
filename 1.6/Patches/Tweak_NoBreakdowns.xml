@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_NoBreakdowns</li>
+		</settings>
+		<active Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[not(defName="VPE_NuclearGenerator")]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+		</active>
+	</Operation>
+
+</Patch>

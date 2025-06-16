@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_VFEInsectoids_PermanentFoampods</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI2_FoamPod"]/comps/li[@Class="CompProperties_Lifespan"]</xpath>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

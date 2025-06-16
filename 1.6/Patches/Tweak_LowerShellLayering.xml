@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_LowerShellLayering</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_Jacket"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_Duster"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_FlakJacket"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_Parka"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_PlateArmor"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_PowerArmor"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Apparel_ArmorRecon"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>None</li>
+						</renderSkipFlags>
+						<drawData>
+							<dataNorth>
+								<layer>51</layer>
+							</dataNorth>
+						</drawData>
+					</value>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<success>Always</success>
+					<mods>
+						<li>Royalty</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Apparel_PsyfocusRobe"]/apparel</xpath>
+								<value>
+									<renderSkipFlags>
+										<li>None</li>
+									</renderSkipFlags>
+									<drawData>
+										<dataNorth>
+											<layer>51</layer>
+										</dataNorth>
+									</drawData>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Apparel_RobeRoyal"]/apparel</xpath>
+								<value>
+									<renderSkipFlags>
+										<li>None</li>
+									</renderSkipFlags>
+									<drawData>
+										<dataNorth>
+											<layer>51</layer>
+										</dataNorth>
+									</drawData>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<success>Always</success>
+					<mods>
+						<li>Biotech</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Apparel_KidParka"]/apparel</xpath>
+								<value>
+									<renderSkipFlags>
+										<li>None</li>
+									</renderSkipFlags>
+									<drawData>
+										<dataNorth>
+											<layer>51</layer>
+										</dataNorth>
+									</drawData>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<success>Always</success>
+					<mods>
+						<li>Ideology</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Apparel_BodyStrap"]/apparel</xpath>
+								<value>
+									<renderSkipFlags>
+										<li>None</li>
+									</renderSkipFlags>
+									<drawData>
+										<dataNorth>
+											<layer>51</layer>
+										</dataNorth>
+									</drawData>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<success>Always</success>
+					<mods>
+						<li>Anomaly</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Apparel_LabCoat"]/apparel</xpath>
+								<value>
+									<renderSkipFlags>
+										<li>None</li>
+									</renderSkipFlags>
+									<drawData>
+										<dataNorth>
+											<layer>51</layer>
+										</dataNorth>
+									</drawData>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

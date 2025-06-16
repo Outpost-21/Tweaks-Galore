@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_DarklightGlowPods</li>
+		</settings>
+		<active Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="GlowPod"]/comps/li[@Class="CompProperties_Glower"]/glowColor</xpath>
+			<value>
+				<glowColor>(78, 226, 229, 0)</glowColor>
+			</value>
+		</active>
+	</Operation>
+
+
+</Patch>

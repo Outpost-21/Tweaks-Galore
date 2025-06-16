@@ -1,0 +1,293 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\harmony\\patch_initiateslaverebellionmtbdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_initiateslaverebellionmtbdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\general\\tweakworker_nofriendshapedmanhunters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\general\\tweakworker_nofriendshapedmanhunters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\utilities\\settingsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:utilities\\settingsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\utilities\\logutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:utilities\\logutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\harmony\\patch_workgiver_hunterhunt_hashuntingweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_workgiver_hunterhunt_hashuntingweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TweaksGalore||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthoughtdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgthoughtdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthingcategorydefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgthingcategorydefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgroomstatdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgroomstatdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tghediffdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tghediffdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\harmony\\patch_defgenerator_generateimplieddefs_preresolve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_defgenerator_generateimplieddefs_preresolve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\tweakworkers\\general\\tweakworker_tradeablemeals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\general\\tweakworker_tradeablemeals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\harmony\\patch_pawnrelationworker_basegenerationchancefactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_pawnrelationworker_basegenerationchancefactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Patch_InitiateSlaveRebellionMtbDays.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_InitiateSlaveRebellionMtbDays.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_InitiateSlaveRebellionMtbDays.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_InitiateSlaveRebellionMtbDays.cs",
+              "RelativeToolTip": "Harmony\\Patch_InitiateSlaveRebellionMtbDays.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwCIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:07:25.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TweakWorker_NoFriendShapedManhunters.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "RelativeToolTip": "TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBwAAACRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:02:34.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SettingsUtil.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\SettingsUtil.cs",
+              "RelativeDocumentMoniker": "Utilities\\SettingsUtil.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\SettingsUtil.cs",
+              "RelativeToolTip": "Utilities\\SettingsUtil.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwGEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:01:35.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LogUtil.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\LogUtil.cs",
+              "RelativeDocumentMoniker": "Utilities\\LogUtil.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\LogUtil.cs",
+              "RelativeToolTip": "Utilities\\LogUtil.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwC0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:01:10.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
+              "RelativeToolTip": "Harmony\\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAYwE8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:59:38.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:59:03.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TweaksGalore",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGalore.csproj",
+              "RelativeDocumentMoniker": "TweaksGalore.csproj",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGalore.csproj",
+              "RelativeToolTip": "TweaksGalore.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-16T08:59:01.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TGThingDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGThingDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGThingDefOf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T14:44:37.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TGRoomStatDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGRoomStatDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGRoomStatDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGRoomStatDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGRoomStatDefOf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T14:44:35.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TGHediffDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGHediffDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGHediffDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGHediffDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGHediffDefOf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T14:44:33.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "RelativeToolTip": "Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDwAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T21:36:04.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TGThingCategoryDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingCategoryDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGThingCategoryDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingCategoryDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGThingCategoryDefOf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T20:37:22.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
+              "RelativeToolTip": "Harmony\\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:25:01.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TGTweakDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGTweakDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGTweakDefOf.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:20:50.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TGThoughtDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThoughtDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGThoughtDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThoughtDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGThoughtDefOf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T14:44:38.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TweakWorker_TradeableMeals.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_TradeableMeals.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\General\\TweakWorker_TradeableMeals.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_TradeableMeals.cs",
+              "RelativeToolTip": "TweakWorkers\\General\\TweakWorker_TradeableMeals.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T20:33:36.693Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_Royalty</defName>
+		<label>Royalty</label>
+		<orderID>-5</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Royalty_RoyalTitles</defName>
+		<label>Royal Titles</label>
+		<sectionWorker>TweaksGalore.SectionWorker_RoyalTitles</sectionWorker>
+		<category>TweakCategory_Royalty</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Royalty_RoyalPermits</defName>
+		<label>Royal Permits</label>
+		<sectionWorker>TweaksGalore.SectionWorker_RoyalPermits</sectionWorker>
+		<category>TweakCategory_Royalty</category>
+	</TweaksGalore.TweakSectionDef>
+
+</Defs>

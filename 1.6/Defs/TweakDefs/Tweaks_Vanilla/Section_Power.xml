@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- <TweaksGalore.TweakDef>
+		<defName>Tweak_EnergySavingLighting</defName>
+		<label>Energy Saving Lighting</label>
+		<description>Automatically turns off lighting (as long as it uses vanilla lighting code) when pawns are not in the room, if they're exterior lighting then they remain on contstantly.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_Power</section>
+	</TweaksGalore.TweakDef> -->
+
+	<!-- <TweaksGalore.TweakDef>
+		<defName>Tweak_EnergySavingProduction</defName>
+		<label>Energy Saving Production</label>
+		<description>Automatically turns off compatible production benches when not in use, may not apply to modded benches if they don't inherit from the vanilla classes.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_Power</section>
+	</TweaksGalore.TweakDef> -->
+
+	<!-- 
+		The Tweaks for adjusting power usage/production are automatically generated when the game runs.
+	-->
+
+	<!-- <TweaksGalore.TweakDef Name="TweakBase_PowerAdjuster" Abstract="True">
+		<tweakWorker>TweaksGalore.TweakWorker_PowerValue</tweakWorker>
+		<tweakType>Int</tweakType>
+	</TweaksGalore.TweakDef> -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_PowerAdjusting</defName>
+		<label>Power Adjusting</label>
+		<description>If enabled, allows the below power changes to take effect. If they usually produce then it configures how much they output instead, which will instead show as a negative value slider.</description>
+		<section>TweakSection_Vanilla_Power</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_PowerAdjusting</defName>
+		<label>Enabled</label>
+		<description>If enabled, allows the below power changes to take effect. Requires restart for the values to actually work, as they're assigned on startup.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+		</formatting>
+		<subSection>TweakSubSection_PowerAdjusting</subSection>
+	</TweaksGalore.TweakDef>
+
+</Defs>

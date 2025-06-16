@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_VFEInsectoids_FasterJellyFarms</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VFEI2_JellyFarm"]/comps/li[@Class="CompProperties_Spawner"]/spawnIntervalRange</xpath>
+					<value>
+						<spawnIntervalRange>20000~28000</spawnIntervalRange>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- <TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_01012024</defName>
+		<date>2024/01/01</date>
+		<banner />
+		<contentList>
+			<li>
+				<header></header>
+				<text></text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef> -->
+	
+	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_07102024</defName>
+		<date>2024/10/07</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>New Tweaks</header>
+				<text>- Recreational Smokeleaf
+- Sturdier Bridges
+- Cheaper Hidden Conduits
+- Don't Generate Relations
+- Tradeable Meals</text>
+			</li>
+			<li>
+				<header>Vanilla Factions Expanded - Insectoids 2</header>
+				<text>- Disable Insectoid Wall Popping
+- Stronger Insectoid Walls
+- Persistent Foampods
+- Craftable Creep
+- Faster Jelly Farms</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_18052024</defName>
+		<date>2024/05/18</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>New Tweak for Anomly</header>
+				<text>- Replantable Harbinger Tree
+
+Now that Ludeon aren't updating every other day I'll likely be looking at more tweaks to add for Anomaly, this was just a quick and dirty one.</text>
+			</li>
+			<li>
+				<header>Fixes</header>
+				<text>I lost track of what fixes there have been but there's been quite a few I found during playtesting and from the comments. Big ones were Disable Mechanoid Adaptation being on by default, and some WIP research tweak code that wasn't disabled, wouldn't have affected most people but there may have been some weirdness in anything touching techprints.
+					
+If your issue wasn't fixed, I either just didn't get to it yet, or you failed to include a HugsLib log.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+
+	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_10042024</defName>
+		<date>2024/04/10</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>1.5 Ready...Hopefully.</header>
+				<text>This is essentially a ground up rewrite of Tweaks Galore for 1.5, and alongside the potential of broken tweaks due to changes in RimWorld itself there's also a risk of that just from the change over to this new version of the mod. So keep in mind that if anything seems off, restart the game first to make sure your settings are actually taking effect, check if you can repeat the issue, and then let me know on the Workshop page.\n\nInclude a HugsLib Log (Ctrl + F12) too of course, they're mandatory if you expect it to be fixed.</text>
+			</li>
+			<li>
+				<header>Code/UI Overhaul</header>
+				<text>The options screen for Tweaks Galore has been completely overhauled, the previous pages have been collected together in pages for vanilla and each separate DLC, with collapsable sections and a searchbar for finding specific tweaks easily. Most will probably only see this as a purely visual change, it's far from it though.\n\nTweaks have now been converted into defs so anyone can use this system to very easily add tweaks for their own mods, new tweaks, pages and sections can be added very easily with just XML, and values given in-game can be used to replace values in XML using new types of PatchOperations. In simple terms, this just means future updates are going to be significantly less tedious for me to do.
+					
+Old settings from 1.4 will not carry over. I attempted to have them moved to the new system and it just ended up causing issues, new RimWorld version anyway so better to just have a clean slate than add risk.</text>
+			</li>
+			<li>
+				<header>New Tweaks</header>
+				<text>There are a few additional tweaks now, and with Anomaly just around the corner there will no doubt be plenty more to come still.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+
+</Defs>

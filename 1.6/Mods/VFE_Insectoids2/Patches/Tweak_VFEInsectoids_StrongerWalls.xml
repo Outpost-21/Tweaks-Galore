@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_VFEInsectoids_StrongerWalls</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VFEI_HiveWall"]/statBases/MaxHitPoints</xpath>
+					<value>
+						<MaxHitPoints>175</MaxHitPoints>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VFEI_HiveWall"]/statBases/MaxHitPoints</xpath>
+					<value>
+						<MaxHitPoints>185</MaxHitPoints>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VFEI_HiveWall"]/statBases/MaxHitPoints</xpath>
+					<value>
+						<MaxHitPoints>195</MaxHitPoints>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

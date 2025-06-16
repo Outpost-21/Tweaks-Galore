@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_GrowableWildBerries</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Plant_Berry"]/plant</xpath>
+					<value>
+						<sowWork>400</sowWork>
+						<sowTags>
+							<li>Ground</li>
+						</sowTags>
+					</value>
+				</li> 
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

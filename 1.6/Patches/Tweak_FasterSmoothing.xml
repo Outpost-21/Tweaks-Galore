@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_FasterSmoothing</li>
+		</settings>
+		<active Class="PatchOperationConditional">
+			<xpath>/Defs/StatDef[defName="SmoothingSpeed"]/parts</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>/Defs/StatDef[defName="SmoothingSpeed"]/parts</xpath>
+				<value>
+					<li Class="TweaksGalore.StatPart_FasterSmoothing" />
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/StatDef[defName="SmoothingSpeed"]</xpath>
+				<value>
+					<parts>
+						<li Class="TweaksGalore.StatPart_FasterSmoothing" />
+					</parts>
+				</value>
+			</nomatch>
+		</active>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_BoomalopesBleedChemfuel</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Boomalope"]/race</xpath>
+					<value>
+						<bloodDef>Filth_Fuel</bloodDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Boomrat"]/race</xpath>
+					<value>
+						<bloodDef>Filth_Fuel</bloodDef>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
