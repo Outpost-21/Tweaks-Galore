@@ -7,7 +7,7 @@
 		<baseChance>4</baseChance>
 		<thingDefs>
 			<li>CommsConsole</li>
-			<li MayRequire="Neronix17.CosmoRim.Core">CosRim_MicroCommsConsole</li>
+			<li MayRequire="Neronix17.CosmoRim.Core">CosRim_MacroCommsConsole</li>
 			<li MayRequire="Neronix17.CosmoRim.MicroCommsConsole">CosRim_MicroCommsConsole</li>
 		</thingDefs>
 		<jobDef>TweaksGalore_ChattyComms</jobDef>
