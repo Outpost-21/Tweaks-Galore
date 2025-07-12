@@ -25,5 +25,10 @@ namespace TweaksGalore
 
         [MayRequireRoyalty]
         public static ThingDef DeathAcidifier;
+
+        [MayRequireOdyssey]
+        public static ThingDef
+            GravshipShieldGenerator,
+            LargeChemfuelTank;
     }
 }

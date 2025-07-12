@@ -6,7 +6,7 @@
 			<li>Tweak_NoBreakdowns</li>
 		</settings>
 		<active Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[not(defName="VPE_NuclearGenerator")]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+			<xpath>/Defs/ThingDef[not(defName="VPE_NuclearGenerator" or defName="PilotConsole" or @ParentName="ThrusterBase")]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
 		</active>
 	</Operation>
 

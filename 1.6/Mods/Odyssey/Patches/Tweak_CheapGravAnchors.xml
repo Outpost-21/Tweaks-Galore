@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_CheapGravAnchors</li>
+		</settings>
+		<active Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "GravAnchor"]/costList</xpath>
+			<value>
+				<costList>
+					<Steel>100</Steel>
+				</costList>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

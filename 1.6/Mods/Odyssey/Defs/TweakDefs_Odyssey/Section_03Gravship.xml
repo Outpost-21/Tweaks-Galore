@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_Gravship</defName>
+		<label>Gravship</label>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipTweaks</defName>
+		<label>Enable Gravship Tweaks</label>
+		<description>This entire section is disabled by default for compatibility sake mostly, some gravship related tweaks function regardless of if they've been changed (any changing a radius for example) so this allows them all to be skipped over without any potential for conflicts if you prefer another gravship tweak mod.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+			<enhanced>true</enhanced>
+		</formatting>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- ================= Grav Engine ================== -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_GravshipEngine</defName>
+		<label>Gravship Engine</label>
+		<description>Tweaks specific to the gravship engine.</description>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipEngine_SubstructureSupport</defName>
+		<label>Substructure Support</label>
+		<description>The total supported substructure for the ship provided by the engine itself.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipEngine_SubstructureSupport</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>500</defaultValue>
+		<intRange>250~5000</intRange>
+		<intIncrement>50</intIncrement>
+		<subSection>TweakSubSection_GravshipEngine</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipEngine_SubstructureRadius</defName>
+		<label>Substructure Radius</label>
+		<description>The substructure footprint radius for the ship provided by the engine itself.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipEngine_SubstructureRadius</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>18.9</defaultValue>
+		<floatRange>0.1~100</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_GravshipEngine</subSection>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- ============= Grav Field Extender ============== -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_GravshipFieldExtender</defName>
+		<label>Gravship Field Extender</label>
+		<description>Tweaks specific to the gravship field extender.</description>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipFieldExtender_Maximum</defName>
+		<label>Max Extenders</label>
+		<description>The maximum allowed extenders on one ship.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipFieldExtender_MaximumAllowed</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>6</defaultValue>
+		<intRange>1~50</intRange>
+		<intIncrement>1</intIncrement>
+		<subSection>TweakSubSection_GravshipFieldExtender</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipFieldExtender_SubstructureSupport</defName>
+		<label>Substructure Support</label>
+		<description>The total supported substructure for the ship provided by field extenders.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipFieldExtender_SubstructureRadius</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>250</defaultValue>
+		<intRange>50~2500</intRange>
+		<intIncrement>50</intIncrement>
+		<subSection>TweakSubSection_GravshipFieldExtender</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipFieldExtender_SubstructureRadius</defName>
+		<label>Substructure Radius</label>
+		<description>The substructure footprint radius for the ship provided by field extenders.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipFieldExtender_SubstructureRadius</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>16.9</defaultValue>
+		<floatRange>0.1~100</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_GravshipFieldExtender</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipFieldExtender_MaxDistanceFromEngine</defName>
+		<label>Max Distance From Engine</label>
+		<description>The maximum distance from the grav engine that field extenders can be placed.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipFieldExtender_MaxDistanceFromEngine</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>18.9</defaultValue>
+		<floatRange>0.1~100</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_GravshipFieldExtender</subSection>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- ================ Chemfuel Tanks ================ -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_GravshipChemfuelTanks</defName>
+		<label>Gravship Chemfuel Tanks</label>
+		<description>Tweaks specific to the gravship chemfuel tanks.</description>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipChemfuelTanks_ChemfuelTankCapacity</defName>
+		<label>Chemfuel Tank Capacity</label>
+		<description>The total capacity of the standard chemfuel tank.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipChemfuelTanks_StandardCapacity</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>250</defaultValue>
+		<intRange>50~2500</intRange>
+		<intIncrement>50</intIncrement>
+		<subSection>TweakSubSection_GravshipChemfuelTanks</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipChemfuelTanks_LargeChemfuelTankCapacity</defName>
+		<label>Large Chemfuel Tank Capacity</label>
+		<description>The total capacity of the large chemfuel tank.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipChemfuelTanks_LargeCapacity</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>750</defaultValue>
+		<intRange>50~7500</intRange>
+		<intIncrement>50</intIncrement>
+		<subSection>TweakSubSection_GravshipChemfuelTanks</subSection>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- ============== Gravship Thrusters ============== -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_GravshipThrusters</defName>
+		<label>Gravship Thrusters</label>
+		<description>Tweaks specific to the gravship thrusters.</description>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipThrusters_SmallThrusterRange</defName>
+		<label>Small Thruster Range</label>
+		<description>The travel range added to the gravship from a single small thruster.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipThrusters_SmallRange</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>10</defaultValue>
+		<intRange>1~100</intRange>
+		<intIncrement>1</intIncrement>
+		<subSection>TweakSubSection_GravshipThrusters</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipThrusters_LargeThrusterRange</defName>
+		<label>Large Thruster Range</label>
+		<description>The travel range added to the gravship from a single large thruster.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipThrusters_LargeRange</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>16</defaultValue>
+		<intRange>1~160</intRange>
+		<intIncrement>1</intIncrement>
+		<subSection>TweakSubSection_GravshipThrusters</subSection>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- =============== Gravship Shield ================ -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_GravshipShieldGenerator</defName>
+		<label>Gravship Shield Generator</label>
+		<description>Tweaks specific to the gravship shield generator.</description>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipShieldGenerator_Radius</defName>
+		<label>Shield Radius</label>
+		<description>The radius which the shield covers.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorRadius</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>24.9</defaultValue>
+		<floatRange>10~100</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipShieldGenerator_GroundProj</defName>
+		<label>Shield Intercepts Ground Projectiles</label>
+		<description>Whether or not the shield intercepts ground based projectiles (standard ranged weapons).</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorGroundProj</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>true</defaultValue>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipShieldGenerator_AirProj</defName>
+		<label>Shield Intercepts Air Projectiles</label>
+		<description>Whether or not the shield intercepts air based projectiles (mortars and similar).</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorAirProj</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>true</defaultValue>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipShieldGenerator_Hitpoints</defName>
+		<label>Shield Hitpoints</label>
+		<description>The total hitpoints a full shield can take in damage.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorMaxHP</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>500</defaultValue>
+		<intRange>250~5000</intRange>
+		<intIncrement>50</intIncrement>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipShieldGenerator_RechargeTicks</defName>
+		<label>Shield Recharge Ticks</label>
+		<description>The total ticks (60 ticks per second) before the shield recharges.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorChargeDuration</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>10000</defaultValue>
+		<intRange>1000~60000</intRange>
+		<intIncrement>1000</intIncrement>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>TweakWorker_GravshipShieldGeneratorHitpointsFullyRestore</defName>
+		<label>Shield Full Restores</label>
+		<description>If hitpoints should instantly be full when the shield recharges.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorInstantRestore</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>TweakWorker_GravshipShieldGeneratorHitpointsStartFull</defName>
+		<label>Shield Start Full</label>
+		<description>If hitpoints should instantly be full when the shield initially charges.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorStartMaxHP</tweakWorker>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipShieldGenerator_ActiveDuration</defName>
+		<label>Shield Duration Ticks</label>
+		<description>The total ticks (60 ticks per second) the shield is active for when activated.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_GravshipShieldGeneratorActiveDuration</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>6000</defaultValue>
+		<intRange>1000~60000</intRange>
+		<intIncrement>1000</intIncrement>
+		<subSection>TweakSubSection_GravshipShieldGenerator</subSection>
+	</TweaksGalore.TweakDef>
+
+</Defs>

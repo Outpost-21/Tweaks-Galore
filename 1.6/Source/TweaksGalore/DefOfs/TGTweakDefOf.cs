@@ -126,5 +126,9 @@ namespace TweaksGalore
             Tweak_BandwidthPerBandNode,
             Tweak_ShowGenesTab,
             Tweak_PoluxTweaks;
+
+        [MayRequireOdyssey]
+        public static TweakDef
+            Tweak_GravshipTweaks;
     }
 }

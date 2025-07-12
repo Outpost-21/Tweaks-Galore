@@ -3,43 +3,123 @@
   "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\thruster\\tweakworker_gravshipthrusters_largerange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\thruster\\tweakworker_gravshipthrusters_largerange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\thruster\\tweakworker_gravshipthrusters_smallrange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\thruster\\tweakworker_gravshipthrusters_smallrange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_substructuresupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_substructuresupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_substructureradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_substructureradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_maxdistancefromengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_maxdistancefromengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\engine\\tweakworker_gravshipengine_substructuresupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\engine\\tweakworker_gravshipengine_substructuresupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\engine\\tweakworker_gravshipengine_substructureradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\engine\\tweakworker_gravshipengine_substructureradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\chemfueltank\\tweakworker_gravshipchemfueltanks_standardcapacity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\chemfueltank\\tweakworker_gravshipchemfueltanks_standardcapacity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorstartmaxhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorstartmaxhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratormaxhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratormaxhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorinstantrestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorinstantrestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorgroundproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorgroundproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorairproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorairproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorchargeduration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratorchargeduration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratoractiveduration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\shieldgenerator\\tweakworker_gravshipshieldgeneratoractiveduration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\chemfueltank\\tweakworker_gravshipchemfueltanks_largecapacity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\chemfueltank\\tweakworker_gravshipchemfueltanks_largecapacity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\tweakworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\tweakworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_maximumallowed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gravship\\fieldextender\\tweakworker_gravshipfieldextender_maximumallowed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\gauranlen\\tweakworker_gauranlenartificialradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\gauranlen\\tweakworker_gauranlenartificialradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\harmony\\patch_initiateslaverebellionmtbdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_initiateslaverebellionmtbdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\general\\tweakworker_nofriendshapedmanhunters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\tweakworkers\\general\\tweakworker_nofriendshapedmanhunters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\general\\tweakworker_nofriendshapedmanhunters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\utilities\\settingsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\utilities\\settingsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:utilities\\settingsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\utilities\\logutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\utilities\\logutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:utilities\\logutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\harmony\\patch_workgiver_hunterhunt_hashuntingweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\harmony\\patch_workgiver_hunterhunt_hashuntingweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_workgiver_hunterhunt_hashuntingweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TweaksGalore||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthoughtdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgthoughtdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthingcategorydefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,9 +144,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\harmony\\patch_pawnrelationworker_basegenerationchancefactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_pawnrelationworker_basegenerationchancefactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
     }
   ],
   "DocumentGroupContainers": [
@@ -81,6 +158,279 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TweakWorker_GravshipThrusters_LargeRange.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_LargeRange.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_LargeRange.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_LargeRange.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_LargeRange.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:40:18.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TweakWorker_GravshipThrusters_SmallRange.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_SmallRange.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_SmallRange.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_SmallRange.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\Thruster\\TweakWorker_GravshipThrusters_SmallRange.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:38:01.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TweakWorker_GravshipEngine_SubstructureRadius.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureRadius.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureRadius.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureRadius.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureRadius.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:24:08.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TweakWorker_GravshipEngine_SubstructureSupport.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureSupport.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureSupport.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureSupport.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\Engine\\TweakWorker_GravshipEngine_SubstructureSupport.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:24:14.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TweakWorker_GravshipFieldExtender_MaxDistanceFromEngine.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaxDistanceFromEngine.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaxDistanceFromEngine.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaxDistanceFromEngine.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaxDistanceFromEngine.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:33:13.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TweakWorker_GravshipFieldExtender_SubstructureRadius.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureRadius.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureRadius.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureRadius.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureRadius.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:26:27.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TweakWorker_GravshipFieldExtender_SubstructureSupport.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureSupport.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureSupport.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureSupport.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_SubstructureSupport.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:27:29.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TweakWorker_GravshipChemfuelTanks_StandardCapacity.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_StandardCapacity.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_StandardCapacity.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_StandardCapacity.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_StandardCapacity.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:34:41.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TweakWorker_GravshipShieldGeneratorStartMaxHP.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorStartMaxHP.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorStartMaxHP.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorStartMaxHP.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorStartMaxHP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:43:01.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TweakWorker_GravshipShieldGeneratorRadius.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorRadius.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorRadius.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorRadius.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorRadius.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:36:07.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TweakWorker_GravshipShieldGeneratorMaxHP.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorMaxHP.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorMaxHP.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorMaxHP.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorMaxHP.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:43:23.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TweakWorker_GravshipShieldGeneratorInstantRestore.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorInstantRestore.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorInstantRestore.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorInstantRestore.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorInstantRestore.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:42:26.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TweakWorker_GravshipShieldGeneratorGroundProj.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorGroundProj.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorGroundProj.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorGroundProj.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorGroundProj.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:39:19.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TweakWorker_GravshipShieldGeneratorAirProj.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorAirProj.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorAirProj.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorAirProj.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorAirProj.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:39:56.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TweakWorker_GravshipShieldGeneratorChargeDuration.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorChargeDuration.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorChargeDuration.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorChargeDuration.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorChargeDuration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:44:06.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TweakWorker_GravshipShieldGeneratorActiveDuration.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorActiveDuration.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorActiveDuration.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorActiveDuration.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ShieldGenerator\\TweakWorker_GravshipShieldGeneratorActiveDuration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:58:37.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TweakWorker_GravshipChemfuelTanks_LargeCapacity.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_LargeCapacity.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_LargeCapacity.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_LargeCapacity.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\ChemfuelTank\\TweakWorker_GravshipChemfuelTanks_LargeCapacity.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:35:33.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TGThingDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGThingDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGThingDefOf.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T14:44:37.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TweakWorker_GravshipFieldExtender_MaximumAllowed.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaximumAllowed.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaximumAllowed.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaximumAllowed.cs",
+              "RelativeToolTip": "TweakWorkers\\Gravship\\FieldExtender\\TweakWorker_GravshipFieldExtender_MaximumAllowed.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T23:32:28.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TweakWorker.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\TweakWorker.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\TweakWorker.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\TweakWorker.cs",
+              "RelativeToolTip": "TweakWorkers\\TweakWorker.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:36:05.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TweakWorker_GauranlenArtificialRadius.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gauranlen\\TweakWorker_GauranlenArtificialRadius.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\Gauranlen\\TweakWorker_GauranlenArtificialRadius.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Gauranlen\\TweakWorker_GauranlenArtificialRadius.cs",
+              "RelativeToolTip": "TweakWorkers\\Gauranlen\\TweakWorker_GauranlenArtificialRadius.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T22:35:26.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "Patch_InitiateSlaveRebellionMtbDays.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_InitiateSlaveRebellionMtbDays.cs",
               "RelativeDocumentMoniker": "Harmony\\Patch_InitiateSlaveRebellionMtbDays.cs",
@@ -93,20 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TweakWorker_NoFriendShapedManhunters.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
-              "RelativeDocumentMoniker": "TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
-              "RelativeToolTip": "TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBwAAACRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:02:34.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 24,
               "Title": "SettingsUtil.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\SettingsUtil.cs",
               "RelativeDocumentMoniker": "Utilities\\SettingsUtil.cs",
@@ -114,12 +451,11 @@
               "RelativeToolTip": "Utilities\\SettingsUtil.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAAYwGEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:01:35.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:01:35.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 25,
               "Title": "LogUtil.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\LogUtil.cs",
               "RelativeDocumentMoniker": "Utilities\\LogUtil.cs",
@@ -127,12 +463,36 @@
               "RelativeToolTip": "Utilities\\LogUtil.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwC0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:01:10.06Z",
+              "WhenOpened": "2025-06-16T09:01:10.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TGTweakDefOf.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
+              "RelativeDocumentMoniker": "DefOfs\\TGTweakDefOf.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
+              "RelativeToolTip": "DefOfs\\TGTweakDefOf.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAQwIMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:20:50.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 23,
+              "Title": "TweakWorker_NoFriendShapedManhunters.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "RelativeToolTip": "TweakWorkers\\General\\TweakWorker_NoFriendShapedManhunters.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBwAAACRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:02:34.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
               "RelativeDocumentMoniker": "Harmony\\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
@@ -140,12 +500,11 @@
               "RelativeToolTip": "Harmony\\Patch_WorkGiver_HunterHunt_HasHuntingWeapon.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAYwE8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:59:38.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T08:59:38.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 27,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
@@ -153,37 +512,22 @@
               "RelativeToolTip": "Properties\\AssemblyInfo.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:59:03.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T08:59:03.233Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 28,
               "Title": "TweaksGalore",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGalore.csproj",
               "RelativeDocumentMoniker": "TweaksGalore.csproj",
               "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGalore.csproj",
               "RelativeToolTip": "TweaksGalore.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-16T08:59:01.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T08:59:01.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TGThingDefOf.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingDefOf.cs",
-              "RelativeDocumentMoniker": "DefOfs\\TGThingDefOf.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingDefOf.cs",
-              "RelativeToolTip": "DefOfs\\TGThingDefOf.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:44:37.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 31,
               "Title": "TGRoomStatDefOf.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGRoomStatDefOf.cs",
               "RelativeDocumentMoniker": "DefOfs\\TGRoomStatDefOf.cs",
@@ -191,12 +535,11 @@
               "RelativeToolTip": "DefOfs\\TGRoomStatDefOf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:44:35.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T14:44:35.616Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 32,
               "Title": "TGHediffDefOf.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGHediffDefOf.cs",
               "RelativeDocumentMoniker": "DefOfs\\TGHediffDefOf.cs",
@@ -204,12 +547,11 @@
               "RelativeToolTip": "DefOfs\\TGHediffDefOf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:44:33.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T14:44:33.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 33,
               "Title": "Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
               "RelativeDocumentMoniker": "Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
@@ -217,12 +559,11 @@
               "RelativeToolTip": "Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwDwAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T21:36:04.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T21:36:04.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 30,
               "Title": "TGThingCategoryDefOf.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingCategoryDefOf.cs",
               "RelativeDocumentMoniker": "DefOfs\\TGThingCategoryDefOf.cs",
@@ -230,12 +571,11 @@
               "RelativeToolTip": "DefOfs\\TGThingCategoryDefOf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T20:37:22.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T20:37:22.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 35,
               "Title": "Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
               "RelativeDocumentMoniker": "Harmony\\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
@@ -243,25 +583,11 @@
               "RelativeToolTip": "Harmony\\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:25:01.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T10:25:01.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TGTweakDefOf.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
-              "RelativeDocumentMoniker": "DefOfs\\TGTweakDefOf.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
-              "RelativeToolTip": "DefOfs\\TGTweakDefOf.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:20:50.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 29,
               "Title": "TGThoughtDefOf.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThoughtDefOf.cs",
               "RelativeDocumentMoniker": "DefOfs\\TGThoughtDefOf.cs",
@@ -269,12 +595,11 @@
               "RelativeToolTip": "DefOfs\\TGThoughtDefOf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:44:38.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T14:44:38.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 34,
               "Title": "TweakWorker_TradeableMeals.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_TradeableMeals.cs",
               "RelativeDocumentMoniker": "TweakWorkers\\General\\TweakWorker_TradeableMeals.cs",
@@ -282,8 +607,7 @@
               "RelativeToolTip": "TweakWorkers\\General\\TweakWorker_TradeableMeals.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T20:33:36.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T20:33:36.693Z"
             }
           ]
         }

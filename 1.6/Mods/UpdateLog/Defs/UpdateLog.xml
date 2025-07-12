@@ -26,6 +26,34 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_12072025</defName>
+		<date>2025/07/12</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>New Gravship Tweaks</header>
+				<text>Generally covering range, capacity etc. of the new Gravship structures.</text>
+			</li>
+			<li>
+				<header>Fixes</header>
+				<text>- 'No Breakdowns' should now not break the gravship, currently it just keeps breakdowns as being possible on them, I'll do a better fix in future.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_07102024</defName>
 		<date>2024/10/07</date>
 		<banner />
