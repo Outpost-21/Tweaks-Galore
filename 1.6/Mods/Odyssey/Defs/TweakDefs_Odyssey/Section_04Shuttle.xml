@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_Shuttle</defName>
+		<label>Passenger Shuttle</label>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ShuttleTweaks</defName>
+		<label>Enable Passenger Shuttle Tweaks</label>
+		<description>This entire section is disabled by default for compatibility sake mostly, some shuttle related tweaks function regardless of if they've been changed (any changing a radius for example) so this allows them all to be skipped over without any potential for conflicts if you prefer another shuttle tweak mod.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+			<enhanced>true</enhanced>
+		</formatting>
+		<section>TweakSection_Odyssey_Shuttle</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_Shuttle_LaunchDistanceMax</defName>
+		<label>Max Launch Distance</label>
+		<description>The maximum distance the shuttle can travel in tiles.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_Shuttle_LaunchDistanceMax</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>62</defaultValue>
+		<intRange>10~500</intRange>
+		<intIncrement>1</intIncrement>
+		<section>TweakSection_Odyssey_Shuttle</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_Shuttle_MassCapacity</defName>
+		<label>Mass Capacity</label>
+		<description>The mass capacity on the shuttle.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_Shuttle_MassCapacity</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>500</defaultValue>
+		<intRange>50~5000</intRange>
+		<intIncrement>50</intIncrement>
+		<section>TweakSection_Odyssey_Shuttle</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_Shuttle_FuelCapacity</defName>
+		<label>Fuel Capacity</label>
+		<description>The fuel capacity on the shuttle.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_Shuttle_FuelCapacity</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>400</defaultValue>
+		<intRange>50~4000</intRange>
+		<intIncrement>50</intIncrement>
+		<section>TweakSection_Odyssey_Shuttle</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_Shuttle_FuelPerTile</defName>
+		<label>Fuel Cost Per Tile</label>
+		<description>The fuel cost for each tile distance traveled.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_Shuttle_FuelPerTile</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>3</defaultValue>
+		<intRange>1~50</intRange>
+		<intIncrement>1</intIncrement>
+		<section>TweakSection_Odyssey_Shuttle</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_Shuttle_CooldownTicks</defName>
+		<label>Launch Cooldown Ticks</label>
+		<description>The ticks (60 per second) before the shuttle can launch again. Setting to 0 will effectively disable the cooldown.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_Shuttle_CooldownTicks</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>3750</defaultValue>
+		<intRange>0~10000</intRange>
+		<intIncrement>50</intIncrement>
+		<section>TweakSection_Odyssey_Shuttle</section>
+	</TweaksGalore.TweakDef>
+
+</Defs>

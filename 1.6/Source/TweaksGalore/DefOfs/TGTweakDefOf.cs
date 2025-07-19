@@ -129,6 +129,12 @@ namespace TweaksGalore
 
         [MayRequireOdyssey]
         public static TweakDef
-            Tweak_GravshipTweaks;
+            Tweak_GravshipTweaks,
+            Tweak_Gravship_DisableCooldown,
+            Tweak_GravshipLandingOutcome_GravNausea,
+            Tweak_GravshipLandingOutcome_MinorGravshipCrash,
+            Tweak_GravshipLandingOutcome_OverheatedGravEngine,
+            Tweak_GravshipLandingOutcome_ThrusterBreakdown,
+            Tweak_ShuttleTweaks;
     }
 }

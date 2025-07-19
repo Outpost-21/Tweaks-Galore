@@ -84,6 +84,8 @@
     <Compile Include="Data\ResearchProjectSettings.cs" />
     <Compile Include="DefOfs\TGThingCategoryDefOf.cs" />
     <Compile Include="DefOfs\TGRoomStatDefOf.cs" />
+    <Compile Include="Harmony\Patch_Building_GravEngine_ConsumeFuel.cs" />
+    <Compile Include="Harmony\Patch_LandingOutcomeWorker.cs" />
     <Compile Include="Harmony\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs" />
     <Compile Include="Harmony\Patch_CompShearable_CompInspectStringExtra.cs" />
     <Compile Include="Harmony\Patch_CompMilkable_CompInspectStringExtra.cs" />
@@ -117,6 +119,11 @@
     <Compile Include="TweakWorkers\Gravship\ShieldGenerator\TweakWorker_GravshipShieldGeneratorRadius.cs" />
     <Compile Include="TweakWorkers\Gravship\Thruster\TweakWorker_GravshipThrusters_LargeRange.cs" />
     <Compile Include="TweakWorkers\Gravship\Thruster\TweakWorker_GravshipThrusters_SmallRange.cs" />
+    <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_FuelCapacity.cs" />
+    <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_FuelPerTile.cs" />
+    <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_CooldownTicks.cs" />
+    <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_MassCapacity.cs" />
+    <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_LaunchDistanceMax.cs" />
     <Compile Include="Utilities\CodeMatch.cs" />
     <Compile Include="Utilities\CodeMatcher.cs" />
     <Compile Include="Data\RoyalPermitSettings.cs" />

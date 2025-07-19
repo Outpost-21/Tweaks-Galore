@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_GravshipEngine_PoweredGravEngine</li>
+		</settings>
+		<active Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="GravEngine"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_Power">
+					<compClass>CompPowerPlant</compClass>
+					<basePowerConsumption>-350</basePowerConsumption>
+					<transmitsPower>true</transmitsPower>
+				</li>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

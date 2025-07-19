@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_Gravship_GravshipHullConduits</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GravshipHull"]/comps</xpath>
+					<value>
+						<li Class="CompProperties_Power">
+							<compClass>CompPowerTransmitter</compClass>
+							<transmitsPower>true</transmitsPower>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GravshipHull"]/placeWorkers</xpath>
+					<value>
+						<li>PlaceWorker_Conduit</li>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

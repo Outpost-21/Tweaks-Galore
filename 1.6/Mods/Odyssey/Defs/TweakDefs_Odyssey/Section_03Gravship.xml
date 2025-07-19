@@ -4,7 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Odyssey_Gravship</defName>
 		<label>Gravship</label>
-		<sortTweaks>true</sortTweaks>
+		<sortTweaks>false</sortTweaks>
 		<category>TweakCategory_Odyssey</category>
 	</TweaksGalore.TweakSectionDef>
 
@@ -21,6 +21,71 @@
 		<section>TweakSection_Odyssey_Gravship</section>
 	</TweaksGalore.TweakDef>
 
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_Gravship_DisableCooldown</defName>
+		<label>Disable Gravship Cooldown</label>
+		<description>If enabled, this tweak will disable the cooldown after moving the gravship before you are allowed to launch again.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_Gravship_GravshipHullConduits</defName>
+		<label>Gravship Hull Conduits</label>
+		<description>If enabled, this tweak will add conduit functionality to the gravship hull at no extra cost.\n\nNote: Does not require 'Enable Gravship Tweaks' to be active.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakDef>
+
+	<!-- ================================================ -->
+	<!-- =============== Landing Outcomes =============== -->
+	<!-- ================================================ -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_GravshipLandingOutcome</defName>
+		<label>Gravship Landing Outcomes</label>
+		<description>Tweaks specific to the gravship landing outcome events. If all are disabled this may cause issues when it tries to run one.</description>
+		<section>TweakSection_Odyssey_Gravship</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipLandingOutcome_GravNausea</defName>
+		<label>Disable Landing Outcome: Grav Nausea</label>
+		<description>If enabled, this tweak will disable landing event that gives pawns grav nausea.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_GravshipLandingOutcome</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipLandingOutcome_MinorGravshipCrash</defName>
+		<label>Disable Landing Outcome: Minor Gravship Crash</label>
+		<description>If enabled, this tweak will disable landing event where the gravship has a minor crash damaging parts of it.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_GravshipLandingOutcome</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipLandingOutcome_OverheatedGravEngine</defName>
+		<label>Disable Landing Outcome: Overheated Grav Engine</label>
+		<description>If enabled, this tweak will disable landing event that excessively increases the cooldown before next launch.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_GravshipLandingOutcome</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipLandingOutcome_ThrusterBreakdown</defName>
+		<label>Disable Landing Outcome: Thruster Breakdown</label>
+		<description>If enabled, this tweak will disable landing event that causes an immediate breakdown in thrusters.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_GravshipLandingOutcome</subSection>
+	</TweaksGalore.TweakDef>
+
 	<!-- ================================================ -->
 	<!-- ================= Grav Engine ================== -->
 	<!-- ================================================ -->
@@ -31,6 +96,15 @@
 		<description>Tweaks specific to the gravship engine.</description>
 		<section>TweakSection_Odyssey_Gravship</section>
 	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_GravshipEngine_PoweredGravEngine</defName>
+		<label>Powered GravEngine</label>
+		<description>If enabled, makes the GravEngine capable of providing some power (350 by default, can be changed after a restart in the general power tweaks section).\n\nNote: Does not require 'Enable Gravship Tweaks' to be active.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_GravshipEngine</subSection>
+	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_GravshipEngine_SubstructureSupport</defName>
