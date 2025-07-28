@@ -16,11 +16,22 @@
 						</li>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
+				<li Class="PatchOperationConditional">
 					<xpath>/Defs/ThingDef[defName="GravshipHull"]/placeWorkers</xpath>
-					<value>
-						<li>PlaceWorker_Conduit</li>
-					</value>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="GravshipHull"]/placeWorkers</xpath>
+						<value>
+							<li>PlaceWorker_Conduit</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="GravshipHull"]</xpath>
+						<value>
+							<placeWorkers>
+								<li>PlaceWorker_Conduit</li>
+							</placeWorkers>
+						</value>
+					</nomatch>
 				</li>
 			</operations>
 		</active>
