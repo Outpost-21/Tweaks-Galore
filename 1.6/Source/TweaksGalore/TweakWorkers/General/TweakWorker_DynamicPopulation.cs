@@ -18,8 +18,8 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
-            if (!def.ShouldRunTweak()) { return; }
             base.OnStartup();
+            if (!def.ShouldRunTweak()) { return; }
             if (def.BoolValue)
             {
                 List<StorytellerDef> allStorytellers = DefDatabase<StorytellerDef>.AllDefsListForReading;

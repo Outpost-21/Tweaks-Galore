@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_GravshipTweaks.BoolValue)
             {
                 ThingDefOf.GravEngine.SetStatBaseValue(StatDefOf.SubstructureSupport, def.IntValue);

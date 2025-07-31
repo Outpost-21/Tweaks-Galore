@@ -54,6 +54,7 @@ namespace TweaksGalore
                 default:
                     break;
             }
+            def.PurgeCache();
         }
 
         public virtual string Description()
@@ -77,7 +78,7 @@ namespace TweaksGalore
 
         public virtual void OnWriteSettings()
         {
-
+            def.PurgeCache();
         }
     }
 }

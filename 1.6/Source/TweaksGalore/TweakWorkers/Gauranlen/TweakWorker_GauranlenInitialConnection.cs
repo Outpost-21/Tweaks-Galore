@@ -23,6 +23,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             settings.GetFloatRangeSetting(def.defName, new FloatRange(0.25f, 0.45f));
             ApplyTweak();
         }

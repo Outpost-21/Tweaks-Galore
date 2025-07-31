@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_PoluxTweaks.BoolValue)
             {
                 CompProperties_PollutionPump pollutionPumpComp = TGThingDefOf.Plant_TreePolux.GetCompProperties<CompProperties_PollutionPump>();

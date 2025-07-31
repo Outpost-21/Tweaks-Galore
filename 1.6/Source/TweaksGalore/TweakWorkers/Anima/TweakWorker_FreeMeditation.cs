@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (def.BoolValue)
             {
                 List<ThingDef> meditationObjects = DefDatabase<ThingDef>.AllDefs.Where(td => td.GetCompProperties<CompProperties_MeditationFocus>() != null).ToList();

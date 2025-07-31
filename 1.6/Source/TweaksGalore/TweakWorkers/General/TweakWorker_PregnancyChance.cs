@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             RegisterAlteredPregnancyChances();
             if (!def.ShouldRunTweak()) { return; }
             UpdatePregnancyChances();

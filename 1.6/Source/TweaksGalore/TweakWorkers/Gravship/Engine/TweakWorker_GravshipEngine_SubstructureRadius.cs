@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_GravshipTweaks.BoolValue)
             {
                 CompProperties_SubstructureFootprint props = ThingDefOf.GravEngine.GetCompProperties<CompProperties_SubstructureFootprint>();

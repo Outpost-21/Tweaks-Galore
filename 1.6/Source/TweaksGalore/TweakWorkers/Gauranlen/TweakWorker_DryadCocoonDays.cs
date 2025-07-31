@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_GauranlenTweaks.BoolValue)
             {
                 CompProperties_DryadCocoon cocoonProps = ThingDefOf.DryadCocoon.GetCompProperties<CompProperties_DryadCocoon>();

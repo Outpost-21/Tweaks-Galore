@@ -64,26 +64,29 @@ namespace TweaksGalore
             }
         }
 
+        public bool? boolValueCached;
+
         public bool BoolValue
         {
             get
             {
-                if(tweakType != TweakType.Bool)
+                if (tweakType != TweakType.Bool)
+                { return true; }
+                if (boolValueCached == null)
                 {
-                    return true;
+                    boolValueCached = TweaksGaloreMod.settings.GetBoolSetting(defName, DefaultBool);
                 }
-                return TweaksGaloreMod.settings.GetBoolSetting(defName, DefaultBool);
+                return (bool)boolValueCached;
             }
         }
+
+        public int? intValueCached;
 
         public int DefaultInt
         {
             get
             {
-                if (tweakType != TweakType.Int)
-                {
-                    return -1;
-                }
+                if (tweakType != TweakType.Int) { return -1; }
                 return int.Parse(defaultValue);
             }
         }
@@ -96,7 +99,11 @@ namespace TweaksGalore
                 {
                     return -1;
                 }
-                return TweaksGaloreMod.settings.GetIntSetting(defName, DefaultInt);
+                if (intValueCached == null)
+                {
+                    intValueCached = TweaksGaloreMod.settings.GetIntSetting(defName, DefaultInt);
+                }
+                return (int)intValueCached;
             }
         }
 
@@ -115,6 +122,8 @@ namespace TweaksGalore
             }
         }
 
+        public IntRange? intRangeCached;
+
         public IntRange IntRangeValue
         {
             get
@@ -123,7 +132,11 @@ namespace TweaksGalore
                 {
                     return new IntRange(-1, -1);
                 }
-                return TweaksGaloreMod.settings.GetIntRangeSetting(defName, DefaultIntRange);
+                if (intRangeCached == null)
+                {
+                    intRangeCached = TweaksGaloreMod.settings.GetIntRangeSetting(defName, DefaultIntRange);
+                }
+                return (IntRange)intRangeCached;
             }
         }
 
@@ -139,6 +152,8 @@ namespace TweaksGalore
             }
         }
 
+        public float? floatValueCached;
+
         public float FloatValue
         {
             get
@@ -147,7 +162,11 @@ namespace TweaksGalore
                 {
                     return -1f;
                 }
-                return TweaksGaloreMod.settings.GetFloatSetting(defName, DefaultFloat);
+                if (floatValueCached == null)
+                {
+                    floatValueCached = TweaksGaloreMod.settings.GetFloatSetting(defName, DefaultFloat);
+                }
+                return (float)floatValueCached;
             }
         }
 
@@ -155,7 +174,7 @@ namespace TweaksGalore
         {
             get
             {
-                if(tweakType != TweakType.FloatRange)
+                if (tweakType != TweakType.FloatRange)
                 {
                     return new FloatRange(-1f, -1f);
                 }
@@ -166,16 +185,31 @@ namespace TweaksGalore
             }
         }
 
+        public FloatRange? floatRangeCached;
+
         public FloatRange FloatRangeValue
         {
             get
             {
-                if(tweakType != TweakType.FloatRange)
+                if (tweakType != TweakType.FloatRange)
                 {
                     return new FloatRange(-1f, -1f);
                 }
-                return TweaksGaloreMod.settings.GetFloatRangeSetting(defName, DefaultFloatRange);
+                if (floatRangeCached == null)
+                {
+                    floatRangeCached = TweaksGaloreMod.settings.GetFloatRangeSetting(defName, DefaultFloatRange);
+                }
+                return (FloatRange)floatRangeCached;
             }
+        }
+
+        public void PurgeCache()
+        {
+            boolValueCached = null;
+            intValueCached = null;
+            intRangeCached = null;
+            floatValueCached = null;
+            floatRangeCached = null;
         }
     }
 

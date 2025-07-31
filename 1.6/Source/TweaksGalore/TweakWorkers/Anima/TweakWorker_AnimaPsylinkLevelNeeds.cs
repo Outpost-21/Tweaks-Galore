@@ -46,6 +46,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (GetPsylinkStuff) 
             {
                 // Intentionally does nothing, just calls it for the values.

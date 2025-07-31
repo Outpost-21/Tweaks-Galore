@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_ShuttleTweaks.BoolValue)
             {
                 CompProperties_Refuelable props = ThingDefOf.PassengerShuttle.GetCompProperties<CompProperties_Refuelable>();

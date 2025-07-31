@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_AnimaTweaks.BoolValue && def.BoolValue)
             {
                 if (TGTweakDefOf.Tweak_DisableAnimaScream.BoolValue)

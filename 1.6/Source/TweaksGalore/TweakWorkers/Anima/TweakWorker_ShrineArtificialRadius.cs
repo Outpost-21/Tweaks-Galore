@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_AnimaTweaks.BoolValue)
             {
                 foreach (ThingDef shrine in def.tweakThings)

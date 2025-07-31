@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_GauranlenTweaks.BoolValue)
             {
                 TGThingDefOf.Plant_MossGauranlen.plant.growDays = def.IntValue;

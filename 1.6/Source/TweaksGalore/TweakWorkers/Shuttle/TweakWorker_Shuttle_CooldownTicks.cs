@@ -18,6 +18,7 @@ namespace TweaksGalore
 
         public override void OnStartup()
         {
+            base.OnStartup();
             if (TGTweakDefOf.Tweak_ShuttleTweaks.BoolValue)
             {
                 CompProperties_Launchable props = ThingDefOf.PassengerShuttle.GetCompProperties<CompProperties_Launchable>();
