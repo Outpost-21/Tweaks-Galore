@@ -51,6 +51,10 @@ namespace TweaksGalore
                     sb.AppendLine($"{def.LabelCap} ({def.defName}) due to infinite power setting.");
                     continue;
                 }
+                if (float.IsNaN(comp.basePowerConsumption))
+                {
+                    sb.AppendLine($"{def.LabelCap} ({def.defName}) due to non-numeric setting.");
+                }
                 if(comp.basePowerConsumption == 0)
                 {
                     sb.AppendLine($"{def.LabelCap} ({def.defName}) due to zero power setting.");
@@ -77,7 +81,7 @@ namespace TweaksGalore
                 label = thingDef.LabelCap,
                 tweakWorker = typeof(TweakWorker_PowerValue),
                 tweakType = TweakType.Int,
-                defaultValue = comp.basePowerConsumption.ToString(),
+                defaultValue = Mathf.RoundToInt(comp.basePowerConsumption).ToString(),
                 intRange = (comp.basePowerConsumption >= 0 ? new IntRange(0, Mathf.RoundToInt(comp.basePowerConsumption * 10f)) : new IntRange(Mathf.RoundToInt(comp.basePowerConsumption * 10f), 0)),
                 tweakThings = new List<ThingDef>() { thingDef },
                 subSection = TGTweakDefOf.TweakSubSection_PowerAdjusting

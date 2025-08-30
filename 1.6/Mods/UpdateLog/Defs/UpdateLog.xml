@@ -26,6 +26,35 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_30082025</defName>
+		<date>2025/08/30</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>New Archean Tweaks</header>
+				<text>A couple additional tweaks covering the Archean Tree in the Odyssey DLC, for replantability and the radius/speed of the terraforming.</text>
+			</li>
+			<li>
+				<header>Fixes</header>
+				<text>- Performance boost to many checks, previously it was getting the value saved for some tweaks every time it was checked, now those values are cached and rechecked only when necessary. Probably a minor effect if anything but every little helps.
+- Additional checks for some tweaks for numerical values to potentially prevent errors in rare/unique cases where a number is expected but text is found instead.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_12072025</defName>
 		<date>2025/07/12</date>
 		<banner />

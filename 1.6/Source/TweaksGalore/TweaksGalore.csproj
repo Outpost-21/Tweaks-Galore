@@ -119,6 +119,8 @@
     <Compile Include="TweakWorkers\Gravship\ShieldGenerator\TweakWorker_GravshipShieldGeneratorRadius.cs" />
     <Compile Include="TweakWorkers\Gravship\Thruster\TweakWorker_GravshipThrusters_LargeRange.cs" />
     <Compile Include="TweakWorkers\Gravship\Thruster\TweakWorker_GravshipThrusters_SmallRange.cs" />
+    <Compile Include="TweakWorkers\Archean\TweakWorker_ArcheanEffectRadius.cs" />
+    <Compile Include="TweakWorkers\Archean\TweakWorker_ArcheanEffectRate.cs" />
     <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_FuelCapacity.cs" />
     <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_FuelPerTile.cs" />
     <Compile Include="TweakWorkers\Shuttle\TweakWorker_Shuttle_CooldownTicks.cs" />

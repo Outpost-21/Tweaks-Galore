@@ -29,6 +29,7 @@ namespace TweaksGalore
         [MayRequireOdyssey]
         public static ThingDef
             GravshipShieldGenerator,
-            LargeChemfuelTank;
+            LargeChemfuelTank,
+            Plant_TreeArchean;
     }
 }

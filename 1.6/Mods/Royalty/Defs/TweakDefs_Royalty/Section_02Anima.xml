@@ -4,6 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Royalty_Anima</defName>
 		<label>Anima</label>
+		<sortTweaks>false</sortTweaks>
 		<category>TweakCategory_Royalty</category>
 	</TweaksGalore.TweakSectionDef>
 

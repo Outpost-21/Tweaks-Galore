@@ -300,7 +300,7 @@ namespace TweaksGalore
             listing.Gap(6f);
         }
 
-        public static void SetPowerUsage(this ThingDef thing, int powerConsumption)
+        public static void SetPowerUsage(this ThingDef thing, float powerConsumption)
         {
             if (thing != null)
             {

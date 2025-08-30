@@ -4,6 +4,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_Biotech_Polux</defName>
 		<label>Polux</label>
+		<sortTweaks>false</sortTweaks>
 		<category>TweakCategory_Biotech</category>
 	</TweaksGalore.TweakSectionDef>
 

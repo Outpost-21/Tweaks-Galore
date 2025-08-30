@@ -135,6 +135,7 @@ namespace TweaksGalore
             Tweak_GravshipLandingOutcome_MinorGravshipCrash,
             Tweak_GravshipLandingOutcome_OverheatedGravEngine,
             Tweak_GravshipLandingOutcome_ThrusterBreakdown,
-            Tweak_ShuttleTweaks;
+            Tweak_ShuttleTweaks,
+            Tweak_ArcheanTweaks;
     }
 }

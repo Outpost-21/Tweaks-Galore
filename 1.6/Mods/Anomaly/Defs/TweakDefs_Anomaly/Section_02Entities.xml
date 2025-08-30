@@ -8,6 +8,7 @@
 	<TweaksGalore.TweakSectionDef>
 		<defName>TweakSection_AnomalyEntities</defName>
 		<label>Entities</label>
+		<sortTweaks>false</sortTweaks>
 		<category>TweakCategory_Anomaly</category>
 	</TweaksGalore.TweakSectionDef>
 
