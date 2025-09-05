@@ -66,8 +66,9 @@
 	<TweaksGalore.TweakDef ParentName="TweakBase_MechWorkAdjuster">
 		<defName>Tweak_MechAdj_GlobalWorkSpeed</defName>
 		<label>Global Work Speed</label>
+		<description>Doesn't affect all mechanoids, some certain work will require specific skill speeds changed.</description>
 		<defaultValue>0.50</defaultValue>
-		<tweakStat>ConstructionSpeed</tweakStat>
+		<tweakStat>WorkSpeedGlobal</tweakStat>
 		<tweakThings>
 			<li>Mech_Constructoid</li>
 			<li>Mech_Fabricor</li>
