@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
-		<settings>
-			<li>Tweak_UsefulGrass</li>
-		</settings>
-		<active Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="Plant_Grass"]/plant</xpath>
-					<value>
-						<harvestYield>2</harvestYield>
-						<harvestedThingDef>Hay</harvestedThingDef>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="Plant_TallGrass"]/plant</xpath>
-					<value>
-						<harvestYield>2</harvestYield>
-						<harvestedThingDef>Hay</harvestedThingDef>
-					</value>
-				</li>
-			</operations>
-		</active>
-	</Operation>
+    <Operation Class="TweaksGalore.PatchOperation_TweakBool">
+        <settings>
+            <li>Tweak_UsefulGrass</li>
+        </settings>
+        <active Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Plant_Grass"]/plant</xpath>
+                    <value>
+                        <harvestYield>2</harvestYield>
+                        <harvestedThingDef>Hay</harvestedThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Plant_TallGrass"]/plant</xpath>
+                    <value>
+                        <harvestYield>2</harvestYield>
+                        <harvestedThingDef>Hay</harvestedThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+                    <xpath>/Defs/ThingDef[defName="Plant_YellowGrass"]/plant</xpath>
+                    <value>
+                        <harvestYield>2</harvestYield>
+                        <harvestedThingDef>Hay</harvestedThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+                    <xpath>/Defs/ThingDef[defName="Plant_YellowTallGrass"]/plant</xpath>
+                    <value>
+                        <harvestYield>2</harvestYield>
+                        <harvestedThingDef>Hay</harvestedThingDef>
+                    </value>
+                </li>
+            </operations>
+        </active>
+    </Operation>
 
 </Patch>
