@@ -210,6 +210,9 @@
 		<intRange>50~2500</intRange>
 		<intIncrement>50</intIncrement>
 		<subSection>TweakSubSection_GravshipChemfuelTanks</subSection>
+		<incompatible>
+			<li>vanillaexpanded.gravship</li>
+		</incompatible>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef>
@@ -222,6 +225,9 @@
 		<intRange>50~7500</intRange>
 		<intIncrement>50</intIncrement>
 		<subSection>TweakSubSection_GravshipChemfuelTanks</subSection>
+		<incompatible>
+			<li>vanillaexpanded.gravship</li>
+		</incompatible>
 	</TweaksGalore.TweakDef>
 
 	<!-- ================================================ -->

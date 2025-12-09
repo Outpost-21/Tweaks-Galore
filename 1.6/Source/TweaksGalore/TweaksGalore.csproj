@@ -85,6 +85,7 @@
     <Compile Include="DefOfs\TGThingCategoryDefOf.cs" />
     <Compile Include="DefOfs\TGRoomStatDefOf.cs" />
     <Compile Include="Harmony\Patch_Building_GravEngine_ConsumeFuel.cs" />
+    <Compile Include="Harmony\Patch_CompBreakdownable_DoBreakdown.cs" />
     <Compile Include="Harmony\Patch_LandingOutcomeWorker.cs" />
     <Compile Include="Harmony\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs" />
     <Compile Include="Harmony\Patch_CompShearable_CompInspectStringExtra.cs" />

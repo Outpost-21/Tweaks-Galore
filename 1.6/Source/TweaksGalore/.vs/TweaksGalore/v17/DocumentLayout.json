@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\harmony\\patch_compbreakdownable_dobreakdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_compbreakdownable_dobreakdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\harmony\\patch_defgenerator_generateimplieddefs_preresolve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_defgenerator_generateimplieddefs_preresolve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\archean\\tweakworker_archeaneffectradius.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgtweakdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:defofs\\tgthingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Patch_CompBreakdownable_DoBreakdown.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_CompBreakdownable_DoBreakdown.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_CompBreakdownable_DoBreakdown.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_CompBreakdownable_DoBreakdown.cs",
+              "RelativeToolTip": "Harmony\\Patch_CompBreakdownable_DoBreakdown.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:02:41.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
               "RelativeDocumentMoniker": "Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TweakUtil.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\TweakUtil.cs",
               "RelativeDocumentMoniker": "Utilities\\TweakUtil.cs",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "TweakWorker_PowerValue.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_PowerValue.cs",
               "RelativeDocumentMoniker": "TweakWorkers\\General\\TweakWorker_PowerValue.cs",
@@ -79,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TweakWorker_ArcheanEffectRate.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Archean\\TweakWorker_ArcheanEffectRate.cs",
               "RelativeDocumentMoniker": "TweakWorkers\\Archean\\TweakWorker_ArcheanEffectRate.cs",
@@ -91,19 +108,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "TGTweakDefOf.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
               "RelativeDocumentMoniker": "DefOfs\\TGTweakDefOf.cs",
               "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGTweakDefOf.cs",
               "RelativeToolTip": "DefOfs\\TGTweakDefOf.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAgwIoAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T10:51:54.649Z"
+              "WhenOpened": "2025-08-30T10:51:54.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TGThingDefOf.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\DefOfs\\TGThingDefOf.cs",
               "RelativeDocumentMoniker": "DefOfs\\TGThingDefOf.cs",
@@ -115,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TweakWorker_ArcheanEffectRadius.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\Archean\\TweakWorker_ArcheanEffectRadius.cs",
               "RelativeDocumentMoniker": "TweakWorkers\\Archean\\TweakWorker_ArcheanEffectRadius.cs",

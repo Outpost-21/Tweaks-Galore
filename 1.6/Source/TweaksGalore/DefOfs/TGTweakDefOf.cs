@@ -21,7 +21,8 @@ namespace TweaksGalore
 
         public static TweakSubSectionDef TweakSubSection_PowerAdjusting;
 
-        public static TweakDef 
+        public static TweakDef
+            Tweak_NoBreakdowns,
             Tweak_FasterSmoothingFactor,
             Tweak_AnimalResourceLabel,
             Tweak_DisableSpecialSkinShader,

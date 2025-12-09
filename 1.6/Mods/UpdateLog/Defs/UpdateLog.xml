@@ -26,6 +26,32 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_09122025</defName>
+		<date>2025/12/09</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>Fixes</header>
+				<text>- Disabled some tweaks no longer relevant when Vanilla Gravships Expanded is enabled.
+- Changed No Breakdowns to be a Harmony patch instead of just XML, should be compatible with anything now.
+- Update to Useful Grass tweak to support the grass added by Odyssey (PR by ocarina0001).</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_30082025</defName>
 		<date>2025/08/30</date>
 		<banner />

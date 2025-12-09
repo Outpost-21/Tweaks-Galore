@@ -437,12 +437,9 @@
 	<TweaksGalore.TweakDef>
 		<defName>Tweak_NoBreakdowns</defName>
 		<label>No Breakdowns</label>
-		<description>Removes the breakdown comp from anything that has it, artificially enforced resource sinks are LAZY.</description>
+		<description>Disables the breakdown code on anything that has it, artificially enforced resource sinks are LAZY.</description>
 		<tweakType>Bool</tweakType>
 		<defaultValue>false</defaultValue>
-		<incompatible>
-			<li>kentington.saveourship2</li>
-		</incompatible>
 		<section>TweakSection_Vanilla_General</section>
 	</TweaksGalore.TweakDef>
 
