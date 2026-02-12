@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Alerts\Alert_OrbitalTrader.cs" />
     <Compile Include="Alerts\Alert_PawnTrader.cs" />
+    <Compile Include="Data\BiomeWeatherSettings.cs" />
     <Compile Include="Data\ResearchProjectSettings.cs" />
     <Compile Include="DefOfs\TGThingCategoryDefOf.cs" />
     <Compile Include="DefOfs\TGRoomStatDefOf.cs" />

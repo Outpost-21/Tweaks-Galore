@@ -11,108 +11,153 @@ namespace TweaksGalore
 {
     public class SectionWorker_WeatherControl : SectionWorker
     {
-        public Dictionary<string, float> defaultValues = new Dictionary<string, float>();
+        public float? cachedHighestCommonality;
 
-        public List<IncidentDef> cachedIncidentListing = new List<IncidentDef>();
-
-        public List<IncidentDef> CachedIncidentListing
+        public float HighestCommonality
         {
             get
             {
-                if (cachedIncidentListing.NullOrEmpty())
+                if (cachedHighestCommonality == null)
                 {
-                    cachedIncidentListing = new List<IncidentDef>();
-                    List<string> startList = (from x in settings.tweak_eventControlDict.Keys.ToList() orderby x descending select x).ToList();
-                    foreach (string name in startList)
+                    float currNum = 20f;
+                    foreach (BiomeDef biome in DefDatabase<BiomeDef>.AllDefs)
                     {
-                        IncidentDef animal = DefDatabase<IncidentDef>.GetNamedSilentFail(name);
-                        if (animal != null)
+                        if (!biome.baseWeatherCommonalities.NullOrEmpty())
                         {
-                            cachedIncidentListing.Add(animal);
+                            foreach (WeatherCommonalityRecord bcr in biome.baseWeatherCommonalities)
+                            {
+                                if(bcr.commonality > currNum)
+                                {
+                                    currNum = bcr.commonality;
+                                }
+                            }
                         }
                     }
-                    cachedIncidentListing.SortBy(x => x.label);
+                    cachedHighestCommonality = currNum;
                 }
-                return cachedIncidentListing;
+                return cachedHighestCommonality.Value;
             }
         }
 
         public override void DoSectionContents(Listing_Standard listing, string filter)
         {
             base.DoSectionContents(listing, filter);
-            // Tweak: Penned Animal Config
-            listing.DoSettingBool("TweaksGalore.IncidentControlBool".Translate(), "TweaskGalore.IncidentControlBoolDesc".Translate(), def.defName, false, true);
+            listing.DoSettingBool("TweaksGalore.WeatherControlBool".Translate(), "TweaksGalore.WeatherControlBoolDesc".Translate(), def.defName, false, true);
             if (settings.GetBoolSetting(def.defName, false))
             {
-                listing.GapLine();
-                for (int i = 0; i < CachedIncidentListing.Count; i++)
+                foreach (BiomeDef biome in DefDatabase<BiomeDef>.AllDefs)
                 {
-                    IncidentDef curIncident = CachedIncidentListing[i];
-                    float value = settings.tweak_eventControlDict[curIncident.defName];
-                    listing.AddLabeledSlider(curIncident.LabelCap + ": " + (value == 0f ? "Never" : (value)), ref value, 0f, 10f, "Disabled", "High Chance", 0.01f);
-                    settings.tweak_eventControlDict[curIncident.defName] = value;
+                    if (!biome.baseWeatherCommonalities.NullOrEmpty() && biome.generatesNaturally)
+                    {
+                        DoBiomeWeatherSettings(listing, biome);
+                    }
                 }
-                SetIncidentChances();
+            }
+        }
+
+        public void DoBiomeWeatherSettings(Listing_Standard listing, BiomeDef biome)
+        {
+            string categoryString = "Cat_BiomeWeather_" + biome.defName;
+            bool categoryToggle = mod.GetCollapsedCategoryState(categoryString);
+            listing.LabelBackedHeader(biome.LabelCap, mod.subHeaderColor, ref categoryToggle, GameFont.Small);
+            mod.SetCollapsedCategoryState(categoryString, categoryToggle);
+            if (!categoryToggle)
+            {
+                foreach(WeatherDef weather in DefDatabase<WeatherDef>.AllDefs)
+                {
+                    if (settings.tweak_biomeWeatherSettings[biome.defName].weatherCommonality.ContainsKey(weather.defName))
+                    {
+                        float commonalityBuffer = settings.tweak_biomeWeatherSettings[biome.defName].weatherCommonality[weather.defName];
+                        listing.AddLabeledSlider("TweaksGalore.BiomeWeatherCommonality".Translate(weather.LabelCap.ToString(), commonalityBuffer.ToString()), ref commonalityBuffer, 0f, HighestCommonality, "Min: 0", $"Max: {HighestCommonality}", 0.1f);
+                        settings.tweak_biomeWeatherSettings[biome.defName].weatherCommonality[weather.defName] = commonalityBuffer;
+                    }
+                }
             }
         }
 
         public override void DoSectionRestore()
         {
             base.DoSectionRestore();
-            settings.tweak_eventControlDict = defaultValues;
+            settings.tweak_biomeWeatherSettings = settings.biomeWeatherSettingsDefaults;
         }
 
         public override void DoOnStartup()
         {
             StoreDefaultValues();
-            UpdateIncidentDict();
+            RegisterValidBiomeWeathers();
             if (settings.GetBoolSetting(def.defName, false))
             {
-                SetIncidentChances();
+                SetBiomeWeatherCommonalities();
+            }
+        }
+
+        public void SetBiomeWeatherCommonalities()
+        {
+            foreach(BiomeDef biome in DefDatabase<BiomeDef>.AllDefsListForReading)
+            {
+                if (settings.tweak_biomeWeatherSettings.ContainsKey(biome.defName))
+                {
+                    Dictionary<string, float> bc = settings.tweak_biomeWeatherSettings[biome.defName].weatherCommonality;
+                    for (int i = 0; i < biome.baseWeatherCommonalities.Count; i++)
+                    {
+                        if (bc.ContainsKey(biome.baseWeatherCommonalities[i].weather.defName))
+                        {
+                            biome.baseWeatherCommonalities[i].commonality = bc[biome.baseWeatherCommonalities[i].weather.defName];
+                        }
+                    }
+                }
+            }
+        }
+
+        public void RegisterValidBiomeWeathers()
+        {
+            if (settings.tweak_biomeWeatherSettings.NullOrEmpty())
+            {
+                settings.tweak_biomeWeatherSettings = new Dictionary<string, BiomeWeatherSettings>();
+            }
+            foreach (BiomeDef biome in DefDatabase<BiomeDef>.AllDefsListForReading)
+            {
+                if (!biome.baseWeatherCommonalities.NullOrEmpty())
+                {
+                    if (!settings.tweak_biomeWeatherSettings.ContainsKey(biome.defName))
+                    {
+                        BiomeWeatherSettings s = new BiomeWeatherSettings();
+                        foreach (WeatherCommonalityRecord wcr in biome.baseWeatherCommonalities)
+                        {
+                            s.weatherCommonality.Add(wcr.weather.defName, wcr.commonality);
+                        }
+                        settings.tweak_biomeWeatherSettings.Add(biome.defName, s);
+                    }
+                    else
+                    {
+                        foreach (WeatherCommonalityRecord wcr in biome.baseWeatherCommonalities)
+                        {
+                            if (!settings.tweak_biomeWeatherSettings[biome.defName].weatherCommonality.ContainsKey(wcr.weather.defName))
+                            {
+                                settings.tweak_biomeWeatherSettings[biome.defName].weatherCommonality.Add(wcr.weather.defName, wcr.commonality);
+                            }
+                        }
+                    }
+                }
             }
         }
 
         public void StoreDefaultValues()
         {
-            if (defaultValues.NullOrEmpty())
+            if (settings.biomeWeatherSettingsDefaults.NullOrEmpty())
             {
-                defaultValues = new Dictionary<string, float>();
+                settings.biomeWeatherSettingsDefaults = new Dictionary<string, BiomeWeatherSettings>();
             }
-            foreach (IncidentDef def in DefDatabase<IncidentDef>.AllDefsListForReading)
+            foreach (BiomeDef biome in DefDatabase<BiomeDef>.AllDefsListForReading)
             {
-                if (!defaultValues.ContainsKey(def.defName))
+                if (!settings.biomeWeatherSettingsDefaults.ContainsKey(biome.defName) && !biome.baseWeatherCommonalities.NullOrEmpty())
                 {
-                    float chance = def.baseChance;
-                    defaultValues.Add(def.defName, chance);
-                }
-            }
-        }
-
-        public void UpdateIncidentDict()
-        {
-            if (settings.tweak_eventControlDict.NullOrEmpty())
-            {
-                settings.tweak_eventControlDict = new Dictionary<string, float>();
-            }
-
-            foreach (IncidentDef def in DefDatabase<IncidentDef>.AllDefsListForReading)
-            {
-                if (!settings.tweak_eventControlDict.ContainsKey(def.defName))
-                {
-                    float chance = def.baseChance;
-                    settings.tweak_eventControlDict.Add(def.defName, chance);
-                }
-            }
-        }
-
-        public void SetIncidentChances()
-        {
-            foreach (KeyValuePair<string, float> pair in settings.tweak_eventControlDict)
-            {
-                IncidentDef incident = DefDatabase<IncidentDef>.GetNamedSilentFail(pair.Key);
-                if (incident != null)
-                {
-                    incident.baseChance = pair.Value;
+                    BiomeWeatherSettings s = new BiomeWeatherSettings();
+                    foreach (WeatherCommonalityRecord wcr in biome.baseWeatherCommonalities)
+                    {
+                        s.weatherCommonality.Add(wcr.weather.defName, wcr.commonality);
+                    }
+                    settings.biomeWeatherSettingsDefaults.Add(biome.defName, s);
                 }
             }
         }

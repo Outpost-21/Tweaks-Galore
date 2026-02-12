@@ -26,6 +26,30 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_12022026</defName>
+		<date>2026/02/12</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>Additions</header>
+				<text>- Weather commonalities in each biome can now be tweaked (essentially removing that weather at 0). Only includes naturally generated biomes to not potentially cause issues with the likes of the Anomaly underground ones.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_09122025</defName>
 		<date>2025/12/09</date>
 		<banner />

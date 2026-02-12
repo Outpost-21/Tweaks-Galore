@@ -40,6 +40,10 @@
 	<TweaksGalore.TitleDisableThroneroomReqs>- Disable Throneroom Requirements</TweaksGalore.TitleDisableThroneroomReqs>
 	<TweaksGalore.TitleDisableThroneroomReqsDesc>If enabled, clears any requirements for thronerooms from the title.</TweaksGalore.TitleDisableThroneroomReqsDesc>
 
+	<TweaksGalore.WeatherControlBool>Weather Control Config</TweaksGalore.WeatherControlBool>
+	<TweaksGalore.WeatherControlBoolDesc>Allows control over the weather in each biome, biomes are set up with their own individual commonalities so it has to be done this way.</TweaksGalore.WeatherControlBoolDesc>
+	<TweaksGalore.BiomeWeatherCommonality>- {0} commonality: {1}</TweaksGalore.BiomeWeatherCommonality>
+
 	<TweaksGalore.IncapableOf>Skill Limited Work Types</TweaksGalore.IncapableOf>
 	<TweaksGalore.CannotDoThisWork>{0} is only capable of doing this work to a limited skill level.</TweaksGalore.CannotDoThisWork>
 	<TweaksGalore.IsIncapableOfViolenceLower>{0} is non-violent and not assigned a weapon</TweaksGalore.IsIncapableOfViolenceLower>

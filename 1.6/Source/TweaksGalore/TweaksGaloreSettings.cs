@@ -52,6 +52,10 @@ namespace TweaksGalore
         [Unsaved]
         public Dictionary<string, RoyalPermitSettings> royalPermitSettingsDefaults = new Dictionary<string, RoyalPermitSettings>();
 
+        // Weathers
+        public Dictionary<string, BiomeWeatherSettings> tweak_biomeWeatherSettings = new Dictionary<string, BiomeWeatherSettings>();
+        public Dictionary<string, BiomeWeatherSettings> biomeWeatherSettingsDefaults = new Dictionary<string, BiomeWeatherSettings>();
+
         // Pregnancy PawnKinds
         public List<PawnKindDef> tweak_pregnancyChanceEditedPawnKinds = new List<PawnKindDef>();
 
@@ -218,6 +222,9 @@ namespace TweaksGalore
 
             // Royal Permits
             Scribe_Collections.Look(ref tweak_royalPermitSettings, "tweak_royalPermitSettings");
+
+            // Weather Control
+            Scribe_Collections.Look(ref tweak_biomeWeatherSettings, "tweak_biomeWeatherSettings");
 
             // Genepacks
             Scribe_Values.Look(ref tweak_genepackTweaks, "tweak_genepackTweaks", false);
