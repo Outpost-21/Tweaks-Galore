@@ -26,13 +26,44 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_26022026</defName>
+		<date>2026/02/26</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>Experimental Odyssey Additions</header>
+				<text>- Landmark Control for changing commonality of landmarks (including modded).
+- Tile Mutator Control for changing whether a tile mutator can generate on a tile. The conditions for these are too individually specific to really do anything more than an on/off.
+
+Entirely experimental for how well this works, avoid changing them mid-save as I'm unsure how that affects things in an existing save.</text>
+			</li>
+			<li>
+				<header>Subcategory Searching</header>
+				<text>The search filter wasn't properly narrowing down subcategories (like the power tweaks), now it does, some more specific subcategories may work differently and need fixed still, that's being worked on.</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_12022026</defName>
 		<date>2026/02/12</date>
 		<banner />
 		<contentList>
 			<li>
 				<header>Additions</header>
-				<text>- Weather commonalities in each biome can now be tweaked (essentially removing that weather at 0). Only includes naturally generated biomes to not potentially cause issues with the likes of the Anomaly underground ones.</text>
+				<text>- Weather Control so weather commonalities in each biome can now be tweaked (essentially removing that weather at 0). Only includes naturally generated biomes to not potentially cause issues with the likes of the Anomaly underground ones.</text>
 			</li>
 		</contentList>
 		<links>

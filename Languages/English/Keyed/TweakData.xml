@@ -44,6 +44,12 @@
 	<TweaksGalore.WeatherControlBoolDesc>Allows control over the weather in each biome, biomes are set up with their own individual commonalities so it has to be done this way.</TweaksGalore.WeatherControlBoolDesc>
 	<TweaksGalore.BiomeWeatherCommonality>- {0} commonality: {1}</TweaksGalore.BiomeWeatherCommonality>
 
+	<TweaksGalore.LandmarkControlBool>Landmark Control Config</TweaksGalore.LandmarkControlBool>
+	<TweaksGalore.LandmarkControlBoolDesc>Allows control over the spawning of landmarks, this should be done BEFORE generating a new world, if it works on existing worlds then it may actually be problematic but it's not up to me to deal with.</TweaksGalore.LandmarkControlBoolDesc>
+
+	<TweaksGalore.TileMutatorControlBool>Tile Mutator Control Config</TweaksGalore.TileMutatorControlBool>
+	<TweaksGalore.TileMutatorControlBoolDesc>Allows control over the tile mutators spawning on tiles during world generation, this should be done BEFORE generating a new world, if it works on existing worlds then it may actually be problematic but that's not up to me to deal with.</TweaksGalore.TileMutatorControlBoolDesc>
+
 	<TweaksGalore.IncapableOf>Skill Limited Work Types</TweaksGalore.IncapableOf>
 	<TweaksGalore.CannotDoThisWork>{0} is only capable of doing this work to a limited skill level.</TweaksGalore.CannotDoThisWork>
 	<TweaksGalore.IsIncapableOfViolenceLower>{0} is non-violent and not assigned a weapon</TweaksGalore.IsIncapableOfViolenceLower>

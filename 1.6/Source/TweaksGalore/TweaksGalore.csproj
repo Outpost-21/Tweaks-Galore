@@ -86,6 +86,7 @@
     <Compile Include="DefOfs\TGThingCategoryDefOf.cs" />
     <Compile Include="DefOfs\TGRoomStatDefOf.cs" />
     <Compile Include="Harmony\Patch_Building_GravEngine_ConsumeFuel.cs" />
+    <Compile Include="Harmony\Patch_TileMutatorDef_EverValid.cs" />
     <Compile Include="Harmony\Patch_CompBreakdownable_DoBreakdown.cs" />
     <Compile Include="Harmony\Patch_LandingOutcomeWorker.cs" />
     <Compile Include="Harmony\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs" />
@@ -96,6 +97,8 @@
     <Compile Include="Harmony\Patch_MainTabWindow_Research_DrawLeftRect.cs" />
     <None Include="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
     <Compile Include="Harmony\Patch_Pawn_HealthTracker_ShouldBeDeadFromLethalDamageThreshold.cs" />
+    <Compile Include="SectionWorkers\SectionWorker_TileMutatorControl.cs" />
+    <Compile Include="SectionWorkers\SectionWorker_LandmarkControl.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_TradeableMeals.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_NoDeathAcidifiers.cs" />
     <Compile Include="TweakWorkers\General\TweakWorker_NoBiocoding.cs" />

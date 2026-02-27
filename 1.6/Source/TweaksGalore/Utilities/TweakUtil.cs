@@ -128,7 +128,7 @@ namespace TweaksGalore
             }
         }
 
-        public static void DoSubSection(this Listing_Standard listing, TweakSubSectionDef def)
+        public static void DoSubSection(this Listing_Standard listing, TweakSubSectionDef def, string filter)
         {
             bool categoryToggle = TweaksGaloreMod.mod.GetCollapsedCategoryState(def.defName);
             listing.LabelBackedHeader(def.LabelCap, TweaksGaloreMod.mod.subHeaderColor, ref categoryToggle, GameFont.Small);
@@ -138,7 +138,8 @@ namespace TweaksGalore
                 listing.Note(def.description, GameFont.Tiny);
                 // Get Sub-Section Tweaks
                 IEnumerable<TweakDef> tweakIEnumerable = from x in def.heldTweaks
-                                                         where (x.required.NullOrEmpty() || x.required.All(r => ModLister.GetActiveModWithIdentifier(r) != null)) 
+                                                         where x.FilterForTweak(filter.ToLower())
+                                                         && (x.required.NullOrEmpty() || x.required.All(r => ModLister.GetActiveModWithIdentifier(r) != null)) 
                                                          && (x.incompatible.NullOrEmpty() || x.incompatible.All(i => ModLister.GetActiveModWithIdentifier(i) == null))
                                                          select x;
                 List<TweakDef> tweakList = tweakIEnumerable.ToList();

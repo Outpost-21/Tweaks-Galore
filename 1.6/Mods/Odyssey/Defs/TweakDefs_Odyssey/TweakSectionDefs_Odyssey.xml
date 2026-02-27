@@ -7,4 +7,18 @@
 		<orderID>-1</orderID>
 	</TweaksGalore.TweakCategoryDef>
 
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_LandmarkControl</defName>
+		<label>Landmarks</label>
+		<sectionWorker>TweaksGalore.SectionWorker_LandmarkControl</sectionWorker>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_TileMutatorControl</defName>
+		<label>Tile Mutators</label>
+		<sectionWorker>TweaksGalore.SectionWorker_TileMutatorControl</sectionWorker>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
 </Defs>

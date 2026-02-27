@@ -54,7 +54,15 @@ namespace TweaksGalore
 
         // Weathers
         public Dictionary<string, BiomeWeatherSettings> tweak_biomeWeatherSettings = new Dictionary<string, BiomeWeatherSettings>();
+        [Unsaved]
         public Dictionary<string, BiomeWeatherSettings> biomeWeatherSettingsDefaults = new Dictionary<string, BiomeWeatherSettings>();
+
+        // Landmark Control
+        public Dictionary<string, float> tweak_landmarkControlSettings = new Dictionary<string, float>();
+        public Dictionary<string, float> landmarkSettingsDefaults = new Dictionary<string, float>();
+
+        // Tile Mutator Control
+        public Dictionary<string, bool> tweak_tileMutatorControlSettings = new Dictionary<string, bool>();
 
         // Pregnancy PawnKinds
         public List<PawnKindDef> tweak_pregnancyChanceEditedPawnKinds = new List<PawnKindDef>();

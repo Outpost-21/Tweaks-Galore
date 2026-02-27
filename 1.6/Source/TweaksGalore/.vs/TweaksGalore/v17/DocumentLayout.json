@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\sectionworkers\\sectionworker_weathercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:sectionworkers\\sectionworker_weathercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\sectionworkers\\sectionworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:sectionworkers\\sectionworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\sectionworkers\\sectionworker_raids.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:sectionworkers\\sectionworker_raids.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\utilities\\tweakutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:utilities\\tweakutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\sectionworkers\\sectionworker_royaltitles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:sectionworkers\\sectionworker_royaltitles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweaksgaloremod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweaksgaloremod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\data\\biomeweathersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:data\\biomeweathersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\harmony\\patch_defgenerator_generateimplieddefs_preresolve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_defgenerator_generateimplieddefs_preresolve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\tweakworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\tweakworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweaksgalorestartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweaksgalorestartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\tweakworkers\\general\\tweakworker_powervalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweakworkers\\general\\tweakworker_powervalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\sectionworkers\\sectionworker_genepacks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:sectionworkers\\sectionworker_genepacks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|f:\\rwmodcategories\\neronix17\\_fixes\\tweaks galore\\1.6\\source\\tweaksgalore\\sectionworkers\\sectionworker_tilemutatorcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:sectionworkers\\sectionworker_tilemutatorcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\sectionworkers\\sectionworker_landmarkcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:sectionworkers\\sectionworker_landmarkcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\tweaksgaloresettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:tweaksgaloresettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\harmony\\patch_tilemutatordef_evervalid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99C9396-DEB9-4C00-8AA2-3FC496543021}|TweaksGalore.csproj|solutionrelative:harmony\\patch_tilemutatordef_evervalid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +58,160 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TweakWorker.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\TweakWorker.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\TweakWorker.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\TweakWorker.cs",
+              "RelativeToolTip": "TweakWorkers\\TweakWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:53:41.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SectionWorker_Raids.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_Raids.cs",
-              "RelativeDocumentMoniker": "SectionWorkers\\SectionWorker_Raids.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_Raids.cs",
-              "RelativeToolTip": "SectionWorkers\\SectionWorker_Raids.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAcwFEAAAAeAAAAAAAAAA==",
+              "Title": "TweakUtil.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\TweakUtil.cs",
+              "RelativeDocumentMoniker": "Utilities\\TweakUtil.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Utilities\\TweakUtil.cs",
+              "RelativeToolTip": "Utilities\\TweakUtil.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAgwIwAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T01:47:05.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SectionWorker_RoyalTitles.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_RoyalTitles.cs",
-              "RelativeDocumentMoniker": "SectionWorkers\\SectionWorker_RoyalTitles.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_RoyalTitles.cs",
-              "RelativeToolTip": "SectionWorkers\\SectionWorker_RoyalTitles.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwGEAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T00:15:04.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BiomeWeatherSettings.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Data\\BiomeWeatherSettings.cs",
-              "RelativeDocumentMoniker": "Data\\BiomeWeatherSettings.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Data\\BiomeWeatherSettings.cs",
-              "RelativeToolTip": "Data\\BiomeWeatherSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T00:14:54.742Z",
+              "WhenOpened": "2026-02-26T23:40:45.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SectionWorker_WeatherControl.cs",
-              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_WeatherControl.cs",
-              "RelativeDocumentMoniker": "SectionWorkers\\SectionWorker_WeatherControl.cs",
-              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_WeatherControl.cs",
-              "RelativeToolTip": "SectionWorkers\\SectionWorker_WeatherControl.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAA9AAAAAAAAAA==",
+              "Title": "SectionWorker.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker.cs",
+              "RelativeDocumentMoniker": "SectionWorkers\\SectionWorker.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker.cs",
+              "RelativeToolTip": "SectionWorkers\\SectionWorker.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowCcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T00:14:52.316Z",
+              "WhenOpened": "2026-02-26T23:40:15.631Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TweaksGaloreMod.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGaloreMod.cs",
+              "RelativeDocumentMoniker": "TweaksGaloreMod.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGaloreMod.cs",
+              "RelativeToolTip": "TweaksGaloreMod.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAIAwwHYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:37:04.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "RelativeToolTip": "Harmony\\Patch_DefGenerator_GenerateImpliedDefs_PreResolve.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:35:45.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TweaksGaloreStartup.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGaloreStartup.cs",
+              "RelativeDocumentMoniker": "TweaksGaloreStartup.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGaloreStartup.cs",
+              "RelativeToolTip": "TweaksGaloreStartup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:34:52.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TweakWorker_PowerValue.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_PowerValue.cs",
+              "RelativeDocumentMoniker": "TweakWorkers\\General\\TweakWorker_PowerValue.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweakWorkers\\General\\TweakWorker_PowerValue.cs",
+              "RelativeToolTip": "TweakWorkers\\General\\TweakWorker_PowerValue.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:34:11.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SectionWorker_Genepacks.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_Genepacks.cs",
+              "RelativeDocumentMoniker": "SectionWorkers\\SectionWorker_Genepacks.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_Genepacks.cs",
+              "RelativeToolTip": "SectionWorkers\\SectionWorker_Genepacks.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:33:41.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SectionWorker_TileMutatorControl.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_TileMutatorControl.cs",
+              "RelativeDocumentMoniker": "SectionWorkers\\SectionWorker_TileMutatorControl.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_TileMutatorControl.cs",
+              "RelativeToolTip": "SectionWorkers\\SectionWorker_TileMutatorControl.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA1wDAAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T15:09:19.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Patch_TileMutatorDef_EverValid.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_TileMutatorDef_EverValid.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_TileMutatorDef_EverValid.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\Harmony\\Patch_TileMutatorDef_EverValid.cs",
+              "RelativeToolTip": "Harmony\\Patch_TileMutatorDef_EverValid.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T14:56:14.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SectionWorker_LandmarkControl.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_LandmarkControl.cs",
+              "RelativeDocumentMoniker": "SectionWorkers\\SectionWorker_LandmarkControl.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\SectionWorkers\\SectionWorker_LandmarkControl.cs",
+              "RelativeToolTip": "SectionWorkers\\SectionWorker_LandmarkControl.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADIAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T14:51:18.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TweaksGaloreSettings.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGaloreSettings.cs",
+              "RelativeDocumentMoniker": "TweaksGaloreSettings.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Fixes\\Tweaks Galore\\1.6\\Source\\TweaksGalore\\TweaksGaloreSettings.cs",
+              "RelativeToolTip": "TweaksGaloreSettings.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwD0AAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T14:51:42.455Z"
             }
           ]
         }
