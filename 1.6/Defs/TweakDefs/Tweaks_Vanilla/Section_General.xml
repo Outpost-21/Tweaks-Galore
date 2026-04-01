@@ -6,6 +6,15 @@
 	<!-- ======================================================= -->
 
 	<TweaksGalore.TweakDef>
+		<defName>Tweak_RangedShieldBelts</defName>
+		<label>Ranged Shield Belts</label>
+		<description>If enabled, removes the restriction on shield belts preventing ranged weapons from working.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
 		<defName>Tweak_NoDeathAcidifiers</defName>
 		<label>No Death Acidifiers</label>
 		<description>If enabled, removes death acidifiers from pawnKinds so they don't spawn with them. Does not affect any pawns that have already spawned, but will affect mod added pawns.</description>
