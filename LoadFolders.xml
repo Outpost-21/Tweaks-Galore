@@ -39,7 +39,7 @@
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Mods/Anomaly</li>
 		<li IfModActive="Ludeon.RimWorld.Odyssey">1.6/Mods/Odyssey</li>
 		<!-- Tabula Rasa -->
-		<li IfModActive="neronix17.toolbox">1.6/Mods/UpdateLog</li>
+		<li IfModActive="neronix17.toolbox">1.6/Mods/TabulaRasa</li>
 		<!-- Vanilla Expanded -->
 		<li>1.6/Mods/VanillaExpanded</li>
 		<li IfModActive="OskarPotocki.VFE.Insectoid2">1.6/Mods/VFE_Insectoids2</li>

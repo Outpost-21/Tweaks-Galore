@@ -26,6 +26,31 @@
 	</TabulaRasa.UpdateDef> -->
 	
 	<TabulaRasa.UpdateDef>
+		<defName>TweaksGalore_02042026</defName>
+		<date>2026/04/02</date>
+		<banner />
+		<contentList>
+			<li>
+				<header>New Tweaks</header>
+				<text>- Ranged Shield Belt
+- Mushrooms Like Darklight</text>
+			</li>
+		</contentList>
+		<links>
+			<li>
+				<linkLabel>Steam Workshop</linkLabel>
+				<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2695164414</linkUrl>
+				<linkTex>TabulaRasa/UI/Steam</linkTex>
+			</li>
+			<li>
+				<linkLabel>GitHub</linkLabel>
+				<linkUrl>https://github.com/Outpost-21/Tweaks-Galore</linkUrl>
+				<linkTex>TabulaRasa/UI/GitHub</linkTex>
+			</li>
+		</links>
+	</TabulaRasa.UpdateDef>
+	
+	<TabulaRasa.UpdateDef>
 		<defName>TweaksGalore_26022026</defName>
 		<date>2026/02/26</date>
 		<banner />
