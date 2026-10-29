@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_HayDoesntNeedCooling</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Hay"]/statBases</xpath>
+					<value>
+						<DeteriorationRate>0.25</DeteriorationRate>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Hay"]/comps/li[@Class="CompProperties_Rottable"]</xpath>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

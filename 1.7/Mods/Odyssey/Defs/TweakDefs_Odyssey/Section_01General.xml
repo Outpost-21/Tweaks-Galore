@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_General</defName>
+		<label>General</label>
+		<sortTweaks>true</sortTweaks>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_CheapGravAnchors</defName>
+		<label>Cheap Grav Anchors</label>
+		<description>Lowers the stupidly overpriced cost of keeping your colony in one piece when you launch from it, instead of plasteel, gravlite panels and advanced components it'll now just cost some steel.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Odyssey_General</section>
+	</TweaksGalore.TweakDef>
+
+</Defs>

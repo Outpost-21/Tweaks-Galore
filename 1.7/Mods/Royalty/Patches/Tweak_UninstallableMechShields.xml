@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_UninstallableMechShields</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ShieldGeneratorMortar" or defName="ShieldGeneratorBullets"]</xpath>
+					<value>
+						<minifiedDef>MinifiedThing</minifiedDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ShieldGeneratorMortar" or defName="ShieldGeneratorBullets"]/statBases</xpath>
+					<value>
+						<Mass>2</Mass>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ShieldGeneratorMortar" or defName="ShieldGeneratorBullets"]</xpath>
+					<value>
+						<thingClass>Building</thingClass>
+						<thingCategories>
+							<li>BuildingsPower</li>
+						</thingCategories>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

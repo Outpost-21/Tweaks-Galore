@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Odyssey_Archean</defName>
+		<label>Archean</label>
+		<sortTweaks>false</sortTweaks>
+		<category>TweakCategory_Odyssey</category>
+	</TweaksGalore.TweakSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ArcheanTweaks</defName>
+		<label>Enable Archean Tweaks</label>
+		<description>This entire section is disabled by default for compatibility sake mostly, some Archean related tweaks function regardless of if they've been changed (any changing a radius for example) so this allows them all to be skipped over without any potential for conflicts if you prefer another archean tweak mod.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<formatting>
+			<gapLine>true</gapLine>
+			<enhanced>true</enhanced>
+		</formatting>
+		<section>TweakSection_Odyssey_Archean</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ReplantableArchean</defName>
+		<label>Replantable Archean</label>
+		<description>Makes it so you can move Archean trees like any other.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Odyssey_Archean</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ArcheanEffectRadius</defName>
+		<label>Effect Radius</label>
+		<description>The radius in which the archean tree will convert terrain to rich soil.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_ArcheanEffectRadius</tweakWorker>
+		<tweakType>Float</tweakType>
+		<defaultValue>6.9</defaultValue>
+		<floatRange>0~50</floatRange>
+		<floatIncrement>0.1</floatIncrement>
+		<section>TweakSection_Odyssey_Archean</section>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_ArcheanEffectRate</defName>
+		<label>Effect Rate</label>
+		<description>Seconds for each tile the Archean tree converts.</description>
+		<tweakWorker>TweaksGalore.TweakWorker_ArcheanEffectRate</tweakWorker>
+		<tweakType>Int</tweakType>
+		<defaultValue>20</defaultValue>
+		<intRange>1~100</intRange>
+		<intIncrement>1</intIncrement>
+		<section>TweakSection_Odyssey_Archean</section>
+	</TweaksGalore.TweakDef>
+
+</Defs>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <DebugType>embedded</DebugType>
+    <AssemblyTitle>TweaksGalore</AssemblyTitle>
+    <Product>Tweaks Galore</Product>
+    <Copyright>Copyright @ 2018-2026 Neronix17</Copyright>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Harmony\Patch_PawnGraphicSet_ResolveAllGraphics.cs" />
+    <Compile Remove="Harmony\Patch_TraitSet_GainTrait.cs" />
+    <Compile Remove="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
+    <Compile Remove="PatchOperation\PatchOperation_SettingActive.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Harmony\Patch_PawnGraphicSet_ResolveAllGraphics.cs" />
+    <None Include="Harmony\Patch_TraitSet_GainTrait.cs" />
+    <None Include="Harmony\Patch_UnnaturalCorpseTracker_InEscapableContainer.cs" />
+    <None Include="PatchOperation\PatchOperation_SettingActive.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\Assembly-CSharp_public.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TabulaRasa">
+      <HintPath>..\..\..\..\..\_Libraries\Tabula Rasa\1.7\Assemblies\TabulaRasa.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\UnityStubs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\Waylith.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

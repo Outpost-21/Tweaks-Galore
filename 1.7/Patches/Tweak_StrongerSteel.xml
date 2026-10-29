@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_StrongerSteel</li>
+		</settings>
+		<active Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Steel"]/stuffProps/statFactors/MaxHitPoints</xpath>
+			<value>
+				<MaxHitPoints>2</MaxHitPoints>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

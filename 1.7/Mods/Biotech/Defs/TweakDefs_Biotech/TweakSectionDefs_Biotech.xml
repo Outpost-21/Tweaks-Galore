@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_Biotech</defName>
+		<label>Biotech</label>
+		<orderID>-3</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+	<TweaksGalore.TweakSectionDef>
+		<defName>TweakSection_Biotech_Genepacks</defName>
+		<label>Genepacks</label>
+		<sectionWorker>TweaksGalore.SectionWorker_Genepacks</sectionWorker>
+		<category>TweakCategory_Biotech</category>
+	</TweaksGalore.TweakSectionDef>
+
+</Defs>

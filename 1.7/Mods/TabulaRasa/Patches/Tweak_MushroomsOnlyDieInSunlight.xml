@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_MushroomsLikeDarklight</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[plant/diesToLight="true"]</xpath>
+					<value>
+						<li Class="TabulaRasa.DefModExt_PlantStuff">
+							<diesInDarklight>false</diesInDarklight>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

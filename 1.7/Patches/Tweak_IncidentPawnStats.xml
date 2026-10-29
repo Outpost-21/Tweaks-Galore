@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_IncidentPawnStats</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/QuestScriptDef/root/nodes/li[@Class="QuestNode_AddPawnReward"]/rewardDetailsHidden</xpath>
+					<value>
+						<rewardDetailsHidden>false</rewardDetailsHidden>
+					</value>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

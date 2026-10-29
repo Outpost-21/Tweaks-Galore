@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_MushroomsLikeDarklight</defName>
+		<label>Mushrooms Like Darklight</label>
+		<description>If enabled, changes mushrooms (and any other plant that normally dies in light) so they are fine in any darklight.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<section>TweakSection_Vanilla_General</section>
+	</TweaksGalore.TweakDef>
+
+</Defs>

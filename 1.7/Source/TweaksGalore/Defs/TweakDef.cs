@@ -1,0 +1,222 @@
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
+using Verse;
+
+namespace TweaksGalore
+{
+    public class TweakDef : TweakBaseDef
+    {
+        public TweakType tweakType;
+
+        public StatDef tweakStat;
+
+        public string defaultValue;
+
+        public FloatRange floatRange;
+
+        public float? floatIncrement;
+
+        public IntRange intRange;
+
+        public int? intIncrement;
+
+        public ThingDef tweakThing;
+
+        public List<ThingDef> tweakThings;
+
+        public bool invertUsage = false;
+
+        public TweakFormatting formatting = new TweakFormatting();
+
+        public List<TweakDef> requiredTweaks = new List<TweakDef>();
+
+        public Type tweakWorker = typeof(TweakWorker);
+
+        public TweakWorker workerInt;
+
+        public TweakWorker Worker
+        {
+            get
+            {
+                if (workerInt == null)
+                {
+                    workerInt = (TweakWorker)Activator.CreateInstance(tweakWorker);
+                    workerInt.def = this;
+                }
+                return workerInt;
+            }
+        }
+
+        public bool DefaultBool
+        {
+            get
+            {
+                if (tweakType != TweakType.Bool)
+                {
+                    return true;
+                }
+                return bool.Parse(defaultValue);
+            }
+        }
+
+        public bool? boolValueCached;
+
+        public bool BoolValue
+        {
+            get
+            {
+                if (tweakType != TweakType.Bool)
+                { return true; }
+                if (boolValueCached == null)
+                {
+                    boolValueCached = TweaksGaloreMod.settings.GetBoolSetting(defName, DefaultBool);
+                }
+                return (bool)boolValueCached;
+            }
+        }
+
+        public int? intValueCached;
+
+        public int DefaultInt
+        {
+            get
+            {
+                if (tweakType != TweakType.Int) { return -1; }
+                return int.Parse(defaultValue);
+            }
+        }
+
+        public int IntValue
+        {
+            get
+            {
+                if (tweakType != TweakType.Int)
+                {
+                    return -1;
+                }
+                if (intValueCached == null)
+                {
+                    intValueCached = TweaksGaloreMod.settings.GetIntSetting(defName, DefaultInt);
+                }
+                return (int)intValueCached;
+            }
+        }
+
+        public IntRange DefaultIntRange
+        {
+            get
+            {
+                if (tweakType != TweakType.IntRange)
+                {
+                    return new IntRange(-1, -1);
+                }
+                IntRange result;
+                int[] a = defaultValue.Split('~').Select(s => int.Parse(s)).ToArray();
+                result = new IntRange(a[0], a[1]);
+                return result;
+            }
+        }
+
+        public IntRange? intRangeCached;
+
+        public IntRange IntRangeValue
+        {
+            get
+            {
+                if (tweakType != TweakType.FloatRange)
+                {
+                    return new IntRange(-1, -1);
+                }
+                if (intRangeCached == null)
+                {
+                    intRangeCached = TweaksGaloreMod.settings.GetIntRangeSetting(defName, DefaultIntRange);
+                }
+                return (IntRange)intRangeCached;
+            }
+        }
+
+        public float DefaultFloat
+        {
+            get
+            {
+                if (tweakType != TweakType.Float)
+                {
+                    return -1f;
+                }
+                return float.Parse(defaultValue);
+            }
+        }
+
+        public float? floatValueCached;
+
+        public float FloatValue
+        {
+            get
+            {
+                if (tweakType != TweakType.Float)
+                {
+                    return -1f;
+                }
+                if (floatValueCached == null)
+                {
+                    floatValueCached = TweaksGaloreMod.settings.GetFloatSetting(defName, DefaultFloat);
+                }
+                return (float)floatValueCached;
+            }
+        }
+
+        public FloatRange DefaultFloatRange
+        {
+            get
+            {
+                if (tweakType != TweakType.FloatRange)
+                {
+                    return new FloatRange(-1f, -1f);
+                }
+                FloatRange result;
+                float[] a = defaultValue.Split('~').Select(s => float.Parse(s)).ToArray();
+                result = new FloatRange(a[0], a[1]);
+                return result;
+            }
+        }
+
+        public FloatRange? floatRangeCached;
+
+        public FloatRange FloatRangeValue
+        {
+            get
+            {
+                if (tweakType != TweakType.FloatRange)
+                {
+                    return new FloatRange(-1f, -1f);
+                }
+                if (floatRangeCached == null)
+                {
+                    floatRangeCached = TweaksGaloreMod.settings.GetFloatRangeSetting(defName, DefaultFloatRange);
+                }
+                return (FloatRange)floatRangeCached;
+            }
+        }
+
+        public void PurgeCache()
+        {
+            boolValueCached = null;
+            intValueCached = null;
+            intRangeCached = null;
+            floatValueCached = null;
+            floatRangeCached = null;
+        }
+    }
+
+    public class TweakFormatting
+    {
+        public bool gapLine = false;
+        public bool enhanced = false;
+        public bool percentage = false;
+    }
+}

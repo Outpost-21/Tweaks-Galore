@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_SturdierBridges</li>
+		</settings>
+		<active Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[defName="Bridge"]/affordances</xpath>
+			<value>
+				<li>Medium</li>
+				<li>Heavy</li>
+			</value>
+		</active>
+	</Operation>
+
+</Patch>

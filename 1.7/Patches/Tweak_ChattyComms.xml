@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_ChattyComms</li>
+		</settings>
+		<inactive Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/JoyGiverDef[defName="TweaksGalore_ChattyComms"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/JobDef[defName="TweaksGalore_ChattyComms"]</xpath>
+				</li>
+			</operations>
+		</inactive>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="CommsConsole"]/building</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="CommsConsole"]/building</xpath>
+						<value>
+							<joyKind>Social</joyKind>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="CommsConsole"]</xpath>
+						<value>
+							<building>
+								<joyKind>Social</joyKind>
+							</building>
+						</value>
+					</nomatch>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<TweaksGalore.TweakCategoryDef>
+		<defName>TweakCategory_VanillaExpanded</defName>
+		<label>Vanilla Expanded</label>
+		<orderID>999</orderID>
+	</TweaksGalore.TweakCategoryDef>
+
+</Defs>

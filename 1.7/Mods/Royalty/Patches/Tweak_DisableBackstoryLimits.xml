@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_NoBackstoryLimits</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/MeditationFocusDef[defName="Artistic"]/incompatibleBackstoriesAny</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/MeditationFocusDef[defName="Artistic"]/incompatibleBackstoriesAny</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Psycasts Expanded</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationRemove">
+								<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName="VPE_Archotechist" or defName="VPE_Wildspeaker" or defName="VPE_Animat" or defName="VPE_Puppeteer"]/lockedReason</xpath>
+							</li>
+							<li Class="PatchOperationRemove">
+								<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName="VPE_Archotechist" or defName="VPE_Wildspeaker" or defName="VPE_Animat" or defName="VPE_Puppeteer"]/requiredBackstoriesAny</xpath>
+							</li>
+							<li Class="PatchOperationRemove">
+								<xpath>/Defs/MeditationFocusDef[defName="Natural"]/modExtensions/li/canBeUnlocked</xpath>
+							</li>
+						</operations>
+					</match>
+				</li>
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ======================================================= -->
+	<!-- ================== Better Gloomlight ================== -->
+	<!-- ======================================================= -->
+
+	<TweaksGalore.TweakSubSectionDef>
+		<defName>TweakSubSection_BetterGloomlight</defName>
+		<label>Better Gloomlight</label>
+		<description>Changes the gloomlight often found in mech clusters to produce more light so it's actually useful.</description>
+		<section>TweakSection_Vanilla_Mechanoids</section>
+	</TweaksGalore.TweakSubSectionDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BetterGloomlight</defName>
+		<label>Enabled</label>
+		<description>Changes the gloomlight often found in mech clusters to produce more light so it's actually useful.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_BetterGloomlight</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BetterGloomlightSunlamp</defName>
+		<label>Work As Sunlamp</label>
+		<description>With Better Gloomlight and this enabled, they'll instead produce enough light to be equal to that of a free sunlamp.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_BetterGloomlight</subSection>
+	</TweaksGalore.TweakDef>
+
+	<TweaksGalore.TweakDef>
+		<defName>Tweak_BetterGloomlightDarklight</defName>
+		<label>Darklight Glow</label>
+		<description>Changes the colour of the gloomlight to match that of 'Darklight'.</description>
+		<tweakType>Bool</tweakType>
+		<defaultValue>false</defaultValue>
+		<subSection>TweakSubSection_BetterGloomlight</subSection>
+	</TweaksGalore.TweakDef>
+
+</Defs>

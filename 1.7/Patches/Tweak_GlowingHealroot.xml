@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="TweaksGalore.PatchOperation_TweakBool">
+		<settings>
+			<li>Tweak_GlowingHealroot</li>
+		</settings>
+		<active Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="HealrootBase"]</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_Glower">
+						<glowRadius>3</glowRadius>
+						<glowColor>(90, 166, 151, 0)</glowColor>
+					</li>
+				</comps>
+			</value>
+		</active>
+	</Operation>
+
+
+</Patch>
