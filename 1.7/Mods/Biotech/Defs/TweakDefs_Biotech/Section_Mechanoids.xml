@@ -50,6 +50,9 @@
 		<defaultValue>10</defaultValue>
 		<intRange>1~20</intRange>
 		<subSection>TweakSubSection_PlayerMechs</subSection>
+		<incompatible>
+			<li>Pyro.TieredMechs</li>
+		</incompatible>
 	</TweaksGalore.TweakDef>
 
 	<TweaksGalore.TweakDef Name="TweakBase_MechWorkAdjuster" Abstract="True">
